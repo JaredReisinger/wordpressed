@@ -2,7 +2,7 @@
 // an attempt at a new and modern WordPress REST API client
 import got from 'got';
 
-import { dbg } from '../helpers.js';
+import { dbg } from './helpers.js';
 
 interface WpJson {
   _links: Record<string, Link[]>;
@@ -32,11 +32,13 @@ interface Authentication {
   };
 }
 
-
 export async function dummy() {
-  const resp = await got<WpJson>('https://nationalspecialty.basenji.org/wp-json', {
-    responseType: 'json',
-  });
+  const resp = await got<WpJson>(
+    'https://nationalspecialty.basenji.org/wp-json',
+    {
+      responseType: 'json',
+    }
+  );
 
   dbg(0, 'headers', resp.headers);
 
