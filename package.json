@@ -1,0 +1,76 @@
+{
+  "name": "wordpressed",
+  "version": "0.0.1",
+  "description": "A modern, Typescript+ESM client for the WordPress REST API.",
+  "author": "Jared Reisinger <jaredreisinger@hotmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "WordPress",
+    "API",
+    "client"
+  ],
+  "private": true,
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "adhoc": "ts-node adhoc.ts",
+    "clean": "rm -r dist",
+    "lint": "eslint ./src",
+    "test": "ava",
+    "test:coverage": "c8 --all --src src --per-file --reporter lcov --reporter text npm test",
+    "coverage": "npm run test:coverage",
+    "prepare": "(is-ci || husky install) && npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^4.1.0",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "ava": "^5.3.1",
+    "c8": "^8.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "semantic-release": "^21.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@snyk/protect": "^1.1189.0",
+    "got": "^13.0.0"
+  },
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "dist/"
+      },
+      "compile": "tsc"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --ignore-unknown --write"
+    ],
+    "*.ts": [
+      "prettier --ignore-unknown --write",
+      "eslint"
+    ]
+  },
+  "snyk": true
+}
