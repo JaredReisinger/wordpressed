@@ -140,3 +140,17 @@ export function err(
   }
   out(msg, chalker || chalk.red, outputter ?? console.error.bind(console));
 }
+
+/**
+ * exists is a helper for Array.filter(), to remove null/undefined values
+ * @param self the value to check
+ * @returns `true` if truthy
+ */
+export function exists<T>(self: T | undefined | null | false | ''): self is T {
+  return !!self;
+}
+
+/** An "identity" pass-through helper. */
+export function identity<T>(x: T) {
+  return x;
+}
