@@ -1,6 +1,6 @@
 {
   "name": "wordpressed",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "A modern, Typescript+ESM client for the WordPress REST API.",
   "author": "Jared Reisinger <jaredreisinger@hotmail.com>",
   "license": "ISC",

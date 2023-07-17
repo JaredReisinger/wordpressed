@@ -3,6 +3,14 @@
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
 
+# [0.1.0-alpha.3](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.2...v0.1.0-alpha.3) (2023-07-17)
+
+
+### Bug Fixes
+
+* add provenance, publish as latest? ([e5d59e6](https://github.com/JaredReisinger/wordpressed/commit/e5d59e67c55f76fccb1dffbe18ba4a941655e83a))
+* screenshot for npm, publish as latest even though alpha ([1fe09bc](https://github.com/JaredReisinger/wordpressed/commit/1fe09bc3077fb752e2f855782ec363c88af11e02))
+
 # [0.1.0-alpha.2](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.1...v0.1.0-alpha.2) (2023-07-17)
 
 
