@@ -3,6 +3,13 @@
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
 
+# [0.1.0-alpha.2](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.1...v0.1.0-alpha.2) (2023-07-17)
+
+
+### Bug Fixes
+
+* expand README ([efdf3d3](https://github.com/JaredReisinger/wordpressed/commit/efdf3d37d8f057b0cf860a39c5509c087dffc9dc))
+
 # [0.1.0-alpha.1](https://github.com/JaredReisinger/wordpressed/compare/v0.0.0...v0.1.0-alpha.1) (2023-07-17)
 
 
