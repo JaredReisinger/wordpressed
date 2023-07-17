@@ -1,6 +1,6 @@
 {
   "name": "wordpressed",
-  "version": "0.0.0",
+  "version": "0.0.0-alpha.0",
   "description": "A modern, Typescript+ESM client for the WordPress REST API.",
   "author": "Jared Reisinger <jaredreisinger@hotmail.com>",
   "license": "ISC",
@@ -9,7 +9,9 @@
     "API",
     "client"
   ],
-  "private": true,
+  "publishConfig": {
+    "tag": "alpha"
+  },
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -21,6 +23,7 @@
     "test:coverage": "c8 --all --src src --per-file --reporter lcov --reporter text npm test",
     "coverage": "npm run test:coverage",
     "prepare": "(is-ci || husky install) && npm run snyk-protect",
+    "release": "semantic-release",
     "snyk-protect": "snyk-protect",
     "tool": "ts-node --esm ./src/tools/$TOOL.ts",
     "tool:adhoc": "TOOL=adhoc npm run tool",

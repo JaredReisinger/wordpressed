@@ -1,6 +1,9 @@
 branches:
   - name: main
-    channel: alpha # for now!
+  - name: alpha
+    prerelease: true
+  - name: beta
+    prerelease: true
 
 plugins:
   - '@semantic-release/commit-analyzer'
