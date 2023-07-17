@@ -8,7 +8,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import inflection from 'inflection';
 
-import { EndpointMethod, Route, WpJson } from '../index.js';
+import { EndpointMethod, Route, WpJson } from './util/wpapi.js';
 import { dbg, err, out } from './util/helpers.js';
 import { /*byProperty,*/ byProperty, exists } from './util/objects.js';
 import { getWpJson } from './util/wphost.js';

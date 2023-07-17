@@ -10,7 +10,15 @@ import {
 
 // We have to decide if some core WpJson stuff is exposed in parallel to the
 // discovery-generated types.
-import { EndpointMethod } from './tools/util/wpapi.js';
+// import { EndpointMethod } from './tools/util/wpapi.js';
+export enum EndpointMethod {
+  DELETE = 'DELETE',
+  GET = 'GET',
+  PATCH = 'PATCH',
+  POST = 'POST',
+  PUT = 'PUT',
+  // missing: OPTIONS, HEAD, etc.
+}
 
 type AllRoutes = KnownDeleteRoutes &
   KnownGetRoutes &

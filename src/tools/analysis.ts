@@ -2,10 +2,10 @@
 // variables WP_HOST).
 // import util from 'util';
 
-import { WpJson } from '../index.js';
 import { dbg, err, out } from './util/helpers.js';
 import { mapObject } from './util/objects.js';
 import { getWpJson } from './util/wphost.js';
+import { WpJson } from './util/wpapi.js';
 
 try {
   await analysis();

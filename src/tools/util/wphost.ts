@@ -2,7 +2,7 @@
 import fs from 'fs/promises';
 import 'dotenv/config';
 
-import { Client, WpJson } from '../../index.js';
+import { Client, WpJson } from './wpapi.js';
 // import { dbg, err, out } from './helpers.js';
 
 const fetchWpJson = false; // true; // fetch live vs. use cached file...
