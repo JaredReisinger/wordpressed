@@ -1,4 +1,6 @@
-branches: main
+branches:
+  - name: main
+    channel: alpha # for now!
 
 plugins:
   - '@semantic-release/commit-analyzer'

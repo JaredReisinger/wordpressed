@@ -1,1 +1,1 @@
-export * from './wpapi.js';
+export * from './client.js';

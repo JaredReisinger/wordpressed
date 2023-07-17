@@ -7,6 +7,8 @@ A modern, Typescript+ESM client for the WordPress REST API. _(Rhymes with “wo
 [![code coverage](https://img.shields.io/codecov/c/github/JaredReisinger/wordpressed.svg?logo=codecov)](https://codecov.io/github/JaredReisinger/wordpressed)
 [![snyk vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/JaredReisinger/wordpressed.svg?logo=snyk)](https://snyk.io/test/github/JaredReisinger/wordpressed)
 
+> **WARNING:** This is _**very much**_ an early work-in-progress. It is being published so that early feedback on design decisions can be made.
+
 ## _Why?_
 
 The existing _WooCommerce_ API client wrappers are somewhat frustrating to use, and their Typescript typings are either nonexistent or incorrect. The _de facto_ standard WP API client library hasn’t been updated for years, and doesn’t follow modern design patterns.

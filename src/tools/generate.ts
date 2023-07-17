@@ -368,14 +368,14 @@ function parseArgTypes(
 async function writeNamespaces(data: GenData, dir: string) {
   // Note that we don't use Array.forEach because we have async/await for fs
   // calls.
-
   for (const ns of Object.values(data).sort(byProperty('namespace'))) {
     await writeNamespace(ns, dir);
   }
+
+  await writeNamespaceIndex(data, dir);
 }
 
 async function writeNamespace(ns: GenNamespace, dir: string) {
-  // always write a new file to '.temp/generated.ts'
   const file = await fs.open(
     path.join(dir, `${ns.fileName}.ts`),
     fs.constants.O_CREAT | fs.constants.O_WRONLY | fs.constants.O_TRUNC
@@ -463,4 +463,51 @@ async function writeMappingTypes(
   }
 
   await file.write(lines.join('\n'));
+}
+
+async function writeNamespaceIndex(data: GenData, dir: string) {
+  // Also write an index file that gathers/combines everything together...
+  const file = await fs.open(
+    path.join(dir, 'index.ts'),
+    fs.constants.O_CREAT | fs.constants.O_WRONLY | fs.constants.O_TRUNC
+  );
+
+  // Rather than many small file writes, we collect an array of lines, and then
+  // join/write them all at once.  Javascript can perform the join efficiently,
+  // so this is likely the best performance balance option.
+  const lines: string[] = [];
+  const indent = 0;
+
+  const nss = Object.values(data).sort(byProperty('namespace'));
+
+  for (const ns of nss) {
+    lines.push(
+      `${'  '.repeat(indent)}import * as ${ns.typeName} from './${
+        ns.fileName
+      }.js';`
+    );
+  }
+
+  lines.push('');
+
+  // Note that we really want to group mappings by method, because that's how
+  // the caller will find these...
+  for (const m of Object.values(EndpointMethod)) {
+    lines.push(
+      `${'  '.repeat(indent)}export type Known${inflection.humanize(m)}Routes =`
+    );
+
+    for (let i = 0; i < nss.length; i++) {
+      lines.push(
+        `${'  '.repeat(indent + 1)}${nss[i].typeName}.${
+          nss[i].typeName
+        }${inflection.humanize(m)}Routes${i < nss.length - 1 ? ' &' : ';'}`
+      );
+    }
+
+    lines.push('');
+  }
+
+  await file.write(lines.join('\n'));
+  await file.close();
 }
