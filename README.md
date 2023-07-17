@@ -15,7 +15,7 @@ This is an attempt at bringing Typescript and ESM support to the [WordPress REST
 
 Ideally, when calling, say, the `GET /wp-json/wp/v2/pages` endpoint, Typescript can prevent you from passing invalid arguments, and can provide auto-complete for the correct ones… and even provide some documentation about them, as well!
 
-![example usage](./docs/wordpressed-example.png)
+![example usage](https://github.com/JaredReisinger/wordpressed/blob/alpha/docs/wordpressed-example.png?raw=true)
 
 I’d also like a “namespace-streamlined” client, so you could, say, lock it to a single namespace, and vastly simplify the calls. [My use-case in particular](https://www.npmjs.com/package/order-fetcher) could look like:
 
