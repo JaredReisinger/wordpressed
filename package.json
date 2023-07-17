@@ -10,7 +10,7 @@
     "client"
   ],
   "publishConfig": {
-    "tag": "alpha"
+    "tag": "latest"
   },
   "type": "module",
   "main": "index.js",

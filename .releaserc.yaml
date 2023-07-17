@@ -2,9 +2,11 @@ branches:
   - name: main
   - name: alpha
     prerelease: true
-    channel: latest
   # - name: beta
   #   prerelease: true
+
+# also run `npm dist-tag add wordpressed@0.1.0-alpha.XXX latest` to update latest.
+# (could be an exec step!)
 
 plugins:
   - '@semantic-release/commit-analyzer'
