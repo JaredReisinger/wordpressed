@@ -33,50 +33,56 @@ export class Client {
     this.host = host;
   }
 
+  // The `args` arguments are currently optional, but there may be cases where
+  // an argument value is *required*.  I think it would be possible to detect
+  // "all optional" arg types, and make their route-to-arg mapping specifically
+  // call out "or undefined" ('/some/route': SomeRouteGetArgs | undefined), so
+  // that *just* those routes can be called without the `args` argument.
+
   async delete<
     T = unknown,
     R extends keyof KnownDeleteRoutes = keyof KnownDeleteRoutes,
-    A = KnownDeleteRoutes[R],
+    A extends KnownDeleteRoutes[R] = KnownDeleteRoutes[R],
   >(route: R, args?: A) {
-    return this._call<T, R, A>(EndpointMethod.DELETE, route, args);
+    return this._call<T>(EndpointMethod.DELETE, route, args);
   }
 
   async get<
     T = unknown,
     R extends keyof KnownGetRoutes = keyof KnownGetRoutes,
-    A = KnownGetRoutes[R],
+    A extends KnownGetRoutes[R] = KnownGetRoutes[R],
   >(route: R, args?: A) {
-    return this._call<T, R, A>(EndpointMethod.GET, route, args);
+    return this._call<T>(EndpointMethod.GET, route, args);
   }
 
   async patch<
     T = unknown,
     R extends keyof KnownPatchRoutes = keyof KnownPatchRoutes,
-    A = KnownPatchRoutes[R],
+    A extends KnownPatchRoutes[R] = KnownPatchRoutes[R],
   >(route: R, args?: A) {
-    return this._call<T, R, A>(EndpointMethod.PATCH, route, args);
+    return this._call<T>(EndpointMethod.PATCH, route, args);
   }
 
   async post<
     T = unknown,
     R extends keyof KnownPostRoutes = keyof KnownPostRoutes,
-    A = KnownPostRoutes[R],
+    A extends KnownPostRoutes[R] = KnownPostRoutes[R],
   >(route: R, args?: A) {
-    return this._call<T, R, A>(EndpointMethod.POST, route, args);
+    return this._call<T>(EndpointMethod.POST, route, args);
   }
 
   async put<
     T = unknown,
     R extends keyof KnownPutRoutes = keyof KnownPutRoutes,
-    A = KnownPutRoutes[R],
+    A extends KnownPutRoutes[R] = KnownPutRoutes[R],
   >(route: R, args?: A) {
-    return this._call<T, R, A>(EndpointMethod.PUT, route, args);
+    return this._call<T>(EndpointMethod.PUT, route, args);
   }
 
   async _call<
     T = unknown,
     R extends keyof AllRoutes = keyof AllRoutes,
-    A = AllRoutes[R],
+    A extends AllRoutes[R] = AllRoutes[R],
   >(method: EndpointMethod, route: R, args?: A) {
     // TODO: find pattern-match segments of the route path, and add those values
     // as needed.

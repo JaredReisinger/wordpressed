@@ -43,4 +43,27 @@ async function adhoc() {
   const wcv3orders = await client.get('/wc/v3/orders');
   dbg(0, '/wc/v3/orders headers', wcv3orders.headers);
   dbg(0, '/wc/v3/orders body', wcv3orders.body);
+
+  // image example!
+
+  // const pages = await client.get('/wp/v2/pages', {
+  //   bogus: 'This gets flagged!',
+  //   // but auto-complete can help!
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  // });
+
+  // console.log(pages);
 }
