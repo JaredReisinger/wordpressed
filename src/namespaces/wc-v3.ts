@@ -1,4 +1,5 @@
-export interface WcV3GetArgs {}
+export interface WcV3GetArgs {
+}
 
 export interface WcV3CouponsGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -33,7 +34,9 @@ export interface WcV3CouponsGetArgs {
   search?: string;
 }
 
-export interface WcV3CouponsPostArgsMetaData {}
+export interface WcV3CouponsPostArgsMetaData {
+}
+
 
 export interface WcV3CouponsPostArgs {
   /** The amount of discount. Should always be numeric, even if setting a percentage. */
@@ -83,7 +86,9 @@ export interface WcV3CouponsPIdDGetArgs {
   id?: number;
 }
 
-export interface WcV3CouponsPIdDPostPutPatchArgsMetaData {}
+export interface WcV3CouponsPIdDPostPutPatchArgsMetaData {
+}
+
 
 export interface WcV3CouponsPIdDPostPutPatchArgs {
   /** The amount of discount. Should always be numeric, even if setting a percentage. */
@@ -135,7 +140,9 @@ export interface WcV3CouponsPIdDDeleteArgs {
   id?: number;
 }
 
-export interface WcV3CouponsBatchPostPutPatchArgsMetaData {}
+export interface WcV3CouponsBatchPostPutPatchArgsMetaData {
+}
+
 
 export interface WcV3CouponsBatchPostPutPatchArgs {
   /** The amount of discount. Should always be numeric, even if setting a percentage. */
@@ -198,24 +205,22 @@ export interface WcV3CustomersGetArgs {
   /** Maximum number of items to be returned in result set. */
   per_page?: number;
   /** Limit result set to resources with a specific role. */
-  role?:
-    | 'all'
-    | 'administrator'
-    | 'editor'
-    | 'author'
-    | 'contributor'
-    | 'subscriber'
-    | 'customer'
-    | 'shop_manager';
+  role?: 'all' | 'administrator' | 'editor' | 'author' | 'contributor' | 'subscriber' | 'customer' | 'shop_manager';
   /** Limit results to those matching a string. */
   search?: string;
 }
 
-export interface WcV3CustomersPostArgsBilling {}
+export interface WcV3CustomersPostArgsBilling {
+}
 
-export interface WcV3CustomersPostArgsMetaData {}
 
-export interface WcV3CustomersPostArgsShipping {}
+export interface WcV3CustomersPostArgsMetaData {
+}
+
+
+export interface WcV3CustomersPostArgsShipping {
+}
+
 
 export interface WcV3CustomersPostArgs {
   /** List of billing address data. */
@@ -250,11 +255,17 @@ export interface WcV3CustomersPIdDGetArgs {
   id?: number;
 }
 
-export interface WcV3CustomersPIdDPostPutPatchArgsBilling {}
+export interface WcV3CustomersPIdDPostPutPatchArgsBilling {
+}
 
-export interface WcV3CustomersPIdDPostPutPatchArgsMetaData {}
 
-export interface WcV3CustomersPIdDPostPutPatchArgsShipping {}
+export interface WcV3CustomersPIdDPostPutPatchArgsMetaData {
+}
+
+
+export interface WcV3CustomersPIdDPostPutPatchArgsShipping {
+}
+
 
 export interface WcV3CustomersPIdDPostPutPatchArgs {
   /** List of billing address data. */
@@ -286,11 +297,17 @@ export interface WcV3CustomersPIdDDeleteArgs {
   reassign?: number;
 }
 
-export interface WcV3CustomersBatchPostPutPatchArgsBilling {}
+export interface WcV3CustomersBatchPostPutPatchArgsBilling {
+}
 
-export interface WcV3CustomersBatchPostPutPatchArgsMetaData {}
 
-export interface WcV3CustomersBatchPostPutPatchArgsShipping {}
+export interface WcV3CustomersBatchPostPutPatchArgsMetaData {
+}
+
+
+export interface WcV3CustomersBatchPostPutPatchArgsShipping {
+}
+
 
 export interface WcV3CustomersBatchPostPutPatchArgs {
   /** List of billing address data. */
@@ -311,30 +328,35 @@ export interface WcV3CustomersBatchPostPutPatchArgs {
   username?: string;
 }
 
-export interface WcV3DataGetArgs {}
+export interface WcV3DataGetArgs {
+}
 
-export interface WcV3DataContinentsGetArgs {}
+export interface WcV3DataContinentsGetArgs {
+}
 
 export interface WcV3DataContinentsPLocationWGetArgs {
   /** 2 character continent code. */
   continent?: string;
 }
 
-export interface WcV3DataCountriesGetArgs {}
+export interface WcV3DataCountriesGetArgs {
+}
 
 export interface WcV3DataCountriesPLocationWGetArgs {
   /** ISO3166 alpha-2 country code. */
   location?: string;
 }
 
-export interface WcV3DataCurrenciesGetArgs {}
+export interface WcV3DataCurrenciesGetArgs {
+}
 
 export interface WcV3DataCurrenciesPCurrencyW3GetArgs {
   /** ISO4217 currency code. */
   location?: string;
 }
 
-export interface WcV3DataCurrenciesCurrentGetArgs {}
+export interface WcV3DataCurrenciesCurrentGetArgs {
+}
 
 export interface WcV3OrdersGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -385,19 +407,33 @@ export interface WcV3OrdersGetArgs {
   status?: number[];
 }
 
-export interface WcV3OrdersPostArgsBilling {}
+export interface WcV3OrdersPostArgsBilling {
+}
 
-export interface WcV3OrdersPostArgsCouponLines {}
 
-export interface WcV3OrdersPostArgsFeeLines {}
+export interface WcV3OrdersPostArgsCouponLines {
+}
 
-export interface WcV3OrdersPostArgsLineItems {}
 
-export interface WcV3OrdersPostArgsMetaData {}
+export interface WcV3OrdersPostArgsFeeLines {
+}
 
-export interface WcV3OrdersPostArgsShipping {}
 
-export interface WcV3OrdersPostArgsShippingLines {}
+export interface WcV3OrdersPostArgsLineItems {
+}
+
+
+export interface WcV3OrdersPostArgsMetaData {
+}
+
+
+export interface WcV3OrdersPostArgsShipping {
+}
+
+
+export interface WcV3OrdersPostArgsShippingLines {
+}
+
 
 export interface WcV3OrdersPostArgs {
   /** Billing address. */
@@ -405,170 +441,7 @@ export interface WcV3OrdersPostArgs {
   /** Coupons line data. */
   coupon_lines?: WcV3OrdersPostArgsCouponLines[];
   /** Currency the order was created with, in ISO format. */
-  currency?:
-    | 'AED'
-    | 'AFN'
-    | 'ALL'
-    | 'AMD'
-    | 'ANG'
-    | 'AOA'
-    | 'ARS'
-    | 'AUD'
-    | 'AWG'
-    | 'AZN'
-    | 'BAM'
-    | 'BBD'
-    | 'BDT'
-    | 'BGN'
-    | 'BHD'
-    | 'BIF'
-    | 'BMD'
-    | 'BND'
-    | 'BOB'
-    | 'BRL'
-    | 'BSD'
-    | 'BTC'
-    | 'BTN'
-    | 'BWP'
-    | 'BYR'
-    | 'BYN'
-    | 'BZD'
-    | 'CAD'
-    | 'CDF'
-    | 'CHF'
-    | 'CLP'
-    | 'CNY'
-    | 'COP'
-    | 'CRC'
-    | 'CUC'
-    | 'CUP'
-    | 'CVE'
-    | 'CZK'
-    | 'DJF'
-    | 'DKK'
-    | 'DOP'
-    | 'DZD'
-    | 'EGP'
-    | 'ERN'
-    | 'ETB'
-    | 'EUR'
-    | 'FJD'
-    | 'FKP'
-    | 'GBP'
-    | 'GEL'
-    | 'GGP'
-    | 'GHS'
-    | 'GIP'
-    | 'GMD'
-    | 'GNF'
-    | 'GTQ'
-    | 'GYD'
-    | 'HKD'
-    | 'HNL'
-    | 'HRK'
-    | 'HTG'
-    | 'HUF'
-    | 'IDR'
-    | 'ILS'
-    | 'IMP'
-    | 'INR'
-    | 'IQD'
-    | 'IRR'
-    | 'IRT'
-    | 'ISK'
-    | 'JEP'
-    | 'JMD'
-    | 'JOD'
-    | 'JPY'
-    | 'KES'
-    | 'KGS'
-    | 'KHR'
-    | 'KMF'
-    | 'KPW'
-    | 'KRW'
-    | 'KWD'
-    | 'KYD'
-    | 'KZT'
-    | 'LAK'
-    | 'LBP'
-    | 'LKR'
-    | 'LRD'
-    | 'LSL'
-    | 'LYD'
-    | 'MAD'
-    | 'MDL'
-    | 'MGA'
-    | 'MKD'
-    | 'MMK'
-    | 'MNT'
-    | 'MOP'
-    | 'MRU'
-    | 'MUR'
-    | 'MVR'
-    | 'MWK'
-    | 'MXN'
-    | 'MYR'
-    | 'MZN'
-    | 'NAD'
-    | 'NGN'
-    | 'NIO'
-    | 'NOK'
-    | 'NPR'
-    | 'NZD'
-    | 'OMR'
-    | 'PAB'
-    | 'PEN'
-    | 'PGK'
-    | 'PHP'
-    | 'PKR'
-    | 'PLN'
-    | 'PRB'
-    | 'PYG'
-    | 'QAR'
-    | 'RON'
-    | 'RSD'
-    | 'RUB'
-    | 'RWF'
-    | 'SAR'
-    | 'SBD'
-    | 'SCR'
-    | 'SDG'
-    | 'SEK'
-    | 'SGD'
-    | 'SHP'
-    | 'SLL'
-    | 'SOS'
-    | 'SRD'
-    | 'SSP'
-    | 'STN'
-    | 'SYP'
-    | 'SZL'
-    | 'THB'
-    | 'TJS'
-    | 'TMT'
-    | 'TND'
-    | 'TOP'
-    | 'TRY'
-    | 'TTD'
-    | 'TWD'
-    | 'TZS'
-    | 'UAH'
-    | 'UGX'
-    | 'USD'
-    | 'UYU'
-    | 'UZS'
-    | 'VEF'
-    | 'VES'
-    | 'VND'
-    | 'VUV'
-    | 'WST'
-    | 'XAF'
-    | 'XCD'
-    | 'XOF'
-    | 'XPF'
-    | 'YER'
-    | 'ZAR'
-    | 'ZMW';
+  currency?: 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' | 'BAM' | 'BBD' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BMD' | 'BND' | 'BOB' | 'BRL' | 'BSD' | 'BTC' | 'BTN' | 'BWP' | 'BYR' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CUC' | 'CUP' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'FJD' | 'FKP' | 'GBP' | 'GEL' | 'GGP' | 'GHS' | 'GIP' | 'GMD' | 'GNF' | 'GTQ' | 'GYD' | 'HKD' | 'HNL' | 'HRK' | 'HTG' | 'HUF' | 'IDR' | 'ILS' | 'IMP' | 'INR' | 'IQD' | 'IRR' | 'IRT' | 'ISK' | 'JEP' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KGS' | 'KHR' | 'KMF' | 'KPW' | 'KRW' | 'KWD' | 'KYD' | 'KZT' | 'LAK' | 'LBP' | 'LKR' | 'LRD' | 'LSL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MNT' | 'MOP' | 'MRU' | 'MUR' | 'MVR' | 'MWK' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PGK' | 'PHP' | 'PKR' | 'PLN' | 'PRB' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SBD' | 'SCR' | 'SDG' | 'SEK' | 'SGD' | 'SHP' | 'SLL' | 'SOS' | 'SRD' | 'SSP' | 'STN' | 'SYP' | 'SZL' | 'THB' | 'TJS' | 'TMT' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VES' | 'VND' | 'VUV' | 'WST' | 'XAF' | 'XCD' | 'XOF' | 'XPF' | 'YER' | 'ZAR' | 'ZMW';
   /** User ID who owns the order. 0 for guests. */
   customer_id?: number;
   /** Note left by customer during checkout. */
@@ -592,16 +465,7 @@ export interface WcV3OrdersPostArgs {
   /** Shipping lines data. */
   shipping_lines?: WcV3OrdersPostArgsShippingLines[];
   /** Order status. */
-  status?:
-    | 'auto-draft'
-    | 'pending'
-    | 'processing'
-    | 'on-hold'
-    | 'completed'
-    | 'cancelled'
-    | 'refunded'
-    | 'failed'
-    | 'checkout-draft';
+  status?: 'auto-draft' | 'pending' | 'processing' | 'on-hold' | 'completed' | 'cancelled' | 'refunded' | 'failed' | 'checkout-draft';
   /** Unique transaction ID. */
   transaction_id?: string;
 }
@@ -613,19 +477,33 @@ export interface WcV3OrdersPIdDGetArgs {
   id?: number;
 }
 
-export interface WcV3OrdersPIdDPostPutPatchArgsBilling {}
+export interface WcV3OrdersPIdDPostPutPatchArgsBilling {
+}
 
-export interface WcV3OrdersPIdDPostPutPatchArgsCouponLines {}
 
-export interface WcV3OrdersPIdDPostPutPatchArgsFeeLines {}
+export interface WcV3OrdersPIdDPostPutPatchArgsCouponLines {
+}
 
-export interface WcV3OrdersPIdDPostPutPatchArgsLineItems {}
 
-export interface WcV3OrdersPIdDPostPutPatchArgsMetaData {}
+export interface WcV3OrdersPIdDPostPutPatchArgsFeeLines {
+}
 
-export interface WcV3OrdersPIdDPostPutPatchArgsShipping {}
 
-export interface WcV3OrdersPIdDPostPutPatchArgsShippingLines {}
+export interface WcV3OrdersPIdDPostPutPatchArgsLineItems {
+}
+
+
+export interface WcV3OrdersPIdDPostPutPatchArgsMetaData {
+}
+
+
+export interface WcV3OrdersPIdDPostPutPatchArgsShipping {
+}
+
+
+export interface WcV3OrdersPIdDPostPutPatchArgsShippingLines {
+}
+
 
 export interface WcV3OrdersPIdDPostPutPatchArgs {
   /** Billing address. */
@@ -633,170 +511,7 @@ export interface WcV3OrdersPIdDPostPutPatchArgs {
   /** Coupons line data. */
   coupon_lines?: WcV3OrdersPIdDPostPutPatchArgsCouponLines[];
   /** Currency the order was created with, in ISO format. */
-  currency?:
-    | 'AED'
-    | 'AFN'
-    | 'ALL'
-    | 'AMD'
-    | 'ANG'
-    | 'AOA'
-    | 'ARS'
-    | 'AUD'
-    | 'AWG'
-    | 'AZN'
-    | 'BAM'
-    | 'BBD'
-    | 'BDT'
-    | 'BGN'
-    | 'BHD'
-    | 'BIF'
-    | 'BMD'
-    | 'BND'
-    | 'BOB'
-    | 'BRL'
-    | 'BSD'
-    | 'BTC'
-    | 'BTN'
-    | 'BWP'
-    | 'BYR'
-    | 'BYN'
-    | 'BZD'
-    | 'CAD'
-    | 'CDF'
-    | 'CHF'
-    | 'CLP'
-    | 'CNY'
-    | 'COP'
-    | 'CRC'
-    | 'CUC'
-    | 'CUP'
-    | 'CVE'
-    | 'CZK'
-    | 'DJF'
-    | 'DKK'
-    | 'DOP'
-    | 'DZD'
-    | 'EGP'
-    | 'ERN'
-    | 'ETB'
-    | 'EUR'
-    | 'FJD'
-    | 'FKP'
-    | 'GBP'
-    | 'GEL'
-    | 'GGP'
-    | 'GHS'
-    | 'GIP'
-    | 'GMD'
-    | 'GNF'
-    | 'GTQ'
-    | 'GYD'
-    | 'HKD'
-    | 'HNL'
-    | 'HRK'
-    | 'HTG'
-    | 'HUF'
-    | 'IDR'
-    | 'ILS'
-    | 'IMP'
-    | 'INR'
-    | 'IQD'
-    | 'IRR'
-    | 'IRT'
-    | 'ISK'
-    | 'JEP'
-    | 'JMD'
-    | 'JOD'
-    | 'JPY'
-    | 'KES'
-    | 'KGS'
-    | 'KHR'
-    | 'KMF'
-    | 'KPW'
-    | 'KRW'
-    | 'KWD'
-    | 'KYD'
-    | 'KZT'
-    | 'LAK'
-    | 'LBP'
-    | 'LKR'
-    | 'LRD'
-    | 'LSL'
-    | 'LYD'
-    | 'MAD'
-    | 'MDL'
-    | 'MGA'
-    | 'MKD'
-    | 'MMK'
-    | 'MNT'
-    | 'MOP'
-    | 'MRU'
-    | 'MUR'
-    | 'MVR'
-    | 'MWK'
-    | 'MXN'
-    | 'MYR'
-    | 'MZN'
-    | 'NAD'
-    | 'NGN'
-    | 'NIO'
-    | 'NOK'
-    | 'NPR'
-    | 'NZD'
-    | 'OMR'
-    | 'PAB'
-    | 'PEN'
-    | 'PGK'
-    | 'PHP'
-    | 'PKR'
-    | 'PLN'
-    | 'PRB'
-    | 'PYG'
-    | 'QAR'
-    | 'RON'
-    | 'RSD'
-    | 'RUB'
-    | 'RWF'
-    | 'SAR'
-    | 'SBD'
-    | 'SCR'
-    | 'SDG'
-    | 'SEK'
-    | 'SGD'
-    | 'SHP'
-    | 'SLL'
-    | 'SOS'
-    | 'SRD'
-    | 'SSP'
-    | 'STN'
-    | 'SYP'
-    | 'SZL'
-    | 'THB'
-    | 'TJS'
-    | 'TMT'
-    | 'TND'
-    | 'TOP'
-    | 'TRY'
-    | 'TTD'
-    | 'TWD'
-    | 'TZS'
-    | 'UAH'
-    | 'UGX'
-    | 'USD'
-    | 'UYU'
-    | 'UZS'
-    | 'VEF'
-    | 'VES'
-    | 'VND'
-    | 'VUV'
-    | 'WST'
-    | 'XAF'
-    | 'XCD'
-    | 'XOF'
-    | 'XPF'
-    | 'YER'
-    | 'ZAR'
-    | 'ZMW';
+  currency?: 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' | 'BAM' | 'BBD' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BMD' | 'BND' | 'BOB' | 'BRL' | 'BSD' | 'BTC' | 'BTN' | 'BWP' | 'BYR' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CUC' | 'CUP' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'FJD' | 'FKP' | 'GBP' | 'GEL' | 'GGP' | 'GHS' | 'GIP' | 'GMD' | 'GNF' | 'GTQ' | 'GYD' | 'HKD' | 'HNL' | 'HRK' | 'HTG' | 'HUF' | 'IDR' | 'ILS' | 'IMP' | 'INR' | 'IQD' | 'IRR' | 'IRT' | 'ISK' | 'JEP' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KGS' | 'KHR' | 'KMF' | 'KPW' | 'KRW' | 'KWD' | 'KYD' | 'KZT' | 'LAK' | 'LBP' | 'LKR' | 'LRD' | 'LSL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MNT' | 'MOP' | 'MRU' | 'MUR' | 'MVR' | 'MWK' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PGK' | 'PHP' | 'PKR' | 'PLN' | 'PRB' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SBD' | 'SCR' | 'SDG' | 'SEK' | 'SGD' | 'SHP' | 'SLL' | 'SOS' | 'SRD' | 'SSP' | 'STN' | 'SYP' | 'SZL' | 'THB' | 'TJS' | 'TMT' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VES' | 'VND' | 'VUV' | 'WST' | 'XAF' | 'XCD' | 'XOF' | 'XPF' | 'YER' | 'ZAR' | 'ZMW';
   /** User ID who owns the order. 0 for guests. */
   customer_id?: number;
   /** Note left by customer during checkout. */
@@ -822,16 +537,7 @@ export interface WcV3OrdersPIdDPostPutPatchArgs {
   /** Shipping lines data. */
   shipping_lines?: WcV3OrdersPIdDPostPutPatchArgsShippingLines[];
   /** Order status. */
-  status?:
-    | 'auto-draft'
-    | 'pending'
-    | 'processing'
-    | 'on-hold'
-    | 'completed'
-    | 'cancelled'
-    | 'refunded'
-    | 'failed'
-    | 'checkout-draft';
+  status?: 'auto-draft' | 'pending' | 'processing' | 'on-hold' | 'completed' | 'cancelled' | 'refunded' | 'failed' | 'checkout-draft';
   /** Unique transaction ID. */
   transaction_id?: string;
 }
@@ -926,7 +632,9 @@ export interface WcV3OrdersPOrderIdDRefundsGetArgs {
   search?: string;
 }
 
-export interface WcV3OrdersPOrderIdDRefundsPostArgsMetaData {}
+export interface WcV3OrdersPOrderIdDRefundsPostArgsMetaData {
+}
+
 
 export interface WcV3OrdersPOrderIdDRefundsPostArgs {
   /** Refund amount. */
@@ -963,19 +671,33 @@ export interface WcV3OrdersPOrderIdDRefundsPIdDDeleteArgs {
   order_id?: number;
 }
 
-export interface WcV3OrdersBatchPostPutPatchArgsBilling {}
+export interface WcV3OrdersBatchPostPutPatchArgsBilling {
+}
 
-export interface WcV3OrdersBatchPostPutPatchArgsCouponLines {}
 
-export interface WcV3OrdersBatchPostPutPatchArgsFeeLines {}
+export interface WcV3OrdersBatchPostPutPatchArgsCouponLines {
+}
 
-export interface WcV3OrdersBatchPostPutPatchArgsLineItems {}
 
-export interface WcV3OrdersBatchPostPutPatchArgsMetaData {}
+export interface WcV3OrdersBatchPostPutPatchArgsFeeLines {
+}
 
-export interface WcV3OrdersBatchPostPutPatchArgsShipping {}
 
-export interface WcV3OrdersBatchPostPutPatchArgsShippingLines {}
+export interface WcV3OrdersBatchPostPutPatchArgsLineItems {
+}
+
+
+export interface WcV3OrdersBatchPostPutPatchArgsMetaData {
+}
+
+
+export interface WcV3OrdersBatchPostPutPatchArgsShipping {
+}
+
+
+export interface WcV3OrdersBatchPostPutPatchArgsShippingLines {
+}
+
 
 export interface WcV3OrdersBatchPostPutPatchArgs {
   /** Billing address. */
@@ -983,170 +705,7 @@ export interface WcV3OrdersBatchPostPutPatchArgs {
   /** Coupons line data. */
   coupon_lines?: WcV3OrdersBatchPostPutPatchArgsCouponLines[];
   /** Currency the order was created with, in ISO format. */
-  currency?:
-    | 'AED'
-    | 'AFN'
-    | 'ALL'
-    | 'AMD'
-    | 'ANG'
-    | 'AOA'
-    | 'ARS'
-    | 'AUD'
-    | 'AWG'
-    | 'AZN'
-    | 'BAM'
-    | 'BBD'
-    | 'BDT'
-    | 'BGN'
-    | 'BHD'
-    | 'BIF'
-    | 'BMD'
-    | 'BND'
-    | 'BOB'
-    | 'BRL'
-    | 'BSD'
-    | 'BTC'
-    | 'BTN'
-    | 'BWP'
-    | 'BYR'
-    | 'BYN'
-    | 'BZD'
-    | 'CAD'
-    | 'CDF'
-    | 'CHF'
-    | 'CLP'
-    | 'CNY'
-    | 'COP'
-    | 'CRC'
-    | 'CUC'
-    | 'CUP'
-    | 'CVE'
-    | 'CZK'
-    | 'DJF'
-    | 'DKK'
-    | 'DOP'
-    | 'DZD'
-    | 'EGP'
-    | 'ERN'
-    | 'ETB'
-    | 'EUR'
-    | 'FJD'
-    | 'FKP'
-    | 'GBP'
-    | 'GEL'
-    | 'GGP'
-    | 'GHS'
-    | 'GIP'
-    | 'GMD'
-    | 'GNF'
-    | 'GTQ'
-    | 'GYD'
-    | 'HKD'
-    | 'HNL'
-    | 'HRK'
-    | 'HTG'
-    | 'HUF'
-    | 'IDR'
-    | 'ILS'
-    | 'IMP'
-    | 'INR'
-    | 'IQD'
-    | 'IRR'
-    | 'IRT'
-    | 'ISK'
-    | 'JEP'
-    | 'JMD'
-    | 'JOD'
-    | 'JPY'
-    | 'KES'
-    | 'KGS'
-    | 'KHR'
-    | 'KMF'
-    | 'KPW'
-    | 'KRW'
-    | 'KWD'
-    | 'KYD'
-    | 'KZT'
-    | 'LAK'
-    | 'LBP'
-    | 'LKR'
-    | 'LRD'
-    | 'LSL'
-    | 'LYD'
-    | 'MAD'
-    | 'MDL'
-    | 'MGA'
-    | 'MKD'
-    | 'MMK'
-    | 'MNT'
-    | 'MOP'
-    | 'MRU'
-    | 'MUR'
-    | 'MVR'
-    | 'MWK'
-    | 'MXN'
-    | 'MYR'
-    | 'MZN'
-    | 'NAD'
-    | 'NGN'
-    | 'NIO'
-    | 'NOK'
-    | 'NPR'
-    | 'NZD'
-    | 'OMR'
-    | 'PAB'
-    | 'PEN'
-    | 'PGK'
-    | 'PHP'
-    | 'PKR'
-    | 'PLN'
-    | 'PRB'
-    | 'PYG'
-    | 'QAR'
-    | 'RON'
-    | 'RSD'
-    | 'RUB'
-    | 'RWF'
-    | 'SAR'
-    | 'SBD'
-    | 'SCR'
-    | 'SDG'
-    | 'SEK'
-    | 'SGD'
-    | 'SHP'
-    | 'SLL'
-    | 'SOS'
-    | 'SRD'
-    | 'SSP'
-    | 'STN'
-    | 'SYP'
-    | 'SZL'
-    | 'THB'
-    | 'TJS'
-    | 'TMT'
-    | 'TND'
-    | 'TOP'
-    | 'TRY'
-    | 'TTD'
-    | 'TWD'
-    | 'TZS'
-    | 'UAH'
-    | 'UGX'
-    | 'USD'
-    | 'UYU'
-    | 'UZS'
-    | 'VEF'
-    | 'VES'
-    | 'VND'
-    | 'VUV'
-    | 'WST'
-    | 'XAF'
-    | 'XCD'
-    | 'XOF'
-    | 'XPF'
-    | 'YER'
-    | 'ZAR'
-    | 'ZMW';
+  currency?: 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' | 'BAM' | 'BBD' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BMD' | 'BND' | 'BOB' | 'BRL' | 'BSD' | 'BTC' | 'BTN' | 'BWP' | 'BYR' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CUC' | 'CUP' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'FJD' | 'FKP' | 'GBP' | 'GEL' | 'GGP' | 'GHS' | 'GIP' | 'GMD' | 'GNF' | 'GTQ' | 'GYD' | 'HKD' | 'HNL' | 'HRK' | 'HTG' | 'HUF' | 'IDR' | 'ILS' | 'IMP' | 'INR' | 'IQD' | 'IRR' | 'IRT' | 'ISK' | 'JEP' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KGS' | 'KHR' | 'KMF' | 'KPW' | 'KRW' | 'KWD' | 'KYD' | 'KZT' | 'LAK' | 'LBP' | 'LKR' | 'LRD' | 'LSL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MNT' | 'MOP' | 'MRU' | 'MUR' | 'MVR' | 'MWK' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PGK' | 'PHP' | 'PKR' | 'PLN' | 'PRB' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SBD' | 'SCR' | 'SDG' | 'SEK' | 'SGD' | 'SHP' | 'SLL' | 'SOS' | 'SRD' | 'SSP' | 'STN' | 'SYP' | 'SZL' | 'THB' | 'TJS' | 'TMT' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VES' | 'VND' | 'VUV' | 'WST' | 'XAF' | 'XCD' | 'XOF' | 'XPF' | 'YER' | 'ZAR' | 'ZMW';
   /** User ID who owns the order. 0 for guests. */
   customer_id?: number;
   /** Note left by customer during checkout. */
@@ -1170,16 +729,7 @@ export interface WcV3OrdersBatchPostPutPatchArgs {
   /** Shipping lines data. */
   shipping_lines?: WcV3OrdersBatchPostPutPatchArgsShippingLines[];
   /** Order status. */
-  status?:
-    | 'auto-draft'
-    | 'pending'
-    | 'processing'
-    | 'on-hold'
-    | 'completed'
-    | 'cancelled'
-    | 'refunded'
-    | 'failed'
-    | 'checkout-draft';
+  status?: 'auto-draft' | 'pending' | 'processing' | 'on-hold' | 'completed' | 'cancelled' | 'refunded' | 'failed' | 'checkout-draft';
   /** Unique transaction ID. */
   transaction_id?: string;
 }
@@ -1196,7 +746,9 @@ export interface WcV3PaymentGatewaysPIdWGetArgs {
   id?: string;
 }
 
-export interface WcV3PaymentGatewaysPIdWPostPutPatchArgsSettings {}
+export interface WcV3PaymentGatewaysPIdWPostPutPatchArgsSettings {
+}
+
 
 export interface WcV3PaymentGatewaysPIdWPostPutPatchArgs {
   /** Payment gateway description on checkout. */
@@ -1253,21 +805,7 @@ export interface WcV3ProductsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'title'
-    | 'slug'
-    | 'modified'
-    | 'rand'
-    | 'menu_order'
-    | 'popularity'
-    | 'rating'
-    | 'menu_order'
-    | 'price'
-    | 'popularity'
-    | 'rating';
+  orderby?: 'date' | 'id' | 'include' | 'title' | 'slug' | 'modified' | 'rand' | 'menu_order' | 'popularity' | 'rating' | 'menu_order' | 'price' | 'popularity' | 'rating';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -1287,14 +825,7 @@ export interface WcV3ProductsGetArgs {
   /** Limit result set to products with a specific slug. */
   slug?: string;
   /** Limit result set to products assigned a specific status. */
-  status?:
-    | 'any'
-    | 'future'
-    | 'trash'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'publish';
+  status?: 'any' | 'future' | 'trash' | 'draft' | 'pending' | 'private' | 'publish';
   /** Limit result set to products with specified stock status. */
   stock_status?: 'instock' | 'outofstock' | 'onbackorder';
   /** Limit result set to products assigned a specific tag ID. */
@@ -1303,21 +834,37 @@ export interface WcV3ProductsGetArgs {
   type?: 'simple' | 'grouped' | 'external' | 'variable';
 }
 
-export interface WcV3ProductsPostArgsAttributes {}
+export interface WcV3ProductsPostArgsAttributes {
+}
 
-export interface WcV3ProductsPostArgsCategories {}
 
-export interface WcV3ProductsPostArgsDefaultAttributes {}
+export interface WcV3ProductsPostArgsCategories {
+}
 
-export interface WcV3ProductsPostArgsDimensions {}
 
-export interface WcV3ProductsPostArgsDownloads {}
+export interface WcV3ProductsPostArgsDefaultAttributes {
+}
 
-export interface WcV3ProductsPostArgsImages {}
 
-export interface WcV3ProductsPostArgsMetaData {}
+export interface WcV3ProductsPostArgsDimensions {
+}
 
-export interface WcV3ProductsPostArgsTags {}
+
+export interface WcV3ProductsPostArgsDownloads {
+}
+
+
+export interface WcV3ProductsPostArgsImages {
+}
+
+
+export interface WcV3ProductsPostArgsMetaData {
+}
+
+
+export interface WcV3ProductsPostArgsTags {
+}
+
 
 export interface WcV3ProductsPostArgs {
   /** List of attributes. */
@@ -1381,14 +928,7 @@ export interface WcV3ProductsPostArgs {
   /** Allow one item to be bought in a single order. */
   sold_individually?: boolean;
   /** Product status (post status). */
-  status?:
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'publish'
-    | 'future'
-    | 'auto-draft'
-    | 'trash';
+  status?: 'draft' | 'pending' | 'private' | 'publish' | 'future' | 'auto-draft' | 'trash';
   /** Stock quantity. */
   stock_quantity?: number;
   /** Controls the stock status of the product. */
@@ -1416,21 +956,37 @@ export interface WcV3ProductsPIdDGetArgs {
   id?: number;
 }
 
-export interface WcV3ProductsPIdDPostPutPatchArgsAttributes {}
+export interface WcV3ProductsPIdDPostPutPatchArgsAttributes {
+}
 
-export interface WcV3ProductsPIdDPostPutPatchArgsCategories {}
 
-export interface WcV3ProductsPIdDPostPutPatchArgsDefaultAttributes {}
+export interface WcV3ProductsPIdDPostPutPatchArgsCategories {
+}
 
-export interface WcV3ProductsPIdDPostPutPatchArgsDimensions {}
 
-export interface WcV3ProductsPIdDPostPutPatchArgsDownloads {}
+export interface WcV3ProductsPIdDPostPutPatchArgsDefaultAttributes {
+}
 
-export interface WcV3ProductsPIdDPostPutPatchArgsImages {}
 
-export interface WcV3ProductsPIdDPostPutPatchArgsMetaData {}
+export interface WcV3ProductsPIdDPostPutPatchArgsDimensions {
+}
 
-export interface WcV3ProductsPIdDPostPutPatchArgsTags {}
+
+export interface WcV3ProductsPIdDPostPutPatchArgsDownloads {
+}
+
+
+export interface WcV3ProductsPIdDPostPutPatchArgsImages {
+}
+
+
+export interface WcV3ProductsPIdDPostPutPatchArgsMetaData {
+}
+
+
+export interface WcV3ProductsPIdDPostPutPatchArgsTags {
+}
+
 
 export interface WcV3ProductsPIdDPostPutPatchArgs {
   /** List of attributes. */
@@ -1496,14 +1052,7 @@ export interface WcV3ProductsPIdDPostPutPatchArgs {
   /** Allow one item to be bought in a single order. */
   sold_individually?: boolean;
   /** Product status (post status). */
-  status?:
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'publish'
-    | 'future'
-    | 'auto-draft'
-    | 'trash';
+  status?: 'draft' | 'pending' | 'private' | 'publish' | 'future' | 'auto-draft' | 'trash';
   /** Stock quantity. */
   stock_quantity?: number;
   /** Controls the stock status of the product. */
@@ -1563,14 +1112,7 @@ export interface WcV3ProductsPProductIdDVariationsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'title'
-    | 'slug'
-    | 'modified'
-    | 'menu_order';
+  orderby?: 'date' | 'id' | 'include' | 'title' | 'slug' | 'modified' | 'menu_order';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -1588,27 +1130,30 @@ export interface WcV3ProductsPProductIdDVariationsGetArgs {
   /** Limit result set to products with a specific slug. */
   slug?: string;
   /** Limit result set to products assigned a specific status. */
-  status?:
-    | 'any'
-    | 'future'
-    | 'trash'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'publish';
+  status?: 'any' | 'future' | 'trash' | 'draft' | 'pending' | 'private' | 'publish';
   /** Limit result set to products with specified stock status. */
   stock_status?: 'instock' | 'outofstock' | 'onbackorder';
 }
 
-export interface WcV3ProductsPProductIdDVariationsPostArgsAttributes {}
+export interface WcV3ProductsPProductIdDVariationsPostArgsAttributes {
+}
 
-export interface WcV3ProductsPProductIdDVariationsPostArgsDimensions {}
 
-export interface WcV3ProductsPProductIdDVariationsPostArgsDownloads {}
+export interface WcV3ProductsPProductIdDVariationsPostArgsDimensions {
+}
 
-export interface WcV3ProductsPProductIdDVariationsPostArgsImage {}
 
-export interface WcV3ProductsPProductIdDVariationsPostArgsMetaData {}
+export interface WcV3ProductsPProductIdDVariationsPostArgsDownloads {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsPostArgsImage {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsPostArgsMetaData {
+}
+
 
 export interface WcV3ProductsPProductIdDVariationsPostArgs {
   /** List of attributes. */
@@ -1670,15 +1215,25 @@ export interface WcV3ProductsPProductIdDVariationsPIdDGetArgs {
   product_id?: number;
 }
 
-export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsAttributes {}
+export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsAttributes {
+}
 
-export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsDimensions {}
 
-export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsDownloads {}
+export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsDimensions {
+}
 
-export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsImage {}
 
-export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsMetaData {}
+export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsDownloads {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsImage {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgsMetaData {
+}
+
 
 export interface WcV3ProductsPProductIdDVariationsPIdDPostPutPatchArgs {
   /** List of attributes. */
@@ -1742,15 +1297,25 @@ export interface WcV3ProductsPProductIdDVariationsPIdDDeleteArgs {
   product_id?: number;
 }
 
-export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsAttributes {}
+export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsAttributes {
+}
 
-export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsDimensions {}
 
-export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsDownloads {}
+export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsDimensions {
+}
 
-export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsImage {}
 
-export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsMetaData {}
+export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsDownloads {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsImage {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgsMetaData {
+}
+
 
 export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgs {
   /** List of attributes. */
@@ -1803,15 +1368,25 @@ export interface WcV3ProductsPProductIdDVariationsBatchPostPutPatchArgs {
   weight?: string;
 }
 
-export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsAttributes {}
+export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsAttributes {
+}
 
-export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsDimensions {}
 
-export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsDownloads {}
+export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsDimensions {
+}
 
-export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsImage {}
 
-export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsMetaData {}
+export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsDownloads {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsImage {
+}
+
+
+export interface WcV3ProductsPProductIdDVariationsGeneratePostArgsMetaData {
+}
+
 
 export interface WcV3ProductsPProductIdDVariationsGeneratePostArgs {
   /** List of attributes. */
@@ -1898,14 +1473,7 @@ export interface WcV3ProductsAttributesPAttributeIdDTermsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by resource attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to resources assigned to a specific parent. Applies to hierarchical taxonomies only. */
@@ -2021,21 +1589,37 @@ export interface WcV3ProductsAttributesBatchPostPutPatchArgs {
   type?: 'select';
 }
 
-export interface WcV3ProductsBatchPostPutPatchArgsAttributes {}
+export interface WcV3ProductsBatchPostPutPatchArgsAttributes {
+}
 
-export interface WcV3ProductsBatchPostPutPatchArgsCategories {}
 
-export interface WcV3ProductsBatchPostPutPatchArgsDefaultAttributes {}
+export interface WcV3ProductsBatchPostPutPatchArgsCategories {
+}
 
-export interface WcV3ProductsBatchPostPutPatchArgsDimensions {}
 
-export interface WcV3ProductsBatchPostPutPatchArgsDownloads {}
+export interface WcV3ProductsBatchPostPutPatchArgsDefaultAttributes {
+}
 
-export interface WcV3ProductsBatchPostPutPatchArgsImages {}
 
-export interface WcV3ProductsBatchPostPutPatchArgsMetaData {}
+export interface WcV3ProductsBatchPostPutPatchArgsDimensions {
+}
 
-export interface WcV3ProductsBatchPostPutPatchArgsTags {}
+
+export interface WcV3ProductsBatchPostPutPatchArgsDownloads {
+}
+
+
+export interface WcV3ProductsBatchPostPutPatchArgsImages {
+}
+
+
+export interface WcV3ProductsBatchPostPutPatchArgsMetaData {
+}
+
+
+export interface WcV3ProductsBatchPostPutPatchArgsTags {
+}
+
 
 export interface WcV3ProductsBatchPostPutPatchArgs {
   /** List of attributes. */
@@ -2099,14 +1683,7 @@ export interface WcV3ProductsBatchPostPutPatchArgs {
   /** Allow one item to be bought in a single order. */
   sold_individually?: boolean;
   /** Product status (post status). */
-  status?:
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'publish'
-    | 'future'
-    | 'auto-draft'
-    | 'trash';
+  status?: 'draft' | 'pending' | 'private' | 'publish' | 'future' | 'auto-draft' | 'trash';
   /** Stock quantity. */
   stock_quantity?: number;
   /** Controls the stock status of the product. */
@@ -2141,14 +1718,7 @@ export interface WcV3ProductsCategoriesGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by resource attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to resources assigned to a specific parent. Applies to hierarchical taxonomies only. */
@@ -2163,7 +1733,9 @@ export interface WcV3ProductsCategoriesGetArgs {
   slug?: string;
 }
 
-export interface WcV3ProductsCategoriesPostArgsImage {}
+export interface WcV3ProductsCategoriesPostArgsImage {
+}
+
 
 export interface WcV3ProductsCategoriesPostArgs {
   /** HTML description of the resource. */
@@ -2189,7 +1761,9 @@ export interface WcV3ProductsCategoriesPIdDGetArgs {
   id?: number;
 }
 
-export interface WcV3ProductsCategoriesPIdDPostPutPatchArgsImage {}
+export interface WcV3ProductsCategoriesPIdDPostPutPatchArgsImage {
+}
+
 
 export interface WcV3ProductsCategoriesPIdDPostPutPatchArgs {
   /** HTML description of the resource. */
@@ -2217,7 +1791,9 @@ export interface WcV3ProductsCategoriesPIdDDeleteArgs {
   id?: number;
 }
 
-export interface WcV3ProductsCategoriesBatchPostPutPatchArgsImage {}
+export interface WcV3ProductsCategoriesBatchPostPutPatchArgsImage {
+}
+
 
 export interface WcV3ProductsCategoriesBatchPostPutPatchArgs {
   /** HTML description of the resource. */
@@ -2352,14 +1928,7 @@ export interface WcV3ProductsShippingClassesGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by resource attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to resources assigned to a specific parent. Applies to hierarchical taxonomies only. */
@@ -2431,14 +2000,7 @@ export interface WcV3ProductsTagsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by resource attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to resources assigned to a specific parent. Applies to hierarchical taxonomies only. */
@@ -2548,7 +2110,8 @@ export interface WcV3ReportsTopSellersGetArgs {
   period?: 'week' | 'month' | 'last_month' | 'year';
 }
 
-export interface WcV3SettingsGetArgs {}
+export interface WcV3SettingsGetArgs {
+}
 
 export interface WcV3SettingsPGroupIdWGetArgs {
   /** Settings group ID. */
@@ -2574,7 +2137,8 @@ export interface WcV3SettingsPGroupIdWBatchPostPutPatchArgs {
   group?: string;
 }
 
-export interface WcV3SettingsBatchPostPutPatchArgs {}
+export interface WcV3SettingsBatchPostPutPatchArgs {
+}
 
 export interface WcV3ShippingMethodsGetArgs {
   /** Scope under which the request is made; determines fields present in response. */
@@ -2588,7 +2152,8 @@ export interface WcV3ShippingMethodsPIdWGetArgs {
   id?: string;
 }
 
-export interface WcV3ShippingZonesGetArgs {}
+export interface WcV3ShippingZonesGetArgs {
+}
 
 export interface WcV3ShippingZonesPostArgs {
   /** Shipping zone name. */
@@ -2637,7 +2202,9 @@ export interface WcV3ShippingZonesPZoneIdDMethodsGetArgs {
   zone_id?: number;
 }
 
-export interface WcV3ShippingZonesPZoneIdDMethodsPostArgsSettings {}
+export interface WcV3ShippingZonesPZoneIdDMethodsPostArgsSettings {
+}
+
 
 export interface WcV3ShippingZonesPZoneIdDMethodsPostArgs {
   /** Shipping method enabled status. */
@@ -2657,7 +2224,9 @@ export interface WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDGetArgs {
   zone_id?: number;
 }
 
-export interface WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPostPutPatchArgsSettings {}
+export interface WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPostPutPatchArgsSettings {
+}
+
 
 export interface WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPostPutPatchArgs {
   /** Shipping method enabled status. */
@@ -2930,6 +2499,7 @@ export interface WcV3WebhooksBatchPostPutPatchArgs {
   /** Webhook topic. */
   topic?: string;
 }
+
 
 export interface WcV3DeleteRoutes {
   '/wc/v3/coupons/(?P<id>[\\d]+)': WcV3CouponsPIdDDeleteArgs;

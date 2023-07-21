@@ -18,5 +18,8 @@
     "removeComments": true,
     "sourceMap": true,
     "declaration": true
+  },
+  "ts-node": {
+    "esm": true
   }
 }

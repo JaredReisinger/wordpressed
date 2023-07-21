@@ -1,34 +1,51 @@
-export interface JetpackV4BlazeAppGetArgs {}
+export interface JetpackV4BlazeAppGetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134BlazePostsGetArgs {}
+export interface JetpackV4BlazeAppSites202188134BlazePostsGetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1CampaignsPSubPathAZaZ09PostPutPatchArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1CampaignsPSubPathAZaZ09PostPutPatchArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1CampaignsPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1CampaignsPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1CreditsPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1CreditsPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1ImagePSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1ImagePSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1LocationsPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1LocationsPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SearchPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SearchPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1Sites202188134CampaignsPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1Sites202188134CampaignsPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SmartPSubPathAZaZ09PostPutPatchArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SmartPSubPathAZaZ09PostPutPatchArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SmartPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SmartPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SubscriptionsPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1SubscriptionsPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1TemplatesPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1TemplatesPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1UserPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1UserPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1WooCountriesPSubPathAZaZ09GetArgs {}
+export interface JetpackV4BlazeAppSites202188134WordadsDspApiV1WooCountriesPSubPathAZaZ09GetArgs {
+}
 
-export interface JetpackV4BlazeAppDeleteRoutes {}
+
+export interface JetpackV4BlazeAppDeleteRoutes {
+}
 
 export interface JetpackV4BlazeAppGetRoutes {
   '/jetpack/v4/blaze-app': JetpackV4BlazeAppGetArgs;

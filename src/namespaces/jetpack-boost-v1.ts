@@ -1,10 +1,15 @@
-export interface JetpackBoostV1GetArgs {}
+export interface JetpackBoostV1GetArgs {
+}
 
-export interface JetpackBoostV1SpeedScoresPostPutPatchArgs {}
+export interface JetpackBoostV1SpeedScoresPostPutPatchArgs {
+}
 
-export interface JetpackBoostV1SpeedScoresRefreshPostPutPatchArgs {}
+export interface JetpackBoostV1SpeedScoresRefreshPostPutPatchArgs {
+}
 
-export interface JetpackBoostV1DeleteRoutes {}
+
+export interface JetpackBoostV1DeleteRoutes {
+}
 
 export interface JetpackBoostV1GetRoutes {
   '/jetpack-boost/v1': JetpackBoostV1GetArgs;

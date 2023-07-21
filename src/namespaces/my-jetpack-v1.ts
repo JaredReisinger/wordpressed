@@ -1,89 +1,43 @@
-export interface MyJetpackV1GetArgs {}
+export interface MyJetpackV1GetArgs {
+}
 
 export interface MyJetpackV1ChatAuthenticationGetArgs {
   test_mode?: boolean;
   type?: string;
 }
 
-export interface MyJetpackV1ChatAvailabilityGetArgs {}
+export interface MyJetpackV1ChatAvailabilityGetArgs {
+}
 
-export interface MyJetpackV1SiteGetArgs {}
+export interface MyJetpackV1SiteGetArgs {
+}
 
-export interface MyJetpackV1SiteProductsGetArgs {}
+export interface MyJetpackV1SiteProductsGetArgs {
+}
 
 export interface MyJetpackV1SiteProductsPProductAZGetArgs {
   /** Product slug */
-  product:
-    | 'anti-spam'
-    | 'backup'
-    | 'boost'
-    | 'crm'
-    | 'extras'
-    | 'jetpack-ai'
-    | 'scan'
-    | 'search'
-    | 'social'
-    | 'security'
-    | 'protect'
-    | 'videopress'
-    | 'stats';
+  product: 'anti-spam' | 'backup' | 'boost' | 'crm' | 'extras' | 'jetpack-ai' | 'scan' | 'search' | 'social' | 'security' | 'protect' | 'videopress' | 'stats';
 }
 
 export interface MyJetpackV1SiteProductsPProductAZPostPutPatchArgs {
   /** Product slug */
-  product:
-    | 'anti-spam'
-    | 'backup'
-    | 'boost'
-    | 'crm'
-    | 'extras'
-    | 'jetpack-ai'
-    | 'scan'
-    | 'search'
-    | 'social'
-    | 'security'
-    | 'protect'
-    | 'videopress'
-    | 'stats';
+  product: 'anti-spam' | 'backup' | 'boost' | 'crm' | 'extras' | 'jetpack-ai' | 'scan' | 'search' | 'social' | 'security' | 'protect' | 'videopress' | 'stats';
 }
 
 export interface MyJetpackV1SiteProductsPProductAZDeleteArgs {
   /** Product slug */
-  product:
-    | 'anti-spam'
-    | 'backup'
-    | 'boost'
-    | 'crm'
-    | 'extras'
-    | 'jetpack-ai'
-    | 'scan'
-    | 'search'
-    | 'social'
-    | 'security'
-    | 'protect'
-    | 'videopress'
-    | 'stats';
+  product: 'anti-spam' | 'backup' | 'boost' | 'crm' | 'extras' | 'jetpack-ai' | 'scan' | 'search' | 'social' | 'security' | 'protect' | 'videopress' | 'stats';
 }
 
 export interface MyJetpackV1SiteProductsPProductAZInstallStandalonePostPutPatchArgs {
   /** Product slug */
-  product:
-    | 'anti-spam'
-    | 'backup'
-    | 'boost'
-    | 'crm'
-    | 'extras'
-    | 'jetpack-ai'
-    | 'scan'
-    | 'search'
-    | 'social'
-    | 'security'
-    | 'protect'
-    | 'videopress'
-    | 'stats';
+  product: 'anti-spam' | 'backup' | 'boost' | 'crm' | 'extras' | 'jetpack-ai' | 'scan' | 'search' | 'social' | 'security' | 'protect' | 'videopress' | 'stats';
 }
 
-export interface MyJetpackV1SitePurchasesGetArgs {}
+export interface MyJetpackV1SitePurchasesGetArgs {
+}
+
 
 export interface MyJetpackV1DeleteRoutes {
   '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZDeleteArgs;

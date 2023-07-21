@@ -1,4 +1,5 @@
-export interface Oembed10GetArgs {}
+export interface Oembed10GetArgs {
+}
 
 export interface Oembed10EmbedGetArgs {
   /** The URL of the resource for which to fetch oEmbed data. */
@@ -18,7 +19,9 @@ export interface Oembed10ProxyGetArgs {
   url: string;
 }
 
-export interface Oembed10DeleteRoutes {}
+
+export interface Oembed10DeleteRoutes {
+}
 
 export interface Oembed10GetRoutes {
   '/oembed/1.0': Oembed10GetArgs;
@@ -26,8 +29,11 @@ export interface Oembed10GetRoutes {
   '/oembed/1.0/proxy': Oembed10ProxyGetArgs;
 }
 
-export interface Oembed10PatchRoutes {}
+export interface Oembed10PatchRoutes {
+}
 
-export interface Oembed10PostRoutes {}
+export interface Oembed10PostRoutes {
+}
 
-export interface Oembed10PutRoutes {}
+export interface Oembed10PutRoutes {
+}

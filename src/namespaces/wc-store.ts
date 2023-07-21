@@ -1,6 +1,9 @@
-export interface WcStoreGetArgs {}
+export interface WcStoreGetArgs {
+}
 
-export interface WcStoreBatchPostArgsRequests {}
+export interface WcStoreBatchPostArgsRequests {
+}
+
 
 export interface WcStoreBatchPostArgs {
   requests: WcStoreBatchPostArgsRequests[];
@@ -12,7 +15,9 @@ export interface WcStoreCartGetArgs {
   context?: 'view' | 'edit';
 }
 
-export interface WcStoreCartAddItemPostArgsVariation {}
+export interface WcStoreCartAddItemPostArgsVariation {
+}
+
 
 export interface WcStoreCartAddItemPostArgs {
   /** The cart item product or variation ID. */
@@ -40,7 +45,8 @@ export interface WcStoreCartCouponsPostArgs {
   discount_type?: string;
 }
 
-export interface WcStoreCartCouponsDeleteArgs {}
+export interface WcStoreCartCouponsDeleteArgs {
+}
 
 export interface WcStoreCartCouponsPCodeWGetArgs {
   /** Unique identifier for the coupon within the cart. */
@@ -54,7 +60,9 @@ export interface WcStoreCartCouponsPCodeWDeleteArgs {
   code?: string;
 }
 
-export interface WcStoreCartExtensionsPostArgsData {}
+export interface WcStoreCartExtensionsPostArgsData {
+}
+
 
 export interface WcStoreCartExtensionsPostArgs {
   /** Additional data to pass to the extension */
@@ -68,13 +76,16 @@ export interface WcStoreCartItemsGetArgs {
   context?: 'view' | 'edit';
 }
 
-export interface WcStoreCartItemsPostArgsExtensions {}
+export interface WcStoreCartItemsPostArgsExtensions {
+}
+
 
 export interface WcStoreCartItemsPostArgs {
   extensions?: WcStoreCartItemsPostArgsExtensions;
 }
 
-export interface WcStoreCartItemsDeleteArgs {}
+export interface WcStoreCartItemsDeleteArgs {
+}
 
 export interface WcStoreCartItemsPKeyW32GetArgs {
   /** Scope under which the request is made; determines fields present in response. */
@@ -83,7 +94,9 @@ export interface WcStoreCartItemsPKeyW32GetArgs {
   key?: string;
 }
 
-export interface WcStoreCartItemsPKeyW32PostPutPatchArgsExtensions {}
+export interface WcStoreCartItemsPKeyW32PostPutPatchArgsExtensions {
+}
+
 
 export interface WcStoreCartItemsPKeyW32PostPutPatchArgs {
   extensions?: WcStoreCartItemsPKeyW32PostPutPatchArgsExtensions;
@@ -111,9 +124,13 @@ export interface WcStoreCartSelectShippingRatePostArgs {
   rate_id: string;
 }
 
-export interface WcStoreCartUpdateCustomerPostArgsBillingAddress {}
+export interface WcStoreCartUpdateCustomerPostArgsBillingAddress {
+}
 
-export interface WcStoreCartUpdateCustomerPostArgsShippingAddress {}
+
+export interface WcStoreCartUpdateCustomerPostArgsShippingAddress {
+}
+
 
 export interface WcStoreCartUpdateCustomerPostArgs {
   /** Billing address. */
@@ -134,13 +151,21 @@ export interface WcStoreCheckoutGetArgs {
   context?: 'view' | 'edit';
 }
 
-export interface WcStoreCheckoutPostArgsBillingAddress {}
+export interface WcStoreCheckoutPostArgsBillingAddress {
+}
 
-export interface WcStoreCheckoutPostArgsExtensions {}
 
-export interface WcStoreCheckoutPostArgsPaymentData {}
+export interface WcStoreCheckoutPostArgsExtensions {
+}
 
-export interface WcStoreCheckoutPostArgsShippingAddress {}
+
+export interface WcStoreCheckoutPostArgsPaymentData {
+}
+
+
+export interface WcStoreCheckoutPostArgsShippingAddress {
+}
+
 
 export interface WcStoreCheckoutPostArgs {
   /** Billing address. */
@@ -153,12 +178,14 @@ export interface WcStoreCheckoutPostArgs {
   /** Data to pass through to the payment method when processing payment. */
   payment_data?: WcStoreCheckoutPostArgsPaymentData[];
   /** The ID of the payment method being used to process the payment. */
-  payment_method?: 'ppcp-gateway';
+  payment_method?: 'ppcp-gateway' | 'bacs' | 'cheque' | 'cod';
   /** Shipping address. */
   shipping_address?: WcStoreCheckoutPostArgsShippingAddress;
 }
 
-export interface WcStoreProductsGetArgsAttributes {}
+export interface WcStoreProductsGetArgsAttributes {
+}
+
 
 export interface WcStoreProductsGetArgs {
   /** Limit response to resources created after a given ISO8601 compliant date. */
@@ -196,18 +223,7 @@ export interface WcStoreProductsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'modified'
-    | 'id'
-    | 'include'
-    | 'title'
-    | 'slug'
-    | 'price'
-    | 'popularity'
-    | 'rating'
-    | 'menu_order'
-    | 'comment_count';
+  orderby?: 'date' | 'modified' | 'id' | 'include' | 'title' | 'slug' | 'price' | 'popularity' | 'rating' | 'menu_order' | 'comment_count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -311,9 +327,13 @@ export interface WcStoreProductsCategoriesPIdDGetArgs {
   id?: number;
 }
 
-export interface WcStoreProductsCollectionDataGetArgsAttributes {}
+export interface WcStoreProductsCollectionDataGetArgsAttributes {
+}
 
-export interface WcStoreProductsCollectionDataGetArgsCalculateAttributeCounts {}
+
+export interface WcStoreProductsCollectionDataGetArgsCalculateAttributeCounts {
+}
+
 
 export interface WcStoreProductsCollectionDataGetArgs {
   /** Limit response to resources created after a given ISO8601 compliant date. */
@@ -359,18 +379,7 @@ export interface WcStoreProductsCollectionDataGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'modified'
-    | 'id'
-    | 'include'
-    | 'title'
-    | 'slug'
-    | 'price'
-    | 'popularity'
-    | 'rating'
-    | 'menu_order'
-    | 'comment_count';
+  orderby?: 'date' | 'modified' | 'id' | 'include' | 'title' | 'slug' | 'price' | 'popularity' | 'rating' | 'menu_order' | 'comment_count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -436,6 +445,7 @@ export interface WcStoreProductsTagsGetArgs {
   /** Limit results to those matching a string. */
   search?: string;
 }
+
 
 export interface WcStoreDeleteRoutes {
   '/wc/store/cart/coupons': WcStoreCartCouponsDeleteArgs;

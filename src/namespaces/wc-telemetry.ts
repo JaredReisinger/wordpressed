@@ -1,4 +1,5 @@
-export interface WcTelemetryGetArgs {}
+export interface WcTelemetryGetArgs {
+}
 
 export interface WcTelemetryTrackerPostArgs {
   /** Platform to track. */
@@ -7,16 +8,20 @@ export interface WcTelemetryTrackerPostArgs {
   version: string;
 }
 
-export interface WcTelemetryDeleteRoutes {}
+
+export interface WcTelemetryDeleteRoutes {
+}
 
 export interface WcTelemetryGetRoutes {
   '/wc-telemetry': WcTelemetryGetArgs;
 }
 
-export interface WcTelemetryPatchRoutes {}
+export interface WcTelemetryPatchRoutes {
+}
 
 export interface WcTelemetryPostRoutes {
   '/wc-telemetry/tracker': WcTelemetryTrackerPostArgs;
 }
 
-export interface WcTelemetryPutRoutes {}
+export interface WcTelemetryPutRoutes {
+}

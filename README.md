@@ -7,7 +7,7 @@ A modern, Typescript+ESM client for the WordPress REST API. _(Rhymes with “wo
 [![code coverage](https://codecov.io/github/JaredReisinger/wordpressed/branch/alpha/graph/badge.svg?token=E3A3UAPD25)](https://codecov.io/github/JaredReisinger/wordpressed)
 [![known vulnerabilities](https://snyk.io/test/github/JaredReisinger/wordpressed/alpha/badge.svg)](https://snyk.io/test/github/JaredReisinger/wordpressed/alpha)
 
-> **WARNING:** This is _**very much**_ an early work-in-progress. It is being published so that early feedback on design decisions can be made.
+> **WARNING:** This is _**very much**_ an early work-in-progress. It is being published so that early feedback on design decisions can be made. There _**will**_ be changes to the way that calls/requests are made.
 
 ## _What is this?_
 
@@ -24,11 +24,17 @@ const client = new NamespaceClient('https://somehost.com', 'wc/v3');
 const orders = await client.get('orders', { after: '2023-01-01' });
 ```
 
-... which, to me, looks _waaaaaay_ cleaner and easier than most other options available. _(Note that the namespace-specific client is not yet implemented!)_
+... which, to me, looks much cleaner and easier than most other options available. _(Note that the namespace-specific client is not yet implemented!)_
 
-### Current roadblocks / thoughts
+## `wordpressed` CLI
 
-- The WordPress REST API discovery mechanism does not seem to provide _**any**_ response field information whatsoever. To me, this seems like a complete oversight. These response types _might_ have to be completely hand-written, which is unfortunate.
+This package now also includes [a CLI](https://github.com/JaredReisinger/wordpressed/blob/alpha/docs/cli#readme) for generating types from a live WordPress host.
+
+---
+
+## Current roadblocks / thoughts
+
+- The WordPress REST API discovery mechanism does not seem to provide _**any**_ response field information whatsoever. To me, this seems like a complete oversight. These response types _might_ have to be completely hand-written, which is unfortunate. If that is the case, I will endeavor to ensure that automatic generation of route param and arg types will not clobber the hand-written response types.
 
 - The namespace/route/endpoint generation is currently dependent on a WordPress instance that I can reach. It does not have all possible plugins/namespaces available. I am attempting to structure this type information in a way that it will be easy to take contributions to this library. I’m also hoping to make it relatively easy to create your own custom routes/type mappings for _**your**_ specific WordPress server, and provide those directly to the “standard” library, _without_ needing to necessarily contribute them back, so that you’re never stuck waiting for an update in order to handle your specific use-case. (Which might make possible som number of "extension pacakges" that just augment the set of available routes/types.)
 
@@ -44,7 +50,7 @@ const orders = await client.get('orders', { after: '2023-01-01' });
 
 - [ ] Generate route path (regexp match) parameters
 
-- [ ] Generate response types for routes/endpoints _(It appears that the WordPress developers didn’t think reponses needed to be discoverable… I don’t believe there is **any** queryable/parseable response information at all.:facepalm:)_
+- [ ] Generate response types for routes/endpoints _(It appears that the WordPress developers didn’t think reponses needed to be discoverable… I don’t believe there is **any** queryable/parseable response information at all, sadly.)_
 
 - [x] Create route/endpoint-to-argument type safety
 
@@ -59,11 +65,3 @@ const orders = await client.get('orders', { after: '2023-01-01' });
 - [ ] Create streamlined “namespace-specific” client?
 
 - [ ] Generate namespace-specific authentication? (WooCommerce has its own, but I don’t see that “magic” exposed in the discovery information.)
-
-## _Why?_
-
-The existing WordPress API client wrappers (or namespace-specific ones, like for WooCommerce) are somewhat frustrating to use, and their Typescript typings are often either nonexistent or incorrect (in one case because of very non-standard Javascript export objects). The _de facto_ standard WP API client library hasn’t been updated for years, and doesn’t follow modern design patterns, predates ESM, etc.
-
-Further, the WordPress REST API is designed in such a way that most, if not all, API calls follow the same pattern. All that really differs is the shape of the data going in, and the shape coming out… exactly the thing for which Typescript excels!
-
-On top of that, I have [a particular use-case](https://www.npmjs.com/package/order-fetcher) for which a modern client would be incredibly beneficial.

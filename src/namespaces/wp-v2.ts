@@ -1,4 +1,5 @@
-export interface WpV2GetArgs {}
+export interface WpV2GetArgs {
+}
 
 export interface WpV2BlockDirectorySearchGetArgs {
   /** Scope under which the request is made; determines fields present in response. */
@@ -11,11 +12,15 @@ export interface WpV2BlockDirectorySearchGetArgs {
   term: string;
 }
 
-export interface WpV2BlockPatternsCategoriesGetArgs {}
+export interface WpV2BlockPatternsCategoriesGetArgs {
+}
 
-export interface WpV2BlockPatternsPatternsGetArgs {}
+export interface WpV2BlockPatternsPatternsGetArgs {
+}
 
-export interface WpV2BlockRendererPNameAZ09AZ09GetPostArgsAttributes {}
+export interface WpV2BlockRendererPNameAZ09AZ09GetPostArgsAttributes {
+}
+
 
 export interface WpV2BlockRendererPNameAZ09AZ09GetPostArgs {
   /** Attributes for the block. */
@@ -71,17 +76,7 @@ export interface WpV2BlocksGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -96,9 +91,13 @@ export interface WpV2BlocksGetArgs {
   status?: number[];
 }
 
-export interface WpV2BlocksPostArgsContent {}
+export interface WpV2BlocksPostArgsContent {
+}
 
-export interface WpV2BlocksPostArgsTitle {}
+
+export interface WpV2BlocksPostArgsTitle {
+}
+
 
 export interface WpV2BlocksPostArgs {
   /** The content for the post. */
@@ -108,21 +107,7 @@ export interface WpV2BlocksPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -138,9 +123,13 @@ export interface WpV2BlocksPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2BlocksPIdDPostPutPatchArgsContent {}
+export interface WpV2BlocksPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2BlocksPIdDPostPutPatchArgsTitle {}
+
+export interface WpV2BlocksPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2BlocksPIdDPostPutPatchArgs {
   /** The content for the post. */
@@ -152,21 +141,7 @@ export interface WpV2BlocksPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -187,9 +162,13 @@ export interface WpV2BlocksPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2BlocksPIdDAutosavesPostArgsContent {}
+export interface WpV2BlocksPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2BlocksPIdDAutosavesPostArgsTitle {}
+
+export interface WpV2BlocksPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2BlocksPIdDAutosavesPostArgs {
   /** The content for the post. */
@@ -201,21 +180,7 @@ export interface WpV2BlocksPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -243,14 +208,7 @@ export interface WpV2BlocksPParentDRevisionsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'date' | 'id' | 'include' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** The ID for the parent of the revision. */
@@ -291,15 +249,7 @@ export interface WpV2CategoriesGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by term attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'include_slugs'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'include_slugs' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to terms assigned to a specific parent. */
@@ -314,7 +264,9 @@ export interface WpV2CategoriesGetArgs {
   slug?: number[];
 }
 
-export interface WpV2CategoriesPostArgsMeta {}
+export interface WpV2CategoriesPostArgsMeta {
+}
+
 
 export interface WpV2CategoriesPostArgs {
   /** HTML description of the term. */
@@ -336,7 +288,9 @@ export interface WpV2CategoriesPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2CategoriesPIdDPostPutPatchArgsMeta {}
+export interface WpV2CategoriesPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2CategoriesPIdDPostPutPatchArgs {
   /** HTML description of the term. */
@@ -403,9 +357,13 @@ export interface WpV2CommentsGetArgs {
   type?: string;
 }
 
-export interface WpV2CommentsPostArgsContent {}
+export interface WpV2CommentsPostArgsContent {
+}
 
-export interface WpV2CommentsPostArgsMeta {}
+
+export interface WpV2CommentsPostArgsMeta {
+}
+
 
 export interface WpV2CommentsPostArgs {
   /** The ID of the user object, if author was a user. */
@@ -445,9 +403,13 @@ export interface WpV2CommentsPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2CommentsPIdDPostPutPatchArgsContent {}
+export interface WpV2CommentsPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2CommentsPIdDPostPutPatchArgsMeta {}
+
+export interface WpV2CommentsPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2CommentsPIdDPostPutPatchArgs {
   /** The ID of the user object, if author was a user. */
@@ -509,17 +471,7 @@ export interface WpV2FeedbackGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -534,9 +486,13 @@ export interface WpV2FeedbackGetArgs {
   status?: number[];
 }
 
-export interface WpV2FeedbackPostArgsContent {}
+export interface WpV2FeedbackPostArgsContent {
+}
 
-export interface WpV2FeedbackPostArgsTitle {}
+
+export interface WpV2FeedbackPostArgsTitle {
+}
+
 
 export interface WpV2FeedbackPostArgs {
   /** The content for the post. */
@@ -546,21 +502,7 @@ export interface WpV2FeedbackPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -576,9 +518,13 @@ export interface WpV2FeedbackPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2FeedbackPIdDPostPutPatchArgsContent {}
+export interface WpV2FeedbackPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2FeedbackPIdDPostPutPatchArgsTitle {}
+
+export interface WpV2FeedbackPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2FeedbackPIdDPostPutPatchArgs {
   /** The content for the post. */
@@ -590,21 +536,7 @@ export interface WpV2FeedbackPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -625,9 +557,13 @@ export interface WpV2FeedbackPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2FeedbackPIdDAutosavesPostArgsContent {}
+export interface WpV2FeedbackPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2FeedbackPIdDAutosavesPostArgsTitle {}
+
+export interface WpV2FeedbackPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2FeedbackPIdDAutosavesPostArgs {
   /** The content for the post. */
@@ -639,21 +575,7 @@ export interface WpV2FeedbackPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -674,7 +596,8 @@ export interface WpV2GlobalStylesPIdWGetArgs {
   id?: string;
 }
 
-export interface WpV2GlobalStylesPIdWPostPutPatchArgs {}
+export interface WpV2GlobalStylesPIdWPostPutPatchArgs {
+}
 
 export interface WpV2GlobalStylesThemesPStylesheetSWVariationsGetArgs {
   /** The theme identifier */
@@ -706,17 +629,7 @@ export interface WpV2JpPayOrderGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -731,9 +644,13 @@ export interface WpV2JpPayOrderGetArgs {
   status?: number[];
 }
 
-export interface WpV2JpPayOrderPostArgsExcerpt {}
+export interface WpV2JpPayOrderPostArgsExcerpt {
+}
 
-export interface WpV2JpPayOrderPostArgsMeta {}
+
+export interface WpV2JpPayOrderPostArgsMeta {
+}
+
 
 export interface WpV2JpPayOrderPostArgs {
   /** The excerpt for the post. */
@@ -745,21 +662,7 @@ export interface WpV2JpPayOrderPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
 }
@@ -773,9 +676,13 @@ export interface WpV2JpPayOrderPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2JpPayOrderPIdDPostPutPatchArgsExcerpt {}
+export interface WpV2JpPayOrderPIdDPostPutPatchArgsExcerpt {
+}
 
-export interface WpV2JpPayOrderPIdDPostPutPatchArgsMeta {}
+
+export interface WpV2JpPayOrderPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2JpPayOrderPIdDPostPutPatchArgs {
   /** The excerpt for the post. */
@@ -789,21 +696,7 @@ export interface WpV2JpPayOrderPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
 }
@@ -822,9 +715,13 @@ export interface WpV2JpPayOrderPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2JpPayOrderPIdDAutosavesPostArgsExcerpt {}
+export interface WpV2JpPayOrderPIdDAutosavesPostArgsExcerpt {
+}
 
-export interface WpV2JpPayOrderPIdDAutosavesPostArgsMeta {}
+
+export interface WpV2JpPayOrderPIdDAutosavesPostArgsMeta {
+}
+
 
 export interface WpV2JpPayOrderPIdDAutosavesPostArgs {
   /** The excerpt for the post. */
@@ -838,21 +735,7 @@ export interface WpV2JpPayOrderPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
 }
@@ -890,17 +773,7 @@ export interface WpV2JpPayProductGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -915,11 +788,17 @@ export interface WpV2JpPayProductGetArgs {
   status?: number[];
 }
 
-export interface WpV2JpPayProductPostArgsContent {}
+export interface WpV2JpPayProductPostArgsContent {
+}
 
-export interface WpV2JpPayProductPostArgsMeta {}
 
-export interface WpV2JpPayProductPostArgsTitle {}
+export interface WpV2JpPayProductPostArgsMeta {
+}
+
+
+export interface WpV2JpPayProductPostArgsTitle {
+}
+
 
 export interface WpV2JpPayProductPostArgs {
   /** The ID for the author of the post. */
@@ -935,21 +814,7 @@ export interface WpV2JpPayProductPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -965,11 +830,17 @@ export interface WpV2JpPayProductPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2JpPayProductPIdDPostPutPatchArgsContent {}
+export interface WpV2JpPayProductPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2JpPayProductPIdDPostPutPatchArgsMeta {}
 
-export interface WpV2JpPayProductPIdDPostPutPatchArgsTitle {}
+export interface WpV2JpPayProductPIdDPostPutPatchArgsMeta {
+}
+
+
+export interface WpV2JpPayProductPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2JpPayProductPIdDPostPutPatchArgs {
   /** The ID for the author of the post. */
@@ -987,21 +858,7 @@ export interface WpV2JpPayProductPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1022,11 +879,17 @@ export interface WpV2JpPayProductPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2JpPayProductPIdDAutosavesPostArgsContent {}
+export interface WpV2JpPayProductPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2JpPayProductPIdDAutosavesPostArgsMeta {}
 
-export interface WpV2JpPayProductPIdDAutosavesPostArgsTitle {}
+export interface WpV2JpPayProductPIdDAutosavesPostArgsMeta {
+}
+
+
+export interface WpV2JpPayProductPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2JpPayProductPIdDAutosavesPostArgs {
   /** The ID for the author of the post. */
@@ -1044,21 +907,7 @@ export interface WpV2JpPayProductPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1094,17 +943,7 @@ export interface WpV2KadenceLottieGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -1119,9 +958,13 @@ export interface WpV2KadenceLottieGetArgs {
   status?: number[];
 }
 
-export interface WpV2KadenceLottiePostArgsContent {}
+export interface WpV2KadenceLottiePostArgsContent {
+}
 
-export interface WpV2KadenceLottiePostArgsTitle {}
+
+export interface WpV2KadenceLottiePostArgsTitle {
+}
+
 
 export interface WpV2KadenceLottiePostArgs {
   /** The content for the post. */
@@ -1131,21 +974,7 @@ export interface WpV2KadenceLottiePostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1161,9 +990,13 @@ export interface WpV2KadenceLottiePIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2KadenceLottiePIdDPostPutPatchArgsContent {}
+export interface WpV2KadenceLottiePIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2KadenceLottiePIdDPostPutPatchArgsTitle {}
+
+export interface WpV2KadenceLottiePIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2KadenceLottiePIdDPostPutPatchArgs {
   /** The content for the post. */
@@ -1175,21 +1008,7 @@ export interface WpV2KadenceLottiePIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1210,9 +1029,13 @@ export interface WpV2KadenceLottiePIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2KadenceLottiePIdDAutosavesPostArgsContent {}
+export interface WpV2KadenceLottiePIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2KadenceLottiePIdDAutosavesPostArgsTitle {}
+
+export interface WpV2KadenceLottiePIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2KadenceLottiePIdDAutosavesPostArgs {
   /** The content for the post. */
@@ -1224,21 +1047,7 @@ export interface WpV2KadenceLottiePIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1266,14 +1075,7 @@ export interface WpV2KadenceLottiePParentDRevisionsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'date' | 'id' | 'include' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** The ID for the parent of the revision. */
@@ -1330,17 +1132,7 @@ export interface WpV2MediaGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to items with particular parent IDs. */
@@ -1359,13 +1151,21 @@ export interface WpV2MediaGetArgs {
   status?: number[];
 }
 
-export interface WpV2MediaPostArgsCaption {}
+export interface WpV2MediaPostArgsCaption {
+}
 
-export interface WpV2MediaPostArgsDescription {}
 
-export interface WpV2MediaPostArgsMeta {}
+export interface WpV2MediaPostArgsDescription {
+}
 
-export interface WpV2MediaPostArgsTitle {}
+
+export interface WpV2MediaPostArgsMeta {
+}
+
+
+export interface WpV2MediaPostArgsTitle {
+}
+
 
 export interface WpV2MediaPostArgs {
   /** Alternative text to display when attachment is not displayed. */
@@ -1387,21 +1187,7 @@ export interface WpV2MediaPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1415,13 +1201,21 @@ export interface WpV2MediaPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2MediaPIdDPostPutPatchArgsCaption {}
+export interface WpV2MediaPIdDPostPutPatchArgsCaption {
+}
 
-export interface WpV2MediaPIdDPostPutPatchArgsDescription {}
 
-export interface WpV2MediaPIdDPostPutPatchArgsMeta {}
+export interface WpV2MediaPIdDPostPutPatchArgsDescription {
+}
 
-export interface WpV2MediaPIdDPostPutPatchArgsTitle {}
+
+export interface WpV2MediaPIdDPostPutPatchArgsMeta {
+}
+
+
+export interface WpV2MediaPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2MediaPIdDPostPutPatchArgs {
   /** Alternative text to display when attachment is not displayed. */
@@ -1445,21 +1239,7 @@ export interface WpV2MediaPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1473,7 +1253,9 @@ export interface WpV2MediaPIdDDeleteArgs {
   id?: number;
 }
 
-export interface WpV2MediaPIdDEditPostArgsModifiers {}
+export interface WpV2MediaPIdDEditPostArgsModifiers {
+}
+
 
 export interface WpV2MediaPIdDEditPostArgs {
   /** As a percentage of the image, the height to crop the image to. DEPRECATED: Use `modifiers` instead. */
@@ -1520,18 +1302,7 @@ export interface WpV2MenuItemsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title'
-    | 'menu_order';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title' | 'menu_order';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -1548,7 +1319,9 @@ export interface WpV2MenuItemsGetArgs {
   tax_relation?: 'AND' | 'OR';
 }
 
-export interface WpV2MenuItemsPostArgsMeta {}
+export interface WpV2MenuItemsPostArgsMeta {
+}
+
 
 export interface WpV2MenuItemsPostArgs {
   /** Text for the title attribute of the link element for this menu item. */
@@ -1570,21 +1343,7 @@ export interface WpV2MenuItemsPostArgs {
   /** The ID for the parent of the object. */
   parent?: number;
   /** A named status for the object. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The target attribute of the link element for this menu item. */
   target?: '_blank' | '';
   /** The family of objects originally represented, such as "post_type" or "taxonomy". */
@@ -1602,7 +1361,9 @@ export interface WpV2MenuItemsPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2MenuItemsPIdDPostPutPatchArgsMeta {}
+export interface WpV2MenuItemsPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2MenuItemsPIdDPostPutPatchArgs {
   /** Text for the title attribute of the link element for this menu item. */
@@ -1626,21 +1387,7 @@ export interface WpV2MenuItemsPIdDPostPutPatchArgs {
   /** The ID for the parent of the object. */
   parent?: number;
   /** A named status for the object. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The target attribute of the link element for this menu item. */
   target?: '_blank' | '';
   /** The family of objects originally represented, such as "post_type" or "taxonomy". */
@@ -1665,7 +1412,9 @@ export interface WpV2MenuItemsPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2MenuItemsPIdDAutosavesPostArgsMeta {}
+export interface WpV2MenuItemsPIdDAutosavesPostArgsMeta {
+}
+
 
 export interface WpV2MenuItemsPIdDAutosavesPostArgs {
   /** Text for the title attribute of the link element for this menu item. */
@@ -1687,21 +1436,7 @@ export interface WpV2MenuItemsPIdDAutosavesPostArgs {
   /** The ID for the parent of the object. */
   parent?: number;
   /** A named status for the object. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The target attribute of the link element for this menu item. */
   target?: '_blank' | '';
   /** The family of objects originally represented, such as "post_type" or "taxonomy". */
@@ -1747,15 +1482,7 @@ export interface WpV2MenusGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by term attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'include_slugs'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'include_slugs' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -1768,7 +1495,9 @@ export interface WpV2MenusGetArgs {
   slug?: number[];
 }
 
-export interface WpV2MenusPostArgsMeta {}
+export interface WpV2MenusPostArgsMeta {
+}
+
 
 export interface WpV2MenusPostArgs {
   /** Whether to automatically add top level pages to this menu. */
@@ -1792,7 +1521,9 @@ export interface WpV2MenusPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2MenusPIdDPostPutPatchArgsMeta {}
+export interface WpV2MenusPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2MenusPIdDPostPutPatchArgs {
   /** Whether to automatically add top level pages to this menu. */
@@ -1838,17 +1569,7 @@ export interface WpV2NavigationGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -1863,9 +1584,13 @@ export interface WpV2NavigationGetArgs {
   status?: number[];
 }
 
-export interface WpV2NavigationPostArgsContent {}
+export interface WpV2NavigationPostArgsContent {
+}
 
-export interface WpV2NavigationPostArgsTitle {}
+
+export interface WpV2NavigationPostArgsTitle {
+}
+
 
 export interface WpV2NavigationPostArgs {
   /** The content for the post. */
@@ -1875,21 +1600,7 @@ export interface WpV2NavigationPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1905,9 +1616,13 @@ export interface WpV2NavigationPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2NavigationPIdDPostPutPatchArgsContent {}
+export interface WpV2NavigationPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2NavigationPIdDPostPutPatchArgsTitle {}
+
+export interface WpV2NavigationPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2NavigationPIdDPostPutPatchArgs {
   /** The content for the post. */
@@ -1919,21 +1634,7 @@ export interface WpV2NavigationPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -1954,9 +1655,13 @@ export interface WpV2NavigationPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2NavigationPIdDAutosavesPostArgsContent {}
+export interface WpV2NavigationPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2NavigationPIdDAutosavesPostArgsTitle {}
+
+export interface WpV2NavigationPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2NavigationPIdDAutosavesPostArgs {
   /** The content for the post. */
@@ -1968,21 +1673,7 @@ export interface WpV2NavigationPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -2010,14 +1701,7 @@ export interface WpV2NavigationPParentDRevisionsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'date' | 'id' | 'include' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** The ID for the parent of the revision. */
@@ -2072,20 +1756,7 @@ export interface WpV2PagesGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title'
-    | 'menu_order'
-    | 'rand'
-    | 'menu_order';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title' | 'menu_order' | 'rand' | 'menu_order';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to items with particular parent IDs. */
@@ -2104,13 +1775,21 @@ export interface WpV2PagesGetArgs {
   status?: number[];
 }
 
-export interface WpV2PagesPostArgsContent {}
+export interface WpV2PagesPostArgsContent {
+}
 
-export interface WpV2PagesPostArgsExcerpt {}
 
-export interface WpV2PagesPostArgsMeta {}
+export interface WpV2PagesPostArgsExcerpt {
+}
 
-export interface WpV2PagesPostArgsTitle {}
+
+export interface WpV2PagesPostArgsMeta {
+}
+
+
+export interface WpV2PagesPostArgsTitle {
+}
+
 
 export interface WpV2PagesPostArgs {
   /** The ID for the author of the post. */
@@ -2136,21 +1815,7 @@ export interface WpV2PagesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -2166,13 +1831,21 @@ export interface WpV2PagesPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2PagesPIdDPostPutPatchArgsContent {}
+export interface WpV2PagesPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2PagesPIdDPostPutPatchArgsExcerpt {}
 
-export interface WpV2PagesPIdDPostPutPatchArgsMeta {}
+export interface WpV2PagesPIdDPostPutPatchArgsExcerpt {
+}
 
-export interface WpV2PagesPIdDPostPutPatchArgsTitle {}
+
+export interface WpV2PagesPIdDPostPutPatchArgsMeta {
+}
+
+
+export interface WpV2PagesPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2PagesPIdDPostPutPatchArgs {
   /** The ID for the author of the post. */
@@ -2200,21 +1873,7 @@ export interface WpV2PagesPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -2235,13 +1894,21 @@ export interface WpV2PagesPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2PagesPIdDAutosavesPostArgsContent {}
+export interface WpV2PagesPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2PagesPIdDAutosavesPostArgsExcerpt {}
 
-export interface WpV2PagesPIdDAutosavesPostArgsMeta {}
+export interface WpV2PagesPIdDAutosavesPostArgsExcerpt {
+}
 
-export interface WpV2PagesPIdDAutosavesPostArgsTitle {}
+
+export interface WpV2PagesPIdDAutosavesPostArgsMeta {
+}
+
+
+export interface WpV2PagesPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2PagesPIdDAutosavesPostArgs {
   /** The ID for the author of the post. */
@@ -2267,21 +1934,7 @@ export interface WpV2PagesPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -2309,14 +1962,7 @@ export interface WpV2PagesPParentDRevisionsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'date' | 'id' | 'include' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** The ID for the parent of the revision. */
@@ -2345,7 +1991,9 @@ export interface WpV2PagesPParentDRevisionsPIdDDeleteArgs {
   parent?: number;
 }
 
-export interface WpV2PatternDirectoryPatternsGetArgsSlug {}
+export interface WpV2PatternDirectoryPatternsGetArgsSlug {
+}
+
 
 export interface WpV2PatternDirectoryPatternsGetArgs {
   /** Limit results to those matching a category ID. */
@@ -2359,18 +2007,7 @@ export interface WpV2PatternDirectoryPatternsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title'
-    | 'favorite_count';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title' | 'favorite_count';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2441,19 +2078,7 @@ export interface WpV2PostsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title'
-    | 'rand'
-    | 'menu_order';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title' | 'rand' | 'menu_order';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2472,13 +2097,21 @@ export interface WpV2PostsGetArgs {
   tax_relation?: 'AND' | 'OR';
 }
 
-export interface WpV2PostsPostArgsContent {}
+export interface WpV2PostsPostArgsContent {
+}
 
-export interface WpV2PostsPostArgsExcerpt {}
 
-export interface WpV2PostsPostArgsMeta {}
+export interface WpV2PostsPostArgsExcerpt {
+}
 
-export interface WpV2PostsPostArgsTitle {}
+
+export interface WpV2PostsPostArgsMeta {
+}
+
+
+export interface WpV2PostsPostArgsTitle {
+}
+
 
 export interface WpV2PostsPostArgs {
   /** The ID for the author of the post. */
@@ -2494,17 +2127,7 @@ export interface WpV2PostsPostArgs {
   /** The ID of the featured media for the post. */
   featured_media?: number;
   /** The format for the post. */
-  format?:
-    | 'standard'
-    | 'aside'
-    | 'chat'
-    | 'gallery'
-    | 'link'
-    | 'image'
-    | 'quote'
-    | 'status'
-    | 'video'
-    | 'audio';
+  format?: 'standard' | 'aside' | 'chat' | 'gallery' | 'link' | 'image' | 'quote' | 'status' | 'video' | 'audio';
   /** Meta fields. */
   meta?: WpV2PostsPostArgsMeta;
   /** A password to protect access to the content and excerpt. */
@@ -2514,21 +2137,7 @@ export interface WpV2PostsPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Whether or not the post should be treated as sticky. */
   sticky?: boolean;
   /** The terms assigned to the post in the post_tag taxonomy. */
@@ -2548,13 +2157,21 @@ export interface WpV2PostsPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2PostsPIdDPostPutPatchArgsContent {}
+export interface WpV2PostsPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2PostsPIdDPostPutPatchArgsExcerpt {}
 
-export interface WpV2PostsPIdDPostPutPatchArgsMeta {}
+export interface WpV2PostsPIdDPostPutPatchArgsExcerpt {
+}
 
-export interface WpV2PostsPIdDPostPutPatchArgsTitle {}
+
+export interface WpV2PostsPIdDPostPutPatchArgsMeta {
+}
+
+
+export interface WpV2PostsPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2PostsPIdDPostPutPatchArgs {
   /** The ID for the author of the post. */
@@ -2570,17 +2187,7 @@ export interface WpV2PostsPIdDPostPutPatchArgs {
   /** The ID of the featured media for the post. */
   featured_media?: number;
   /** The format for the post. */
-  format?:
-    | 'standard'
-    | 'aside'
-    | 'chat'
-    | 'gallery'
-    | 'link'
-    | 'image'
-    | 'quote'
-    | 'status'
-    | 'video'
-    | 'audio';
+  format?: 'standard' | 'aside' | 'chat' | 'gallery' | 'link' | 'image' | 'quote' | 'status' | 'video' | 'audio';
   /** Unique identifier for the post. */
   id?: number;
   /** Meta fields. */
@@ -2592,21 +2199,7 @@ export interface WpV2PostsPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Whether or not the post should be treated as sticky. */
   sticky?: boolean;
   /** The terms assigned to the post in the post_tag taxonomy. */
@@ -2631,13 +2224,21 @@ export interface WpV2PostsPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2PostsPIdDAutosavesPostArgsContent {}
+export interface WpV2PostsPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2PostsPIdDAutosavesPostArgsExcerpt {}
 
-export interface WpV2PostsPIdDAutosavesPostArgsMeta {}
+export interface WpV2PostsPIdDAutosavesPostArgsExcerpt {
+}
 
-export interface WpV2PostsPIdDAutosavesPostArgsTitle {}
+
+export interface WpV2PostsPIdDAutosavesPostArgsMeta {
+}
+
+
+export interface WpV2PostsPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2PostsPIdDAutosavesPostArgs {
   /** The ID for the author of the post. */
@@ -2653,17 +2254,7 @@ export interface WpV2PostsPIdDAutosavesPostArgs {
   /** The ID of the featured media for the post. */
   featured_media?: number;
   /** The format for the post. */
-  format?:
-    | 'standard'
-    | 'aside'
-    | 'chat'
-    | 'gallery'
-    | 'link'
-    | 'image'
-    | 'quote'
-    | 'status'
-    | 'video'
-    | 'audio';
+  format?: 'standard' | 'aside' | 'chat' | 'gallery' | 'link' | 'image' | 'quote' | 'status' | 'video' | 'audio';
   /** Meta fields. */
   meta?: WpV2PostsPIdDAutosavesPostArgsMeta;
   /** The ID for the parent of the autosave. */
@@ -2675,21 +2266,7 @@ export interface WpV2PostsPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Whether or not the post should be treated as sticky. */
   sticky?: boolean;
   /** The terms assigned to the post in the post_tag taxonomy. */
@@ -2721,14 +2298,7 @@ export interface WpV2PostsPParentDRevisionsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'date' | 'id' | 'include' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** The ID for the parent of the revision. */
@@ -2777,21 +2347,7 @@ export interface WpV2ProductGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title'
-    | 'rand'
-    | 'menu_order'
-    | 'popularity'
-    | 'rating';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title' | 'rand' | 'menu_order' | 'popularity' | 'rating';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2808,13 +2364,21 @@ export interface WpV2ProductGetArgs {
   tax_relation?: 'AND' | 'OR';
 }
 
-export interface WpV2ProductPostArgsContent {}
+export interface WpV2ProductPostArgsContent {
+}
 
-export interface WpV2ProductPostArgsExcerpt {}
 
-export interface WpV2ProductPostArgsMeta {}
+export interface WpV2ProductPostArgsExcerpt {
+}
 
-export interface WpV2ProductPostArgsTitle {}
+
+export interface WpV2ProductPostArgsMeta {
+}
+
+
+export interface WpV2ProductPostArgsTitle {
+}
+
 
 export interface WpV2ProductPostArgs {
   /** The content for the post. */
@@ -2834,21 +2398,7 @@ export interface WpV2ProductPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -2867,15 +2417,7 @@ export interface WpV2ProductCatGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by term attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'include_slugs'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'include_slugs' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to terms assigned to a specific parent. */
@@ -2890,7 +2432,9 @@ export interface WpV2ProductCatGetArgs {
   slug?: number[];
 }
 
-export interface WpV2ProductCatPostArgsMeta {}
+export interface WpV2ProductCatPostArgsMeta {
+}
+
 
 export interface WpV2ProductCatPostArgs {
   /** HTML description of the term. */
@@ -2912,7 +2456,9 @@ export interface WpV2ProductCatPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2ProductCatPIdDPostPutPatchArgsMeta {}
+export interface WpV2ProductCatPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2ProductCatPIdDPostPutPatchArgs {
   /** HTML description of the term. */
@@ -2950,15 +2496,7 @@ export interface WpV2ProductTagGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by term attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'include_slugs'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'include_slugs' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2971,7 +2509,9 @@ export interface WpV2ProductTagGetArgs {
   slug?: number[];
 }
 
-export interface WpV2ProductTagPostArgsMeta {}
+export interface WpV2ProductTagPostArgsMeta {
+}
+
 
 export interface WpV2ProductTagPostArgs {
   /** HTML description of the term. */
@@ -2991,7 +2531,9 @@ export interface WpV2ProductTagPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2ProductTagPIdDPostPutPatchArgsMeta {}
+export interface WpV2ProductTagPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2ProductTagPIdDPostPutPatchArgs {
   /** HTML description of the term. */
@@ -3022,13 +2564,21 @@ export interface WpV2ProductPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2ProductPIdDPostPutPatchArgsContent {}
+export interface WpV2ProductPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2ProductPIdDPostPutPatchArgsExcerpt {}
 
-export interface WpV2ProductPIdDPostPutPatchArgsMeta {}
+export interface WpV2ProductPIdDPostPutPatchArgsExcerpt {
+}
 
-export interface WpV2ProductPIdDPostPutPatchArgsTitle {}
+
+export interface WpV2ProductPIdDPostPutPatchArgsMeta {
+}
+
+
+export interface WpV2ProductPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2ProductPIdDPostPutPatchArgs {
   /** The content for the post. */
@@ -3050,21 +2600,7 @@ export interface WpV2ProductPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -3085,13 +2621,21 @@ export interface WpV2ProductPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2ProductPIdDAutosavesPostArgsContent {}
+export interface WpV2ProductPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2ProductPIdDAutosavesPostArgsExcerpt {}
 
-export interface WpV2ProductPIdDAutosavesPostArgsMeta {}
+export interface WpV2ProductPIdDAutosavesPostArgsExcerpt {
+}
 
-export interface WpV2ProductPIdDAutosavesPostArgsTitle {}
+
+export interface WpV2ProductPIdDAutosavesPostArgsMeta {
+}
+
+
+export interface WpV2ProductPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2ProductPIdDAutosavesPostArgs {
   /** The content for the post. */
@@ -3113,21 +2657,7 @@ export interface WpV2ProductPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -3162,11 +2692,16 @@ export interface WpV2SearchGetArgs {
   type?: 'post' | 'term' | 'post-format';
 }
 
-export interface WpV2SettingsGetArgs {}
+export interface WpV2SettingsGetArgs {
+}
 
-export interface WpV2SettingsPostPutPatchArgsPickupLocationSettings {}
+export interface WpV2SettingsPostPutPatchArgsPickupLocationSettings {
+}
 
-export interface WpV2SettingsPostPutPatchArgsPickupLocations {}
+
+export interface WpV2SettingsPostPutPatchArgsPickupLocations {
+}
+
 
 export interface WpV2SettingsPostPutPatchArgs {
   /** A date format for all date strings. */
@@ -3255,7 +2790,9 @@ export interface WpV2SidebarsPIdWGetArgs {
   id?: string;
 }
 
-export interface WpV2SidebarsPIdWPostPutPatchArgsWidgets {}
+export interface WpV2SidebarsPIdWPostPutPatchArgsWidgets {
+}
+
 
 export interface WpV2SidebarsPIdWPostPutPatchArgs {
   /** Nested widgets. */
@@ -3286,17 +2823,7 @@ export interface WpV2SpectraPopupGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by post attribute. */
-  orderby?:
-    | 'author'
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'modified'
-    | 'parent'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'author' | 'date' | 'id' | 'include' | 'modified' | 'parent' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -3311,11 +2838,17 @@ export interface WpV2SpectraPopupGetArgs {
   status?: number[];
 }
 
-export interface WpV2SpectraPopupPostArgsContent {}
+export interface WpV2SpectraPopupPostArgsContent {
+}
 
-export interface WpV2SpectraPopupPostArgsMeta {}
 
-export interface WpV2SpectraPopupPostArgsTitle {}
+export interface WpV2SpectraPopupPostArgsMeta {
+}
+
+
+export interface WpV2SpectraPopupPostArgsTitle {
+}
+
 
 export interface WpV2SpectraPopupPostArgs {
   /** The ID for the author of the post. */
@@ -3329,21 +2862,7 @@ export interface WpV2SpectraPopupPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -3359,11 +2878,17 @@ export interface WpV2SpectraPopupPIdDGetArgs {
   password?: string;
 }
 
-export interface WpV2SpectraPopupPIdDPostPutPatchArgsContent {}
+export interface WpV2SpectraPopupPIdDPostPutPatchArgsContent {
+}
 
-export interface WpV2SpectraPopupPIdDPostPutPatchArgsMeta {}
 
-export interface WpV2SpectraPopupPIdDPostPutPatchArgsTitle {}
+export interface WpV2SpectraPopupPIdDPostPutPatchArgsMeta {
+}
+
+
+export interface WpV2SpectraPopupPIdDPostPutPatchArgsTitle {
+}
+
 
 export interface WpV2SpectraPopupPIdDPostPutPatchArgs {
   /** The ID for the author of the post. */
@@ -3379,21 +2904,7 @@ export interface WpV2SpectraPopupPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -3414,11 +2925,17 @@ export interface WpV2SpectraPopupPIdDAutosavesGetArgs {
   parent?: number;
 }
 
-export interface WpV2SpectraPopupPIdDAutosavesPostArgsContent {}
+export interface WpV2SpectraPopupPIdDAutosavesPostArgsContent {
+}
 
-export interface WpV2SpectraPopupPIdDAutosavesPostArgsMeta {}
 
-export interface WpV2SpectraPopupPIdDAutosavesPostArgsTitle {}
+export interface WpV2SpectraPopupPIdDAutosavesPostArgsMeta {
+}
+
+
+export interface WpV2SpectraPopupPIdDAutosavesPostArgsTitle {
+}
+
 
 export interface WpV2SpectraPopupPIdDAutosavesPostArgs {
   /** The ID for the author of the post. */
@@ -3434,21 +2951,7 @@ export interface WpV2SpectraPopupPIdDAutosavesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -3490,15 +2993,7 @@ export interface WpV2TagsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by term attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'slug'
-    | 'include_slugs'
-    | 'term_group'
-    | 'description'
-    | 'count';
+  orderby?: 'id' | 'include' | 'name' | 'slug' | 'include_slugs' | 'term_group' | 'description' | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -3511,7 +3006,9 @@ export interface WpV2TagsGetArgs {
   slug?: number[];
 }
 
-export interface WpV2TagsPostArgsMeta {}
+export interface WpV2TagsPostArgsMeta {
+}
+
 
 export interface WpV2TagsPostArgs {
   /** HTML description of the term. */
@@ -3531,7 +3028,9 @@ export interface WpV2TagsPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2TagsPIdDPostPutPatchArgsMeta {}
+export interface WpV2TagsPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2TagsPIdDPostPutPatchArgs {
   /** HTML description of the term. */
@@ -3588,21 +3087,7 @@ export interface WpV2TemplatePartsPostArgs {
   /** Unique slug identifying the template. */
   slug: string;
   /** Status of template. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -3628,21 +3113,7 @@ export interface WpV2TemplatePartsPIdWPostPutPatchArgs {
   /** Unique slug identifying the template. */
   slug?: string;
   /** Status of template. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -3675,21 +3146,7 @@ export interface WpV2TemplatePartsPIdDAutosavesPostArgs {
   /** Unique slug identifying the template. */
   slug?: string;
   /** Status of template. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -3717,14 +3174,7 @@ export interface WpV2TemplatePartsPParentDRevisionsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'date' | 'id' | 'include' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** The ID for the parent of the revision. */
@@ -3781,21 +3231,7 @@ export interface WpV2TemplatesPostArgs {
   /** Unique slug identifying the template. */
   slug: string;
   /** Status of template. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -3819,21 +3255,7 @@ export interface WpV2TemplatesPIdWPostPutPatchArgs {
   /** Unique slug identifying the template. */
   slug?: string;
   /** Status of template. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -3864,21 +3286,7 @@ export interface WpV2TemplatesPIdDAutosavesPostArgs {
   /** Unique slug identifying the template. */
   slug?: string;
   /** Status of template. */
-  status?:
-    | 'publish'
-    | 'future'
-    | 'draft'
-    | 'pending'
-    | 'private'
-    | 'wc-pending'
-    | 'wc-processing'
-    | 'wc-on-hold'
-    | 'wc-completed'
-    | 'wc-cancelled'
-    | 'wc-refunded'
-    | 'wc-failed'
-    | 'wc-checkout-draft'
-    | 'spam';
+  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -3906,14 +3314,7 @@ export interface WpV2TemplatesPParentDRevisionsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?:
-    | 'date'
-    | 'id'
-    | 'include'
-    | 'relevance'
-    | 'slug'
-    | 'include_slugs'
-    | 'title';
+  orderby?: 'date' | 'id' | 'include' | 'relevance' | 'slug' | 'include_slugs' | 'title';
   /** Current page of the collection. */
   page?: number;
   /** The ID for the parent of the revision. */
@@ -3987,15 +3388,7 @@ export interface WpV2UsersGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by user attribute. */
-  orderby?:
-    | 'id'
-    | 'include'
-    | 'name'
-    | 'registered_date'
-    | 'slug'
-    | 'include_slugs'
-    | 'email'
-    | 'url';
+  orderby?: 'id' | 'include' | 'name' | 'registered_date' | 'slug' | 'include_slugs' | 'email' | 'url';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -4010,7 +3403,9 @@ export interface WpV2UsersGetArgs {
   who?: 'authors';
 }
 
-export interface WpV2UsersPostArgsMeta {}
+export interface WpV2UsersPostArgsMeta {
+}
+
 
 export interface WpV2UsersPostArgs {
   /** Description of the user. */
@@ -4048,7 +3443,9 @@ export interface WpV2UsersPIdDGetArgs {
   id?: number;
 }
 
-export interface WpV2UsersPIdDPostPutPatchArgsMeta {}
+export interface WpV2UsersPIdDPostPutPatchArgsMeta {
+}
+
 
 export interface WpV2UsersPIdDPostPutPatchArgs {
   /** Description of the user. */
@@ -4102,7 +3499,8 @@ export interface WpV2UsersPUserIdDMeApplicationPasswordsPostArgs {
   name: string;
 }
 
-export interface WpV2UsersPUserIdDMeApplicationPasswordsDeleteArgs {}
+export interface WpV2UsersPUserIdDMeApplicationPasswordsDeleteArgs {
+}
 
 export interface WpV2UsersPUserIdDMeApplicationPasswordsPUuidWGetArgs {
   /** Scope under which the request is made; determines fields present in response. */
@@ -4116,7 +3514,8 @@ export interface WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPostPutPatchArgs {
   name?: string;
 }
 
-export interface WpV2UsersPUserIdDMeApplicationPasswordsPUuidWDeleteArgs {}
+export interface WpV2UsersPUserIdDMeApplicationPasswordsPUuidWDeleteArgs {
+}
 
 export interface WpV2UsersPUserIdDMeApplicationPasswordsIntrospectGetArgs {
   /** Scope under which the request is made; determines fields present in response. */
@@ -4128,7 +3527,9 @@ export interface WpV2UsersMeGetArgs {
   context?: 'view' | 'embed' | 'edit';
 }
 
-export interface WpV2UsersMePostPutPatchArgsMeta {}
+export interface WpV2UsersMePostPutPatchArgsMeta {
+}
+
 
 export interface WpV2UsersMePostPutPatchArgs {
   /** Description of the user. */
@@ -4178,7 +3579,9 @@ export interface WpV2WidgetTypesPIdAZaZ09GetArgs {
   id?: string;
 }
 
-export interface WpV2WidgetTypesPIdAZaZ09EncodePostArgsInstance {}
+export interface WpV2WidgetTypesPIdAZaZ09EncodePostArgsInstance {
+}
+
 
 export interface WpV2WidgetTypesPIdAZaZ09EncodePostArgs {
   /** Serialized widget form data to encode into instance settings. */
@@ -4189,7 +3592,9 @@ export interface WpV2WidgetTypesPIdAZaZ09EncodePostArgs {
   instance?: WpV2WidgetTypesPIdAZaZ09EncodePostArgsInstance;
 }
 
-export interface WpV2WidgetTypesPIdAZaZ09RenderPostArgsInstance {}
+export interface WpV2WidgetTypesPIdAZaZ09RenderPostArgsInstance {
+}
+
 
 export interface WpV2WidgetTypesPIdAZaZ09RenderPostArgs {
   /** The widget type id. */
@@ -4205,7 +3610,9 @@ export interface WpV2WidgetsGetArgs {
   sidebar?: string;
 }
 
-export interface WpV2WidgetsPostArgsInstance {}
+export interface WpV2WidgetsPostArgsInstance {
+}
+
 
 export interface WpV2WidgetsPostArgs {
   /** URL-encoded form data from the widget admin form. Used to update a widget that does not support instance. Write only. */
@@ -4225,7 +3632,9 @@ export interface WpV2WidgetsPIdWGetArgs {
   context?: 'view' | 'embed' | 'edit';
 }
 
-export interface WpV2WidgetsPIdWPostPutPatchArgsInstance {}
+export interface WpV2WidgetsPIdWPostPutPatchArgsInstance {
+}
+
 
 export interface WpV2WidgetsPIdWPostPutPatchArgs {
   /** URL-encoded form data from the widget admin form. Used to update a widget that does not support instance. Write only. */
@@ -4244,6 +3653,7 @@ export interface WpV2WidgetsPIdWDeleteArgs {
   /** Whether to force removal of the widget, or move it to the inactive sidebar. */
   force?: boolean;
 }
+
 
 export interface WpV2DeleteRoutes {
   '/wp/v2/blocks/(?P<id>[\\d]+)': WpV2BlocksPIdDDeleteArgs;

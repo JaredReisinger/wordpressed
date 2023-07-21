@@ -15,9 +15,13 @@
   "type": "module",
   "main": "index.js",
   "module": "index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "wordpressed": "./bin/run.js"
+  },
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -r dist",
+    "build": "npm run clean && tsc -b",
+    "clean": "shx rm -rf dist coverage tsconfig.tsbuildinfo",
     "lint": "eslint ./src",
     "test": "ava",
     "test:coverage": "c8 --all --src src --per-file --reporter lcov --reporter text npm test",
@@ -28,19 +32,34 @@
     "tool": "ts-node --esm ./src/tools/$TOOL.ts",
     "tool:adhoc": "TOOL=adhoc npm run tool",
     "tool:analysis": "TOOL=analysis npm run tool",
-    "tool:generate": "TOOL=generate npm run tool"
+    "tool:generate": "TOOL=generate npm run tool",
+    "#oclif stuff": "------------------------------------",
+    "add-to-build?": "clean first?",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "#posttest": "npm run lint",
+    "prepack": "npm run build && oclif manifest && npm run cli:doc",
+    "cli": "npm run cli:dev --",
+    "cli:run": "./bin/run.js",
+    "cli:dev": "./bin/dev.js",
+    "cli:doc": "cd docs/cli && oclif readme",
+    "#version": "oclif readme && git add README.md"
   },
   "files": [
+    "/bin",
     "/dist",
     "!/dist/tools/",
-    "!**/*.test.*"
+    "!**/*.test.*",
+    "oclif.manifest.json"
   ],
   "devDependencies": {
     "@ava/typescript": "^4.1.0",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
+    "@oclif/test": "^2.3.31",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@types/debug": "^4.1.8",
+    "@types/listr": "^0.14.4",
     "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -50,20 +69,30 @@
     "cz-conventional-changelog": "^3.3.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.44.0",
+    "eslint-config-oclif": "^4.0.0",
+    "eslint-config-oclif-typescript": "^1.0.3",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
     "inflection": "^2.0.1",
     "is-ci": "^3.0.1",
     "lint-staged": "^13.2.3",
+    "oclif": "^3.9.2",
     "prettier": "^3.0.0",
     "semantic-release": "^21.0.7",
+    "shx": "^0.3.4",
     "ts-node": "^10.9.1",
+    "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@oclif/core": "^2.9.4",
+    "@oclif/plugin-help": "^5.2.14",
     "@snyk/protect": "^1.1189.0",
-    "got": "^13.0.0"
+    "debug": "^4.3.4",
+    "got": "^13.0.0",
+    "listr": "^0.14.3",
+    "supports-color": "^9.4.0"
   },
   "ava": {
     "typescript": {
@@ -86,6 +115,21 @@
       "prettier --ignore-unknown --write",
       "eslint"
     ]
+  },
+  "oclif": {
+    "bin": "wordpressed",
+    "dirname": "wordpressed",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ],
+    "repositoryPrefix": "https://github.com/JaredReisinger/wordpressed/tree/alpha/",
+    "topicSeparator": " ",
+    "#topics": {
+      "UNUSED": {
+        "description": "description from package.json"
+      }
+    }
   },
   "snyk": true
 }

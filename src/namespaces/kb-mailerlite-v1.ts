@@ -1,6 +1,9 @@
-export interface KbMailerliteV1GetArgs {}
+export interface KbMailerliteV1GetArgs {
+}
 
-export interface KbMailerliteV1GetGetArgsQueryargs {}
+export interface KbMailerliteV1GetGetArgsQueryargs {
+}
+
 
 export interface KbMailerliteV1GetGetArgs {
   /** The API Key for Mailerlite account. */
@@ -19,15 +22,20 @@ export interface KbMailerliteV1GetGetArgs {
   search?: string;
 }
 
-export interface KbMailerliteV1DeleteRoutes {}
+
+export interface KbMailerliteV1DeleteRoutes {
+}
 
 export interface KbMailerliteV1GetRoutes {
   '/kb-mailerlite/v1': KbMailerliteV1GetArgs;
   '/kb-mailerlite/v1/get': KbMailerliteV1GetGetArgs;
 }
 
-export interface KbMailerliteV1PatchRoutes {}
+export interface KbMailerliteV1PatchRoutes {
+}
 
-export interface KbMailerliteV1PostRoutes {}
+export interface KbMailerliteV1PostRoutes {
+}
 
-export interface KbMailerliteV1PutRoutes {}
+export interface KbMailerliteV1PutRoutes {
+}

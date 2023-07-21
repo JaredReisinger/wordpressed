@@ -2,8 +2,8 @@
 import 'dotenv/config';
 
 import { Client } from '../index.js';
-import { WpJson } from './util/wpapi.js';
-import { dbg, err, out } from './util/helpers.js';
+import { WpJson } from '../util/wpapi.js';
+import { dbg, err, out } from '../util/helpers.js';
 
 try {
   await adhoc();

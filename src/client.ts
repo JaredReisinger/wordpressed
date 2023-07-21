@@ -10,7 +10,7 @@ import {
 
 // We have to decide if some core WpJson stuff is exposed in parallel to the
 // discovery-generated types.
-// import { EndpointMethod } from './tools/util/wpapi.js';
+// import { EndpointMethod } from './util/wpapi.js';
 export enum EndpointMethod {
   DELETE = 'DELETE',
   GET = 'GET',

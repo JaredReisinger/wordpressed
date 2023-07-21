@@ -1,6 +1,9 @@
 /* eslint-disable no-use-before-define */
 // an attempt at a new and modern WordPress REST API client
 import got from 'got';
+import debugFn from 'debug';
+
+const debug = debugFn('wordpressed:wpapi');
 
 export interface WpJson {
   _links: Record<string, Link[]>;
@@ -176,9 +179,9 @@ export interface EndpointTypes {
 }
 
 export class Client {
-  host: string;
+  host: URL | string;
 
-  constructor(host: string) {
+  constructor(host: URL | string) {
     this.host = host;
   }
 
@@ -187,7 +190,7 @@ export class Client {
     R extends EndpointTypes[E][0] = EndpointTypes[E][0],
   >(endpoint: E) {
     const url = `${this.host}/wp-json/${endpoint}`;
-    console.log('calling GET', url);
+    debug('calling GET', url);
     const resp = await got<R>(url, { responseType: 'json' });
     return resp;
   }
@@ -198,7 +201,7 @@ export class Client {
     R extends EndpointTypes[E][2] = EndpointTypes[E][2],
   >(endpoint: E, body: B) {
     const url = `${this.host}/wp-json/${endpoint}`;
-    console.log('calling POST', url);
+    debug('calling POST', url);
     const resp = await got<R>(url, { responseType: 'json', json: body });
     return resp;
   }

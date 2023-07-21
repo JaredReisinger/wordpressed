@@ -1,4 +1,4 @@
-/* eslint-disable no-restricted-syntax */
+/* xxx-eslint-disable no-restricted-syntax */
 /* eslint-disable no-use-before-define */
 // analyzes the endpoints exposed by a WordPress site (given by the environment
 // variables WP_HOST).
@@ -8,10 +8,10 @@ import fs from 'fs/promises';
 import path from 'path';
 import inflection from 'inflection';
 
-import { EndpointMethod, Route, WpJson } from './util/wpapi.js';
-import { dbg, err, out } from './util/helpers.js';
-import { /*byProperty,*/ byProperty, exists } from './util/objects.js';
-import { getWpJson } from './util/wphost.js';
+import { EndpointMethod, Route, WpJson } from '../util/wpapi.js';
+import { dbg, err, out } from '../util/helpers.js';
+import { /*byProperty,*/ byProperty, exists } from '../util/objects.js';
+import { getWpJson } from '../util/wphost.js';
 
 try {
   await generate();

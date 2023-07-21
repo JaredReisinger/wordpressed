@@ -1,6 +1,9 @@
-export interface KbpV1GetArgs {}
+export interface KbpV1GetArgs {
+}
 
-export interface KbpV1PostQueryGetArgsInclude {}
+export interface KbpV1PostQueryGetArgsInclude {
+}
+
 
 export interface KbpV1PostQueryGetArgs {
   /** Allow Sticky in Query. */
@@ -39,15 +42,20 @@ export interface KbpV1PostQueryGetArgs {
   type?: string;
 }
 
-export interface KbpV1DeleteRoutes {}
+
+export interface KbpV1DeleteRoutes {
+}
 
 export interface KbpV1GetRoutes {
   '/kbp/v1': KbpV1GetArgs;
   '/kbp/v1/post-query': KbpV1PostQueryGetArgs;
 }
 
-export interface KbpV1PatchRoutes {}
+export interface KbpV1PatchRoutes {
+}
 
-export interface KbpV1PostRoutes {}
+export interface KbpV1PostRoutes {
+}
 
-export interface KbpV1PutRoutes {}
+export interface KbpV1PutRoutes {
+}

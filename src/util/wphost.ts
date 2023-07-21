@@ -5,15 +5,17 @@ import 'dotenv/config';
 import { Client, WpJson } from './wpapi.js';
 // import { dbg, err, out } from './helpers.js';
 
-const fetchWpJson = false; // true; // fetch live vs. use cached file...
 const cacheFile = './.temp/wpjson.json';
 const fileOptions = { encoding: 'utf8' } as const;
 
-export async function getWpJson() {
+export async function getWpJson(
+  host: URL | string | undefined = process.env.WP_HOST,
+  useCachedFile = false
+) {
   let wpjson: WpJson;
 
-  if (fetchWpJson) {
-    const client = new Client(process.env.WP_HOST!);
+  if (!useCachedFile) {
+    const client = new Client(host ?? 'BROKEN');
     const resp = await client.get('');
     // const { headers, body: wpjson } = resp;
     // dbg(1, 'headers', headers);
