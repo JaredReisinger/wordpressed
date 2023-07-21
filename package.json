@@ -42,7 +42,7 @@
     "cli:run": "./bin/run.js",
     "cli:dev": "./bin/dev.js",
     "cli:doc": "cd docs/cli && oclif readme",
-    "#version": "oclif readme && git add README.md"
+    "version": "npm run cli:doc && git add docs/cli/README.md"
   },
   "files": [
     "/bin",
