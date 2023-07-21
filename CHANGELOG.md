@@ -3,6 +3,13 @@
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
 
+# [0.1.0-alpha.4](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.3...v0.1.0-alpha.4) (2023-07-21)
+
+
+### Features
+
+* **cli:** full-fleged CLI for generation ([8dd1cf5](https://github.com/JaredReisinger/wordpressed/commit/8dd1cf5b4c56056f2ad2ad86eadc52a8bc3a267a))
+
 # [0.1.0-alpha.3](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.2...v0.1.0-alpha.3) (2023-07-17)
 
 
