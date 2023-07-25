@@ -2,7 +2,7 @@ import test from 'ava';
 
 import { analyzeRoute } from './routes.js';
 
-test('analyzeRoute()', (t) => {
+test('analyzeRoute() processes good routes', (t) => {
   const cases = [
     ['', []],
     ['/wp/v2', []],
@@ -37,5 +37,13 @@ test('analyzeRoute()', (t) => {
   cases.forEach(([input, expected]) => {
     const actual = analyzeRoute(input);
     t.deepEqual(actual, expected);
+  });
+});
+
+test('analyzeRoute() throws on invalid pattern', (t) => {
+  const cases = ['(?P<no-close-angle \\d)', '(?P<name> no close paren'];
+
+  cases.forEach((input) => {
+    t.throws(() => analyzeRoute(input));
   });
 });

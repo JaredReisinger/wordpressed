@@ -66,11 +66,11 @@ export function analyzeRoute(route: string) {
     const stack: string[] = [')']; // what we expect to end the pattern!
     i = nameEnd + 1;
 
-    for (; i < route.length; i++) {
+    let foundEnd = false;
+    for (; i < route.length && !foundEnd; i++) {
       const char = route.charAt(i);
       // console.log(`pos ${i}: ${char}\t"${route}", ${stack}`);
 
-      let foundEnd = false;
       switch (char) {
         case '\\':
           // escape/magic char... we can skip the next characer!
@@ -95,14 +95,25 @@ export function analyzeRoute(route: string) {
         // we've reached the end!!!
         // console.log('FOUND END!');
         i++;
-        break;
+        // push the found data onto patterns...
+        // console.log('pushing pattern', route, start, i, name, nameEnd, i);
+        const pattern = route.substring(nameEnd + 1, i - 1);
+        patterns.push([
+          name,
+          pattern,
+          patternTypes[pattern] ?? 'string',
+          start,
+          i,
+        ]);
       }
     }
 
-    // push the found data onto patterns...
-    // console.log('pushing pattern', route, start, i, name, nameEnd, i);
-    const pattern = route.substring(nameEnd + 1, i - 1);
-    patterns.push([name, pattern, patternTypes[pattern] ?? 'string', start, i]);
+    if (!foundEnd) {
+      // unexpected! poorly-formatted regexp?
+      throw new Error(
+        `badly formatted pattern in "${route}" (position ${start})`
+      );
+    }
   }
 
   return patterns;
