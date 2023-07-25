@@ -21,3 +21,11 @@ export interface PaypalV1PostRoutes {
 
 export interface PaypalV1PutRoutes {
 }
+
+export interface PaypalV1Routes {
+  Delete: PaypalV1DeleteRoutes;
+  Get: PaypalV1GetRoutes;
+  Patch: PaypalV1PatchRoutes;
+  Post: PaypalV1PostRoutes;
+  Put: PaypalV1PutRoutes;
+}

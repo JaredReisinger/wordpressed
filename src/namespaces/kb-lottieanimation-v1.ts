@@ -25,3 +25,11 @@ export interface KbLottieanimationV1PostRoutes {
 
 export interface KbLottieanimationV1PutRoutes {
 }
+
+export interface KbLottieanimationV1Routes {
+  Delete: KbLottieanimationV1DeleteRoutes;
+  Get: KbLottieanimationV1GetRoutes;
+  Patch: KbLottieanimationV1PatchRoutes;
+  Post: KbLottieanimationV1PostRoutes;
+  Put: KbLottieanimationV1PutRoutes;
+}

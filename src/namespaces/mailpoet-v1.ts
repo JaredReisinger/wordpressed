@@ -79,3 +79,11 @@ export interface MailpoetV1PostRoutes {
 export interface MailpoetV1PutRoutes {
   '/mailpoet/v1/automations/(?P<id>\\d+)': MailpoetV1AutomationsPIdDPutArgs;
 }
+
+export interface MailpoetV1Routes {
+  Delete: MailpoetV1DeleteRoutes;
+  Get: MailpoetV1GetRoutes;
+  Patch: MailpoetV1PatchRoutes;
+  Post: MailpoetV1PostRoutes;
+  Put: MailpoetV1PutRoutes;
+}

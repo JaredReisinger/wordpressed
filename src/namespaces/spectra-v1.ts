@@ -21,3 +21,11 @@ export interface SpectraV1PostRoutes {
 
 export interface SpectraV1PutRoutes {
 }
+
+export interface SpectraV1Routes {
+  Delete: SpectraV1DeleteRoutes;
+  Get: SpectraV1GetRoutes;
+  Patch: SpectraV1PatchRoutes;
+  Post: SpectraV1PostRoutes;
+  Put: SpectraV1PutRoutes;
+}

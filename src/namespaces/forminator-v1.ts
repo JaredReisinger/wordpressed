@@ -35,3 +35,11 @@ export interface ForminatorV1PostRoutes {
 
 export interface ForminatorV1PutRoutes {
 }
+
+export interface ForminatorV1Routes {
+  Delete: ForminatorV1DeleteRoutes;
+  Get: ForminatorV1GetRoutes;
+  Patch: ForminatorV1PatchRoutes;
+  Post: ForminatorV1PostRoutes;
+  Put: ForminatorV1PutRoutes;
+}

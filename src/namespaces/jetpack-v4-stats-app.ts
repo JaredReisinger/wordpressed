@@ -121,3 +121,11 @@ export interface JetpackV4StatsAppPutRoutes {
   '/jetpack/v4/stats-app/sites/202188134/stats/referrers/spam/new': JetpackV4StatsAppSites202188134StatsReferrersSpamNewPostPutPatchArgs;
   '/jetpack/v4/stats-app/stats/notices': JetpackV4StatsAppStatsNoticesPostPutPatchArgs;
 }
+
+export interface JetpackV4StatsAppRoutes {
+  Delete: JetpackV4StatsAppDeleteRoutes;
+  Get: JetpackV4StatsAppGetRoutes;
+  Patch: JetpackV4StatsAppPatchRoutes;
+  Post: JetpackV4StatsAppPostRoutes;
+  Put: JetpackV4StatsAppPutRoutes;
+}

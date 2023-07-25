@@ -1118,3 +1118,11 @@ export interface JetpackV4PutRoutes {
   '/jetpack/v4/waf': JetpackV4WafPostPutPatchArgs;
   '/jetpack/v4/waf/update-rules': JetpackV4WafUpdateRulesPostPutPatchArgs;
 }
+
+export interface JetpackV4Routes {
+  Delete: JetpackV4DeleteRoutes;
+  Get: JetpackV4GetRoutes;
+  Patch: JetpackV4PatchRoutes;
+  Post: JetpackV4PostRoutes;
+  Put: JetpackV4PutRoutes;
+}

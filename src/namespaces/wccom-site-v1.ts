@@ -38,3 +38,11 @@ export interface WccomSiteV1PostRoutes {
 
 export interface WccomSiteV1PutRoutes {
 }
+
+export interface WccomSiteV1Routes {
+  Delete: WccomSiteV1DeleteRoutes;
+  Get: WccomSiteV1GetRoutes;
+  Patch: WccomSiteV1PatchRoutes;
+  Post: WccomSiteV1PostRoutes;
+  Put: WccomSiteV1PutRoutes;
+}

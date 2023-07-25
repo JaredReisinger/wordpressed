@@ -21,3 +21,11 @@ export interface UagV1PostRoutes {
 
 export interface UagV1PutRoutes {
 }
+
+export interface UagV1Routes {
+  Delete: UagV1DeleteRoutes;
+  Get: UagV1GetRoutes;
+  Patch: UagV1PatchRoutes;
+  Post: UagV1PostRoutes;
+  Put: UagV1PutRoutes;
+}

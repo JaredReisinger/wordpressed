@@ -27,3 +27,11 @@ export interface WpJsonPostRoutes {
 
 export interface WpJsonPutRoutes {
 }
+
+export interface WpJsonRoutes {
+  Delete: WpJsonDeleteRoutes;
+  Get: WpJsonGetRoutes;
+  Patch: WpJsonPatchRoutes;
+  Post: WpJsonPostRoutes;
+  Put: WpJsonPutRoutes;
+}

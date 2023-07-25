@@ -25,3 +25,11 @@ export interface JetpackV4BlazePostRoutes {
 
 export interface JetpackV4BlazePutRoutes {
 }
+
+export interface JetpackV4BlazeRoutes {
+  Delete: JetpackV4BlazeDeleteRoutes;
+  Get: JetpackV4BlazeGetRoutes;
+  Patch: JetpackV4BlazePatchRoutes;
+  Post: JetpackV4BlazePostRoutes;
+  Put: JetpackV4BlazePutRoutes;
+}

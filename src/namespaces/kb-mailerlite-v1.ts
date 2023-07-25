@@ -39,3 +39,11 @@ export interface KbMailerliteV1PostRoutes {
 
 export interface KbMailerliteV1PutRoutes {
 }
+
+export interface KbMailerliteV1Routes {
+  Delete: KbMailerliteV1DeleteRoutes;
+  Get: KbMailerliteV1GetRoutes;
+  Patch: KbMailerliteV1PatchRoutes;
+  Post: KbMailerliteV1PostRoutes;
+  Put: KbMailerliteV1PutRoutes;
+}

@@ -369,3 +369,11 @@ export interface WcAdminPutRoutes {
   '/wc-admin/plugins/install': WcAdminPluginsInstallPostPutPatchArgs;
   '/wc-admin/themes': WcAdminThemesPostPutPatchArgs;
 }
+
+export interface WcAdminRoutes {
+  Delete: WcAdminDeleteRoutes;
+  Get: WcAdminGetRoutes;
+  Patch: WcAdminPatchRoutes;
+  Post: WcAdminPostRoutes;
+  Put: WcAdminPutRoutes;
+}

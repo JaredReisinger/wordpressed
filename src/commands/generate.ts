@@ -1,6 +1,3 @@
-/* eslint-disable no-use-before-define */
-
-// import util from 'util';
 import fs from 'fs/promises';
 import path from 'path';
 import inflection from 'inflection';
@@ -12,8 +9,13 @@ import debugFn from 'debug';
 
 import { Command, Flags } from '@oclif/core';
 
-import { EndpointMethod, Route, WpJson } from '../util/wpapi.js';
-import { /*byProperty,*/ byProperty, exists } from '../util/objects.js';
+import {
+  WpJsonEndpointMethod,
+  WpJsonRoute,
+  WpJson,
+} from '../util/wpapi-types.js';
+
+import { byProperty, exists } from '../util/objects.js';
 
 const debug = debugFn('wordpressed:generate');
 
@@ -29,6 +31,9 @@ const debug = debugFn('wordpressed:generate');
 // before the type for the endpoint args just to keep any "used before defined"
 // rules happy.
 
+// we have circularly-referenced types, so we have to disable the
+// use-before-define prevention...
+/* eslint-disable no-use-before-define */
 type GenData = Record<string, GenNamespace>;
 
 interface GenNamespace {
@@ -48,7 +53,7 @@ interface GenRoute {
 
 interface GenEndpoint {
   route: GenRoute;
-  methods: EndpointMethod[];
+  methods: WpJsonEndpointMethod[];
   typeName: string;
   types: GenTypeDesc[]; // last type is the Arg
 }
@@ -66,6 +71,9 @@ interface GenTypeMember {
   type: string;
   optional: boolean;
 }
+
+// re-enable the use-before-define prevention...
+/* eslint-ensable no-use-before-define */
 
 // custom type for our Listr context...
 interface Context {
@@ -129,6 +137,9 @@ export class Generate extends Command {
   //   },
   // ];
 
+  /**
+   * Main entrypoint for the type-generation command.
+   */
   async run() {
     const { flags } = await this.parse(Generate);
 
@@ -148,6 +159,17 @@ export class Generate extends Command {
       });
     }
 
+    // The original code was split up by namespaces, routes, and endpoints, but
+    // using Listr for a nice UI presentation kind of forces a different pattern
+    // of logic on us.  It's still a bit of a combination; further iterations
+    // will hopefully refactor for clarity.  (I'm not sure if delegating Listr
+    // subtask list creation to a helper method is better or worse than keeping
+    // the high-level logic all here in one place.)
+    //
+    // Also, the previous code passed flags directly, and used return values,
+    // but Listr uses a list-global context value for inter-task sharing. We
+    // *could* still use a lexically-scoped object, it's not obvious what's
+    // easiest to comprehend for someone new to the code.
     const tasks = new Listr<Context>(
       [
         {
@@ -187,6 +209,16 @@ export class Generate extends Command {
     await tasks.run({ dryRun: flags['dry-run'] });
   }
 
+  /**
+   * Creates the `Listr` tasks necessary to retrieve the `WpJson` data, using a
+   * cache file if available, or falling back to a host query if not (or if
+   * `fetch` is true).
+   *
+   * @param host host to query
+   * @param cache cache file to use
+   * @param fetch whether to force-fetch even if cache file exists
+   * @returns Listr object with tasks
+   */
   createWpJsonTasks(host?: URL, cache?: string, fetch?: boolean) {
     const fsOpts = { encoding: 'utf8' } as const;
 
@@ -223,7 +255,7 @@ export class Generate extends Command {
           }
 
           // Note that we do *not* build this on top of the WordPress REST API
-          // client we are creating; this generator has its own implenmentation
+          // client we are creating; this generator has its own implementation
           // to make bootstrapping easier (and it's super-simple, in any case).
           const url = new URL('/wp-json/', host);
           // debug('GET', url.toString());
@@ -245,6 +277,12 @@ export class Generate extends Command {
     ]);
   }
 
+  /**
+   * Parses the routes/endpoints from a `WpJson.routes` object into a `GenData`
+   * generated data object.
+   * @param routes the WpJson routes to parse
+   * @param data an empty data object to fill
+   */
   parseRoutes(routes: WpJson['routes'], data: GenData) {
     Object.entries(routes).forEach(([path, routeInfo]) => {
       // create the namespace entry if needed
@@ -264,7 +302,13 @@ export class Generate extends Command {
     });
   }
 
-  parseRoute(route: string, routeInfo: Route, ns: GenNamespace) {
+  /**
+   * Parses an individual route into a `Route` route info object.
+   * @param route the WpJson route path
+   * @param routeInfo the WpJson route object to parse
+   * @param ns the generated namespace object to add the route to
+   */
+  parseRoute(route: string, routeInfo: WpJsonRoute, ns: GenNamespace) {
     let r = ns.routes[route];
     if (!r) {
       // The namespace typeName is often a prefix of the path; we don't re-prefix
@@ -285,7 +329,12 @@ export class Generate extends Command {
     routeInfo.endpoints.forEach((endpoint) => this.parseEndpoint(endpoint, r));
   }
 
-  parseEndpoint(endpoint: Route['endpoints'][number], r: GenRoute) {
+  /**
+   * Parses a single endpoint (one or more HTTP methods!) for a route.
+   * @param endpoint the WpJson endpoint to parse
+   * @param r the GenRoute generated route object to add the endpoint types to
+   */
+  parseEndpoint(endpoint: WpJsonRoute['endpoints'][number], r: GenRoute) {
     // Some endpoints ("/wc-analytics/products/(?P<product_id>[\\d]+)/variations")
     // result in duplication where the methods are listed more than once (GET,
     // POST, GET, POST).  We look for this and ignore the redundant endpoints.
@@ -312,9 +361,12 @@ export class Generate extends Command {
   }
 
   /**
-   *
-   * @param str String to normalize
-   * @param fallback fallback value used if-and-only-if `str` is empty/missing. This is particularly used to cause namespace "" to get called "wp-json".
+   * Creates a normalized file name, typically for a namespace, like
+   * "some-name".
+   * @param str string to normalize
+   * @param fallback fallback value used if-and-only-if `str` is
+   *     empty/missing. This is particularly used to cause namespace "" to get
+   *     called "wp-json".
    */
   normalizeFileName(str: string, fallback: string = 'XXX-UNEXPECTED-XXX') {
     // After cleaning call 'dasherize' to get a more filename looking value
@@ -325,9 +377,10 @@ export class Generate extends Command {
   }
 
   /**
-   *
+   * Creates a normalized Typescript-y type name, like "SomeName".
    * @param str String to normalize
-   * @param fallback fallback value used if-and-only-if `str` is empty/missing. This is particularly used to cause namespace "" to get called "WpJson".
+   * @param fallback fallback value used if-and-only-if `str` is empty/missing.
+   *     This is particularly used to cause namespace "" to get called "WpJson".
    */
   normalizeTypeName(str: string, fallback: string = 'XXX_UNEXPECTED_XXX') {
     // After cleaning call 'camelize' to get a more Typescript-y looking value
@@ -338,10 +391,11 @@ export class Generate extends Command {
   }
 
   /**
-   * Returns a value safe to use as a JS identifier, quoted and escaped if needed.
-   * @param str
+   * Returns a value safe to use as a JS property key, quoted and escaped if
+   * needed.
+   * @param str string to normalize
    */
-  normalizeJsIdentifier(str: string) {
+  normalizePropertyKey(str: string) {
     let safe = str;
     if (safe.match(/\W/)) {
       safe = `'${safe.replaceAll('\\', '\\\\').replaceAll("'", "\\'")}'`;
@@ -366,19 +420,21 @@ export class Generate extends Command {
       .replace(/_$/, '');
   }
 
-  // function canonicalize(str: string) {
-  //   return str.trim().replace(/\W+/g, '_').replace(/^_/, '').replace(/_$/, '');
-  // }
-
-  // function buildName(...str: string[]) {
-  //   return inflection.classify(str.map(canonicalize).join('_'));
-  // }
-
   /**
    * May return multiple type definitions if an arg is an array or object with
    * complex structure.
    **/
-  parseArgTypes(args: Route['endpoints'][number]['args'], e: GenEndpoint) {
+
+  /**
+   * Parses all of the members of a WpJson endpoint argument list.
+   * @param args the WpJson route/endpoint arguments to parse
+   * @param e the GenEndpoint generated data to fill with direct and indirect
+   *     types
+   */
+  parseArgTypes(
+    args: WpJsonRoute['endpoints'][number]['args'],
+    e: GenEndpoint
+  ) {
     const typeName = `${e.typeName}Args`;
 
     // Parse all of the argument types (after sorting).  Note that "discovered"
@@ -470,7 +526,7 @@ export class Generate extends Command {
   }
 
   createWriteTasks(data: GenData, dir: string) {
-    // create a write task for each namespace, and the index, to be run
+    // create a write task for each namespace, and one for the index, to be run
     // concurrently.
     const tasks = Object.values(data)
       .sort(byProperty('namespace'))
@@ -512,8 +568,23 @@ export class Generate extends Command {
     await file.close();
   }
 
+  // TODO: Do we want a general purpose "array of lines" that we add to so that
+  // we can write an entire file at once?  I suspect we get better performance
+  // with one (relatively) big write than medium-ish blocks... and since we
+  // break each namespace into a separate file, each file isn't *that* large.
+  // (It would also fix the occaisional "extra blank line" we get between
+  // invocations if we could assume a continual buffer, I think.)
+  //
+  // And/or... do we want an option for the generator to create one large file
+  // instead of per-namespace files?  There might be a use-case for that, but
+  // until we truly encounter that need, we'll follow YAGNI and not worry about
+  // it yet.
+
   // output functions are dependenct on indent level!
   async writeTypes(file: fs.FileHandle, types: GenTypeDesc[], indent: number) {
+    const sp = '  '.repeat(indent);
+    const spsp = '  '.repeat(indent + 1);
+
     // Rather than many small file writes, we collect an array of lines, and then
     // join/write them all at once.  Javascript can perform the join efficiently,
     // so this is likely the best performance balance option.
@@ -521,23 +592,21 @@ export class Generate extends Command {
 
     types.forEach((t) => {
       // lines.push('');
-      lines.push(`${'  '.repeat(indent)}export interface ${t.typeName} {`);
+      lines.push(`${sp}export interface ${t.typeName} {`);
       t.members.forEach((m) => {
         if (m.desc) {
-          lines.push(
-            `${'  '.repeat(indent + 1)}/** ${m.desc.replaceAll('*/', '* /')} */`
-          );
+          lines.push(`${spsp}/** ${m.desc.replaceAll('*/', '* /')} */`);
         }
 
         lines.push(
-          `${'  '.repeat(indent + 1)}${this.normalizeJsIdentifier(m.name)}${
+          `${spsp}${this.normalizePropertyKey(m.name)}${
             m.optional ? '?' : ''
           }: ${m.type};`
         );
       });
-      lines.push(`${'  '.repeat(indent)}}`);
+      lines.push(`${sp}}`);
       lines.push('');
-      lines.push('');
+      lines.push(''); // ensure 2 LFs after interface
     });
 
     await file.write(lines.join('\n'));
@@ -548,6 +617,9 @@ export class Generate extends Command {
     ns: GenNamespace,
     indent: number
   ) {
+    const sp = '  '.repeat(indent);
+    const spsp = '  '.repeat(indent + 1);
+
     // Rather than many small file writes, we collect an array of lines, and then
     // join/write them all at once.  Javascript can perform the join efficiently,
     // so this is likely the best performance balance option.
@@ -555,28 +627,35 @@ export class Generate extends Command {
 
     // Note that we really want to group mappings by method, because that's how
     // the caller will find these...
-    for (const m of Object.values(EndpointMethod)) {
-      lines.push(
-        `${'  '.repeat(indent)}export interface ${
-          ns.typeName
-        }${inflection.humanize(m)}Routes {`
-      );
+    for (const m of Object.values(WpJsonEndpointMethod)) {
+      const methodName = inflection.humanize(m);
+      const methodRoutesType = `${ns.typeName}${methodName}Routes`;
+      lines.push(`${sp}export interface ${methodRoutesType} {`);
 
       for (const r of Object.values(ns.routes).sort(byProperty('route'))) {
         for (const e of r.endpoints) {
           if (e.methods.includes(m)) {
             lines.push(
-              `${'  '.repeat(indent + 1)}${this.normalizeJsIdentifier(
-                r.route
-              )}: ${e.typeName}Args;`
+              `${spsp}${this.normalizePropertyKey(r.route)}: ${e.typeName}Args;`
             );
           }
         }
       }
 
-      lines.push(`${'  '.repeat(indent)}}`);
+      lines.push(`${sp}}`);
       lines.push('');
     }
+
+    // and we *also* provide a roll-up method-lookup for a namespace-specfic
+    // client
+    lines.push(`${sp}export interface ${ns.typeName}Routes {`);
+    for (const m of Object.values(WpJsonEndpointMethod)) {
+      const methodName = inflection.humanize(m);
+      const methodRoutesType = `${ns.typeName}${methodName}Routes`;
+      lines.push(`${spsp}${methodName}: ${methodRoutesType};`);
+    }
+    lines.push(`${sp}}`);
+    lines.push('');
 
     await file.write(lines.join('\n'));
   }
@@ -593,27 +672,23 @@ export class Generate extends Command {
     // so this is likely the best performance balance option.
     const lines: string[] = [];
     const indent = 0;
+    const sp = '  '.repeat(indent);
+    const spsp = '  '.repeat(indent + 1);
 
     const nss = Object.values(data).sort(byProperty('namespace'));
 
     for (const ns of nss) {
-      lines.push(
-        `${'  '.repeat(indent)}import * as ${ns.typeName} from './${
-          ns.fileName
-        }.js';`
-      );
+      lines.push(`${sp}import * as ${ns.typeName} from './${ns.fileName}.js';`);
     }
 
     lines.push('');
 
     // Note that we really want to group mappings by method, because that's how
     // the caller will find these...
-    for (const m of Object.values(EndpointMethod)) {
-      lines.push(
-        `${'  '.repeat(indent)}export type Known${inflection.humanize(
-          m
-        )}Routes =`
-      );
+    for (const m of Object.values(WpJsonEndpointMethod)) {
+      const methodName = inflection.humanize(m);
+      const methodRoutesType = `Known${methodName}Routes`;
+      lines.push(`${sp}export type ${methodRoutesType} =`);
 
       for (let i = 0; i < nss.length; i++) {
         lines.push(
@@ -625,6 +700,16 @@ export class Generate extends Command {
 
       lines.push('');
     }
+
+    // and we *also* provide a roll-up method-lookup for the client as a whole
+    lines.push(`${sp}export interface KnownRoutes {`);
+    for (const m of Object.values(WpJsonEndpointMethod)) {
+      const methodName = inflection.humanize(m);
+      const methodRoutesType = `Known${methodName}Routes`;
+      lines.push(`${spsp}${methodName}: ${methodRoutesType};`);
+    }
+    lines.push(`${sp}}`);
+    lines.push('');
 
     await file.write(lines.join('\n'));
     await file.close();

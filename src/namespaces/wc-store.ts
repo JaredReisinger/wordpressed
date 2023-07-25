@@ -498,3 +498,11 @@ export interface WcStorePostRoutes {
 export interface WcStorePutRoutes {
   '/wc/store/cart/items/(?P<key>[\\w-]{32})': WcStoreCartItemsPKeyW32PostPutPatchArgs;
 }
+
+export interface WcStoreRoutes {
+  Delete: WcStoreDeleteRoutes;
+  Get: WcStoreGetRoutes;
+  Patch: WcStorePatchRoutes;
+  Post: WcStorePostRoutes;
+  Put: WcStorePutRoutes;
+}

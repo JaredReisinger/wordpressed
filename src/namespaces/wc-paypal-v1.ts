@@ -29,3 +29,11 @@ export interface WcPaypalV1PostRoutes {
 
 export interface WcPaypalV1PutRoutes {
 }
+
+export interface WcPaypalV1Routes {
+  Delete: WcPaypalV1DeleteRoutes;
+  Get: WcPaypalV1GetRoutes;
+  Patch: WcPaypalV1PatchRoutes;
+  Post: WcPaypalV1PostRoutes;
+  Put: WcPaypalV1PutRoutes;
+}

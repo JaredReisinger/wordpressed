@@ -79,3 +79,11 @@ export interface WpgmzaV1PostRoutes {
 
 export interface WpgmzaV1PutRoutes {
 }
+
+export interface WpgmzaV1Routes {
+  Delete: WpgmzaV1DeleteRoutes;
+  Get: WpgmzaV1GetRoutes;
+  Patch: WpgmzaV1PatchRoutes;
+  Post: WpgmzaV1PostRoutes;
+  Put: WpgmzaV1PutRoutes;
+}

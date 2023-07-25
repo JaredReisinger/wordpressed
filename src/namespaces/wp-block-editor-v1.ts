@@ -27,3 +27,11 @@ export interface WpBlockEditorV1PostRoutes {
 
 export interface WpBlockEditorV1PutRoutes {
 }
+
+export interface WpBlockEditorV1Routes {
+  Delete: WpBlockEditorV1DeleteRoutes;
+  Get: WpBlockEditorV1GetRoutes;
+  Patch: WpBlockEditorV1PatchRoutes;
+  Post: WpBlockEditorV1PostRoutes;
+  Put: WpBlockEditorV1PutRoutes;
+}

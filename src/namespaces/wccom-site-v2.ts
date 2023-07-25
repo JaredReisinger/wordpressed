@@ -32,3 +32,11 @@ export interface WccomSiteV2PostRoutes {
 export interface WccomSiteV2PutRoutes {
   '/wccom-site/v2/installer': WccomSiteV2InstallerPostPutPatchArgs;
 }
+
+export interface WccomSiteV2Routes {
+  Delete: WccomSiteV2DeleteRoutes;
+  Get: WccomSiteV2GetRoutes;
+  Patch: WccomSiteV2PatchRoutes;
+  Post: WccomSiteV2PostRoutes;
+  Put: WccomSiteV2PutRoutes;
+}

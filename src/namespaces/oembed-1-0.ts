@@ -37,3 +37,11 @@ export interface Oembed10PostRoutes {
 
 export interface Oembed10PutRoutes {
 }
+
+export interface Oembed10Routes {
+  Delete: Oembed10DeleteRoutes;
+  Get: Oembed10GetRoutes;
+  Patch: Oembed10PatchRoutes;
+  Post: Oembed10PostRoutes;
+  Put: Oembed10PutRoutes;
+}

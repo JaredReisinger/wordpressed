@@ -267,3 +267,11 @@ export interface RedirectionV1PutRoutes {
   '/redirection/v1/redirect/(?P<id>[\\d]+)': RedirectionV1RedirectPIdDPostPutPatchArgs;
   '/redirection/v1/setting': RedirectionV1SettingPostPutPatchArgs;
 }
+
+export interface RedirectionV1Routes {
+  Delete: RedirectionV1DeleteRoutes;
+  Get: RedirectionV1GetRoutes;
+  Patch: RedirectionV1PatchRoutes;
+  Post: RedirectionV1PostRoutes;
+  Put: RedirectionV1PutRoutes;
+}

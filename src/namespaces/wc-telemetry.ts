@@ -25,3 +25,11 @@ export interface WcTelemetryPostRoutes {
 
 export interface WcTelemetryPutRoutes {
 }
+
+export interface WcTelemetryRoutes {
+  Delete: WcTelemetryDeleteRoutes;
+  Get: WcTelemetryGetRoutes;
+  Patch: WcTelemetryPatchRoutes;
+  Post: WcTelemetryPostRoutes;
+  Put: WcTelemetryPutRoutes;
+}

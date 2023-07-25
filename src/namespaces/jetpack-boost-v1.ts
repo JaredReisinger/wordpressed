@@ -29,3 +29,11 @@ export interface JetpackBoostV1PutRoutes {
   '/jetpack-boost/v1/speed-scores': JetpackBoostV1SpeedScoresPostPutPatchArgs;
   '/jetpack-boost/v1/speed-scores/refresh': JetpackBoostV1SpeedScoresRefreshPostPutPatchArgs;
 }
+
+export interface JetpackBoostV1Routes {
+  Delete: JetpackBoostV1DeleteRoutes;
+  Get: JetpackBoostV1GetRoutes;
+  Patch: JetpackBoostV1PatchRoutes;
+  Post: JetpackBoostV1PostRoutes;
+  Put: JetpackBoostV1PutRoutes;
+}

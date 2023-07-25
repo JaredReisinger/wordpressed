@@ -1,16 +1,9 @@
 import got from 'got';
 
-import {
-  KnownDeleteRoutes,
-  KnownGetRoutes,
-  KnownPatchRoutes,
-  KnownPostRoutes,
-  KnownPutRoutes,
-} from './namespaces/index.js';
+import { KnownRoutes } from './namespaces/index.js';
 
 // We have to decide if some core WpJson stuff is exposed in parallel to the
 // discovery-generated types.
-// import { EndpointMethod } from './util/wpapi.js';
 export enum EndpointMethod {
   DELETE = 'DELETE',
   GET = 'GET',
@@ -20,13 +13,20 @@ export enum EndpointMethod {
   // missing: OPTIONS, HEAD, etc.
 }
 
-type AllRoutes = KnownDeleteRoutes &
-  KnownGetRoutes &
-  KnownPatchRoutes &
-  KnownPostRoutes &
-  KnownPutRoutes;
+// We may need agnostic types here?  I'm not sure how to both put constraints
+// (extends) on the generic types *and also* let them be statically defined by
+// default.  Maybe this needs a "where" expression instead?
+type RouteMethodKey = keyof KnownRoutes;
+type RouteType = KnownRoutes[RouteMethodKey];
 
-export class Client {
+export class Client<
+  ROUTES extends Record<RouteMethodKey, RouteType> = KnownRoutes,
+  DELETE_ROUTES = ROUTES['Delete'],
+  GET_ROUTES = ROUTES['Get'],
+  PATCH_ROUTES = ROUTES['Patch'],
+  POST_ROUTES = ROUTES['Post'],
+  PUT_ROUTES = ROUTES['Put'],
+> {
   host: string;
 
   constructor(host: string) {
@@ -41,51 +41,48 @@ export class Client {
 
   async delete<
     T = unknown,
-    R extends keyof KnownDeleteRoutes = keyof KnownDeleteRoutes,
-    A extends KnownDeleteRoutes[R] = KnownDeleteRoutes[R],
+    R extends keyof DELETE_ROUTES = keyof DELETE_ROUTES,
+    A extends DELETE_ROUTES[R] = DELETE_ROUTES[R],
   >(route: R, args?: A) {
-    return this._call<T>(EndpointMethod.DELETE, route, args);
+    return this._call<T, R, A>(EndpointMethod.DELETE, route, args);
   }
 
   async get<
     T = unknown,
-    R extends keyof KnownGetRoutes = keyof KnownGetRoutes,
-    A extends KnownGetRoutes[R] = KnownGetRoutes[R],
+    R extends keyof GET_ROUTES = keyof GET_ROUTES,
+    A extends GET_ROUTES[R] = GET_ROUTES[R],
   >(route: R, args?: A) {
-    return this._call<T>(EndpointMethod.GET, route, args);
+    return this._call<T, R, A>(EndpointMethod.GET, route, args);
   }
 
   async patch<
     T = unknown,
-    R extends keyof KnownPatchRoutes = keyof KnownPatchRoutes,
-    A extends KnownPatchRoutes[R] = KnownPatchRoutes[R],
+    R extends keyof PATCH_ROUTES = keyof PATCH_ROUTES,
+    A extends PATCH_ROUTES[R] = PATCH_ROUTES[R],
   >(route: R, args?: A) {
-    return this._call<T>(EndpointMethod.PATCH, route, args);
+    return this._call<T, R, A>(EndpointMethod.PATCH, route, args);
   }
 
   async post<
     T = unknown,
-    R extends keyof KnownPostRoutes = keyof KnownPostRoutes,
-    A extends KnownPostRoutes[R] = KnownPostRoutes[R],
+    R extends keyof POST_ROUTES = keyof POST_ROUTES,
+    A extends POST_ROUTES[R] = POST_ROUTES[R],
   >(route: R, args?: A) {
-    return this._call<T>(EndpointMethod.POST, route, args);
+    return this._call<T, R, A>(EndpointMethod.POST, route, args);
   }
 
   async put<
     T = unknown,
-    R extends keyof KnownPutRoutes = keyof KnownPutRoutes,
-    A extends KnownPutRoutes[R] = KnownPutRoutes[R],
+    R extends keyof PUT_ROUTES = keyof PUT_ROUTES,
+    A extends PUT_ROUTES[R] = PUT_ROUTES[R],
   >(route: R, args?: A) {
-    return this._call<T>(EndpointMethod.PUT, route, args);
+    return this._call<T, R, A>(EndpointMethod.PUT, route, args);
   }
 
-  async _call<
-    T = unknown,
-    R extends keyof AllRoutes = keyof AllRoutes,
-    A extends AllRoutes[R] = AllRoutes[R],
-  >(method: EndpointMethod, route: R, args?: A) {
+  async _call<T, R, A>(method: EndpointMethod, route: R, args?: A) {
     // TODO: find pattern-match segments of the route path, and add those values
     // as needed.
+    // TODO: other route normalization, like detecting leading `/`, etc.
     const url = `${this.host}/wp-json${route}`;
     console.log(method, { route, args, url });
     const resp = await got<T>(url, { responseType: 'json' });

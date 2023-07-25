@@ -59,3 +59,11 @@ export interface KbpV1PostRoutes {
 
 export interface KbpV1PutRoutes {
 }
+
+export interface KbpV1Routes {
+  Delete: KbpV1DeleteRoutes;
+  Get: KbpV1GetRoutes;
+  Patch: KbpV1PatchRoutes;
+  Post: KbpV1PostRoutes;
+  Put: KbpV1PutRoutes;
+}

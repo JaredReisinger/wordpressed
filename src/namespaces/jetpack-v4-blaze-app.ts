@@ -77,3 +77,11 @@ export interface JetpackV4BlazeAppPutRoutes {
   '/jetpack/v4/blaze-app/sites/202188134/wordads/dsp/api/v1/campaigns(?P<sub_path>[a-zA-Z0-9-_\\/]*)': JetpackV4BlazeAppSites202188134WordadsDspApiV1CampaignsPSubPathAZaZ09PostPutPatchArgs;
   '/jetpack/v4/blaze-app/sites/202188134/wordads/dsp/api/v1/smart(?P<sub_path>[a-zA-Z0-9-_\\/]*)': JetpackV4BlazeAppSites202188134WordadsDspApiV1SmartPSubPathAZaZ09PostPutPatchArgs;
 }
+
+export interface JetpackV4BlazeAppRoutes {
+  Delete: JetpackV4BlazeAppDeleteRoutes;
+  Get: JetpackV4BlazeAppGetRoutes;
+  Patch: JetpackV4BlazeAppPatchRoutes;
+  Post: JetpackV4BlazeAppPostRoutes;
+  Put: JetpackV4BlazeAppPutRoutes;
+}

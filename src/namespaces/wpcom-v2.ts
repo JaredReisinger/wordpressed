@@ -302,3 +302,11 @@ export interface WpcomV2PutRoutes {
   '/wpcom/v2/videopress/playback-jwt/(?P<video_guid>\\w+)': WpcomV2VideopressPlaybackJwtPVideoGuidWPostPutPatchArgs;
   '/wpcom/v2/videopress/upload-jwt': WpcomV2VideopressUploadJwtPostPutPatchArgs;
 }
+
+export interface WpcomV2Routes {
+  Delete: WpcomV2DeleteRoutes;
+  Get: WpcomV2GetRoutes;
+  Patch: WpcomV2PatchRoutes;
+  Post: WpcomV2PostRoutes;
+  Put: WpcomV2PutRoutes;
+}

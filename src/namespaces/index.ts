@@ -230,3 +230,11 @@ export type KnownPutRoutes =
   WpcomV2.WpcomV2PutRoutes &
   WpcomV3.WpcomV3PutRoutes &
   WpgmzaV1.WpgmzaV1PutRoutes;
+
+export interface KnownRoutes {
+  Delete: KnownDeleteRoutes;
+  Get: KnownGetRoutes;
+  Patch: KnownPatchRoutes;
+  Post: KnownPostRoutes;
+  Put: KnownPutRoutes;
+}

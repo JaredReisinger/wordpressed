@@ -1897,3 +1897,11 @@ export interface WcV1PutRoutes {
   '/wc/v1/webhooks/(?P<id>[\\d]+)': WcV1WebhooksPIdDPostPutPatchArgs;
   '/wc/v1/webhooks/batch': WcV1WebhooksBatchPostPutPatchArgs;
 }
+
+export interface WcV1Routes {
+  Delete: WcV1DeleteRoutes;
+  Get: WcV1GetRoutes;
+  Patch: WcV1PatchRoutes;
+  Post: WcV1PostRoutes;
+  Put: WcV1PutRoutes;
+}

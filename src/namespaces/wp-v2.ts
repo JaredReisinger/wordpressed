@@ -3948,3 +3948,11 @@ export interface WpV2PutRoutes {
   '/wp/v2/users/me': WpV2UsersMePostPutPatchArgs;
   '/wp/v2/widgets/(?P<id>[\\w\\-]+)': WpV2WidgetsPIdWPostPutPatchArgs;
 }
+
+export interface WpV2Routes {
+  Delete: WpV2DeleteRoutes;
+  Get: WpV2GetRoutes;
+  Patch: WpV2PatchRoutes;
+  Post: WpV2PostRoutes;
+  Put: WpV2PutRoutes;
+}

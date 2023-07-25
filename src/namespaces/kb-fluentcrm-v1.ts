@@ -31,3 +31,11 @@ export interface KbFluentcrmV1PostRoutes {
 
 export interface KbFluentcrmV1PutRoutes {
 }
+
+export interface KbFluentcrmV1Routes {
+  Delete: KbFluentcrmV1DeleteRoutes;
+  Get: KbFluentcrmV1GetRoutes;
+  Patch: KbFluentcrmV1PatchRoutes;
+  Post: KbFluentcrmV1PostRoutes;
+  Put: KbFluentcrmV1PutRoutes;
+}

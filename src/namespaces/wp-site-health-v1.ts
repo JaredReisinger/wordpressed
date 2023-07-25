@@ -45,3 +45,11 @@ export interface WpSiteHealthV1PostRoutes {
 
 export interface WpSiteHealthV1PutRoutes {
 }
+
+export interface WpSiteHealthV1Routes {
+  Delete: WpSiteHealthV1DeleteRoutes;
+  Get: WpSiteHealthV1GetRoutes;
+  Patch: WpSiteHealthV1PatchRoutes;
+  Post: WpSiteHealthV1PostRoutes;
+  Put: WpSiteHealthV1PutRoutes;
+}

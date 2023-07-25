@@ -2555,3 +2555,11 @@ export interface WcV2PutRoutes {
   '/wc/v2/webhooks/(?P<id>[\\d]+)': WcV2WebhooksPIdDPostPutPatchArgs;
   '/wc/v2/webhooks/batch': WcV2WebhooksBatchPostPutPatchArgs;
 }
+
+export interface WcV2Routes {
+  Delete: WcV2DeleteRoutes;
+  Get: WcV2GetRoutes;
+  Patch: WcV2PatchRoutes;
+  Post: WcV2PostRoutes;
+  Put: WcV2PutRoutes;
+}

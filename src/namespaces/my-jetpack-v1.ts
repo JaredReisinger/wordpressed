@@ -67,3 +67,11 @@ export interface MyJetpackV1PutRoutes {
   '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZPostPutPatchArgs;
   '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)/install-standalone': MyJetpackV1SiteProductsPProductAZInstallStandalonePostPutPatchArgs;
 }
+
+export interface MyJetpackV1Routes {
+  Delete: MyJetpackV1DeleteRoutes;
+  Get: MyJetpackV1GetRoutes;
+  Patch: MyJetpackV1PatchRoutes;
+  Post: MyJetpackV1PostRoutes;
+  Put: MyJetpackV1PutRoutes;
+}

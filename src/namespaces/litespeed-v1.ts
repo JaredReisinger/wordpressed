@@ -69,3 +69,11 @@ export interface LitespeedV1PostRoutes {
 
 export interface LitespeedV1PutRoutes {
 }
+
+export interface LitespeedV1Routes {
+  Delete: LitespeedV1DeleteRoutes;
+  Get: LitespeedV1GetRoutes;
+  Patch: LitespeedV1PatchRoutes;
+  Post: LitespeedV1PostRoutes;
+  Put: LitespeedV1PutRoutes;
+}

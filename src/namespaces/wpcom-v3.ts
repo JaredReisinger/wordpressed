@@ -47,3 +47,11 @@ export interface WpcomV3PostRoutes {
 
 export interface WpcomV3PutRoutes {
 }
+
+export interface WpcomV3Routes {
+  Delete: WpcomV3DeleteRoutes;
+  Get: WpcomV3GetRoutes;
+  Patch: WpcomV3PatchRoutes;
+  Post: WpcomV3PostRoutes;
+  Put: WpcomV3PutRoutes;
+}

@@ -508,3 +508,11 @@ export interface JetpackV4ImportPostRoutes {
 export interface JetpackV4ImportPutRoutes {
   '/jetpack/v4/import/media/(?P<id>[\\d]+)': JetpackV4ImportMediaPIdDPostPutPatchArgs;
 }
+
+export interface JetpackV4ImportRoutes {
+  Delete: JetpackV4ImportDeleteRoutes;
+  Get: JetpackV4ImportGetRoutes;
+  Patch: JetpackV4ImportPatchRoutes;
+  Post: JetpackV4ImportPostRoutes;
+  Put: JetpackV4ImportPutRoutes;
+}

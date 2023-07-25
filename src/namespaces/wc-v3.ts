@@ -2719,3 +2719,11 @@ export interface WcV3PutRoutes {
   '/wc/v3/webhooks/(?P<id>[\\d]+)': WcV3WebhooksPIdDPostPutPatchArgs;
   '/wc/v3/webhooks/batch': WcV3WebhooksBatchPostPutPatchArgs;
 }
+
+export interface WcV3Routes {
+  Delete: WcV3DeleteRoutes;
+  Get: WcV3GetRoutes;
+  Patch: WcV3PatchRoutes;
+  Post: WcV3PostRoutes;
+  Put: WcV3PutRoutes;
+}

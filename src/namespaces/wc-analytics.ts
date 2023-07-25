@@ -3052,3 +3052,11 @@ export interface WcAnalyticsPutRoutes {
   '/wc-analytics/taxes/(?P<id>[\\d]+)': WcAnalyticsTaxesPIdDPostPutPatchArgs;
   '/wc-analytics/taxes/batch': WcAnalyticsTaxesBatchPostPutPatchArgs;
 }
+
+export interface WcAnalyticsRoutes {
+  Delete: WcAnalyticsDeleteRoutes;
+  Get: WcAnalyticsGetRoutes;
+  Patch: WcAnalyticsPatchRoutes;
+  Post: WcAnalyticsPostRoutes;
+  Put: WcAnalyticsPutRoutes;
+}
