@@ -4,13 +4,13 @@
 //
 // import { DateTime, Duration, Interval } from 'luxon';
 
-export function arrayify<T>(itemOrArray?: T | T[] | null) {
-  return !itemOrArray
-    ? []
-    : Array.isArray(itemOrArray)
-    ? itemOrArray
-    : [itemOrArray];
-}
+// export function arrayify<T>(itemOrArray?: T | T[] | null) {
+//   return !itemOrArray
+//     ? []
+//     : Array.isArray(itemOrArray)
+//     ? itemOrArray
+//     : [itemOrArray];
+// }
 
 // A brief primer on Typescript type mapping, so I don't forget:
 //
@@ -62,82 +62,82 @@ export function arrayify<T>(itemOrArray?: T | T[] | null) {
 //   mapify([] as Example[], 'objProp')  // INVALID -- objects cannot be keys
 //   mapify([] as Example[], 'optProp')  // INVALID -- undefined cannot be key
 
-/**
- * Converts an array of values into a key/value map based on a given
- * unique-valued property.
- * @param array the array to convert
- * @param field the name of the property whose values will get used as the key
- * @returns a key/value map where `returnedValue[fieldValue]` is the `value`
- */
-export function mapify<
-  T,
-  // `K` is crazy!  See primer above and (*) note below!
-  K extends keyof {
-    [P in keyof T as T[P] extends PropertyKey ? P : never]: T[P];
-  },
->(
-  array: T[] | undefined,
-  field: K
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore -- see note (*) below
-): Record<T[K], T> {
-  return (array || []).reduce(
-    (memo, val) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore -- see note (*) below
-      memo[val[field]] = val;
-      return memo;
+// /**
+//  * Converts an array of values into a key/value map based on a given
+//  * unique-valued property.
+//  * @param array the array to convert
+//  * @param field the name of the property whose values will get used as the key
+//  * @returns a key/value map where `returnedValue[fieldValue]` is the `value`
+//  */
+// export function mapify<
+//   T,
+//   // `K` is crazy!  See primer above and (*) note below!
+//   K extends keyof {
+//     [P in keyof T as T[P] extends PropertyKey ? P : never]: T[P];
+//   },
+// >(
+//   array: T[] | undefined,
+//   field: K
+//   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//   // @ts-ignore -- see note (*) below
+// ): Record<T[K], T> {
+//   return (array || []).reduce(
+//     (memo, val) => {
+//       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//       // @ts-ignore -- see note (*) below
+//       memo[val[field]] = val;
+//       return memo;
 
-      // (*) Note: Okay... so Typescript's generic contraints (the "K
-      // extends...") are not really used in the *body* of the function, only in
-      // callers *to* this function.  That means that Typescript thinks `T[K]`
-      // isn't valid, because it doesn't "know" that K is, in fact, a valid key
-      // of T.  Thus, we have to add a @ts-ignore before every line that uses
-      // `T[K]` or `val[field]`.  If we could avoid listing K as a separate
-      // generic parameter, that would help, but there's no way to specify
-      // `T[field]` to get the type of the *value* of `array[field]`.  Using
-      // `T[K]` is our only option.  Fortuntely, *uses* of mapify will work,
-      // correctly evaluating `T[K]` for the keys on the returned object.
-    },
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore -- see note (*) above
-    {} as Record<T[K], T>
-  );
-}
+//       // (*) Note: Okay... so Typescript's generic contraints (the "K
+//       // extends...") are not really used in the *body* of the function, only in
+//       // callers *to* this function.  That means that Typescript thinks `T[K]`
+//       // isn't valid, because it doesn't "know" that K is, in fact, a valid key
+//       // of T.  Thus, we have to add a @ts-ignore before every line that uses
+//       // `T[K]` or `val[field]`.  If we could avoid listing K as a separate
+//       // generic parameter, that would help, but there's no way to specify
+//       // `T[field]` to get the type of the *value* of `array[field]`.  Using
+//       // `T[K]` is our only option.  Fortuntely, *uses* of mapify will work,
+//       // correctly evaluating `T[K]` for the keys on the returned object.
+//     },
+//     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//     // @ts-ignore -- see note (*) above
+//     {} as Record<T[K], T>
+//   );
+// }
 
-/**
- * Groups an array of values into a key/value[] map based on a given
- * non-unique-valued property.
- * @param array the array to process
- * @param field the name of the property whose values will get used as the key
- * @param keyFn an optional key modification function to help normalize key
- * values
- * @returns a key/value[] map where `returnedValue[fieldValue]` is an array of
- * all `value`s with the given key value
- */
-export function groupify<
-  T,
-  // crazy `K` definition like mapify... see note there.
-  K extends keyof {
-    [P in keyof T as T[P] extends PropertyKey ? P : never]: T[P];
-  },
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore -- see note (*) above in mapify
-  K2 extends PropertyKey = T[K],
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore -- see note (*) above in mapify
->(array: T[], field: K, keyFn: (_key: T[K]) => K2 = identity): Record<K2, T[]> {
-  return (array || []).reduce(
-    (memo, val) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore -- see note (*) above in mapify
-      const key = keyFn(val[field]);
-      memo[key] = (memo[key] || []).concat(val);
-      return memo;
-    },
-    {} as Record<K2, T[]>
-  );
-}
+// /**
+//  * Groups an array of values into a key/value[] map based on a given
+//  * non-unique-valued property.
+//  * @param array the array to process
+//  * @param field the name of the property whose values will get used as the key
+//  * @param keyFn an optional key modification function to help normalize key
+//  * values
+//  * @returns a key/value[] map where `returnedValue[fieldValue]` is an array of
+//  * all `value`s with the given key value
+//  */
+// export function groupify<
+//   T,
+//   // crazy `K` definition like mapify... see note there.
+//   K extends keyof {
+//     [P in keyof T as T[P] extends PropertyKey ? P : never]: T[P];
+//   },
+//   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//   // @ts-ignore -- see note (*) above in mapify
+//   K2 extends PropertyKey = T[K],
+//   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//   // @ts-ignore -- see note (*) above in mapify
+// >(array: T[], field: K, keyFn: (_key: T[K]) => K2 = identity): Record<K2, T[]> {
+//   return (array || []).reduce(
+//     (memo, val) => {
+//       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//       // @ts-ignore -- see note (*) above in mapify
+//       const key = keyFn(val[field]);
+//       memo[key] = (memo[key] || []).concat(val);
+//       return memo;
+//     },
+//     {} as Record<K2, T[]>
+//   );
+// }
 
 /**
  * exists is a helper for Array.filter(), to remove null/undefined values
@@ -148,70 +148,70 @@ export function exists<T>(self: T | undefined | null | false | ''): self is T {
   return !!self;
 }
 
-// since we can't rely on Array.flatMap() yet...
-export function flatMap<T, R>(
-  arr: T[],
-  fn: (value: T, index: number, array: T[]) => R[] | R
-) {
-  return ([] as R[]).concat(...arr.map(fn));
-}
+// // since we can't rely on Array.flatMap() yet...
+// export function flatMap<T, R>(
+//   arr: T[],
+//   fn: (value: T, index: number, array: T[]) => R[] | R
+// ) {
+//   return ([] as R[]).concat(...arr.map(fn));
+// }
 
-export function firstLetterUpperCase(string: string) {
-  return string.charAt(0).toUpperCase() + string.substring(1);
-}
+// export function firstLetterUpperCase(string: string) {
+//   return string.charAt(0).toUpperCase() + string.substring(1);
+// }
 
-// While it might seem "obvious" to put the keyFn first, we are using this to
-// map the *values* 99% of the time.  Keys only rarely change.
+// // While it might seem "obvious" to put the keyFn first, we are using this to
+// // map the *values* 99% of the time.  Keys only rarely change.
 
-export type ValuesOf<T extends object> = T[keyof T];
+// export type ValuesOf<T extends object> = T[keyof T];
 
-/**
- * Performs an "object-equivalent" version of `Array.prototype.map`, allowing
- * the caller to return a new object which alters both the values and the keys
- * from the original object.
- *
- * Note that `valueFn` and `optionalKeyFn` are defined to optimize for the
- * most-typical use cases; `mapObject` is usually used for modifying the values,
- * so that's the first argument, and likely only needs the existing value so
- * that one's first.  Then, *if* you want to modify the keys, you can optionally
- * provide a function for that, but it takes the *key* as the first argument,
- * because most new key names will be based on the existing key name.
- *
- * @param obj the initial object
- * @param valueFn the value-mapping function (takes the existing *value* as
- * first arg)
- * @param optionalKeyFn the key-mapping function (takes the existing *key* as
- * first arg)
- * @returns the newly-created object
- */
-export function mapObject<
-  T extends object,
-  VR,
-  KR extends PropertyKey,
-  K = keyof T,
-  V = ValuesOf<T>,
->(obj: T, valueFn: (_v: V, _k: K) => VR, optionalKeyFn?: (_k: K, _v: V) => KR) {
-  // export function mapObject<K extends PropertyKey, V, VR, KR extends PropertyKey>(
-  //   obj: Record<K, V>,
-  //   valueFn: (_v: V, _k: K) => VR,
-  //   optionalKeyFn?: (_k: K, _v: V) => KR
-  // ) {
-  const keyFn = optionalKeyFn || identity;
+// /**
+//  * Performs an "object-equivalent" version of `Array.prototype.map`, allowing
+//  * the caller to return a new object which alters both the values and the keys
+//  * from the original object.
+//  *
+//  * Note that `valueFn` and `optionalKeyFn` are defined to optimize for the
+//  * most-typical use cases; `mapObject` is usually used for modifying the values,
+//  * so that's the first argument, and likely only needs the existing value so
+//  * that one's first.  Then, *if* you want to modify the keys, you can optionally
+//  * provide a function for that, but it takes the *key* as the first argument,
+//  * because most new key names will be based on the existing key name.
+//  *
+//  * @param obj the initial object
+//  * @param valueFn the value-mapping function (takes the existing *value* as
+//  * first arg)
+//  * @param optionalKeyFn the key-mapping function (takes the existing *key* as
+//  * first arg)
+//  * @returns the newly-created object
+//  */
+// export function mapObject<
+//   T extends object,
+//   VR,
+//   KR extends PropertyKey,
+//   K = keyof T,
+//   V = ValuesOf<T>,
+// >(obj: T, valueFn: (_v: V, _k: K) => VR, optionalKeyFn?: (_k: K, _v: V) => KR) {
+//   // export function mapObject<K extends PropertyKey, V, VR, KR extends PropertyKey>(
+//   //   obj: Record<K, V>,
+//   //   valueFn: (_v: V, _k: K) => VR,
+//   //   optionalKeyFn?: (_k: K, _v: V) => KR
+//   // ) {
+//   const keyFn = optionalKeyFn || identity;
 
-  // Object.entries() is poorly typed and assumes that the key is a string!
-  const newEntries = (Object.entries(obj) as [K, V][]).map(([key, value]) => {
-    const newKey = keyFn(key, value);
-    const newValue = valueFn(value, key);
-    return [newKey, newValue] as const;
-  });
+//   // Object.entries() is poorly typed and assumes that the key is a string!
+//   const newEntries = (Object.entries(obj) as [K, V][]).map(([key, value]) => {
+//     const newKey = keyFn(key, value);
+//     const newValue = valueFn(value, key);
+//     return [newKey, newValue] as const;
+//   });
 
-  return Object.fromEntries(newEntries) as Record<KR, VR>;
-}
+//   return Object.fromEntries(newEntries) as Record<KR, VR>;
+// }
 
-/** An "identity" pass-through helper. */
-export function identity<T>(x: T) {
-  return x;
-}
+// /** An "identity" pass-through helper. */
+// export function identity<T>(x: T) {
+//   return x;
+// }
 
 // /**
 //  * Creates a plain-text rendering for debug output by using YAML syntax.  Why
@@ -342,25 +342,26 @@ function defaultComparer(a: unknown, b: unknown) {
 
 export const compareStrings = defaultComparer;
 
-/**
- * Returns the index of the last element in the array where predicate is true, and -1
- * otherwise.
- * @param array The source array to search in
- * @param predicate find calls predicate once for each element of the array, in descending
- * order, until it finds one where predicate returns true. If such an element is found,
- * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
- */
-export function findLastIndex<T>(
-  array: Array<T>,
-  predicate: (value: T, index: number, obj: T[]) => boolean
-): number {
-  let l = array.length;
-  while (l > 0) {
-    l = l - 1;
-    if (predicate(array[l], l, array)) return l;
-  }
-  return -1;
-}
+// /**
+//  * Returns the index of the last element in the array where predicate is true,
+//  * and -1 otherwise.
+//  * @param array The source array to search in
+//  * @param predicate find calls predicate once for each element of the array, in
+//  * descending order, until it finds one where predicate returns true. If such an
+//  * element is found, findLastIndex immediately returns that element index.
+//  * Otherwise, findLastIndex returns -1.
+//  */
+// export function findLastIndex<T>(
+//   array: Array<T>,
+//   predicate: (value: T, index: number, obj: T[]) => boolean
+// ): number {
+//   let l = array.length;
+//   while (l > 0) {
+//     l = l - 1;
+//     if (predicate(array[l], l, array)) return l;
+//   }
+//   return -1;
+// }
 
 // /**
 //  * Perform "minimally-invasive" changes to an object to reduce churn in Redux
@@ -473,41 +474,41 @@ export function findLastIndex<T>(
 //   }
 // }
 
-/**
- * Creates an array filtering/testing helper that returns a test predicate that
- * returns whether a key is present in a given map or not.
- *
- * @param itemMap the map in which to check for existence
- * @returns a predicate function appropriate to pass to array.filter,
- * array.every, etc.
- *
- * @example
- * // whether every ID in `someIds` exists in the map
- * someIds.every(inMap(knownItems))
- *
- * // whether at least one ID in `someIds` exists in the map
- * someIds.some(inMap(knownItems))
- *
- * // returns *only* the IDs from `someIds` that are already in the map
- * someIds.filter(inMap(knownItems))
- */
-export function inMap<T extends PropertyKey>(itemMap: Record<T, unknown>) {
-  return (key: T) => !!itemMap[key];
-}
+// /**
+//  * Creates an array filtering/testing helper that returns a test predicate that
+//  * returns whether a key is present in a given map or not.
+//  *
+//  * @param itemMap the map in which to check for existence
+//  * @returns a predicate function appropriate to pass to array.filter,
+//  * array.every, etc.
+//  *
+//  * @example
+//  * // whether every ID in `someIds` exists in the map
+//  * someIds.every(inMap(knownItems))
+//  *
+//  * // whether at least one ID in `someIds` exists in the map
+//  * someIds.some(inMap(knownItems))
+//  *
+//  * // returns *only* the IDs from `someIds` that are already in the map
+//  * someIds.filter(inMap(knownItems))
+//  */
+// export function inMap<T extends PropertyKey>(itemMap: Record<T, unknown>) {
+//   return (key: T) => !!itemMap[key];
+// }
 
-/**
- * A helper for predicate functions, to allow negating the result without having
- * to write a separate negative helper.
- * @param val the value to negate
- * @returns the "opposite" of the value (truthy => false, falsy => true)
- *
- * @example
- * // all IDs *not* in the map
- * someIds.filter(not(inMap(knownItems)))
- */
-export function not(val: boolean) {
-  return !val;
-}
+// /**
+//  * A helper for predicate functions, to allow negating the result without having
+//  * to write a separate negative helper.
+//  * @param val the value to negate
+//  * @returns the "opposite" of the value (truthy => false, falsy => true)
+//  *
+//  * @example
+//  * // all IDs *not* in the map
+//  * someIds.filter(not(inMap(knownItems)))
+//  */
+// export function not(val: boolean) {
+//   return !val;
+// }
 
 // // The objectIdCounter (the low 3 bytes of an ObjectID) is supposed to be "an
 // // incrementing counter, initialized to a random value".  Because of the way
