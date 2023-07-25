@@ -3,6 +3,13 @@
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
 
+# [0.1.0-alpha.5](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.4...v0.1.0-alpha.5) (2023-07-25)
+
+
+### Features
+
+* add all-method mapping for easier Client overrides ([17f5a91](https://github.com/JaredReisinger/wordpressed/commit/17f5a91e1a1896f07b83af3c55fccbf6b1c7cc0f))
+
 # [0.1.0-alpha.4](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.3...v0.1.0-alpha.4) (2023-07-21)
 
 
