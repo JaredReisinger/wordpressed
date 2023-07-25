@@ -1,5 +1,4 @@
-export interface JetpackV4GetArgs {
-}
+export interface JetpackV4GetArgs {}
 
 export interface JetpackV4BackupHelperScriptPostArgs {
   /** base64 encoded Backup Helper Script body. */
@@ -11,33 +10,27 @@ export interface JetpackV4BackupHelperScriptDeleteArgs {
   path: string;
 }
 
-export interface JetpackV4CommentsPIdDBackupGetArgs {
-}
+export interface JetpackV4CommentsPIdDBackupGetArgs {}
 
-export interface JetpackV4ConnectionGetArgs {
-}
+export interface JetpackV4ConnectionGetArgs {}
 
-export interface JetpackV4ConnectionPostPutPatchArgs {
-}
+export interface JetpackV4ConnectionPostPutPatchArgs {}
 
 export interface JetpackV4ConnectionAuthorizeUrlGetArgs {
   /** URI of the admin page where the user should be redirected after connection flow */
   redirect_uri?: string;
 }
 
-export interface JetpackV4ConnectionDataGetArgs {
-}
+export interface JetpackV4ConnectionDataGetArgs {}
 
 export interface JetpackV4ConnectionOwnerPostPutPatchArgs {
   /** New owner */
   owner: number;
 }
 
-export interface JetpackV4ConnectionPluginsGetArgs {
-}
+export interface JetpackV4ConnectionPluginsGetArgs {}
 
-export interface JetpackV4ConnectionReconnectPostPutPatchArgs {
-}
+export interface JetpackV4ConnectionReconnectPostPutPatchArgs {}
 
 export interface JetpackV4ConnectionRegisterPostPutPatchArgs {
   /** Indicates where the registration action was triggered for tracking/segmentation purposes */
@@ -50,19 +43,16 @@ export interface JetpackV4ConnectionRegisterPostPutPatchArgs {
   registration_nonce: string;
 }
 
-export interface JetpackV4ConnectionTestGetArgs {
-}
+export interface JetpackV4ConnectionTestGetArgs {}
 
-export interface JetpackV4ConnectionTestWpcomGetArgs {
-}
+export interface JetpackV4ConnectionTestWpcomGetArgs {}
 
 export interface JetpackV4ConnectionUrlGetArgs {
   from?: string;
   redirect?: string;
 }
 
-export interface JetpackV4ConnectionUserPostPutPatchArgs {
-}
+export interface JetpackV4ConnectionUserPostPutPatchArgs {}
 
 export interface JetpackV4DatabaseObjectBackupGetArgs {
   /** ID of the database object to fetch */
@@ -73,42 +63,34 @@ export interface JetpackV4HintsPostPutPatchArgs {
   hint: string;
 }
 
-export interface JetpackV4IdentityCrisisConfirmSafeModePostPutPatchArgs {
-}
+export interface JetpackV4IdentityCrisisConfirmSafeModePostPutPatchArgs {}
 
-export interface JetpackV4IdentityCrisisMigratePostPutPatchArgs {
-}
+export interface JetpackV4IdentityCrisisMigratePostPutPatchArgs {}
 
 export interface JetpackV4IdentityCrisisStartFreshPostPutPatchArgs {
   /** URI of the admin page where the user should be redirected after connection flow */
   redirect_uri?: string;
 }
 
-export interface JetpackV4IntroOffersGetArgs {
-}
+export interface JetpackV4IntroOffersGetArgs {}
 
-export interface JetpackV4JetpackCrmGetArgs {
-}
+export interface JetpackV4JetpackCrmGetArgs {}
 
 export interface JetpackV4JetpackCrmPostPutPatchArgs {
   extension: string;
 }
 
-export interface JetpackV4JetpackAiJwtPostPutPatchArgs {
-}
+export interface JetpackV4JetpackAiJwtPostPutPatchArgs {}
 
-export interface JetpackV4JitmGetArgs {
-}
+export interface JetpackV4JitmGetArgs {}
 
-export interface JetpackV4JitmPostArgs {
-}
+export interface JetpackV4JitmPostArgs {}
 
 export interface JetpackV4LicensingAttachLicensesPostPutPatchArgs {
   licenses: number[];
 }
 
-export interface JetpackV4LicensingErrorGetArgs {
-}
+export interface JetpackV4LicensingErrorGetArgs {}
 
 export interface JetpackV4LicensingErrorPostPutPatchArgs {
   error: string;
@@ -122,40 +104,27 @@ export interface JetpackV4LicensingUserActivationNoticeDismissPostPutPatchArgs {
   last_detached_count: number;
 }
 
-export interface JetpackV4LicensingUserCountsGetArgs {
-}
+export interface JetpackV4LicensingUserCountsGetArgs {}
 
-export interface JetpackV4LicensingUserLicensesGetArgs {
-}
+export interface JetpackV4LicensingUserLicensesGetArgs {}
 
-export interface JetpackV4MarketingSurveyPostArgs {
-}
+export interface JetpackV4MarketingSurveyPostArgs {}
 
-export interface JetpackV4ModulePServiceAZKeyCheckGetArgs {
-}
+export interface JetpackV4ModulePServiceAZKeyCheckGetArgs {}
 
 export interface JetpackV4ModulePServiceAZKeyCheckPostPutPatchArgs {
   api_key?: string;
 }
 
-export interface JetpackV4ModulePSlugAZGetArgs {
-}
+export interface JetpackV4ModulePSlugAZGetArgs {}
 
-export interface JetpackV4ModulePSlugAZPostPutPatchArgsAdvancedSeoTitleFormats {
-}
+export interface JetpackV4ModulePSlugAZPostPutPatchArgsAdvancedSeoTitleFormats {}
 
+export interface JetpackV4ModulePSlugAZPostPutPatchArgsCustom {}
 
-export interface JetpackV4ModulePSlugAZPostPutPatchArgsCustom {
-}
+export interface JetpackV4ModulePSlugAZPostPutPatchArgsOnboarding {}
 
-
-export interface JetpackV4ModulePSlugAZPostPutPatchArgsOnboarding {
-}
-
-
-export interface JetpackV4ModulePSlugAZPostPutPatchArgsSharingServices {
-}
-
+export interface JetpackV4ModulePSlugAZPostPutPatchArgsSharingServices {}
 
 export interface JetpackV4ModulePSlugAZPostPutPatchArgs {
   'action-bar'?: boolean;
@@ -371,31 +340,24 @@ export interface JetpackV4ModulePSlugAZDataGetArgs {
   range?: string;
 }
 
-export interface JetpackV4ModuleAllGetArgs {
-}
+export interface JetpackV4ModuleAllGetArgs {}
 
 export interface JetpackV4ModuleAllActivePostPutPatchArgs {
   active?: boolean;
   modules: number[];
 }
 
-export interface JetpackV4NoticePNoticeAZPostPutPatchArgs {
-}
+export interface JetpackV4NoticePNoticeAZPostPutPatchArgs {}
 
-export interface JetpackV4OptionsPOptionsAZPostPutPatchArgs {
-}
+export interface JetpackV4OptionsPOptionsAZPostPutPatchArgs {}
 
-export interface JetpackV4OptionsBackupGetArgs {
-}
+export interface JetpackV4OptionsBackupGetArgs {}
 
-export interface JetpackV4PlansGetArgs {
-}
+export interface JetpackV4PlansGetArgs {}
 
-export interface JetpackV4PluginPPluginAZGetArgs {
-}
+export interface JetpackV4PluginPPluginAZGetArgs {}
 
-export interface JetpackV4PluginsGetArgs {
-}
+export interface JetpackV4PluginsGetArgs {}
 
 export interface JetpackV4PluginsPostArgs {
   /** WordPress.org plugin directory slug. */
@@ -410,99 +372,67 @@ export interface JetpackV4PluginsPPluginPostPutPatchArgs {
   status: string;
 }
 
-export interface JetpackV4PostsPIdDBackupGetArgs {
-}
+export interface JetpackV4PostsPIdDBackupGetArgs {}
 
-export interface JetpackV4ProductsGetArgs {
-}
+export interface JetpackV4ProductsGetArgs {}
 
-export interface JetpackV4PurchaseTokenGetArgs {
-}
+export interface JetpackV4PurchaseTokenGetArgs {}
 
-export interface JetpackV4PurchaseTokenPostArgs {
-}
+export interface JetpackV4PurchaseTokenPostArgs {}
 
-export interface JetpackV4RecommendationsConditionalGetArgs {
-}
+export interface JetpackV4RecommendationsConditionalGetArgs {}
 
-export interface JetpackV4RecommendationsDataGetArgs {
-}
+export interface JetpackV4RecommendationsDataGetArgs {}
 
-export interface JetpackV4RecommendationsDataPostPutPatchArgsData {
-}
-
+export interface JetpackV4RecommendationsDataPostPutPatchArgsData {}
 
 export interface JetpackV4RecommendationsDataPostPutPatchArgs {
   data: JetpackV4RecommendationsDataPostPutPatchArgsData;
 }
 
-export interface JetpackV4RecommendationsProductSuggestionsGetArgs {
-}
+export interface JetpackV4RecommendationsProductSuggestionsGetArgs {}
 
-export interface JetpackV4RecommendationsStepGetArgs {
-}
+export interface JetpackV4RecommendationsStepGetArgs {}
 
 export interface JetpackV4RecommendationsStepPostPutPatchArgs {
   step: string;
 }
 
-export interface JetpackV4RecommendationsUpsellGetArgs {
-}
+export interface JetpackV4RecommendationsUpsellGetArgs {}
 
-export interface JetpackV4RemoteAuthorizePostPutPatchArgs {
-}
+export interface JetpackV4RemoteAuthorizePostPutPatchArgs {}
 
-export interface JetpackV4RewindGetArgs {
-}
+export interface JetpackV4RewindGetArgs {}
 
-export interface JetpackV4ScanGetArgs {
-}
+export interface JetpackV4ScanGetArgs {}
 
-export interface JetpackV4SearchGetArgs {
-}
+export interface JetpackV4SearchGetArgs {}
 
-export interface JetpackV4SearchLocalStatsGetArgs {
-}
+export interface JetpackV4SearchLocalStatsGetArgs {}
 
-export interface JetpackV4SearchPlanGetArgs {
-}
+export interface JetpackV4SearchPlanGetArgs {}
 
-export interface JetpackV4SearchPlanActivatePostPutPatchArgs {
-}
+export interface JetpackV4SearchPlanActivatePostPutPatchArgs {}
 
-export interface JetpackV4SearchPlanDeactivatePostPutPatchArgs {
-}
+export interface JetpackV4SearchPlanDeactivatePostPutPatchArgs {}
 
-export interface JetpackV4SearchPricingGetArgs {
-}
+export interface JetpackV4SearchPricingGetArgs {}
 
-export interface JetpackV4SearchSettingsPostPutPatchArgs {
-}
+export interface JetpackV4SearchSettingsPostPutPatchArgs {}
 
-export interface JetpackV4SearchSettingsGetArgs {
-}
+export interface JetpackV4SearchSettingsGetArgs {}
 
-export interface JetpackV4SearchStatsGetArgs {
-}
+export interface JetpackV4SearchStatsGetArgs {}
 
-export interface JetpackV4SeenWcConnectionModalPostPutPatchArgs {
-}
+export interface JetpackV4SeenWcConnectionModalPostPutPatchArgs {}
 
-export interface JetpackV4SettingsPostPutPatchArgsAdvancedSeoTitleFormats {
-}
+export interface JetpackV4SettingsPostPutPatchArgsAdvancedSeoTitleFormats {}
 
+export interface JetpackV4SettingsPostPutPatchArgsCustom {}
 
-export interface JetpackV4SettingsPostPutPatchArgsCustom {
-}
+export interface JetpackV4SettingsPostPutPatchArgsOnboarding {}
 
-
-export interface JetpackV4SettingsPostPutPatchArgsOnboarding {
-}
-
-
-export interface JetpackV4SettingsPostPutPatchArgsSharingServices {
-}
-
+export interface JetpackV4SettingsPostPutPatchArgsSharingServices {}
 
 export interface JetpackV4SettingsPostPutPatchArgs {
   'action-bar'?: boolean;
@@ -710,47 +640,34 @@ export interface JetpackV4SettingsPostPutPatchArgs {
   yandex?: string;
 }
 
-export interface JetpackV4SettingsGetArgs {
-}
+export interface JetpackV4SettingsGetArgs {}
 
-export interface JetpackV4SettingsPSlugAZPostPutPatchArgs {
-}
+export interface JetpackV4SettingsPSlugAZPostPutPatchArgs {}
 
-export interface JetpackV4SiteGetArgs {
-}
+export interface JetpackV4SiteGetArgs {}
 
-export interface JetpackV4SiteActivityGetArgs {
-}
+export interface JetpackV4SiteActivityGetArgs {}
 
-export interface JetpackV4SiteBenefitsGetArgs {
-}
+export interface JetpackV4SiteBenefitsGetArgs {}
 
-export interface JetpackV4SiteDiscountGetArgs {
-}
+export interface JetpackV4SiteDiscountGetArgs {}
 
-export interface JetpackV4SiteFeaturesGetArgs {
-}
+export interface JetpackV4SiteFeaturesGetArgs {}
 
-export interface JetpackV4SiteProductsGetArgs {
-}
+export interface JetpackV4SiteProductsGetArgs {}
 
-export interface JetpackV4SitePurchasesGetArgs {
-}
+export interface JetpackV4SitePurchasesGetArgs {}
 
-export interface JetpackV4SyncCheckoutPostPutPatchArgs {
-}
+export interface JetpackV4SyncCheckoutPostPutPatchArgs {}
 
-export interface JetpackV4SyncClosePostPutPatchArgs {
-}
+export interface JetpackV4SyncClosePostPutPatchArgs {}
 
 export interface JetpackV4SyncDataCheckGetArgs {
   /** If text fields should be converted to latin1 in checksum calculation. */
   perform_text_conversion?: boolean;
 }
 
-export interface JetpackV4SyncDataHistogramPostPutPatchArgsColumns {
-}
-
+export interface JetpackV4SyncDataHistogramPostPutPatchArgsColumns {}
 
 export interface JetpackV4SyncDataHistogramPostPutPatchArgs {
   /** Number of histogram buckets. */
@@ -775,17 +692,11 @@ export interface JetpackV4SyncDataHistogramPostPutPatchArgs {
   strip_non_ascii?: boolean;
 }
 
-export interface JetpackV4SyncFullSyncPostPutPatchArgsComments {
-}
+export interface JetpackV4SyncFullSyncPostPutPatchArgsComments {}
 
+export interface JetpackV4SyncFullSyncPostPutPatchArgsModules {}
 
-export interface JetpackV4SyncFullSyncPostPutPatchArgsModules {
-}
-
-
-export interface JetpackV4SyncFullSyncPostPutPatchArgsPosts {
-}
-
+export interface JetpackV4SyncFullSyncPostPutPatchArgsPosts {}
 
 export interface JetpackV4SyncFullSyncPostPutPatchArgs {
   /** Comment IDs to include in Full Sync */
@@ -801,17 +712,14 @@ export interface JetpackV4SyncHealthPostPutPatchArgs {
   status: string;
 }
 
-export interface JetpackV4SyncLocksDeleteArgs {
-}
+export interface JetpackV4SyncLocksDeleteArgs {}
 
 export interface JetpackV4SyncNowPostPutPatchArgs {
   /** Name of Sync queue. */
   queue: string;
 }
 
-export interface JetpackV4SyncObjectGetPostPutPatchDeleteArgsObjectIds {
-}
-
+export interface JetpackV4SyncObjectGetPostPutPatchDeleteArgsObjectIds {}
 
 export interface JetpackV4SyncObjectGetPostPutPatchDeleteArgs {
   /** Name of Sync module */
@@ -829,14 +737,11 @@ export interface JetpackV4SyncObjectIdRangeGetArgs {
   sync_module: string;
 }
 
-export interface JetpackV4SyncSettingsGetArgs {
-}
+export interface JetpackV4SyncSettingsGetArgs {}
 
-export interface JetpackV4SyncSettingsPostPutPatchArgs {
-}
+export interface JetpackV4SyncSettingsPostPutPatchArgs {}
 
-export interface JetpackV4SyncSpawnSyncGetArgs {
-}
+export interface JetpackV4SyncSpawnSyncGetArgs {}
 
 export interface JetpackV4SyncStatusGetArgs {
   /** Comma seperated list of additional fields that should be included in status. */
@@ -848,18 +753,15 @@ export interface JetpackV4SyncUnlockPostPutPatchArgs {
   queue: string;
 }
 
-export interface JetpackV4TermsPIdDBackupGetArgs {
-}
+export interface JetpackV4TermsPIdDBackupGetArgs {}
 
-export interface JetpackV4TrackingSettingsGetArgs {
-}
+export interface JetpackV4TrackingSettingsGetArgs {}
 
 export interface JetpackV4TrackingSettingsPostPutPatchArgs {
   tracks_opt_out?: boolean;
 }
 
-export interface JetpackV4UpdatesPluginsGetArgs {
-}
+export interface JetpackV4UpdatesPluginsGetArgs {}
 
 export interface JetpackV4UserTokenPostPutPatchArgs {
   /** Is connection owner */
@@ -868,35 +770,27 @@ export interface JetpackV4UserTokenPostPutPatchArgs {
   user_token: string;
 }
 
-export interface JetpackV4UsersPIdDBackupGetArgs {
-}
+export interface JetpackV4UsersPIdDBackupGetArgs {}
 
 export interface JetpackV4VerifyXmlrpcErrorPostArgs {
   nonce: string;
 }
 
-export interface JetpackV4VerifySitePServiceAZGetArgs {
-}
+export interface JetpackV4VerifySitePServiceAZGetArgs {}
 
 export interface JetpackV4VerifySitePServiceAZPostPutPatchArgs {
   keyring_id: number;
 }
 
-export interface JetpackV4VerifySitePServiceAZKeyringId09GetArgs {
-}
+export interface JetpackV4VerifySitePServiceAZKeyringId09GetArgs {}
 
-export interface JetpackV4WafGetArgs {
-}
+export interface JetpackV4WafGetArgs {}
 
-export interface JetpackV4WafPostPutPatchArgs {
-}
+export interface JetpackV4WafPostPutPatchArgs {}
 
-export interface JetpackV4WafUpdateRulesPostPutPatchArgs {
-}
+export interface JetpackV4WafUpdateRulesPostPutPatchArgs {}
 
-export interface JetpackV4WidgetsPId09aZGetArgs {
-}
-
+export interface JetpackV4WidgetsPId09aZGetArgs {}
 
 export interface JetpackV4DeleteRoutes {
   '/jetpack/v4/backup-helper-script': JetpackV4BackupHelperScriptDeleteArgs;

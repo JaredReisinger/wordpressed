@@ -3,5 +3,5 @@
 /dist/
 
 # ignore generated namespace files?
-/.temp/
-/src/namespaces/
+#/.temp/
+#/src/namespaces/

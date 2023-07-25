@@ -30,8 +30,7 @@
     "release": "semantic-release",
     "snyk-protect": "snyk-protect",
     "#generation": "--- mostly for me, assumes .env file for options!",
-    "gen": "npm run generate-types --",
-    "generate-types": "./bin/dev.js generate",
+    "gen": "./bin/dev.js generate --out-dir src/namespaces && prettier --write src/namespaces/*.ts",
     "#oclif stuff": "------------------------------------",
     "postpack": "shx rm -f oclif.manifest.json",
     "#posttest": "npm run lint",
@@ -39,7 +38,7 @@
     "cli": "./bin/dev.js",
     "cli:run": "./bin/run.js",
     "cli:dev": "./bin/dev.js",
-    "cli:doc": "cd docs/cli && oclif readme",
+    "cli:doc": "cd docs/cli && oclif readme && npx prettier --write README.md",
     "version": "npm run cli:doc && git add docs/cli/README.md"
   },
   "files": [

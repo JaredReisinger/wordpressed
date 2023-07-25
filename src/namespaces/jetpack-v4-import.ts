@@ -1,13 +1,8 @@
-export interface JetpackV4ImportGetArgs {
-}
+export interface JetpackV4ImportGetArgs {}
 
-export interface JetpackV4ImportBlocksPostArgsContent {
-}
+export interface JetpackV4ImportBlocksPostArgsContent {}
 
-
-export interface JetpackV4ImportBlocksPostArgsTitle {
-}
-
+export interface JetpackV4ImportBlocksPostArgsTitle {}
 
 export interface JetpackV4ImportBlocksPostArgs {
   /** The content for the post. */
@@ -17,7 +12,21 @@ export interface JetpackV4ImportBlocksPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -26,9 +35,7 @@ export interface JetpackV4ImportBlocksPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportCategoriesPostArgsMeta {
-}
-
+export interface JetpackV4ImportCategoriesPostArgsMeta {}
 
 export interface JetpackV4ImportCategoriesPostArgs {
   /** HTML description of the term. */
@@ -45,13 +52,9 @@ export interface JetpackV4ImportCategoriesPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportCommentsPostArgsContent {
-}
+export interface JetpackV4ImportCommentsPostArgsContent {}
 
-
-export interface JetpackV4ImportCommentsPostArgsMeta {
-}
-
+export interface JetpackV4ImportCommentsPostArgsMeta {}
 
 export interface JetpackV4ImportCommentsPostArgs {
   /** The ID of the user object, if author was a user. */
@@ -84,9 +87,7 @@ export interface JetpackV4ImportCommentsPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportCustomCssPostArgsTitle {
-}
-
+export interface JetpackV4ImportCustomCssPostArgsTitle {}
 
 export interface JetpackV4ImportCustomCssPostArgs {
   /** A password to protect access to the content and excerpt. */
@@ -94,7 +95,21 @@ export interface JetpackV4ImportCustomCssPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -103,16 +118,11 @@ export interface JetpackV4ImportCustomCssPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportEndPostArgs {
-}
+export interface JetpackV4ImportEndPostArgs {}
 
-export interface JetpackV4ImportGlobalStylesPostArgsContent {
-}
+export interface JetpackV4ImportGlobalStylesPostArgsContent {}
 
-
-export interface JetpackV4ImportGlobalStylesPostArgsTitle {
-}
-
+export interface JetpackV4ImportGlobalStylesPostArgsTitle {}
 
 export interface JetpackV4ImportGlobalStylesPostArgs {
   /** The content for the post. */
@@ -122,7 +132,21 @@ export interface JetpackV4ImportGlobalStylesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The name of the theme. */
@@ -133,21 +157,13 @@ export interface JetpackV4ImportGlobalStylesPostArgs {
   unified_importer_id?: number;
 }
 
-export interface JetpackV4ImportMediaPostArgsCaption {
-}
+export interface JetpackV4ImportMediaPostArgsCaption {}
 
+export interface JetpackV4ImportMediaPostArgsDescription {}
 
-export interface JetpackV4ImportMediaPostArgsDescription {
-}
+export interface JetpackV4ImportMediaPostArgsMeta {}
 
-
-export interface JetpackV4ImportMediaPostArgsMeta {
-}
-
-
-export interface JetpackV4ImportMediaPostArgsTitle {
-}
-
+export interface JetpackV4ImportMediaPostArgsTitle {}
 
 export interface JetpackV4ImportMediaPostArgs {
   /** Alternative text to display when attachment is not displayed. */
@@ -169,7 +185,21 @@ export interface JetpackV4ImportMediaPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -178,21 +208,13 @@ export interface JetpackV4ImportMediaPostArgs {
   unified_importer_id?: number;
 }
 
-export interface JetpackV4ImportMediaPIdDPostPutPatchArgsCaption {
-}
+export interface JetpackV4ImportMediaPIdDPostPutPatchArgsCaption {}
 
+export interface JetpackV4ImportMediaPIdDPostPutPatchArgsDescription {}
 
-export interface JetpackV4ImportMediaPIdDPostPutPatchArgsDescription {
-}
+export interface JetpackV4ImportMediaPIdDPostPutPatchArgsMeta {}
 
-
-export interface JetpackV4ImportMediaPIdDPostPutPatchArgsMeta {
-}
-
-
-export interface JetpackV4ImportMediaPIdDPostPutPatchArgsTitle {
-}
-
+export interface JetpackV4ImportMediaPIdDPostPutPatchArgsTitle {}
 
 export interface JetpackV4ImportMediaPIdDPostPutPatchArgs {
   /** Alternative text to display when attachment is not displayed. */
@@ -216,7 +238,21 @@ export interface JetpackV4ImportMediaPIdDPostPutPatchArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -231,9 +267,7 @@ export interface JetpackV4ImportMediaPIdDPostProcessPostArgs {
   id?: number;
 }
 
-export interface JetpackV4ImportMenuItemsPostArgsMeta {
-}
-
+export interface JetpackV4ImportMenuItemsPostArgsMeta {}
 
 export interface JetpackV4ImportMenuItemsPostArgs {
   /** Text for the title attribute of the link element for this menu item. */
@@ -255,7 +289,21 @@ export interface JetpackV4ImportMenuItemsPostArgs {
   /** The ID for the parent of the object. */
   parent?: number;
   /** A named status for the object. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The target attribute of the link element for this menu item. */
   target?: '_blank' | '';
   /** The family of objects originally represented, such as "post_type" or "taxonomy". */
@@ -268,9 +316,7 @@ export interface JetpackV4ImportMenuItemsPostArgs {
   xfn?: number[];
 }
 
-export interface JetpackV4ImportMenusPostArgsMeta {
-}
-
+export interface JetpackV4ImportMenusPostArgsMeta {}
 
 export interface JetpackV4ImportMenusPostArgs {
   /** Whether to automatically add top level pages to this menu. */
@@ -289,13 +335,9 @@ export interface JetpackV4ImportMenusPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportNavigationPostArgsContent {
-}
+export interface JetpackV4ImportNavigationPostArgsContent {}
 
-
-export interface JetpackV4ImportNavigationPostArgsTitle {
-}
-
+export interface JetpackV4ImportNavigationPostArgsTitle {}
 
 export interface JetpackV4ImportNavigationPostArgs {
   /** The content for the post. */
@@ -305,7 +347,21 @@ export interface JetpackV4ImportNavigationPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -314,21 +370,13 @@ export interface JetpackV4ImportNavigationPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportPagesPostArgsContent {
-}
+export interface JetpackV4ImportPagesPostArgsContent {}
 
+export interface JetpackV4ImportPagesPostArgsExcerpt {}
 
-export interface JetpackV4ImportPagesPostArgsExcerpt {
-}
+export interface JetpackV4ImportPagesPostArgsMeta {}
 
-
-export interface JetpackV4ImportPagesPostArgsMeta {
-}
-
-
-export interface JetpackV4ImportPagesPostArgsTitle {
-}
-
+export interface JetpackV4ImportPagesPostArgsTitle {}
 
 export interface JetpackV4ImportPagesPostArgs {
   /** The ID for the author of the post. */
@@ -354,7 +402,21 @@ export interface JetpackV4ImportPagesPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** The theme file to use to display the post. */
   template?: string;
   /** The title for the post. */
@@ -363,21 +425,13 @@ export interface JetpackV4ImportPagesPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportPostsPostArgsContent {
-}
+export interface JetpackV4ImportPostsPostArgsContent {}
 
+export interface JetpackV4ImportPostsPostArgsExcerpt {}
 
-export interface JetpackV4ImportPostsPostArgsExcerpt {
-}
+export interface JetpackV4ImportPostsPostArgsMeta {}
 
-
-export interface JetpackV4ImportPostsPostArgsMeta {
-}
-
-
-export interface JetpackV4ImportPostsPostArgsTitle {
-}
-
+export interface JetpackV4ImportPostsPostArgsTitle {}
 
 export interface JetpackV4ImportPostsPostArgs {
   /** The ID for the author of the post. */
@@ -393,7 +447,17 @@ export interface JetpackV4ImportPostsPostArgs {
   /** The ID of the featured media for the post. */
   featured_media?: number;
   /** The format for the post. */
-  format?: 'standard' | 'aside' | 'chat' | 'gallery' | 'link' | 'image' | 'quote' | 'status' | 'video' | 'audio';
+  format?:
+    | 'standard'
+    | 'aside'
+    | 'chat'
+    | 'gallery'
+    | 'link'
+    | 'image'
+    | 'quote'
+    | 'status'
+    | 'video'
+    | 'audio';
   /** Meta fields. */
   meta?: JetpackV4ImportPostsPostArgsMeta;
   /** A password to protect access to the content and excerpt. */
@@ -403,7 +467,21 @@ export interface JetpackV4ImportPostsPostArgs {
   /** An alphanumeric identifier for the post unique to its type. */
   slug?: string;
   /** A named status for the post. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** Whether or not the post should be treated as sticky. */
   sticky?: boolean;
   /** The terms assigned to the post in the post_tag taxonomy. */
@@ -416,12 +494,9 @@ export interface JetpackV4ImportPostsPostArgs {
   unified_importer_id: number;
 }
 
-export interface JetpackV4ImportStartGetArgs {
-}
+export interface JetpackV4ImportStartGetArgs {}
 
-export interface JetpackV4ImportTagsPostArgsMeta {
-}
-
+export interface JetpackV4ImportTagsPostArgsMeta {}
 
 export interface JetpackV4ImportTagsPostArgs {
   /** HTML description of the term. */
@@ -446,7 +521,21 @@ export interface JetpackV4ImportTemplatePartsPostArgs {
   /** Unique slug identifying the template. */
   slug: string;
   /** Status of template. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -463,7 +552,21 @@ export interface JetpackV4ImportTemplatesPostArgs {
   /** Unique slug identifying the template. */
   slug: string;
   /** Status of template. */
-  status?: 'publish' | 'future' | 'draft' | 'pending' | 'private' | 'wc-pending' | 'wc-processing' | 'wc-on-hold' | 'wc-completed' | 'wc-cancelled' | 'wc-refunded' | 'wc-failed' | 'wc-checkout-draft' | 'spam';
+  status?:
+    | 'publish'
+    | 'future'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'wc-pending'
+    | 'wc-processing'
+    | 'wc-on-hold'
+    | 'wc-completed'
+    | 'wc-cancelled'
+    | 'wc-refunded'
+    | 'wc-failed'
+    | 'wc-checkout-draft'
+    | 'spam';
   /** Theme identifier for the template. */
   theme?: string;
   /** Type of template. */
@@ -472,9 +575,7 @@ export interface JetpackV4ImportTemplatesPostArgs {
   unified_importer_id: number;
 }
 
-
-export interface JetpackV4ImportDeleteRoutes {
-}
+export interface JetpackV4ImportDeleteRoutes {}
 
 export interface JetpackV4ImportGetRoutes {
   '/jetpack/v4/import': JetpackV4ImportGetArgs;

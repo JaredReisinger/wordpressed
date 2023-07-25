@@ -1,5 +1,4 @@
-export interface RedirectionV1GetArgs {
-}
+export interface RedirectionV1GetArgs {}
 
 export interface RedirectionV1404GetArgs {
   /** Direction of ordered results */
@@ -12,9 +11,7 @@ export interface RedirectionV1404GetArgs {
   per_page?: number;
 }
 
-export interface RedirectionV1Bulk404PBulkDeletePostPutPatchArgsItems {
-}
-
+export interface RedirectionV1Bulk404PBulkDeletePostPutPatchArgsItems {}
 
 export interface RedirectionV1Bulk404PBulkDeletePostPutPatchArgs {
   /** Direction of ordered results */
@@ -29,9 +26,7 @@ export interface RedirectionV1Bulk404PBulkDeletePostPutPatchArgs {
   per_page?: number;
 }
 
-export interface RedirectionV1BulkGroupPBulkDeleteEnableDisablePostPutPatchArgsItems {
-}
-
+export interface RedirectionV1BulkGroupPBulkDeleteEnableDisablePostPutPatchArgsItems {}
 
 export interface RedirectionV1BulkGroupPBulkDeleteEnableDisablePostPutPatchArgs {
   /** Direction of ordered results */
@@ -46,9 +41,7 @@ export interface RedirectionV1BulkGroupPBulkDeleteEnableDisablePostPutPatchArgs 
   per_page?: number;
 }
 
-export interface RedirectionV1BulkLogPBulkDeletePostPutPatchArgsItems {
-}
-
+export interface RedirectionV1BulkLogPBulkDeletePostPutPatchArgsItems {}
 
 export interface RedirectionV1BulkLogPBulkDeletePostPutPatchArgs {
   /** Direction of ordered results */
@@ -63,9 +56,7 @@ export interface RedirectionV1BulkLogPBulkDeletePostPutPatchArgs {
   per_page?: number;
 }
 
-export interface RedirectionV1BulkRedirectPBulkDeleteEnableDisableResetPostPutPatchArgsItems {
-}
-
+export interface RedirectionV1BulkRedirectPBulkDeleteEnableDisableResetPostPutPatchArgsItems {}
 
 export interface RedirectionV1BulkRedirectPBulkDeleteEnableDisableResetPostPutPatchArgs {
   /** Direction of ordered results */
@@ -82,8 +73,7 @@ export interface RedirectionV1BulkRedirectPBulkDeleteEnableDisableResetPostPutPa
   per_page?: number;
 }
 
-export interface RedirectionV1ExportPModule123AllPFormatCsvApacheNginxJsonGetArgs {
-}
+export interface RedirectionV1ExportPModule123AllPFormatCsvApacheNginxJsonGetArgs {}
 
 export interface RedirectionV1GroupGetArgs {
   /** Direction of ordered results */
@@ -118,14 +108,11 @@ export interface RedirectionV1GroupPIdDPostPutPatchArgs {
   name: string;
 }
 
-export interface RedirectionV1ImportFilePGroupIdDPostPutPatchArgs {
-}
+export interface RedirectionV1ImportFilePGroupIdDPostPutPatchArgs {}
 
-export interface RedirectionV1ImportPluginGetArgs {
-}
+export interface RedirectionV1ImportPluginGetArgs {}
 
-export interface RedirectionV1ImportPluginPostPutPatchArgs {
-}
+export interface RedirectionV1ImportPluginPostPutPatchArgs {}
 
 export interface RedirectionV1LogGetArgs {
   /** Direction of ordered results */
@@ -138,8 +125,7 @@ export interface RedirectionV1LogGetArgs {
   per_page?: number;
 }
 
-export interface RedirectionV1PluginGetArgs {
-}
+export interface RedirectionV1PluginGetArgs {}
 
 export interface RedirectionV1PluginPostPutPatchArgs {
   /** Name */
@@ -153,11 +139,9 @@ export interface RedirectionV1PluginDataPostPutPatchArgs {
   upgrade?: 'stop' | 'skip' | 'retry';
 }
 
-export interface RedirectionV1PluginDeletePostPutPatchArgs {
-}
+export interface RedirectionV1PluginDeletePostPutPatchArgs {}
 
-export interface RedirectionV1PluginTestGetPostPutPatchDeleteArgs {
-}
+export interface RedirectionV1PluginTestGetPostPutPatchDeleteArgs {}
 
 export interface RedirectionV1RedirectGetArgs {
   /** Direction of ordered results */
@@ -181,20 +165,16 @@ export interface RedirectionV1RedirectPostPutPatchArgs {
   per_page?: number;
 }
 
-export interface RedirectionV1RedirectPIdDPostPutPatchArgs {
-}
+export interface RedirectionV1RedirectPIdDPostPutPatchArgs {}
 
 export interface RedirectionV1RedirectPostGetArgs {
   /** Text to match */
   text: string;
 }
 
-export interface RedirectionV1SettingGetArgs {
-}
+export interface RedirectionV1SettingGetArgs {}
 
-export interface RedirectionV1SettingPostPutPatchArgs {
-}
-
+export interface RedirectionV1SettingPostPutPatchArgs {}
 
 export interface RedirectionV1DeleteRoutes {
   '/redirection/v1/plugin/test': RedirectionV1PluginTestGetPostPutPatchDeleteArgs;

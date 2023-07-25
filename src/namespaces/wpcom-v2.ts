@@ -1,24 +1,16 @@
-export interface WpcomV2GetArgs {
-}
+export interface WpcomV2GetArgs {}
 
-export interface WpcomV2AdminMenuGetArgs {
-}
+export interface WpcomV2AdminMenuGetArgs {}
 
-export interface WpcomV2BusinessHoursLocalizedWeekGetArgs {
-}
+export interface WpcomV2BusinessHoursLocalizedWeekGetArgs {}
 
-export interface WpcomV2CheckgoogledocvisibilityGetArgs {
-}
+export interface WpcomV2CheckgoogledocvisibilityGetArgs {}
 
-export interface WpcomV2ExternalMediaConnectionPServiceGooglePhotosGetArgs {
-}
+export interface WpcomV2ExternalMediaConnectionPServiceGooglePhotosGetArgs {}
 
-export interface WpcomV2ExternalMediaConnectionPServiceGooglePhotosDeleteArgs {
-}
+export interface WpcomV2ExternalMediaConnectionPServiceGooglePhotosDeleteArgs {}
 
-export interface WpcomV2ExternalMediaCopyPServiceGooglePhotosOpenversePexelsPostArgsMedia {
-}
-
+export interface WpcomV2ExternalMediaCopyPServiceGooglePhotosOpenversePexelsPostArgsMedia {}
 
 export interface WpcomV2ExternalMediaCopyPServiceGooglePhotosOpenversePexelsPostArgs {
   /** Media data to copy. */
@@ -47,20 +39,15 @@ export interface WpcomV2FormsResponsesGetArgs {
   search?: string;
 }
 
-export interface WpcomV2FormsResponsesBulkActionsPostArgs {
-}
+export interface WpcomV2FormsResponsesBulkActionsPostArgs {}
 
-export interface WpcomV2GutenbergAvailableExtensionsGetArgs {
-}
+export interface WpcomV2GutenbergAvailableExtensionsGetArgs {}
 
-export interface WpcomV2HelloGetArgs {
-}
+export interface WpcomV2HelloGetArgs {}
 
-export interface WpcomV2InstagramGalleryConnectUrlGetArgs {
-}
+export interface WpcomV2InstagramGalleryConnectUrlGetArgs {}
 
-export interface WpcomV2InstagramGalleryConnectionsGetArgs {
-}
+export interface WpcomV2InstagramGalleryConnectionsGetArgs {}
 
 export interface WpcomV2InstagramGalleryGalleryGetArgs {
   /** An Instagram Keyring access token. */
@@ -69,14 +56,11 @@ export interface WpcomV2InstagramGalleryGalleryGetArgs {
   count: number;
 }
 
-export interface WpcomV2JetpackAiAiAssistantFeatureGetArgs {
-}
+export interface WpcomV2JetpackAiAiAssistantFeatureGetArgs {}
 
-export interface WpcomV2MailchimpGetArgs {
-}
+export interface WpcomV2MailchimpGetArgs {}
 
-export interface WpcomV2MailchimpGroupsGetArgs {
-}
+export interface WpcomV2MailchimpGroupsGetArgs {}
 
 export interface WpcomV2MembershipsProductPostArgs {
   buyer_can_change_amount?: boolean;
@@ -87,8 +71,7 @@ export interface WpcomV2MembershipsProductPostArgs {
   title: string;
 }
 
-export interface WpcomV2MembershipsProductsPostArgs {
-}
+export interface WpcomV2MembershipsProductsPostArgs {}
 
 export interface WpcomV2MembershipsStatusGetArgs {
   is_editable?: boolean;
@@ -96,9 +79,7 @@ export interface WpcomV2MembershipsStatusGetArgs {
   type?: string;
 }
 
-export interface WpcomV2PodcastPlayerGetArgsGuids {
-}
-
+export interface WpcomV2PodcastPlayerGetArgsGuids {}
 
 export interface WpcomV2PodcastPlayerGetArgs {
   /** Whether we should return the episodes list for use in the selection UI */
@@ -109,12 +90,9 @@ export interface WpcomV2PodcastPlayerGetArgs {
   url: string;
 }
 
-export interface WpcomV2PodcastPlayerTrackQuantityGetArgs {
-}
+export interface WpcomV2PodcastPlayerTrackQuantityGetArgs {}
 
-export interface WpcomV2PostsPPostidDPublicizePostArgsSkippedConnections {
-}
-
+export interface WpcomV2PostsPPostidDPublicizePostArgsSkippedConnections {}
 
 export interface WpcomV2PostsPPostidDPublicizePostArgs {
   /** The message to share. */
@@ -123,37 +101,31 @@ export interface WpcomV2PostsPPostidDPublicizePostArgs {
   skipped_connections?: WpcomV2PostsPPostidDPublicizePostArgsSkippedConnections[];
 }
 
-export interface WpcomV2PublicizeConnectionTestResultsGetArgs {
-}
+export interface WpcomV2PublicizeConnectionTestResultsGetArgs {}
 
-export interface WpcomV2PublicizeConnectionsGetArgs {
-}
+export interface WpcomV2PublicizeConnectionsGetArgs {}
 
-export interface WpcomV2PublicizeServicesGetArgs {
-}
+export interface WpcomV2PublicizeServicesGetArgs {}
 
 export interface WpcomV2ResolveRedirectPUrlGetArgs {
   /** The URL to check for redirects. */
   url: string;
 }
 
-export interface WpcomV2SearchGetArgs {
-}
+export interface WpcomV2SearchGetArgs {}
 
 export interface WpcomV2SendEmailPreviewPostArgs {
   /** Unique identifier for the post. */
   id?: number;
 }
 
-export interface WpcomV2ServiceApiKeysPServiceAZGetArgs {
-}
+export interface WpcomV2ServiceApiKeysPServiceAZGetArgs {}
 
 export interface WpcomV2ServiceApiKeysPServiceAZPostPutPatchArgs {
   service_api_key: string;
 }
 
-export interface WpcomV2ServiceApiKeysPServiceAZDeleteArgs {
-}
+export interface WpcomV2ServiceApiKeysPServiceAZDeleteArgs {}
 
 export interface WpcomV2TemplateLoaderPTemplateTypeWGetArgs {
   /** The type of the template. */
@@ -170,29 +142,23 @@ export interface WpcomV2TweetstormGatherGetArgs {
   url: string;
 }
 
-export interface WpcomV2TweetstormGenerateCardsPostPutPatchArgsUrls {
-}
-
+export interface WpcomV2TweetstormGenerateCardsPostPutPatchArgsUrls {}
 
 export interface WpcomV2TweetstormGenerateCardsPostPutPatchArgs {
   /** An array of URLs to generate Twitter card details for. */
   urls: WpcomV2TweetstormGenerateCardsPostPutPatchArgsUrls[];
 }
 
-export interface WpcomV2TweetstormParsePostPutPatchArgsBlocks {
-}
-
+export interface WpcomV2TweetstormParsePostPutPatchArgsBlocks {}
 
 export interface WpcomV2TweetstormParsePostPutPatchArgs {
   /** An array of serialized blocks, and editor-specific block information. */
   blocks: WpcomV2TweetstormParsePostPutPatchArgsBlocks[];
 }
 
-export interface WpcomV2VideopressPVideoGuidWCheckOwnershipPPostIdDGetArgs {
-}
+export interface WpcomV2VideopressPVideoGuidWCheckOwnershipPPostIdDGetArgs {}
 
-export interface WpcomV2VideopressPVideoGuidWPosterGetArgs {
-}
+export interface WpcomV2VideopressPVideoGuidWPosterGetArgs {}
 
 export interface WpcomV2VideopressPVideoGuidWPosterPostPutPatchArgs {
   /** The time in the video to use as the poster frame. */
@@ -222,12 +188,9 @@ export interface WpcomV2VideopressMetaPostPutPatchArgs {
   title?: string;
 }
 
-export interface WpcomV2VideopressPlaybackJwtPVideoGuidWPostPutPatchArgs {
-}
+export interface WpcomV2VideopressPlaybackJwtPVideoGuidWPostPutPatchArgs {}
 
-export interface WpcomV2VideopressUploadJwtPostPutPatchArgs {
-}
-
+export interface WpcomV2VideopressUploadJwtPostPutPatchArgs {}
 
 export interface WpcomV2DeleteRoutes {
   '/wpcom/v2/external-media/connection/(?P<service>google_photos)': WpcomV2ExternalMediaConnectionPServiceGooglePhotosDeleteArgs;

@@ -1,5 +1,4 @@
-export interface WcAnalyticsGetArgs {
-}
+export interface WcAnalyticsGetArgs {}
 
 export interface WcAnalyticsAdminNotesGetArgs {
   /** Scope under which the request is made; determines fields present in response. */
@@ -37,22 +36,18 @@ export interface WcAnalyticsAdminNotesPNoteIdDActionPActionIdDPostPutPatchArgs {
   note_id?: number;
 }
 
-export interface WcAnalyticsAdminNotesDeletePIdDDeleteArgs {
-}
+export interface WcAnalyticsAdminNotesDeletePIdDDeleteArgs {}
 
 export interface WcAnalyticsAdminNotesDeleteAllDeleteArgs {
   /** Status of note. */
   status?: number[];
 }
 
-export interface WcAnalyticsAdminNotesExperimentalActivatePromoPPromoNoteNameWPostPutPatchArgs {
-}
+export interface WcAnalyticsAdminNotesExperimentalActivatePromoPPromoNoteNameWPostPutPatchArgs {}
 
-export interface WcAnalyticsAdminNotesTrackerPNoteIdDUserPUserIdDGetArgs {
-}
+export interface WcAnalyticsAdminNotesTrackerPNoteIdDUserPUserIdDGetArgs {}
 
-export interface WcAnalyticsAdminNotesUpdatePostPutPatchArgs {
-}
+export interface WcAnalyticsAdminNotesUpdatePostPutPatchArgs {}
 
 export interface WcAnalyticsCouponsGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -87,9 +82,7 @@ export interface WcAnalyticsCouponsGetArgs {
   search?: string;
 }
 
-export interface WcAnalyticsCouponsPostArgsMetaData {
-}
-
+export interface WcAnalyticsCouponsPostArgsMetaData {}
 
 export interface WcAnalyticsCouponsPostArgs {
   /** The amount of discount. Should always be numeric, even if setting a percentage. */
@@ -139,9 +132,7 @@ export interface WcAnalyticsCouponsPIdDGetArgs {
   id?: number;
 }
 
-export interface WcAnalyticsCouponsPIdDPostPutPatchArgsMetaData {
-}
-
+export interface WcAnalyticsCouponsPIdDPostPutPatchArgsMetaData {}
 
 export interface WcAnalyticsCouponsPIdDPostPutPatchArgs {
   /** The amount of discount. Should always be numeric, even if setting a percentage. */
@@ -193,9 +184,7 @@ export interface WcAnalyticsCouponsPIdDDeleteArgs {
   id?: number;
 }
 
-export interface WcAnalyticsCouponsBatchPostPutPatchArgsMetaData {
-}
-
+export interface WcAnalyticsCouponsBatchPostPutPatchArgsMetaData {}
 
 export interface WcAnalyticsCouponsBatchPostPutPatchArgs {
   /** The amount of discount. Should always be numeric, even if setting a percentage. */
@@ -282,7 +271,18 @@ export interface WcAnalyticsCustomersGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'username' | 'name' | 'country' | 'city' | 'state' | 'postcode' | 'date_registered' | 'date_last_active' | 'orders_count' | 'total_spend' | 'avg_order_value';
+  orderby?:
+    | 'username'
+    | 'name'
+    | 'country'
+    | 'city'
+    | 'state'
+    | 'postcode'
+    | 'date_registered'
+    | 'date_last_active'
+    | 'orders_count'
+    | 'total_spend'
+    | 'avg_order_value';
   /** Limit response to objects with an order count between two given integers. */
   orders_count_between?: number[];
   /** Limit response to objects with an order count less than or equal to given integer. */
@@ -363,7 +363,18 @@ export interface WcAnalyticsCustomersPIdDGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'username' | 'name' | 'country' | 'city' | 'state' | 'postcode' | 'date_registered' | 'date_last_active' | 'orders_count' | 'total_spend' | 'avg_order_value';
+  orderby?:
+    | 'username'
+    | 'name'
+    | 'country'
+    | 'city'
+    | 'state'
+    | 'postcode'
+    | 'date_registered'
+    | 'date_last_active'
+    | 'orders_count'
+    | 'total_spend'
+    | 'avg_order_value';
   /** Limit response to objects with an order count between two given integers. */
   orders_count_between?: number[];
   /** Limit response to objects with an order count less than or equal to given integer. */
@@ -398,22 +409,18 @@ export interface WcAnalyticsCustomersPIdDGetArgs {
   users?: number[];
 }
 
-export interface WcAnalyticsDataGetArgs {
-}
+export interface WcAnalyticsDataGetArgs {}
 
-export interface WcAnalyticsDataCountriesGetArgs {
-}
+export interface WcAnalyticsDataCountriesGetArgs {}
 
 export interface WcAnalyticsDataCountriesPLocationWGetArgs {
   /** ISO3166 alpha-2 country code. */
   location?: string;
 }
 
-export interface WcAnalyticsDataCountriesLocalesGetArgs {
-}
+export interface WcAnalyticsDataCountriesLocalesGetArgs {}
 
-export interface WcAnalyticsDataDownloadIpsGetArgs {
-}
+export interface WcAnalyticsDataDownloadIpsGetArgs {}
 
 export interface WcAnalyticsLeaderboardsGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -442,8 +449,7 @@ export interface WcAnalyticsLeaderboardsPLeaderboardWGetArgs {
   persisted_query?: string;
 }
 
-export interface WcAnalyticsLeaderboardsAllowedGetArgs {
-}
+export interface WcAnalyticsLeaderboardsAllowedGetArgs {}
 
 export interface WcAnalyticsOrdersGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -496,33 +502,19 @@ export interface WcAnalyticsOrdersGetArgs {
   status?: number[];
 }
 
-export interface WcAnalyticsOrdersPostArgsBilling {
-}
+export interface WcAnalyticsOrdersPostArgsBilling {}
 
+export interface WcAnalyticsOrdersPostArgsCouponLines {}
 
-export interface WcAnalyticsOrdersPostArgsCouponLines {
-}
+export interface WcAnalyticsOrdersPostArgsFeeLines {}
 
+export interface WcAnalyticsOrdersPostArgsLineItems {}
 
-export interface WcAnalyticsOrdersPostArgsFeeLines {
-}
+export interface WcAnalyticsOrdersPostArgsMetaData {}
 
+export interface WcAnalyticsOrdersPostArgsShipping {}
 
-export interface WcAnalyticsOrdersPostArgsLineItems {
-}
-
-
-export interface WcAnalyticsOrdersPostArgsMetaData {
-}
-
-
-export interface WcAnalyticsOrdersPostArgsShipping {
-}
-
-
-export interface WcAnalyticsOrdersPostArgsShippingLines {
-}
-
+export interface WcAnalyticsOrdersPostArgsShippingLines {}
 
 export interface WcAnalyticsOrdersPostArgs {
   /** Billing address. */
@@ -530,7 +522,170 @@ export interface WcAnalyticsOrdersPostArgs {
   /** Coupons line data. */
   coupon_lines?: WcAnalyticsOrdersPostArgsCouponLines[];
   /** Currency the order was created with, in ISO format. */
-  currency?: 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' | 'BAM' | 'BBD' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BMD' | 'BND' | 'BOB' | 'BRL' | 'BSD' | 'BTC' | 'BTN' | 'BWP' | 'BYR' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CUC' | 'CUP' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'FJD' | 'FKP' | 'GBP' | 'GEL' | 'GGP' | 'GHS' | 'GIP' | 'GMD' | 'GNF' | 'GTQ' | 'GYD' | 'HKD' | 'HNL' | 'HRK' | 'HTG' | 'HUF' | 'IDR' | 'ILS' | 'IMP' | 'INR' | 'IQD' | 'IRR' | 'IRT' | 'ISK' | 'JEP' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KGS' | 'KHR' | 'KMF' | 'KPW' | 'KRW' | 'KWD' | 'KYD' | 'KZT' | 'LAK' | 'LBP' | 'LKR' | 'LRD' | 'LSL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MNT' | 'MOP' | 'MRU' | 'MUR' | 'MVR' | 'MWK' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PGK' | 'PHP' | 'PKR' | 'PLN' | 'PRB' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SBD' | 'SCR' | 'SDG' | 'SEK' | 'SGD' | 'SHP' | 'SLL' | 'SOS' | 'SRD' | 'SSP' | 'STN' | 'SYP' | 'SZL' | 'THB' | 'TJS' | 'TMT' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VES' | 'VND' | 'VUV' | 'WST' | 'XAF' | 'XCD' | 'XOF' | 'XPF' | 'YER' | 'ZAR' | 'ZMW';
+  currency?:
+    | 'AED'
+    | 'AFN'
+    | 'ALL'
+    | 'AMD'
+    | 'ANG'
+    | 'AOA'
+    | 'ARS'
+    | 'AUD'
+    | 'AWG'
+    | 'AZN'
+    | 'BAM'
+    | 'BBD'
+    | 'BDT'
+    | 'BGN'
+    | 'BHD'
+    | 'BIF'
+    | 'BMD'
+    | 'BND'
+    | 'BOB'
+    | 'BRL'
+    | 'BSD'
+    | 'BTC'
+    | 'BTN'
+    | 'BWP'
+    | 'BYR'
+    | 'BYN'
+    | 'BZD'
+    | 'CAD'
+    | 'CDF'
+    | 'CHF'
+    | 'CLP'
+    | 'CNY'
+    | 'COP'
+    | 'CRC'
+    | 'CUC'
+    | 'CUP'
+    | 'CVE'
+    | 'CZK'
+    | 'DJF'
+    | 'DKK'
+    | 'DOP'
+    | 'DZD'
+    | 'EGP'
+    | 'ERN'
+    | 'ETB'
+    | 'EUR'
+    | 'FJD'
+    | 'FKP'
+    | 'GBP'
+    | 'GEL'
+    | 'GGP'
+    | 'GHS'
+    | 'GIP'
+    | 'GMD'
+    | 'GNF'
+    | 'GTQ'
+    | 'GYD'
+    | 'HKD'
+    | 'HNL'
+    | 'HRK'
+    | 'HTG'
+    | 'HUF'
+    | 'IDR'
+    | 'ILS'
+    | 'IMP'
+    | 'INR'
+    | 'IQD'
+    | 'IRR'
+    | 'IRT'
+    | 'ISK'
+    | 'JEP'
+    | 'JMD'
+    | 'JOD'
+    | 'JPY'
+    | 'KES'
+    | 'KGS'
+    | 'KHR'
+    | 'KMF'
+    | 'KPW'
+    | 'KRW'
+    | 'KWD'
+    | 'KYD'
+    | 'KZT'
+    | 'LAK'
+    | 'LBP'
+    | 'LKR'
+    | 'LRD'
+    | 'LSL'
+    | 'LYD'
+    | 'MAD'
+    | 'MDL'
+    | 'MGA'
+    | 'MKD'
+    | 'MMK'
+    | 'MNT'
+    | 'MOP'
+    | 'MRU'
+    | 'MUR'
+    | 'MVR'
+    | 'MWK'
+    | 'MXN'
+    | 'MYR'
+    | 'MZN'
+    | 'NAD'
+    | 'NGN'
+    | 'NIO'
+    | 'NOK'
+    | 'NPR'
+    | 'NZD'
+    | 'OMR'
+    | 'PAB'
+    | 'PEN'
+    | 'PGK'
+    | 'PHP'
+    | 'PKR'
+    | 'PLN'
+    | 'PRB'
+    | 'PYG'
+    | 'QAR'
+    | 'RON'
+    | 'RSD'
+    | 'RUB'
+    | 'RWF'
+    | 'SAR'
+    | 'SBD'
+    | 'SCR'
+    | 'SDG'
+    | 'SEK'
+    | 'SGD'
+    | 'SHP'
+    | 'SLL'
+    | 'SOS'
+    | 'SRD'
+    | 'SSP'
+    | 'STN'
+    | 'SYP'
+    | 'SZL'
+    | 'THB'
+    | 'TJS'
+    | 'TMT'
+    | 'TND'
+    | 'TOP'
+    | 'TRY'
+    | 'TTD'
+    | 'TWD'
+    | 'TZS'
+    | 'UAH'
+    | 'UGX'
+    | 'USD'
+    | 'UYU'
+    | 'UZS'
+    | 'VEF'
+    | 'VES'
+    | 'VND'
+    | 'VUV'
+    | 'WST'
+    | 'XAF'
+    | 'XCD'
+    | 'XOF'
+    | 'XPF'
+    | 'YER'
+    | 'ZAR'
+    | 'ZMW';
   /** User ID who owns the order. 0 for guests. */
   customer_id?: number;
   /** Note left by customer during checkout. */
@@ -554,7 +709,16 @@ export interface WcAnalyticsOrdersPostArgs {
   /** Shipping lines data. */
   shipping_lines?: WcAnalyticsOrdersPostArgsShippingLines[];
   /** Order status. */
-  status?: 'auto-draft' | 'pending' | 'processing' | 'on-hold' | 'completed' | 'cancelled' | 'refunded' | 'failed' | 'checkout-draft';
+  status?:
+    | 'auto-draft'
+    | 'pending'
+    | 'processing'
+    | 'on-hold'
+    | 'completed'
+    | 'cancelled'
+    | 'refunded'
+    | 'failed'
+    | 'checkout-draft';
   /** Unique transaction ID. */
   transaction_id?: string;
 }
@@ -566,33 +730,19 @@ export interface WcAnalyticsOrdersPIdDGetArgs {
   id?: number;
 }
 
-export interface WcAnalyticsOrdersPIdDPostPutPatchArgsBilling {
-}
+export interface WcAnalyticsOrdersPIdDPostPutPatchArgsBilling {}
 
+export interface WcAnalyticsOrdersPIdDPostPutPatchArgsCouponLines {}
 
-export interface WcAnalyticsOrdersPIdDPostPutPatchArgsCouponLines {
-}
+export interface WcAnalyticsOrdersPIdDPostPutPatchArgsFeeLines {}
 
+export interface WcAnalyticsOrdersPIdDPostPutPatchArgsLineItems {}
 
-export interface WcAnalyticsOrdersPIdDPostPutPatchArgsFeeLines {
-}
+export interface WcAnalyticsOrdersPIdDPostPutPatchArgsMetaData {}
 
+export interface WcAnalyticsOrdersPIdDPostPutPatchArgsShipping {}
 
-export interface WcAnalyticsOrdersPIdDPostPutPatchArgsLineItems {
-}
-
-
-export interface WcAnalyticsOrdersPIdDPostPutPatchArgsMetaData {
-}
-
-
-export interface WcAnalyticsOrdersPIdDPostPutPatchArgsShipping {
-}
-
-
-export interface WcAnalyticsOrdersPIdDPostPutPatchArgsShippingLines {
-}
-
+export interface WcAnalyticsOrdersPIdDPostPutPatchArgsShippingLines {}
 
 export interface WcAnalyticsOrdersPIdDPostPutPatchArgs {
   /** Billing address. */
@@ -600,7 +750,170 @@ export interface WcAnalyticsOrdersPIdDPostPutPatchArgs {
   /** Coupons line data. */
   coupon_lines?: WcAnalyticsOrdersPIdDPostPutPatchArgsCouponLines[];
   /** Currency the order was created with, in ISO format. */
-  currency?: 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' | 'BAM' | 'BBD' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BMD' | 'BND' | 'BOB' | 'BRL' | 'BSD' | 'BTC' | 'BTN' | 'BWP' | 'BYR' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CUC' | 'CUP' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'FJD' | 'FKP' | 'GBP' | 'GEL' | 'GGP' | 'GHS' | 'GIP' | 'GMD' | 'GNF' | 'GTQ' | 'GYD' | 'HKD' | 'HNL' | 'HRK' | 'HTG' | 'HUF' | 'IDR' | 'ILS' | 'IMP' | 'INR' | 'IQD' | 'IRR' | 'IRT' | 'ISK' | 'JEP' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KGS' | 'KHR' | 'KMF' | 'KPW' | 'KRW' | 'KWD' | 'KYD' | 'KZT' | 'LAK' | 'LBP' | 'LKR' | 'LRD' | 'LSL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MNT' | 'MOP' | 'MRU' | 'MUR' | 'MVR' | 'MWK' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PGK' | 'PHP' | 'PKR' | 'PLN' | 'PRB' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SBD' | 'SCR' | 'SDG' | 'SEK' | 'SGD' | 'SHP' | 'SLL' | 'SOS' | 'SRD' | 'SSP' | 'STN' | 'SYP' | 'SZL' | 'THB' | 'TJS' | 'TMT' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VES' | 'VND' | 'VUV' | 'WST' | 'XAF' | 'XCD' | 'XOF' | 'XPF' | 'YER' | 'ZAR' | 'ZMW';
+  currency?:
+    | 'AED'
+    | 'AFN'
+    | 'ALL'
+    | 'AMD'
+    | 'ANG'
+    | 'AOA'
+    | 'ARS'
+    | 'AUD'
+    | 'AWG'
+    | 'AZN'
+    | 'BAM'
+    | 'BBD'
+    | 'BDT'
+    | 'BGN'
+    | 'BHD'
+    | 'BIF'
+    | 'BMD'
+    | 'BND'
+    | 'BOB'
+    | 'BRL'
+    | 'BSD'
+    | 'BTC'
+    | 'BTN'
+    | 'BWP'
+    | 'BYR'
+    | 'BYN'
+    | 'BZD'
+    | 'CAD'
+    | 'CDF'
+    | 'CHF'
+    | 'CLP'
+    | 'CNY'
+    | 'COP'
+    | 'CRC'
+    | 'CUC'
+    | 'CUP'
+    | 'CVE'
+    | 'CZK'
+    | 'DJF'
+    | 'DKK'
+    | 'DOP'
+    | 'DZD'
+    | 'EGP'
+    | 'ERN'
+    | 'ETB'
+    | 'EUR'
+    | 'FJD'
+    | 'FKP'
+    | 'GBP'
+    | 'GEL'
+    | 'GGP'
+    | 'GHS'
+    | 'GIP'
+    | 'GMD'
+    | 'GNF'
+    | 'GTQ'
+    | 'GYD'
+    | 'HKD'
+    | 'HNL'
+    | 'HRK'
+    | 'HTG'
+    | 'HUF'
+    | 'IDR'
+    | 'ILS'
+    | 'IMP'
+    | 'INR'
+    | 'IQD'
+    | 'IRR'
+    | 'IRT'
+    | 'ISK'
+    | 'JEP'
+    | 'JMD'
+    | 'JOD'
+    | 'JPY'
+    | 'KES'
+    | 'KGS'
+    | 'KHR'
+    | 'KMF'
+    | 'KPW'
+    | 'KRW'
+    | 'KWD'
+    | 'KYD'
+    | 'KZT'
+    | 'LAK'
+    | 'LBP'
+    | 'LKR'
+    | 'LRD'
+    | 'LSL'
+    | 'LYD'
+    | 'MAD'
+    | 'MDL'
+    | 'MGA'
+    | 'MKD'
+    | 'MMK'
+    | 'MNT'
+    | 'MOP'
+    | 'MRU'
+    | 'MUR'
+    | 'MVR'
+    | 'MWK'
+    | 'MXN'
+    | 'MYR'
+    | 'MZN'
+    | 'NAD'
+    | 'NGN'
+    | 'NIO'
+    | 'NOK'
+    | 'NPR'
+    | 'NZD'
+    | 'OMR'
+    | 'PAB'
+    | 'PEN'
+    | 'PGK'
+    | 'PHP'
+    | 'PKR'
+    | 'PLN'
+    | 'PRB'
+    | 'PYG'
+    | 'QAR'
+    | 'RON'
+    | 'RSD'
+    | 'RUB'
+    | 'RWF'
+    | 'SAR'
+    | 'SBD'
+    | 'SCR'
+    | 'SDG'
+    | 'SEK'
+    | 'SGD'
+    | 'SHP'
+    | 'SLL'
+    | 'SOS'
+    | 'SRD'
+    | 'SSP'
+    | 'STN'
+    | 'SYP'
+    | 'SZL'
+    | 'THB'
+    | 'TJS'
+    | 'TMT'
+    | 'TND'
+    | 'TOP'
+    | 'TRY'
+    | 'TTD'
+    | 'TWD'
+    | 'TZS'
+    | 'UAH'
+    | 'UGX'
+    | 'USD'
+    | 'UYU'
+    | 'UZS'
+    | 'VEF'
+    | 'VES'
+    | 'VND'
+    | 'VUV'
+    | 'WST'
+    | 'XAF'
+    | 'XCD'
+    | 'XOF'
+    | 'XPF'
+    | 'YER'
+    | 'ZAR'
+    | 'ZMW';
   /** User ID who owns the order. 0 for guests. */
   customer_id?: number;
   /** Note left by customer during checkout. */
@@ -626,7 +939,16 @@ export interface WcAnalyticsOrdersPIdDPostPutPatchArgs {
   /** Shipping lines data. */
   shipping_lines?: WcAnalyticsOrdersPIdDPostPutPatchArgsShippingLines[];
   /** Order status. */
-  status?: 'auto-draft' | 'pending' | 'processing' | 'on-hold' | 'completed' | 'cancelled' | 'refunded' | 'failed' | 'checkout-draft';
+  status?:
+    | 'auto-draft'
+    | 'pending'
+    | 'processing'
+    | 'on-hold'
+    | 'completed'
+    | 'cancelled'
+    | 'refunded'
+    | 'failed'
+    | 'checkout-draft';
   /** Unique transaction ID. */
   transaction_id?: string;
 }
@@ -638,33 +960,19 @@ export interface WcAnalyticsOrdersPIdDDeleteArgs {
   id?: number;
 }
 
-export interface WcAnalyticsOrdersBatchPostPutPatchArgsBilling {
-}
+export interface WcAnalyticsOrdersBatchPostPutPatchArgsBilling {}
 
+export interface WcAnalyticsOrdersBatchPostPutPatchArgsCouponLines {}
 
-export interface WcAnalyticsOrdersBatchPostPutPatchArgsCouponLines {
-}
+export interface WcAnalyticsOrdersBatchPostPutPatchArgsFeeLines {}
 
+export interface WcAnalyticsOrdersBatchPostPutPatchArgsLineItems {}
 
-export interface WcAnalyticsOrdersBatchPostPutPatchArgsFeeLines {
-}
+export interface WcAnalyticsOrdersBatchPostPutPatchArgsMetaData {}
 
+export interface WcAnalyticsOrdersBatchPostPutPatchArgsShipping {}
 
-export interface WcAnalyticsOrdersBatchPostPutPatchArgsLineItems {
-}
-
-
-export interface WcAnalyticsOrdersBatchPostPutPatchArgsMetaData {
-}
-
-
-export interface WcAnalyticsOrdersBatchPostPutPatchArgsShipping {
-}
-
-
-export interface WcAnalyticsOrdersBatchPostPutPatchArgsShippingLines {
-}
-
+export interface WcAnalyticsOrdersBatchPostPutPatchArgsShippingLines {}
 
 export interface WcAnalyticsOrdersBatchPostPutPatchArgs {
   /** Billing address. */
@@ -672,7 +980,170 @@ export interface WcAnalyticsOrdersBatchPostPutPatchArgs {
   /** Coupons line data. */
   coupon_lines?: WcAnalyticsOrdersBatchPostPutPatchArgsCouponLines[];
   /** Currency the order was created with, in ISO format. */
-  currency?: 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ANG' | 'AOA' | 'ARS' | 'AUD' | 'AWG' | 'AZN' | 'BAM' | 'BBD' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BMD' | 'BND' | 'BOB' | 'BRL' | 'BSD' | 'BTC' | 'BTN' | 'BWP' | 'BYR' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CUC' | 'CUP' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'FJD' | 'FKP' | 'GBP' | 'GEL' | 'GGP' | 'GHS' | 'GIP' | 'GMD' | 'GNF' | 'GTQ' | 'GYD' | 'HKD' | 'HNL' | 'HRK' | 'HTG' | 'HUF' | 'IDR' | 'ILS' | 'IMP' | 'INR' | 'IQD' | 'IRR' | 'IRT' | 'ISK' | 'JEP' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KGS' | 'KHR' | 'KMF' | 'KPW' | 'KRW' | 'KWD' | 'KYD' | 'KZT' | 'LAK' | 'LBP' | 'LKR' | 'LRD' | 'LSL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MNT' | 'MOP' | 'MRU' | 'MUR' | 'MVR' | 'MWK' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PGK' | 'PHP' | 'PKR' | 'PLN' | 'PRB' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SBD' | 'SCR' | 'SDG' | 'SEK' | 'SGD' | 'SHP' | 'SLL' | 'SOS' | 'SRD' | 'SSP' | 'STN' | 'SYP' | 'SZL' | 'THB' | 'TJS' | 'TMT' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VES' | 'VND' | 'VUV' | 'WST' | 'XAF' | 'XCD' | 'XOF' | 'XPF' | 'YER' | 'ZAR' | 'ZMW';
+  currency?:
+    | 'AED'
+    | 'AFN'
+    | 'ALL'
+    | 'AMD'
+    | 'ANG'
+    | 'AOA'
+    | 'ARS'
+    | 'AUD'
+    | 'AWG'
+    | 'AZN'
+    | 'BAM'
+    | 'BBD'
+    | 'BDT'
+    | 'BGN'
+    | 'BHD'
+    | 'BIF'
+    | 'BMD'
+    | 'BND'
+    | 'BOB'
+    | 'BRL'
+    | 'BSD'
+    | 'BTC'
+    | 'BTN'
+    | 'BWP'
+    | 'BYR'
+    | 'BYN'
+    | 'BZD'
+    | 'CAD'
+    | 'CDF'
+    | 'CHF'
+    | 'CLP'
+    | 'CNY'
+    | 'COP'
+    | 'CRC'
+    | 'CUC'
+    | 'CUP'
+    | 'CVE'
+    | 'CZK'
+    | 'DJF'
+    | 'DKK'
+    | 'DOP'
+    | 'DZD'
+    | 'EGP'
+    | 'ERN'
+    | 'ETB'
+    | 'EUR'
+    | 'FJD'
+    | 'FKP'
+    | 'GBP'
+    | 'GEL'
+    | 'GGP'
+    | 'GHS'
+    | 'GIP'
+    | 'GMD'
+    | 'GNF'
+    | 'GTQ'
+    | 'GYD'
+    | 'HKD'
+    | 'HNL'
+    | 'HRK'
+    | 'HTG'
+    | 'HUF'
+    | 'IDR'
+    | 'ILS'
+    | 'IMP'
+    | 'INR'
+    | 'IQD'
+    | 'IRR'
+    | 'IRT'
+    | 'ISK'
+    | 'JEP'
+    | 'JMD'
+    | 'JOD'
+    | 'JPY'
+    | 'KES'
+    | 'KGS'
+    | 'KHR'
+    | 'KMF'
+    | 'KPW'
+    | 'KRW'
+    | 'KWD'
+    | 'KYD'
+    | 'KZT'
+    | 'LAK'
+    | 'LBP'
+    | 'LKR'
+    | 'LRD'
+    | 'LSL'
+    | 'LYD'
+    | 'MAD'
+    | 'MDL'
+    | 'MGA'
+    | 'MKD'
+    | 'MMK'
+    | 'MNT'
+    | 'MOP'
+    | 'MRU'
+    | 'MUR'
+    | 'MVR'
+    | 'MWK'
+    | 'MXN'
+    | 'MYR'
+    | 'MZN'
+    | 'NAD'
+    | 'NGN'
+    | 'NIO'
+    | 'NOK'
+    | 'NPR'
+    | 'NZD'
+    | 'OMR'
+    | 'PAB'
+    | 'PEN'
+    | 'PGK'
+    | 'PHP'
+    | 'PKR'
+    | 'PLN'
+    | 'PRB'
+    | 'PYG'
+    | 'QAR'
+    | 'RON'
+    | 'RSD'
+    | 'RUB'
+    | 'RWF'
+    | 'SAR'
+    | 'SBD'
+    | 'SCR'
+    | 'SDG'
+    | 'SEK'
+    | 'SGD'
+    | 'SHP'
+    | 'SLL'
+    | 'SOS'
+    | 'SRD'
+    | 'SSP'
+    | 'STN'
+    | 'SYP'
+    | 'SZL'
+    | 'THB'
+    | 'TJS'
+    | 'TMT'
+    | 'TND'
+    | 'TOP'
+    | 'TRY'
+    | 'TTD'
+    | 'TWD'
+    | 'TZS'
+    | 'UAH'
+    | 'UGX'
+    | 'USD'
+    | 'UYU'
+    | 'UZS'
+    | 'VEF'
+    | 'VES'
+    | 'VND'
+    | 'VUV'
+    | 'WST'
+    | 'XAF'
+    | 'XCD'
+    | 'XOF'
+    | 'XPF'
+    | 'YER'
+    | 'ZAR'
+    | 'ZMW';
   /** User ID who owns the order. 0 for guests. */
   customer_id?: number;
   /** Note left by customer during checkout. */
@@ -696,7 +1167,16 @@ export interface WcAnalyticsOrdersBatchPostPutPatchArgs {
   /** Shipping lines data. */
   shipping_lines?: WcAnalyticsOrdersBatchPostPutPatchArgsShippingLines[];
   /** Order status. */
-  status?: 'auto-draft' | 'pending' | 'processing' | 'on-hold' | 'completed' | 'cancelled' | 'refunded' | 'failed' | 'checkout-draft';
+  status?:
+    | 'auto-draft'
+    | 'pending'
+    | 'processing'
+    | 'on-hold'
+    | 'completed'
+    | 'cancelled'
+    | 'refunded'
+    | 'failed'
+    | 'checkout-draft';
   /** Unique transaction ID. */
   transaction_id?: string;
 }
@@ -743,7 +1223,21 @@ export interface WcAnalyticsProductsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'id' | 'include' | 'title' | 'slug' | 'modified' | 'rand' | 'menu_order' | 'popularity' | 'rating' | 'menu_order' | 'price' | 'popularity' | 'rating';
+  orderby?:
+    | 'date'
+    | 'id'
+    | 'include'
+    | 'title'
+    | 'slug'
+    | 'modified'
+    | 'rand'
+    | 'menu_order'
+    | 'popularity'
+    | 'rating'
+    | 'menu_order'
+    | 'price'
+    | 'popularity'
+    | 'rating';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -763,7 +1257,14 @@ export interface WcAnalyticsProductsGetArgs {
   /** Limit result set to products with a specific slug. */
   slug?: string;
   /** Limit result set to products assigned a specific status. */
-  status?: 'any' | 'future' | 'trash' | 'draft' | 'pending' | 'private' | 'publish';
+  status?:
+    | 'any'
+    | 'future'
+    | 'trash'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'publish';
   /** Limit result set to products with specified stock status. */
   stock_status?: 'instock' | 'outofstock' | 'onbackorder';
   /** Limit result set to products assigned a specific tag ID. */
@@ -772,37 +1273,21 @@ export interface WcAnalyticsProductsGetArgs {
   type?: 'simple' | 'grouped' | 'external' | 'variable';
 }
 
-export interface WcAnalyticsProductsPostArgsAttributes {
-}
+export interface WcAnalyticsProductsPostArgsAttributes {}
 
+export interface WcAnalyticsProductsPostArgsCategories {}
 
-export interface WcAnalyticsProductsPostArgsCategories {
-}
+export interface WcAnalyticsProductsPostArgsDefaultAttributes {}
 
+export interface WcAnalyticsProductsPostArgsDimensions {}
 
-export interface WcAnalyticsProductsPostArgsDefaultAttributes {
-}
+export interface WcAnalyticsProductsPostArgsDownloads {}
 
+export interface WcAnalyticsProductsPostArgsImages {}
 
-export interface WcAnalyticsProductsPostArgsDimensions {
-}
+export interface WcAnalyticsProductsPostArgsMetaData {}
 
-
-export interface WcAnalyticsProductsPostArgsDownloads {
-}
-
-
-export interface WcAnalyticsProductsPostArgsImages {
-}
-
-
-export interface WcAnalyticsProductsPostArgsMetaData {
-}
-
-
-export interface WcAnalyticsProductsPostArgsTags {
-}
-
+export interface WcAnalyticsProductsPostArgsTags {}
 
 export interface WcAnalyticsProductsPostArgs {
   /** List of attributes. */
@@ -866,7 +1351,14 @@ export interface WcAnalyticsProductsPostArgs {
   /** Allow one item to be bought in a single order. */
   sold_individually?: boolean;
   /** Product status (post status). */
-  status?: 'draft' | 'pending' | 'private' | 'publish' | 'future' | 'auto-draft' | 'trash';
+  status?:
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'publish'
+    | 'future'
+    | 'auto-draft'
+    | 'trash';
   /** Stock quantity. */
   stock_quantity?: number;
   /** Controls the stock status of the product. */
@@ -894,37 +1386,21 @@ export interface WcAnalyticsProductsPIdDGetArgs {
   id?: number;
 }
 
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsAttributes {
-}
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsAttributes {}
 
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsCategories {}
 
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsCategories {
-}
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsDefaultAttributes {}
 
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsDimensions {}
 
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsDefaultAttributes {
-}
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsDownloads {}
 
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsImages {}
 
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsDimensions {
-}
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsMetaData {}
 
-
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsDownloads {
-}
-
-
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsImages {
-}
-
-
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsMetaData {
-}
-
-
-export interface WcAnalyticsProductsPIdDPostPutPatchArgsTags {
-}
-
+export interface WcAnalyticsProductsPIdDPostPutPatchArgsTags {}
 
 export interface WcAnalyticsProductsPIdDPostPutPatchArgs {
   /** List of attributes. */
@@ -990,7 +1466,14 @@ export interface WcAnalyticsProductsPIdDPostPutPatchArgs {
   /** Allow one item to be bought in a single order. */
   sold_individually?: boolean;
   /** Product status (post status). */
-  status?: 'draft' | 'pending' | 'private' | 'publish' | 'future' | 'auto-draft' | 'trash';
+  status?:
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'publish'
+    | 'future'
+    | 'auto-draft'
+    | 'trash';
   /** Stock quantity. */
   stock_quantity?: number;
   /** Controls the stock status of the product. */
@@ -1050,7 +1533,14 @@ export interface WcAnalyticsProductsPProductIdDVariationsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'id' | 'include' | 'title' | 'slug' | 'modified' | 'menu_order';
+  orderby?:
+    | 'date'
+    | 'id'
+    | 'include'
+    | 'title'
+    | 'slug'
+    | 'modified'
+    | 'menu_order';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -1068,30 +1558,27 @@ export interface WcAnalyticsProductsPProductIdDVariationsGetArgs {
   /** Limit result set to products with a specific slug. */
   slug?: string;
   /** Limit result set to products assigned a specific status. */
-  status?: 'any' | 'future' | 'trash' | 'draft' | 'pending' | 'private' | 'publish';
+  status?:
+    | 'any'
+    | 'future'
+    | 'trash'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'publish';
   /** Limit result set to products with specified stock status. */
   stock_status?: 'instock' | 'outofstock' | 'onbackorder';
 }
 
-export interface WcAnalyticsProductsPProductIdDVariationsPostArgsAttributes {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsPostArgsAttributes {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsPostArgsDimensions {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsPostArgsDimensions {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsPostArgsDownloads {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsPostArgsImage {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsPostArgsDownloads {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsPostArgsImage {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsPostArgsMetaData {
-}
-
+export interface WcAnalyticsProductsPProductIdDVariationsPostArgsMetaData {}
 
 export interface WcAnalyticsProductsPProductIdDVariationsPostArgs {
   /** List of attributes. */
@@ -1159,25 +1646,15 @@ export interface WcAnalyticsProductsPProductIdDVariationsPIdDGetArgs {
   product_id?: number;
 }
 
-export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsAttributes {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsAttributes {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsDimensions {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsDimensions {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsDownloads {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsImage {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsDownloads {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsImage {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsMetaData {
-}
-
+export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgsMetaData {}
 
 export interface WcAnalyticsProductsPProductIdDVariationsPIdDPostPutPatchArgs {
   /** List of attributes. */
@@ -1247,25 +1724,15 @@ export interface WcAnalyticsProductsPProductIdDVariationsPIdDDeleteArgs {
   product_id?: number;
 }
 
-export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsAttributes {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsAttributes {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsDimensions {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsDimensions {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsDownloads {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsImage {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsDownloads {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsImage {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsMetaData {
-}
-
+export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgsMetaData {}
 
 export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgs {
   /** List of attributes. */
@@ -1324,25 +1791,15 @@ export interface WcAnalyticsProductsPProductIdDVariationsBatchPostPutPatchArgs {
   weight?: string;
 }
 
-export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsAttributes {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsAttributes {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsDimensions {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsDimensions {
-}
+export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsDownloads {}
 
+export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsImage {}
 
-export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsDownloads {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsImage {
-}
-
-
-export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsMetaData {
-}
-
+export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgsMetaData {}
 
 export interface WcAnalyticsProductsPProductIdDVariationsGeneratePostArgs {
   /** List of attributes. */
@@ -1437,7 +1894,14 @@ export interface WcAnalyticsProductsAttributesPAttributeIdDTermsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by resource attribute. */
-  orderby?: 'id' | 'include' | 'name' | 'slug' | 'term_group' | 'description' | 'count';
+  orderby?:
+    | 'id'
+    | 'include'
+    | 'name'
+    | 'slug'
+    | 'term_group'
+    | 'description'
+    | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to resources assigned to a specific parent. Applies to hierarchical taxonomies only. */
@@ -1559,7 +2023,14 @@ export interface WcAnalyticsProductsAttributesPSlugAZ09TermsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by resource attribute. */
-  orderby?: 'id' | 'include' | 'name' | 'slug' | 'term_group' | 'description' | 'count';
+  orderby?:
+    | 'id'
+    | 'include'
+    | 'name'
+    | 'slug'
+    | 'term_group'
+    | 'description'
+    | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to resources assigned to a specific parent. Applies to hierarchical taxonomies only. */
@@ -1587,37 +2058,21 @@ export interface WcAnalyticsProductsAttributesBatchPostPutPatchArgs {
   type?: 'select';
 }
 
-export interface WcAnalyticsProductsBatchPostPutPatchArgsAttributes {
-}
+export interface WcAnalyticsProductsBatchPostPutPatchArgsAttributes {}
 
+export interface WcAnalyticsProductsBatchPostPutPatchArgsCategories {}
 
-export interface WcAnalyticsProductsBatchPostPutPatchArgsCategories {
-}
+export interface WcAnalyticsProductsBatchPostPutPatchArgsDefaultAttributes {}
 
+export interface WcAnalyticsProductsBatchPostPutPatchArgsDimensions {}
 
-export interface WcAnalyticsProductsBatchPostPutPatchArgsDefaultAttributes {
-}
+export interface WcAnalyticsProductsBatchPostPutPatchArgsDownloads {}
 
+export interface WcAnalyticsProductsBatchPostPutPatchArgsImages {}
 
-export interface WcAnalyticsProductsBatchPostPutPatchArgsDimensions {
-}
+export interface WcAnalyticsProductsBatchPostPutPatchArgsMetaData {}
 
-
-export interface WcAnalyticsProductsBatchPostPutPatchArgsDownloads {
-}
-
-
-export interface WcAnalyticsProductsBatchPostPutPatchArgsImages {
-}
-
-
-export interface WcAnalyticsProductsBatchPostPutPatchArgsMetaData {
-}
-
-
-export interface WcAnalyticsProductsBatchPostPutPatchArgsTags {
-}
-
+export interface WcAnalyticsProductsBatchPostPutPatchArgsTags {}
 
 export interface WcAnalyticsProductsBatchPostPutPatchArgs {
   /** List of attributes. */
@@ -1681,7 +2136,14 @@ export interface WcAnalyticsProductsBatchPostPutPatchArgs {
   /** Allow one item to be bought in a single order. */
   sold_individually?: boolean;
   /** Product status (post status). */
-  status?: 'draft' | 'pending' | 'private' | 'publish' | 'future' | 'auto-draft' | 'trash';
+  status?:
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'publish'
+    | 'future'
+    | 'auto-draft'
+    | 'trash';
   /** Stock quantity. */
   stock_quantity?: number;
   /** Controls the stock status of the product. */
@@ -1716,7 +2178,14 @@ export interface WcAnalyticsProductsCategoriesGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by resource attribute. */
-  orderby?: 'id' | 'include' | 'name' | 'slug' | 'term_group' | 'description' | 'count';
+  orderby?:
+    | 'id'
+    | 'include'
+    | 'name'
+    | 'slug'
+    | 'term_group'
+    | 'description'
+    | 'count';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to resources assigned to a specific parent. Applies to hierarchical taxonomies only. */
@@ -1731,9 +2200,7 @@ export interface WcAnalyticsProductsCategoriesGetArgs {
   slug?: string;
 }
 
-export interface WcAnalyticsProductsCategoriesPostArgsImage {
-}
-
+export interface WcAnalyticsProductsCategoriesPostArgsImage {}
 
 export interface WcAnalyticsProductsCategoriesPostArgs {
   /** HTML description of the resource. */
@@ -1759,9 +2226,7 @@ export interface WcAnalyticsProductsCategoriesPIdDGetArgs {
   id?: number;
 }
 
-export interface WcAnalyticsProductsCategoriesPIdDPostPutPatchArgsImage {
-}
-
+export interface WcAnalyticsProductsCategoriesPIdDPostPutPatchArgsImage {}
 
 export interface WcAnalyticsProductsCategoriesPIdDPostPutPatchArgs {
   /** HTML description of the resource. */
@@ -1789,9 +2254,7 @@ export interface WcAnalyticsProductsCategoriesPIdDDeleteArgs {
   id?: number;
 }
 
-export interface WcAnalyticsProductsCategoriesBatchPostPutPatchArgsImage {
-}
-
+export interface WcAnalyticsProductsCategoriesBatchPostPutPatchArgsImage {}
 
 export interface WcAnalyticsProductsCategoriesBatchPostPutPatchArgs {
   /** HTML description of the resource. */
@@ -1928,9 +2391,7 @@ export interface WcAnalyticsReportsGetArgs {
   context?: 'view';
 }
 
-export interface WcAnalyticsReportsPTypeAZExportPostPutPatchArgsReportArgs {
-}
-
+export interface WcAnalyticsReportsPTypeAZExportPostPutPatchArgsReportArgs {}
 
 export interface WcAnalyticsReportsPTypeAZExportPostPutPatchArgs {
   /** When true, email a link to download the export to the requesting user. */
@@ -1939,8 +2400,7 @@ export interface WcAnalyticsReportsPTypeAZExportPostPutPatchArgs {
   report_args?: WcAnalyticsReportsPTypeAZExportPostPutPatchArgsReportArgs;
 }
 
-export interface WcAnalyticsReportsPTypeAZExportPExportIdAZ09StatusGetArgs {
-}
+export interface WcAnalyticsReportsPTypeAZExportPExportIdAZ09StatusGetArgs {}
 
 export interface WcAnalyticsReportsCategoriesGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -1960,7 +2420,13 @@ export interface WcAnalyticsReportsCategoriesGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'category_id' | 'items_sold' | 'net_revenue' | 'orders_count' | 'products_count' | 'category';
+  orderby?:
+    | 'category_id'
+    | 'items_sold'
+    | 'net_revenue'
+    | 'orders_count'
+    | 'products_count'
+    | 'category';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2065,7 +2531,18 @@ export interface WcAnalyticsReportsCustomersGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'username' | 'name' | 'country' | 'city' | 'state' | 'postcode' | 'date_registered' | 'date_last_active' | 'orders_count' | 'total_spend' | 'avg_order_value';
+  orderby?:
+    | 'username'
+    | 'name'
+    | 'country'
+    | 'city'
+    | 'state'
+    | 'postcode'
+    | 'date_registered'
+    | 'date_last_active'
+    | 'orders_count'
+    | 'total_spend'
+    | 'avg_order_value';
   /** Limit response to objects with an order count between two given integers. */
   orders_count_between?: number[];
   /** Limit response to objects with an order count less than or equal to given integer. */
@@ -2252,14 +2729,11 @@ export interface WcAnalyticsReportsImportPostPutPatchArgs {
   skip_existing?: boolean;
 }
 
-export interface WcAnalyticsReportsImportCancelPostPutPatchArgs {
-}
+export interface WcAnalyticsReportsImportCancelPostPutPatchArgs {}
 
-export interface WcAnalyticsReportsImportDeletePostPutPatchArgs {
-}
+export interface WcAnalyticsReportsImportDeletePostPutPatchArgs {}
 
-export interface WcAnalyticsReportsImportStatusGetArgs {
-}
+export interface WcAnalyticsReportsImportStatusGetArgs {}
 
 export interface WcAnalyticsReportsImportTotalsGetArgs {
   /** Number of days to import. */
@@ -2268,13 +2742,9 @@ export interface WcAnalyticsReportsImportTotalsGetArgs {
   skip_existing?: boolean;
 }
 
-export interface WcAnalyticsReportsOrdersGetArgsAttributeIs {
-}
+export interface WcAnalyticsReportsOrdersGetArgsAttributeIs {}
 
-
-export interface WcAnalyticsReportsOrdersGetArgsAttributeIsNot {
-}
-
+export interface WcAnalyticsReportsOrdersGetArgsAttributeIsNot {}
 
 export interface WcAnalyticsReportsOrdersGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -2329,13 +2799,9 @@ export interface WcAnalyticsReportsOrdersGetArgs {
   variation_includes?: number[];
 }
 
-export interface WcAnalyticsReportsOrdersStatsGetArgsAttributeIs {
-}
+export interface WcAnalyticsReportsOrdersStatsGetArgsAttributeIs {}
 
-
-export interface WcAnalyticsReportsOrdersStatsGetArgsAttributeIsNot {
-}
-
+export interface WcAnalyticsReportsOrdersStatsGetArgsAttributeIsNot {}
 
 export interface WcAnalyticsReportsOrdersStatsGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -2434,7 +2900,14 @@ export interface WcAnalyticsReportsProductsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'net_revenue' | 'orders_count' | 'items_sold' | 'product_name' | 'variations' | 'sku';
+  orderby?:
+    | 'date'
+    | 'net_revenue'
+    | 'orders_count'
+    | 'items_sold'
+    | 'product_name'
+    | 'variations'
+    | 'sku';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2461,7 +2934,16 @@ export interface WcAnalyticsReportsProductsStatsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'net_revenue' | 'coupons' | 'refunds' | 'shipping' | 'taxes' | 'net_revenue' | 'orders_count' | 'items_sold';
+  orderby?:
+    | 'date'
+    | 'net_revenue'
+    | 'coupons'
+    | 'refunds'
+    | 'shipping'
+    | 'taxes'
+    | 'net_revenue'
+    | 'orders_count'
+    | 'items_sold';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2488,7 +2970,17 @@ export interface WcAnalyticsReportsRevenueStatsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'total_sales' | 'coupons' | 'refunds' | 'shipping' | 'taxes' | 'net_revenue' | 'orders_count' | 'items_sold' | 'gross_sales';
+  orderby?:
+    | 'date'
+    | 'total_sales'
+    | 'coupons'
+    | 'refunds'
+    | 'shipping'
+    | 'taxes'
+    | 'net_revenue'
+    | 'orders_count'
+    | 'items_sold'
+    | 'gross_sales';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2509,7 +3001,14 @@ export interface WcAnalyticsReportsStockGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'stock_status' | 'stock_quantity' | 'date' | 'id' | 'include' | 'title' | 'sku';
+  orderby?:
+    | 'stock_status'
+    | 'stock_quantity'
+    | 'date'
+    | 'id'
+    | 'include'
+    | 'title'
+    | 'sku';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -2539,7 +3038,15 @@ export interface WcAnalyticsReportsTaxesGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'name' | 'tax_rate_id' | 'tax_code' | 'rate' | 'order_tax' | 'total_tax' | 'shipping_tax' | 'orders_count';
+  orderby?:
+    | 'name'
+    | 'tax_rate_id'
+    | 'tax_code'
+    | 'rate'
+    | 'order_tax'
+    | 'total_tax'
+    | 'shipping_tax'
+    | 'orders_count';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2564,7 +3071,12 @@ export interface WcAnalyticsReportsTaxesStatsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'items_sold' | 'total_sales' | 'orders_count' | 'products_count';
+  orderby?:
+    | 'date'
+    | 'items_sold'
+    | 'total_sales'
+    | 'orders_count'
+    | 'products_count';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2575,13 +3087,9 @@ export interface WcAnalyticsReportsTaxesStatsGetArgs {
   taxes?: number[];
 }
 
-export interface WcAnalyticsReportsVariationsGetArgsAttributeIs {
-}
+export interface WcAnalyticsReportsVariationsGetArgsAttributeIs {}
 
-
-export interface WcAnalyticsReportsVariationsGetArgsAttributeIsNot {
-}
-
+export interface WcAnalyticsReportsVariationsGetArgsAttributeIsNot {}
 
 export interface WcAnalyticsReportsVariationsGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -2620,13 +3128,9 @@ export interface WcAnalyticsReportsVariationsGetArgs {
   variations?: number[];
 }
 
-export interface WcAnalyticsReportsVariationsStatsGetArgsAttributeIs {
-}
+export interface WcAnalyticsReportsVariationsStatsGetArgsAttributeIs {}
 
-
-export interface WcAnalyticsReportsVariationsStatsGetArgsAttributeIsNot {
-}
-
+export interface WcAnalyticsReportsVariationsStatsGetArgsAttributeIsNot {}
 
 export interface WcAnalyticsReportsVariationsStatsGetArgs {
   /** Limit response to resources published after a given ISO8601 compliant date. */
@@ -2654,7 +3158,16 @@ export interface WcAnalyticsReportsVariationsStatsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'net_revenue' | 'coupons' | 'refunds' | 'shipping' | 'taxes' | 'net_revenue' | 'orders_count' | 'items_sold';
+  orderby?:
+    | 'date'
+    | 'net_revenue'
+    | 'coupons'
+    | 'refunds'
+    | 'shipping'
+    | 'taxes'
+    | 'net_revenue'
+    | 'orders_count'
+    | 'items_sold';
   /** Current page of the collection. */
   page?: number;
   /** Maximum number of items to be returned in result set. */
@@ -2849,7 +3362,14 @@ export interface WcAnalyticsVariationsGetArgs {
   /** Order sort attribute ascending or descending. */
   order?: 'asc' | 'desc';
   /** Sort collection by object attribute. */
-  orderby?: 'date' | 'id' | 'include' | 'title' | 'slug' | 'modified' | 'menu_order';
+  orderby?:
+    | 'date'
+    | 'id'
+    | 'include'
+    | 'title'
+    | 'slug'
+    | 'modified'
+    | 'menu_order';
   /** Current page of the collection. */
   page?: number;
   /** Limit result set to those of particular parent IDs. */
@@ -2865,11 +3385,17 @@ export interface WcAnalyticsVariationsGetArgs {
   /** Limit result set to products with a specific slug. */
   slug?: string;
   /** Limit result set to products assigned a specific status. */
-  status?: 'any' | 'future' | 'trash' | 'draft' | 'pending' | 'private' | 'publish';
+  status?:
+    | 'any'
+    | 'future'
+    | 'trash'
+    | 'draft'
+    | 'pending'
+    | 'private'
+    | 'publish';
   /** Limit result set to products with specified stock status. */
   stock_status?: 'instock' | 'outofstock' | 'onbackorder';
 }
-
 
 export interface WcAnalyticsDeleteRoutes {
   '/wc-analytics/admin/notes/delete/(?P<id>[\\d-]+)': WcAnalyticsAdminNotesDeletePIdDDeleteArgs;

@@ -1,17 +1,12 @@
-export interface JetpackV4StatsAppGetArgs {
-}
+export interface JetpackV4StatsAppGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModuleSettingsPostPutPatchArgs {
-}
+export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModuleSettingsPostPutPatchArgs {}
 
-export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModuleSettingsGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModuleSettingsGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModulesPostPutPatchArgs {
-}
+export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModulesPostPutPatchArgs {}
 
-export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModulesGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardModulesGetArgs {}
 
 export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardNoticesPostPutPatchArgs {
   /** ID of the notice */
@@ -22,29 +17,21 @@ export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardNoticesPost
   status: string;
 }
 
-export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardNoticesGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134JetpackStatsDashboardNoticesGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134PostsGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134PostsGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134PostsPResourceIdDGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134PostsPResourceIdDGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134PostsPResourceIdDLikesGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134PostsPResourceIdDLikesGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134SiteHasNeverPublishedPostGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134SiteHasNeverPublishedPostGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134StatsGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134StatsGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134StatsPResourceWGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134StatsPResourceWGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134StatsPResourceWPResourceIdDGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134StatsPResourceWPResourceIdDGetArgs {}
 
 export interface JetpackV4StatsAppSites202188134StatsReferrersSpamDeletePostPutPatchArgs {
   /** Domain of the referrer */
@@ -56,14 +43,11 @@ export interface JetpackV4StatsAppSites202188134StatsReferrersSpamNewPostPutPatc
   domain: string;
 }
 
-export interface JetpackV4StatsAppSites202188134SubscribersCountsGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134SubscribersCountsGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134WordadsEarningsGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134WordadsEarningsGetArgs {}
 
-export interface JetpackV4StatsAppSites202188134WordadsStatsGetArgs {
-}
+export interface JetpackV4StatsAppSites202188134WordadsStatsGetArgs {}
 
 export interface JetpackV4StatsAppStatsNoticesPostPutPatchArgs {
   /** ID of the notice */
@@ -74,9 +58,7 @@ export interface JetpackV4StatsAppStatsNoticesPostPutPatchArgs {
   status: string;
 }
 
-
-export interface JetpackV4StatsAppDeleteRoutes {
-}
+export interface JetpackV4StatsAppDeleteRoutes {}
 
 export interface JetpackV4StatsAppGetRoutes {
   '/jetpack/v4/stats-app': JetpackV4StatsAppGetArgs;

@@ -1,15 +1,10 @@
-export interface JetpackV4BlazeGetArgs {
-}
+export interface JetpackV4BlazeGetArgs {}
 
-export interface JetpackV4BlazeDashboardGetArgs {
-}
+export interface JetpackV4BlazeDashboardGetArgs {}
 
-export interface JetpackV4BlazeEligibilityGetArgs {
-}
+export interface JetpackV4BlazeEligibilityGetArgs {}
 
-
-export interface JetpackV4BlazeDeleteRoutes {
-}
+export interface JetpackV4BlazeDeleteRoutes {}
 
 export interface JetpackV4BlazeGetRoutes {
   '/jetpack/v4/blaze': JetpackV4BlazeGetArgs;
@@ -17,14 +12,11 @@ export interface JetpackV4BlazeGetRoutes {
   '/jetpack/v4/blaze/eligibility': JetpackV4BlazeEligibilityGetArgs;
 }
 
-export interface JetpackV4BlazePatchRoutes {
-}
+export interface JetpackV4BlazePatchRoutes {}
 
-export interface JetpackV4BlazePostRoutes {
-}
+export interface JetpackV4BlazePostRoutes {}
 
-export interface JetpackV4BlazePutRoutes {
-}
+export interface JetpackV4BlazePutRoutes {}
 
 export interface JetpackV4BlazeRoutes {
   Delete: JetpackV4BlazeDeleteRoutes;

@@ -1,48 +1,32 @@
-export interface LitespeedV1GetArgs {
-}
+export interface LitespeedV1GetArgs {}
 
-export interface LitespeedV1ApikeyPostArgs {
-}
+export interface LitespeedV1ApikeyPostArgs {}
 
-export interface LitespeedV1CdnStatusPostArgs {
-}
+export interface LitespeedV1CdnStatusPostArgs {}
 
-export interface LitespeedV1CheckImgPostArgs {
-}
+export interface LitespeedV1CheckImgPostArgs {}
 
-export interface LitespeedV1ErrDomainsPostArgs {
-}
+export interface LitespeedV1ErrDomainsPostArgs {}
 
-export interface LitespeedV1IpValidatePostArgs {
-}
+export interface LitespeedV1IpValidatePostArgs {}
 
-export interface LitespeedV1NotifyImgPostArgs {
-}
+export interface LitespeedV1NotifyImgPostArgs {}
 
-export interface LitespeedV1NotifyUcssPostArgs {
-}
+export interface LitespeedV1NotifyUcssPostArgs {}
 
-export interface LitespeedV1NotifyVpiPostArgs {
-}
+export interface LitespeedV1NotifyVpiPostArgs {}
 
-export interface LitespeedV1PingGetArgs {
-}
+export interface LitespeedV1PingGetArgs {}
 
-export interface LitespeedV1ToggleCrawlerStatePostArgs {
-}
+export interface LitespeedV1ToggleCrawlerStatePostArgs {}
 
-export interface LitespeedV1TokenPostArgs {
-}
+export interface LitespeedV1TokenPostArgs {}
 
-export interface LitespeedV1TokenGetArgs {
-}
+export interface LitespeedV1TokenGetArgs {}
 
-export interface LitespeedV1ToolCheckIpGetArgs {
-}
+export interface LitespeedV1ToolCheckIpGetArgs {}
 
-
-export interface LitespeedV1DeleteRoutes {
-}
+export interface LitespeedV1DeleteRoutes {}
 
 export interface LitespeedV1GetRoutes {
   '/litespeed/v1': LitespeedV1GetArgs;
@@ -51,8 +35,7 @@ export interface LitespeedV1GetRoutes {
   '/litespeed/v1/tool/check_ip': LitespeedV1ToolCheckIpGetArgs;
 }
 
-export interface LitespeedV1PatchRoutes {
-}
+export interface LitespeedV1PatchRoutes {}
 
 export interface LitespeedV1PostRoutes {
   '/litespeed/v1/apikey': LitespeedV1ApikeyPostArgs;
@@ -67,8 +50,7 @@ export interface LitespeedV1PostRoutes {
   '/litespeed/v1/token': LitespeedV1TokenPostArgs;
 }
 
-export interface LitespeedV1PutRoutes {
-}
+export interface LitespeedV1PutRoutes {}
 
 export interface LitespeedV1Routes {
   Delete: LitespeedV1DeleteRoutes;
