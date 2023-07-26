@@ -692,9 +692,9 @@ export class Generate extends Command {
 
       for (let i = 0; i < nss.length; i++) {
         lines.push(
-          `${'  '.repeat(indent + 1)}${nss[i].typeName}.${
-            nss[i].typeName
-          }${inflection.humanize(m)}Routes${i < nss.length - 1 ? ' &' : ';'}`
+          `${spsp}${nss[i].typeName}.${nss[i].typeName}${methodName}Routes${
+            i < nss.length - 1 ? ' &' : ';'
+          }`
         );
       }
 

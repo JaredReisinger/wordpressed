@@ -1,4 +1,4 @@
-import got from 'got';
+import got, { OptionsOfJSONResponseBody } from 'got';
 
 import { KnownRoutes } from './namespaces/index.js';
 
@@ -13,14 +13,25 @@ export enum EndpointMethod {
   // missing: OPTIONS, HEAD, etc.
 }
 
+// define the truly generic versions of the route types... a lot of
+// trial-and-error went into finding something that works in an "extends" clause
+// *and* accepts both the pre-defined default routes, *and* custom route sets.
+
+interface Routes {} // placeholder for "some interface"
+
+type Endpoints = Record<
+  Capitalize<Lowercase<keyof typeof EndpointMethod>>,
+  Routes
+>;
+
 // We may need agnostic types here?  I'm not sure how to both put constraints
 // (extends) on the generic types *and also* let them be statically defined by
 // default.  Maybe this needs a "where" expression instead?
-type RouteMethodKey = keyof KnownRoutes;
-type RouteType = KnownRoutes[RouteMethodKey];
+// type RouteMethodKey = keyof KnownRoutes;
+// type RouteType = KnownRoutes[RouteMethodKey];
 
 export class Client<
-  ROUTES extends Record<RouteMethodKey, RouteType> = KnownRoutes,
+  ROUTES extends Endpoints = KnownRoutes,
   DELETE_ROUTES = ROUTES['Delete'],
   GET_ROUTES = ROUTES['Get'],
   PATCH_ROUTES = ROUTES['Patch'],
@@ -83,9 +94,27 @@ export class Client<
     // TODO: find pattern-match segments of the route path, and add those values
     // as needed.
     // TODO: other route normalization, like detecting leading `/`, etc.
-    const url = `${this.host}/wp-json${route}`;
-    console.log(method, { route, args, url });
-    const resp = await got<T>(url, { responseType: 'json' });
+
+    const url = new URL(`${this.host}/wp-json${route}`);
+    // console.log(method, { route, args, url });
+    const options: OptionsOfJSONResponseBody = { method, responseType: 'json' };
+
+    const argsInQuerystring = [
+      EndpointMethod.DELETE,
+      EndpointMethod.GET,
+    ].includes(method);
+    // build querystring args...
+    if (args) {
+      if (argsInQuerystring) {
+        const params = new URLSearchParams(args);
+        url.search = params.toString();
+      } else {
+        options.json = args;
+      }
+    }
+
+    const resp = await got<T>(url, options);
+    // console.log('********', resp);
     return resp;
   }
 }
