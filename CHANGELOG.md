@@ -3,6 +3,13 @@
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
 
+# [0.1.0-alpha.6](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.5...v0.1.0-alpha.6) (2023-07-26)
+
+
+### Features
+
+* pass args in querystring or body ([afec556](https://github.com/JaredReisinger/wordpressed/commit/afec556bbb497681b372dc0a02681dab9e042b72))
+
 # [0.1.0-alpha.5](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.4...v0.1.0-alpha.5) (2023-07-25)
 
 
