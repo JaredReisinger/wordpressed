@@ -147,7 +147,7 @@ export type WpJsonObjectProperties = Record<string, WpJsonObjectProperty>;
 // object properties are similar to args themselves, but not quite (at
 // least from what I've seen).  They have far fewer keys/values.
 export interface WpJsonObjectProperty {
-  description: string;
+  description?: string;
   type: WpJsonObjectPropertyType | (WpJsonObjectPropertyType | 'null')[];
   format?: 'email';
   context: ('view' | 'edit')[];

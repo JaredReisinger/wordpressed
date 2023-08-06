@@ -56,9 +56,9 @@ This package now also includes [a CLI](https://github.com/JaredReisinger/wordpre
 
 - [ ] Create all-purpose get/post/patch/etc. client calls
 
-  - [ ] very rough stubbed calls
+  - [x] very rough stubbed calls
 
-  - [ ] argument support
+  - [x] argument support
 
   - [ ] route parameter support
 

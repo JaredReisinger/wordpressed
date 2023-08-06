@@ -4,7 +4,8 @@ import inflection from 'inflection';
 import Listr from 'listr';
 import got from 'got';
 
-import 'dotenv/config';
+// import 'dotenv/config';
+import dotenv from 'dotenv';
 import debugFn from 'debug';
 
 import { Command, Flags } from '@oclif/core';
@@ -16,6 +17,11 @@ import {
 } from '../util/wpapi-types.js';
 
 import { byProperty, exists } from '../util/objects.js';
+
+// we *do not* use dotenv when testing!
+if (process.env.NODE_ENV !== 'test') {
+  dotenv.config();
+}
 
 const debug = debugFn('wordpressed:generate');
 
@@ -585,9 +591,9 @@ export class Generate extends Command {
     const sp = '  '.repeat(indent);
     const spsp = '  '.repeat(indent + 1);
 
-    // Rather than many small file writes, we collect an array of lines, and then
-    // join/write them all at once.  Javascript can perform the join efficiently,
-    // so this is likely the best performance balance option.
+    // Rather than many small file writes, we collect an array of lines, and
+    // then join/write them all at once.  Javascript can perform the join
+    // efficiently, so this is likely the best performance balance option.
     const lines: string[] = [];
 
     types.forEach((t) => {
