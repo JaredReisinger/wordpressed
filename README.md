@@ -65,3 +65,11 @@ This package now also includes [a CLI](https://github.com/JaredReisinger/wordpre
 - [ ] Create streamlined “namespace-specific” client?
 
 - [ ] Generate namespace-specific authentication? (WooCommerce has its own, but I don’t see that “magic” exposed in the discovery information.)
+
+- [x] Increase test coverage
+
+  - [x] main client code
+
+  - [x] utility routines
+
+  - [x] generation CLI
