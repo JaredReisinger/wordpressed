@@ -2,6 +2,30 @@
 
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
+
+## [0.1.0-alpha.7](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.6...v0.1.0-alpha.7) (2023-08-06)
+
+
+### Bug Fixes
+
+* kick build/release (readme tweak) ([db14b45](https://github.com/JaredReisinger/wordpressed/commit/db14b4516c90a451aaf54bff6cfc5ef5b0a8e315))
+* turn off node 20.x until ESM extensions get fixed ([f438702](https://github.com/JaredReisinger/wordpressed/commit/f4387020539a6b465a37856f9df0c2ef1a4b77ea))
+
+
+### Documentation
+
+* **changelog:** incldue *all* changes in changelog ([4926690](https://github.com/JaredReisinger/wordpressed/commit/4926690ef8e1094c466a27a225bc9c2e3fd4ab65))
+
+
+### Tests
+
+* test generation CLI ([8e3e44e](https://github.com/JaredReisinger/wordpressed/commit/8e3e44efa3519ed3eaf8942dd0865623f6ab85f7))
+
+
+### Continuous Integration
+
+* include all types in changelog/release ([066b03a](https://github.com/JaredReisinger/wordpressed/commit/066b03a040184e5429028f75e57d5e08b007942f))
+
 ## [0.1.0-alpha.6](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.5...v0.1.0-alpha.6) (2023-07-26)
 
 ### Features
