@@ -169,6 +169,66 @@ test.serial('simple wp-json data does not crash', async (t) => {
   }
 });
 
+test.serial('namespace "index" in wp-json is error', async (t) => {
+  const host = 'example.org';
+  const urlPath = '/wp-json/';
+  const url = `http://${host}${urlPath}`;
+  // const args = { simple: 2 };
+
+  const expectWpJson: Resolver = async (req, res, ctx) => {
+    // t.log('MSW hander got', req.params, req.url, req.url.searchParams);
+    // t.is(req.url.searchParams.get('simple'), args.simple.toString());
+
+    t.is(req.url.host, host);
+    t.is(req.url.pathname, urlPath);
+
+    return res(
+      ctx.json<WpJson>({
+        _links: {},
+        authentication: {},
+        description: 'dummy host',
+        gmt_offset: 0,
+        home: '',
+        name: 'dummy server',
+        namespaces: ['index'],
+        routes: {
+          '/index': {
+            namespace: 'index',
+            methods: [WpJsonEndpointMethod.GET],
+            endpoints: [
+              {
+                methods: [WpJsonEndpointMethod.GET],
+                args: {
+                  someString: {
+                    description: 'a string arg',
+                    type: 'string',
+                  },
+                },
+              },
+            ],
+          },
+        },
+        site_icon_url: '',
+        site_icon: 0,
+        site_logo: 0,
+        timezone_string: 'utc',
+        url: url,
+      })
+    );
+  };
+
+  const server = setupServer(rest.get(url, expectWpJson));
+
+  try {
+    server.listen();
+    await t.throwsAsync(() =>
+      runCommand('generate', '--host', 'http://example.org', '--dry-run')
+    );
+  } finally {
+    server.close();
+  }
+});
+
 test.serial('handles known argument types', async (t) => {
   const host = 'example.org';
   const urlPath = '/wp-json/';
@@ -306,6 +366,7 @@ test.serial('handles known argument types', async (t) => {
       const content = await fs.readFile(path.join(tmpDir, file), {
         encoding: 'utf8',
       });
+      // t.log('FILE CONTENTS', file, '\n----------\n' + content + '\n----------');
       t.snapshot(content);
     }
   } finally {

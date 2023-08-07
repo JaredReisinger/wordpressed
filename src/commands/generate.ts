@@ -17,6 +17,7 @@ import {
 } from '../util/wpapi-types.js';
 
 import { byProperty, exists } from '../util/objects.js';
+import { LineBuffer } from '../util/line-buffer.js';
 
 // we *do not* use dotenv when testing!
 if (process.env.NODE_ENV !== 'test') {
@@ -200,10 +201,7 @@ export class Generate extends Command {
               throw new Error('no parsed data available');
             }
 
-            return this.createWriteTasks(
-              ctx.data,
-              flags['out-dir'] ?? 'UNUSED' // unused if dry-run...
-            );
+            return this.createGenerationTasks(ctx.data, flags['out-dir']);
           },
         },
       ],
@@ -531,193 +529,193 @@ export class Generate extends Command {
     });
   }
 
-  createWriteTasks(data: GenData, dir: string) {
-    // create a write task for each namespace, and one for the index, to be run
-    // concurrently.
+  createGenerationTasks(data: GenData, dir?: string) {
+    // Create a generate/write task for each namespace, and one for the index,
+    // to be run concurrently.  Note that we commingle the type generation and
+    // the writing sothat we can take advantage of parallelizing generation
+    // while other writes are happening.
     const tasks = Object.values(data)
       .sort(byProperty('namespace'))
       .map<Listr.ListrTask<Context>>((ns) => ({
         title: `write ${ns.namespace || ns.fileName}`,
-        skip: (ctx) => ctx.dryRun && 'dry-run',
-        task: async () => {
-          await this.writeNamespaceTypes(ns, dir);
+        // skip: (ctx) => ctx.dryRun && 'dry-run',
+        task: async (ctx, task) => {
+          // 'index' is a special name, and we *cannot* have a namespace that
+          // uses it!
+          if (ns.fileName === 'index') {
+            task.report(new Error('cannnot have namespace named "index"'));
+            return;
+          }
+
+          const content = this.createNamespaceTypes(ns);
+
+          if (ctx.dryRun || !dir) {
+            task.skip('skipping write to file system');
+            return;
+          }
+
+          await this.writeFile(`${ns.fileName}.ts`, dir, content);
         },
       }));
 
     // also create a task to write the index file!
     tasks.push({
       title: `write index`,
-      skip: (ctx) => ctx.dryRun && 'dry-run',
-      task: async () => {
-        await this.writeNamespaceIndex(data, dir);
+      // skip: (ctx) => ctx.dryRun && 'dry-run',
+      task: async (ctx, task) => {
+        const content = this.createIndexTypes(data);
+
+        if (ctx.dryRun || !dir) {
+          task.skip('skipping write to file system');
+          return;
+        }
+
+        await this.writeFile('index.ts', dir, content);
       },
     });
 
     return new Listr(tasks, { concurrent: true });
   }
 
-  async writeNamespaceTypes(ns: GenNamespace, dir: string) {
-    const file = await fs.open(
-      path.join(dir, `${ns.fileName}.ts`),
-      fs.constants.O_CREAT | fs.constants.O_WRONLY | fs.constants.O_TRUNC
-    );
+  async writeFile(filename: string, dir: string, content: string) {
+    // note that we *could* check dryRun here, and skip the file-system call
 
-    for (const r of Object.values(ns.routes).sort(byProperty('route'))) {
-      for (const e of r.endpoints) {
-        await this.writeTypes(file, e.types, 0);
-      }
-    }
+    // const file = await fs.open(
+    //   path.join(dir, filename),
+    //   fs.constants.O_CREAT | fs.constants.O_WRONLY | fs.constants.O_TRUNC
+    // );
+    // await file.write(content);
+    // await file.close();
+    await fs.writeFile(path.join(dir, filename), content, { encoding: 'utf8' });
+  }
+
+  createNamespaceTypes(ns: GenNamespace) {
+    const buf = new LineBuffer();
+
+    buf.add('// GENERATED FILE -- DO NOT EDIT');
+    buf.add(`// WordPress REST API "${ns.namespace}" namespace`);
+
+    Object.values(ns.routes)
+      .sort(byProperty('route'))
+      .forEach((r) => {
+        r.endpoints.forEach((e) => {
+          this.writeTypes(buf, e.types);
+        });
+      });
 
     // We also write the route/endpoint/args mapping types...
-    await this.writeMappingTypes(file, ns, 0);
+    this.writeMethodMaps(buf, ns);
 
-    await file.close();
+    return buf.toString();
   }
 
-  // TODO: Do we want a general purpose "array of lines" that we add to so that
-  // we can write an entire file at once?  I suspect we get better performance
-  // with one (relatively) big write than medium-ish blocks... and since we
-  // break each namespace into a separate file, each file isn't *that* large.
-  // (It would also fix the occaisional "extra blank line" we get between
-  // invocations if we could assume a continual buffer, I think.)
-  //
-  // And/or... do we want an option for the generator to create one large file
-  // instead of per-namespace files?  There might be a use-case for that, but
-  // until we truly encounter that need, we'll follow YAGNI and not worry about
-  // it yet.
-
-  // output functions are dependenct on indent level!
-  async writeTypes(file: fs.FileHandle, types: GenTypeDesc[], indent: number) {
-    const sp = '  '.repeat(indent);
-    const spsp = '  '.repeat(indent + 1);
-
-    // Rather than many small file writes, we collect an array of lines, and
-    // then join/write them all at once.  Javascript can perform the join
-    // efficiently, so this is likely the best performance balance option.
-    const lines: string[] = [];
-
+  writeTypes(buf: LineBuffer, types: GenTypeDesc[]) {
     types.forEach((t) => {
-      // lines.push('');
-      lines.push(`${sp}export interface ${t.typeName} {`);
+      buf.ensureBlank();
+      buf.add(`export interface ${t.typeName} {`);
+      const indented = buf.indent();
       t.members.forEach((m) => {
         if (m.desc) {
-          lines.push(`${spsp}/** ${m.desc.replaceAll('*/', '* /')} */`);
+          indented.add(`/** ${m.desc.replaceAll('*/', '* /')} */`);
         }
 
-        lines.push(
-          `${spsp}${this.normalizePropertyKey(m.name)}${
-            m.optional ? '?' : ''
-          }: ${m.type};`
+        indented.add(
+          `${this.normalizePropertyKey(m.name)}${m.optional ? '?' : ''}: ${
+            m.type
+          };`
         );
       });
-      lines.push(`${sp}}`);
-      lines.push('');
-      lines.push(''); // ensure 2 LFs after interface
+      buf.add('}');
     });
-
-    await file.write(lines.join('\n'));
   }
 
-  async writeMappingTypes(
-    file: fs.FileHandle,
-    ns: GenNamespace,
-    indent: number
-  ) {
-    const sp = '  '.repeat(indent);
-    const spsp = '  '.repeat(indent + 1);
-
-    // Rather than many small file writes, we collect an array of lines, and then
-    // join/write them all at once.  Javascript can perform the join efficiently,
-    // so this is likely the best performance balance option.
-    const lines: string[] = [''];
-
+  writeMethodMaps(buf: LineBuffer, ns: GenNamespace) {
     // Note that we really want to group mappings by method, because that's how
     // the caller will find these...
-    for (const m of Object.values(WpJsonEndpointMethod)) {
+    Object.values(WpJsonEndpointMethod).forEach((m) => {
       const methodName = inflection.humanize(m);
       const methodRoutesType = `${ns.typeName}${methodName}Routes`;
-      lines.push(`${sp}export interface ${methodRoutesType} {`);
 
-      for (const r of Object.values(ns.routes).sort(byProperty('route'))) {
-        for (const e of r.endpoints) {
-          if (e.methods.includes(m)) {
-            lines.push(
-              `${spsp}${this.normalizePropertyKey(r.route)}: ${e.typeName}Args;`
-            );
-          }
-        }
-      }
+      buf.ensureBlank();
+      buf.add(`export interface ${methodRoutesType} {`);
 
-      lines.push(`${sp}}`);
-      lines.push('');
-    }
+      const indented = buf.indent();
 
-    // and we *also* provide a roll-up method-lookup for a namespace-specfic
-    // client
-    lines.push(`${sp}export interface ${ns.typeName}Routes {`);
-    for (const m of Object.values(WpJsonEndpointMethod)) {
-      const methodName = inflection.humanize(m);
-      const methodRoutesType = `${ns.typeName}${methodName}Routes`;
-      lines.push(`${spsp}${methodName}: ${methodRoutesType};`);
-    }
-    lines.push(`${sp}}`);
-    lines.push('');
+      Object.values(ns.routes)
+        .sort(byProperty('route'))
+        .forEach((r) => {
+          r.endpoints.forEach((e) => {
+            if (e.methods.includes(m)) {
+              indented.add(
+                `${this.normalizePropertyKey(r.route)}: ${e.typeName}Args;`
+              );
+            }
+          });
+        });
 
-    await file.write(lines.join('\n'));
+      buf.add('}');
+    });
+
+    this.writeSummaryMethodMap(buf, ns.typeName);
   }
 
-  async writeNamespaceIndex(data: GenData, dir: string) {
+  createIndexTypes(data: GenData) {
     // Also write an index file that gathers/combines everything together...
-    const file = await fs.open(
-      path.join(dir, 'index.ts'),
-      fs.constants.O_CREAT | fs.constants.O_WRONLY | fs.constants.O_TRUNC
-    );
+    const buf = new LineBuffer();
 
-    // Rather than many small file writes, we collect an array of lines, and then
-    // join/write them all at once.  Javascript can perform the join efficiently,
-    // so this is likely the best performance balance option.
-    const lines: string[] = [];
-    const indent = 0;
-    const sp = '  '.repeat(indent);
-    const spsp = '  '.repeat(indent + 1);
+    buf.add('// GENERATED FILE -- DO NOT EDIT');
+    buf.add('// WordPress REST API types');
 
     const nss = Object.values(data).sort(byProperty('namespace'));
 
-    for (const ns of nss) {
-      lines.push(`${sp}import * as ${ns.typeName} from './${ns.fileName}.js';`);
-    }
-
-    lines.push('');
+    buf.ensureBlank();
+    nss.forEach((ns) => {
+      buf.add(`import * as ${ns.typeName} from './${ns.fileName}.js';`);
+    });
 
     // Note that we really want to group mappings by method, because that's how
     // the caller will find these...
-    for (const m of Object.values(WpJsonEndpointMethod)) {
+    Object.values(WpJsonEndpointMethod).forEach((m) => {
       const methodName = inflection.humanize(m);
       const methodRoutesType = `Known${methodName}Routes`;
-      lines.push(`${sp}export type ${methodRoutesType} =`);
+
+      buf.ensureBlank();
+
+      buf.add(`export type ${methodRoutesType} =`);
+      const indented = buf.indent();
 
       for (let i = 0; i < nss.length; i++) {
-        lines.push(
-          `${spsp}${nss[i].typeName}.${nss[i].typeName}${methodName}Routes${
+        indented.add(
+          `${nss[i].typeName}.${nss[i].typeName}${methodName}Routes${
             i < nss.length - 1 ? ' &' : ';'
           }`
         );
       }
+    });
 
-      lines.push('');
-    }
+    this.writeSummaryMethodMap(buf, 'Known');
 
-    // and we *also* provide a roll-up method-lookup for the client as a whole
-    lines.push(`${sp}export interface KnownRoutes {`);
-    for (const m of Object.values(WpJsonEndpointMethod)) {
+    return buf.toString();
+  }
+
+  /**
+   * Writes the summary method-to-"known" routes mapping. For a namespace, the
+   * prefix is the namespace class name.  For the index file, it's the word
+   * "Known".
+   * @param buf line buffer to fill
+   * @param typeNamePrefix type name prefix for the mapping type and the
+   * per-method types.
+   */
+  writeSummaryMethodMap(buf: LineBuffer, typeNamePrefix: string) {
+    buf.ensureBlank();
+    buf.add(`export interface ${typeNamePrefix}Routes {`);
+    const indented = buf.indent();
+
+    Object.values(WpJsonEndpointMethod).forEach((m) => {
       const methodName = inflection.humanize(m);
-      const methodRoutesType = `Known${methodName}Routes`;
-      lines.push(`${spsp}${methodName}: ${methodRoutesType};`);
-    }
-    lines.push(`${sp}}`);
-    lines.push('');
-
-    await file.write(lines.join('\n'));
-    await file.close();
+      const methodRoutesType = `${typeNamePrefix}${methodName}Routes`;
+      indented.add(`${methodName}: ${methodRoutesType};`);
+    });
+    buf.add('}');
   }
 }
