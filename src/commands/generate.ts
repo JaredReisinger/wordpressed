@@ -14,10 +14,17 @@ import {
   WpJsonEndpointMethod,
   WpJsonRoute,
   WpJson,
+  WpJsonArgDesc,
 } from '../util/wpapi-types.js';
 
 import { byProperty, exists } from '../util/objects.js';
 import { LineBuffer } from '../util/line-buffer.js';
+import {
+  allMethods,
+  humanizeMethodList,
+  normalizeMethodList,
+} from '../util/methods.js';
+import { sanitizeForDocComment } from '../util/comments.js';
 
 // we *do not* use dotenv when testing!
 if (process.env.NODE_ENV !== 'test') {
@@ -77,6 +84,10 @@ interface GenTypeMember {
   desc?: string;
   type: string;
   optional: boolean;
+  // We also point back to original member definition for things like min/max,
+  // default, so that we don't have to copy them all here. We use them in
+  // generating the doc-comment.
+  original: WpJsonArgDesc;
 }
 
 // re-enable the use-before-define prevention...
@@ -339,10 +350,12 @@ export class Generate extends Command {
    * @param r the GenRoute generated route object to add the endpoint types to
    */
   parseEndpoint(endpoint: WpJsonRoute['endpoints'][number], r: GenRoute) {
-    // Some endpoints ("/wc-analytics/products/(?P<product_id>[\\d]+)/variations")
-    // result in duplication where the methods are listed more than once (GET,
-    // POST, GET, POST).  We look for this and ignore the redundant endpoints.
-    if (r.endpoints.some((e) => e.methods.includes(endpoint.methods[0]))) {
+    // Some endpoints (like
+    // "/wc-analytics/products/(?P<product_id>[\\d]+)/variations") result in
+    // duplication where the methods are listed more than once (GET, POST, GET,
+    // POST).  We look for this and ignore the redundant endpoints.
+    const methods = normalizeMethodList(endpoint.methods);
+    if (r.endpoints.some((e) => e.methods.includes(methods[0]))) {
       // this.warn(
       //   `DUPLICATE ROUTE METHOD ${r.route} ${endpoint.methods}... IGNORING`
       // );
@@ -352,9 +365,9 @@ export class Generate extends Command {
     // Otherwise, parse the argument types (and dependency types).
     const e: GenEndpoint = {
       route: r,
-      methods: [...endpoint.methods],
+      methods,
       typeName: `${r.typeName}${this.normalizeTypeName(
-        endpoint.methods.join('_').toLowerCase()
+        methods.join('_').toLowerCase()
       )}`,
       types: [],
     };
@@ -511,13 +524,16 @@ export class Generate extends Command {
             return null;
         }
 
-        return {
+        const m: GenTypeMember = {
           name: argName,
           optional: !argDesc.required,
           type: typeStr,
           // adding meta info, like min/max, default would be good!
           desc: argDesc.description,
+          original: argDesc,
         };
+
+        return m;
       })
       .filter(exists);
 
@@ -599,7 +615,8 @@ export class Generate extends Command {
       .sort(byProperty('route'))
       .forEach((r) => {
         r.endpoints.forEach((e) => {
-          this.writeTypes(buf, e.types);
+          buf.ensureBlank();
+          this.writeEndpointTypes(buf, e);
         });
       });
 
@@ -609,14 +626,80 @@ export class Generate extends Command {
     return buf.toString();
   }
 
-  writeTypes(buf: LineBuffer, types: GenTypeDesc[]) {
-    types.forEach((t) => {
+  writeEndpointTypes(buf: LineBuffer, e: GenEndpoint) {
+    e.types.forEach((t, i, arr) => {
       buf.ensureBlank();
+      // The *last* type is the args for the route itself (previous types are supporting types). We add a comment to help decribe
+      if (i === arr.length - 1) {
+        buf.add('/**');
+        buf.add(
+          ` * Arguments for \`${
+            e.route.route
+          }\` route when calling ${humanizeMethodList(e.methods, true)}.`
+        );
+        buf.add(' */');
+      }
       buf.add(`export interface ${t.typeName} {`);
       const indented = buf.indent();
       t.members.forEach((m) => {
         if (m.desc) {
-          indented.add(`/** ${m.desc.replaceAll('*/', '* /')} */`);
+          indented.add('/**');
+
+          // we also include additional data (min, max, etc.)
+          const contraintItems: string[] = [];
+
+          // Note that we kind of do this blindly, the values are all simple.
+          // Also, rather than alphabetical (by type), they are in the order we
+          // want to see them.
+          const contraintProps = [
+            // array
+            'minItems',
+            'maxItems',
+            'uniqueItems',
+            // int
+            'minimum',
+            'maximum',
+            'exclusiveMinimum',
+            'exclusiveMaximum',
+            'multipleOf',
+            // string
+            'minLength',
+            'format',
+            'pattern',
+          ] as const;
+
+          contraintProps.forEach((prop) => {
+            if (prop in m.original) {
+              // @ts-expect-error - we've looked for the prop, so we know it's
+              // valid to index
+              const constraintValue = m.original[prop];
+              if (constraintValue !== undefined) {
+                contraintItems.push(
+                  `${prop} = ${sanitizeForDocComment(String(constraintValue))}`
+                );
+              }
+            }
+          });
+
+          const contraints =
+            contraintItems.length > 0
+              ? ` Constraints: ${contraintItems.join(', ')}.`
+              : '';
+
+          indented.add(` * ${sanitizeForDocComment(m.desc)}${contraints}`);
+
+          if ('default' in m.original) {
+            const defaultValue = m.original.default;
+            if (defaultValue !== undefined) {
+              let defaultFmt = String(defaultValue);
+              if (typeof defaultValue === 'string') {
+                defaultFmt = `"${defaultValue}"`;
+              }
+              indented.add(` * @default ${sanitizeForDocComment(defaultFmt)}`);
+            }
+          }
+
+          indented.add(' */');
         }
 
         indented.add(
@@ -632,11 +715,14 @@ export class Generate extends Command {
   writeMethodMaps(buf: LineBuffer, ns: GenNamespace) {
     // Note that we really want to group mappings by method, because that's how
     // the caller will find these...
-    Object.values(WpJsonEndpointMethod).forEach((m) => {
+    allMethods.forEach((m) => {
       const methodName = inflection.humanize(m);
       const methodRoutesType = `${ns.typeName}${methodName}Routes`;
 
       buf.ensureBlank();
+      buf.add('/**');
+      buf.add(` * All "${sanitizeForDocComment(ns.namespace)}" ${m} routes.`);
+      buf.add(' */');
       buf.add(`export interface ${methodRoutesType} {`);
 
       const indented = buf.indent();
@@ -656,7 +742,7 @@ export class Generate extends Command {
       buf.add('}');
     });
 
-    this.writeSummaryMethodMap(buf, ns.typeName);
+    this.writeSummaryMethodMap(buf, ns);
   }
 
   createIndexTypes(data: GenData) {
@@ -675,12 +761,14 @@ export class Generate extends Command {
 
     // Note that we really want to group mappings by method, because that's how
     // the caller will find these...
-    Object.values(WpJsonEndpointMethod).forEach((m) => {
+    allMethods.forEach((m) => {
       const methodName = inflection.humanize(m);
       const methodRoutesType = `Known${methodName}Routes`;
 
       buf.ensureBlank();
-
+      buf.add('/**');
+      buf.add(` * All known ${m} routes for WordPress REST API.`);
+      buf.add(' */');
       buf.add(`export type ${methodRoutesType} =`);
       const indented = buf.indent();
 
@@ -693,7 +781,7 @@ export class Generate extends Command {
       }
     });
 
-    this.writeSummaryMethodMap(buf, 'Known');
+    this.writeSummaryMethodMap(buf);
 
     return buf.toString();
   }
@@ -703,15 +791,24 @@ export class Generate extends Command {
    * prefix is the namespace class name.  For the index file, it's the word
    * "Known".
    * @param buf line buffer to fill
-   * @param typeNamePrefix type name prefix for the mapping type and the
-   * per-method types.
+   * @param ns namespace for the summary (or falsy for the index/all-known
+   * sumamry)
    */
-  writeSummaryMethodMap(buf: LineBuffer, typeNamePrefix: string) {
+  writeSummaryMethodMap(buf: LineBuffer, ns?: GenNamespace) {
+    const typeNamePrefix = ns?.typeName ?? 'Known';
+
     buf.ensureBlank();
+    buf.add('/**');
+    buf.add(
+      ` * All ${sanitizeForDocComment(
+        ns ? `"${ns.namespace}"` : 'known'
+      )} WordPress REST API methods/routes.`
+    );
+    buf.add(' */');
     buf.add(`export interface ${typeNamePrefix}Routes {`);
     const indented = buf.indent();
 
-    Object.values(WpJsonEndpointMethod).forEach((m) => {
+    allMethods.forEach((m) => {
       const methodName = inflection.humanize(m);
       const methodRoutesType = `${typeNamePrefix}${methodName}Routes`;
       indented.add(`${methodName}: ${methodRoutesType};`);

@@ -1,18 +1,41 @@
+// GENERATED FILE -- DO NOT EDIT
+// WordPress REST API "my-jetpack/v1" namespace
+
+/**
+ * Arguments for `/my-jetpack/v1` route when calling GET method.
+ */
 export interface MyJetpackV1GetArgs {}
 
+/**
+ * Arguments for `/my-jetpack/v1/chat/authentication` route when calling GET method.
+ */
 export interface MyJetpackV1ChatAuthenticationGetArgs {
   test_mode?: boolean;
   type?: string;
 }
 
+/**
+ * Arguments for `/my-jetpack/v1/chat/availability` route when calling GET method.
+ */
 export interface MyJetpackV1ChatAvailabilityGetArgs {}
 
+/**
+ * Arguments for `/my-jetpack/v1/site` route when calling GET method.
+ */
 export interface MyJetpackV1SiteGetArgs {}
 
+/**
+ * Arguments for `/my-jetpack/v1/site/products` route when calling GET method.
+ */
 export interface MyJetpackV1SiteProductsGetArgs {}
 
+/**
+ * Arguments for `/my-jetpack/v1/site/products/(?P<product>[a-z\-]+)` route when calling GET method.
+ */
 export interface MyJetpackV1SiteProductsPProductAZGetArgs {
-  /** Product slug */
+  /**
+   * Product slug
+   */
   product:
     | 'anti-spam'
     | 'backup'
@@ -29,8 +52,13 @@ export interface MyJetpackV1SiteProductsPProductAZGetArgs {
     | 'stats';
 }
 
-export interface MyJetpackV1SiteProductsPProductAZPostPutPatchArgs {
-  /** Product slug */
+/**
+ * Arguments for `/my-jetpack/v1/site/products/(?P<product>[a-z\-]+)` route when calling PATCH, POST, and PUT methods.
+ */
+export interface MyJetpackV1SiteProductsPProductAZPatchPostPutArgs {
+  /**
+   * Product slug
+   */
   product:
     | 'anti-spam'
     | 'backup'
@@ -47,8 +75,13 @@ export interface MyJetpackV1SiteProductsPProductAZPostPutPatchArgs {
     | 'stats';
 }
 
+/**
+ * Arguments for `/my-jetpack/v1/site/products/(?P<product>[a-z\-]+)` route when calling DELETE method.
+ */
 export interface MyJetpackV1SiteProductsPProductAZDeleteArgs {
-  /** Product slug */
+  /**
+   * Product slug
+   */
   product:
     | 'anti-spam'
     | 'backup'
@@ -65,8 +98,13 @@ export interface MyJetpackV1SiteProductsPProductAZDeleteArgs {
     | 'stats';
 }
 
-export interface MyJetpackV1SiteProductsPProductAZInstallStandalonePostPutPatchArgs {
-  /** Product slug */
+/**
+ * Arguments for `/my-jetpack/v1/site/products/(?P<product>[a-z\-]+)/install-standalone` route when calling PATCH, POST, and PUT methods.
+ */
+export interface MyJetpackV1SiteProductsPProductAZInstallStandalonePatchPostPutArgs {
+  /**
+   * Product slug
+   */
   product:
     | 'anti-spam'
     | 'backup'
@@ -83,12 +121,21 @@ export interface MyJetpackV1SiteProductsPProductAZInstallStandalonePostPutPatchA
     | 'stats';
 }
 
+/**
+ * Arguments for `/my-jetpack/v1/site/purchases` route when calling GET method.
+ */
 export interface MyJetpackV1SitePurchasesGetArgs {}
 
+/**
+ * All "my-jetpack/v1" DELETE routes.
+ */
 export interface MyJetpackV1DeleteRoutes {
   '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZDeleteArgs;
 }
 
+/**
+ * All "my-jetpack/v1" GET routes.
+ */
 export interface MyJetpackV1GetRoutes {
   '/my-jetpack/v1': MyJetpackV1GetArgs;
   '/my-jetpack/v1/chat/authentication': MyJetpackV1ChatAuthenticationGetArgs;
@@ -99,21 +146,33 @@ export interface MyJetpackV1GetRoutes {
   '/my-jetpack/v1/site/purchases': MyJetpackV1SitePurchasesGetArgs;
 }
 
+/**
+ * All "my-jetpack/v1" PATCH routes.
+ */
 export interface MyJetpackV1PatchRoutes {
-  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZPostPutPatchArgs;
-  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)/install-standalone': MyJetpackV1SiteProductsPProductAZInstallStandalonePostPutPatchArgs;
+  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZPatchPostPutArgs;
+  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)/install-standalone': MyJetpackV1SiteProductsPProductAZInstallStandalonePatchPostPutArgs;
 }
 
+/**
+ * All "my-jetpack/v1" POST routes.
+ */
 export interface MyJetpackV1PostRoutes {
-  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZPostPutPatchArgs;
-  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)/install-standalone': MyJetpackV1SiteProductsPProductAZInstallStandalonePostPutPatchArgs;
+  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZPatchPostPutArgs;
+  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)/install-standalone': MyJetpackV1SiteProductsPProductAZInstallStandalonePatchPostPutArgs;
 }
 
+/**
+ * All "my-jetpack/v1" PUT routes.
+ */
 export interface MyJetpackV1PutRoutes {
-  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZPostPutPatchArgs;
-  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)/install-standalone': MyJetpackV1SiteProductsPProductAZInstallStandalonePostPutPatchArgs;
+  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)': MyJetpackV1SiteProductsPProductAZPatchPostPutArgs;
+  '/my-jetpack/v1/site/products/(?P<product>[a-z\\-]+)/install-standalone': MyJetpackV1SiteProductsPProductAZInstallStandalonePatchPostPutArgs;
 }
 
+/**
+ * All "my-jetpack/v1" WordPress REST API methods/routes.
+ */
 export interface MyJetpackV1Routes {
   Delete: MyJetpackV1DeleteRoutes;
   Get: MyJetpackV1GetRoutes;

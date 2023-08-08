@@ -1,3 +1,6 @@
+// GENERATED FILE -- DO NOT EDIT
+// WordPress REST API types
+
 import * as WpJson from './wp-json.js';
 import * as ForminatorV1 from './forminator-v1.js';
 import * as JetpackBoostV1 from './jetpack-boost-v1.js';
@@ -36,6 +39,9 @@ import * as WpcomV2 from './wpcom-v2.js';
 import * as WpcomV3 from './wpcom-v3.js';
 import * as WpgmzaV1 from './wpgmza-v1.js';
 
+/**
+ * All known DELETE routes for WordPress REST API.
+ */
 export type KnownDeleteRoutes = WpJson.WpJsonDeleteRoutes &
   ForminatorV1.ForminatorV1DeleteRoutes &
   JetpackBoostV1.JetpackBoostV1DeleteRoutes &
@@ -74,6 +80,9 @@ export type KnownDeleteRoutes = WpJson.WpJsonDeleteRoutes &
   WpcomV3.WpcomV3DeleteRoutes &
   WpgmzaV1.WpgmzaV1DeleteRoutes;
 
+/**
+ * All known GET routes for WordPress REST API.
+ */
 export type KnownGetRoutes = WpJson.WpJsonGetRoutes &
   ForminatorV1.ForminatorV1GetRoutes &
   JetpackBoostV1.JetpackBoostV1GetRoutes &
@@ -112,6 +121,9 @@ export type KnownGetRoutes = WpJson.WpJsonGetRoutes &
   WpcomV3.WpcomV3GetRoutes &
   WpgmzaV1.WpgmzaV1GetRoutes;
 
+/**
+ * All known PATCH routes for WordPress REST API.
+ */
 export type KnownPatchRoutes = WpJson.WpJsonPatchRoutes &
   ForminatorV1.ForminatorV1PatchRoutes &
   JetpackBoostV1.JetpackBoostV1PatchRoutes &
@@ -150,6 +162,9 @@ export type KnownPatchRoutes = WpJson.WpJsonPatchRoutes &
   WpcomV3.WpcomV3PatchRoutes &
   WpgmzaV1.WpgmzaV1PatchRoutes;
 
+/**
+ * All known POST routes for WordPress REST API.
+ */
 export type KnownPostRoutes = WpJson.WpJsonPostRoutes &
   ForminatorV1.ForminatorV1PostRoutes &
   JetpackBoostV1.JetpackBoostV1PostRoutes &
@@ -188,6 +203,9 @@ export type KnownPostRoutes = WpJson.WpJsonPostRoutes &
   WpcomV3.WpcomV3PostRoutes &
   WpgmzaV1.WpgmzaV1PostRoutes;
 
+/**
+ * All known PUT routes for WordPress REST API.
+ */
 export type KnownPutRoutes = WpJson.WpJsonPutRoutes &
   ForminatorV1.ForminatorV1PutRoutes &
   JetpackBoostV1.JetpackBoostV1PutRoutes &
@@ -226,6 +244,9 @@ export type KnownPutRoutes = WpJson.WpJsonPutRoutes &
   WpcomV3.WpcomV3PutRoutes &
   WpgmzaV1.WpgmzaV1PutRoutes;
 
+/**
+ * All known WordPress REST API methods/routes.
+ */
 export interface KnownRoutes {
   Delete: KnownDeleteRoutes;
   Get: KnownGetRoutes;
