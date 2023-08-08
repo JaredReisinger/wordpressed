@@ -1,6 +1,68 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wpcom/v2" namespace
 
+import {
+  WpcomV2GetResponse,
+  WpcomV2AdminMenuGetResponse,
+  WpcomV2BusinessHoursLocalizedWeekGetResponse,
+  WpcomV2CheckgoogledocvisibilityGetResponse,
+  WpcomV2ExternalMediaConnectionPServiceGooglePhotosGetResponse,
+  WpcomV2ExternalMediaConnectionPServiceGooglePhotosDeleteResponse,
+  WpcomV2ExternalMediaCopyPServiceGooglePhotosOpenversePexelsPostResponse,
+  WpcomV2ExternalMediaListPServiceGooglePhotosOpenversePexelsGetResponse,
+  WpcomV2FollowingMineGetResponse,
+  WpcomV2FormsResponsesGetResponse,
+  WpcomV2FormsResponsesBulkActionsPostResponse,
+  WpcomV2GutenbergAvailableExtensionsGetResponse,
+  WpcomV2HelloGetResponse,
+  WpcomV2InstagramGalleryConnectUrlGetResponse,
+  WpcomV2InstagramGalleryConnectionsGetResponse,
+  WpcomV2InstagramGalleryGalleryGetResponse,
+  WpcomV2JetpackAiAiAssistantFeatureGetResponse,
+  WpcomV2MailchimpGetResponse,
+  WpcomV2MailchimpGroupsGetResponse,
+  WpcomV2MembershipsProductPostResponse,
+  WpcomV2MembershipsProductsPostResponse,
+  WpcomV2MembershipsStatusGetResponse,
+  WpcomV2PodcastPlayerGetResponse,
+  WpcomV2PodcastPlayerTrackQuantityGetResponse,
+  WpcomV2PostsPPostidDPublicizePostResponse,
+  WpcomV2PublicizeConnectionTestResultsGetResponse,
+  WpcomV2PublicizeConnectionsGetResponse,
+  WpcomV2PublicizeServicesGetResponse,
+  WpcomV2ResolveRedirectPUrlGetResponse,
+  WpcomV2SearchGetResponse,
+  WpcomV2SendEmailPreviewPostResponse,
+  WpcomV2ServiceApiKeysPServiceAZGetResponse,
+  WpcomV2ServiceApiKeysPServiceAZPatchResponse,
+  WpcomV2ServiceApiKeysPServiceAZPostResponse,
+  WpcomV2ServiceApiKeysPServiceAZPutResponse,
+  WpcomV2ServiceApiKeysPServiceAZDeleteResponse,
+  WpcomV2TemplateLoaderPTemplateTypeWGetResponse,
+  WpcomV2TransientsPNameW1172DeleteResponse,
+  WpcomV2TweetstormGatherGetResponse,
+  WpcomV2TweetstormGenerateCardsPatchResponse,
+  WpcomV2TweetstormGenerateCardsPostResponse,
+  WpcomV2TweetstormGenerateCardsPutResponse,
+  WpcomV2TweetstormParsePatchResponse,
+  WpcomV2TweetstormParsePostResponse,
+  WpcomV2TweetstormParsePutResponse,
+  WpcomV2VideopressPVideoGuidWCheckOwnershipPPostIdDGetResponse,
+  WpcomV2VideopressPVideoGuidWPosterGetResponse,
+  WpcomV2VideopressPVideoGuidWPosterPatchResponse,
+  WpcomV2VideopressPVideoGuidWPosterPostResponse,
+  WpcomV2VideopressPVideoGuidWPosterPutResponse,
+  WpcomV2VideopressMetaPatchResponse,
+  WpcomV2VideopressMetaPostResponse,
+  WpcomV2VideopressMetaPutResponse,
+  WpcomV2VideopressPlaybackJwtPVideoGuidWPatchResponse,
+  WpcomV2VideopressPlaybackJwtPVideoGuidWPostResponse,
+  WpcomV2VideopressPlaybackJwtPVideoGuidWPutResponse,
+  WpcomV2VideopressUploadJwtPatchResponse,
+  WpcomV2VideopressUploadJwtPostResponse,
+  WpcomV2VideopressUploadJwtPutResponse,
+} from './wpcom-v2-responses.js';
+
 /**
  * Arguments for `/wpcom/v2` route when calling GET method.
  */
@@ -393,89 +455,266 @@ export interface WpcomV2VideopressUploadJwtPatchPostPutArgs {}
  * All "wpcom/v2" DELETE routes.
  */
 export interface WpcomV2DeleteRoutes {
-  '/wpcom/v2/external-media/connection/(?P<service>google_photos)': WpcomV2ExternalMediaConnectionPServiceGooglePhotosDeleteArgs;
-  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': WpcomV2ServiceApiKeysPServiceAZDeleteArgs;
-  '/wpcom/v2/transients/(?P<name>\\w{1,172})': WpcomV2TransientsPNameW1172DeleteArgs;
+  '/wpcom/v2/external-media/connection/(?P<service>google_photos)': {
+    args: WpcomV2ExternalMediaConnectionPServiceGooglePhotosDeleteArgs;
+    response: WpcomV2ExternalMediaConnectionPServiceGooglePhotosDeleteResponse;
+  };
+  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': {
+    args: WpcomV2ServiceApiKeysPServiceAZDeleteArgs;
+    response: WpcomV2ServiceApiKeysPServiceAZDeleteResponse;
+  };
+  '/wpcom/v2/transients/(?P<name>\\w{1,172})': {
+    args: WpcomV2TransientsPNameW1172DeleteArgs;
+    response: WpcomV2TransientsPNameW1172DeleteResponse;
+  };
 }
 
 /**
  * All "wpcom/v2" GET routes.
  */
 export interface WpcomV2GetRoutes {
-  '/wpcom/v2': WpcomV2GetArgs;
-  '/wpcom/v2/admin-menu': WpcomV2AdminMenuGetArgs;
-  '/wpcom/v2/business-hours/localized-week': WpcomV2BusinessHoursLocalizedWeekGetArgs;
-  '/wpcom/v2/checkGoogleDocVisibility': WpcomV2CheckgoogledocvisibilityGetArgs;
-  '/wpcom/v2/external-media/connection/(?P<service>google_photos)': WpcomV2ExternalMediaConnectionPServiceGooglePhotosGetArgs;
-  '/wpcom/v2/external-media/list/(?P<service>google_photos|openverse|pexels)': WpcomV2ExternalMediaListPServiceGooglePhotosOpenversePexelsGetArgs;
-  '/wpcom/v2/following/mine': WpcomV2FollowingMineGetArgs;
-  '/wpcom/v2/forms/responses': WpcomV2FormsResponsesGetArgs;
-  '/wpcom/v2/gutenberg/available-extensions': WpcomV2GutenbergAvailableExtensionsGetArgs;
-  '/wpcom/v2/hello': WpcomV2HelloGetArgs;
-  '/wpcom/v2/instagram-gallery/connect-url': WpcomV2InstagramGalleryConnectUrlGetArgs;
-  '/wpcom/v2/instagram-gallery/connections': WpcomV2InstagramGalleryConnectionsGetArgs;
-  '/wpcom/v2/instagram-gallery/gallery': WpcomV2InstagramGalleryGalleryGetArgs;
-  '/wpcom/v2/jetpack-ai/ai-assistant-feature': WpcomV2JetpackAiAiAssistantFeatureGetArgs;
-  '/wpcom/v2/mailchimp': WpcomV2MailchimpGetArgs;
-  '/wpcom/v2/mailchimp/groups': WpcomV2MailchimpGroupsGetArgs;
-  '/wpcom/v2/memberships/status': WpcomV2MembershipsStatusGetArgs;
-  '/wpcom/v2/podcast-player': WpcomV2PodcastPlayerGetArgs;
-  '/wpcom/v2/podcast-player/track-quantity': WpcomV2PodcastPlayerTrackQuantityGetArgs;
-  '/wpcom/v2/publicize/connection-test-results': WpcomV2PublicizeConnectionTestResultsGetArgs;
-  '/wpcom/v2/publicize/connections': WpcomV2PublicizeConnectionsGetArgs;
-  '/wpcom/v2/publicize/services': WpcomV2PublicizeServicesGetArgs;
-  '/wpcom/v2/resolve-redirect/?(?P<url>.+)?': WpcomV2ResolveRedirectPUrlGetArgs;
-  '/wpcom/v2/search': WpcomV2SearchGetArgs;
-  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': WpcomV2ServiceApiKeysPServiceAZGetArgs;
-  '/wpcom/v2/template-loader/(?P<template_type>\\w+)': WpcomV2TemplateLoaderPTemplateTypeWGetArgs;
-  '/wpcom/v2/tweetstorm/gather': WpcomV2TweetstormGatherGetArgs;
-  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/check-ownership/(?P<post_id>\\d+)': WpcomV2VideopressPVideoGuidWCheckOwnershipPPostIdDGetArgs;
-  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': WpcomV2VideopressPVideoGuidWPosterGetArgs;
+  '/wpcom/v2': {
+    args: WpcomV2GetArgs;
+    response: WpcomV2GetResponse;
+  };
+  '/wpcom/v2/admin-menu': {
+    args: WpcomV2AdminMenuGetArgs;
+    response: WpcomV2AdminMenuGetResponse;
+  };
+  '/wpcom/v2/business-hours/localized-week': {
+    args: WpcomV2BusinessHoursLocalizedWeekGetArgs;
+    response: WpcomV2BusinessHoursLocalizedWeekGetResponse;
+  };
+  '/wpcom/v2/checkGoogleDocVisibility': {
+    args: WpcomV2CheckgoogledocvisibilityGetArgs;
+    response: WpcomV2CheckgoogledocvisibilityGetResponse;
+  };
+  '/wpcom/v2/external-media/connection/(?P<service>google_photos)': {
+    args: WpcomV2ExternalMediaConnectionPServiceGooglePhotosGetArgs;
+    response: WpcomV2ExternalMediaConnectionPServiceGooglePhotosGetResponse;
+  };
+  '/wpcom/v2/external-media/list/(?P<service>google_photos|openverse|pexels)': {
+    args: WpcomV2ExternalMediaListPServiceGooglePhotosOpenversePexelsGetArgs;
+    response: WpcomV2ExternalMediaListPServiceGooglePhotosOpenversePexelsGetResponse;
+  };
+  '/wpcom/v2/following/mine': {
+    args: WpcomV2FollowingMineGetArgs;
+    response: WpcomV2FollowingMineGetResponse;
+  };
+  '/wpcom/v2/forms/responses': {
+    args: WpcomV2FormsResponsesGetArgs;
+    response: WpcomV2FormsResponsesGetResponse;
+  };
+  '/wpcom/v2/gutenberg/available-extensions': {
+    args: WpcomV2GutenbergAvailableExtensionsGetArgs;
+    response: WpcomV2GutenbergAvailableExtensionsGetResponse;
+  };
+  '/wpcom/v2/hello': {
+    args: WpcomV2HelloGetArgs;
+    response: WpcomV2HelloGetResponse;
+  };
+  '/wpcom/v2/instagram-gallery/connect-url': {
+    args: WpcomV2InstagramGalleryConnectUrlGetArgs;
+    response: WpcomV2InstagramGalleryConnectUrlGetResponse;
+  };
+  '/wpcom/v2/instagram-gallery/connections': {
+    args: WpcomV2InstagramGalleryConnectionsGetArgs;
+    response: WpcomV2InstagramGalleryConnectionsGetResponse;
+  };
+  '/wpcom/v2/instagram-gallery/gallery': {
+    args: WpcomV2InstagramGalleryGalleryGetArgs;
+    response: WpcomV2InstagramGalleryGalleryGetResponse;
+  };
+  '/wpcom/v2/jetpack-ai/ai-assistant-feature': {
+    args: WpcomV2JetpackAiAiAssistantFeatureGetArgs;
+    response: WpcomV2JetpackAiAiAssistantFeatureGetResponse;
+  };
+  '/wpcom/v2/mailchimp': {
+    args: WpcomV2MailchimpGetArgs;
+    response: WpcomV2MailchimpGetResponse;
+  };
+  '/wpcom/v2/mailchimp/groups': {
+    args: WpcomV2MailchimpGroupsGetArgs;
+    response: WpcomV2MailchimpGroupsGetResponse;
+  };
+  '/wpcom/v2/memberships/status': {
+    args: WpcomV2MembershipsStatusGetArgs;
+    response: WpcomV2MembershipsStatusGetResponse;
+  };
+  '/wpcom/v2/podcast-player': {
+    args: WpcomV2PodcastPlayerGetArgs;
+    response: WpcomV2PodcastPlayerGetResponse;
+  };
+  '/wpcom/v2/podcast-player/track-quantity': {
+    args: WpcomV2PodcastPlayerTrackQuantityGetArgs;
+    response: WpcomV2PodcastPlayerTrackQuantityGetResponse;
+  };
+  '/wpcom/v2/publicize/connection-test-results': {
+    args: WpcomV2PublicizeConnectionTestResultsGetArgs;
+    response: WpcomV2PublicizeConnectionTestResultsGetResponse;
+  };
+  '/wpcom/v2/publicize/connections': {
+    args: WpcomV2PublicizeConnectionsGetArgs;
+    response: WpcomV2PublicizeConnectionsGetResponse;
+  };
+  '/wpcom/v2/publicize/services': {
+    args: WpcomV2PublicizeServicesGetArgs;
+    response: WpcomV2PublicizeServicesGetResponse;
+  };
+  '/wpcom/v2/resolve-redirect/?(?P<url>.+)?': {
+    args: WpcomV2ResolveRedirectPUrlGetArgs;
+    response: WpcomV2ResolveRedirectPUrlGetResponse;
+  };
+  '/wpcom/v2/search': {
+    args: WpcomV2SearchGetArgs;
+    response: WpcomV2SearchGetResponse;
+  };
+  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': {
+    args: WpcomV2ServiceApiKeysPServiceAZGetArgs;
+    response: WpcomV2ServiceApiKeysPServiceAZGetResponse;
+  };
+  '/wpcom/v2/template-loader/(?P<template_type>\\w+)': {
+    args: WpcomV2TemplateLoaderPTemplateTypeWGetArgs;
+    response: WpcomV2TemplateLoaderPTemplateTypeWGetResponse;
+  };
+  '/wpcom/v2/tweetstorm/gather': {
+    args: WpcomV2TweetstormGatherGetArgs;
+    response: WpcomV2TweetstormGatherGetResponse;
+  };
+  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/check-ownership/(?P<post_id>\\d+)': {
+    args: WpcomV2VideopressPVideoGuidWCheckOwnershipPPostIdDGetArgs;
+    response: WpcomV2VideopressPVideoGuidWCheckOwnershipPPostIdDGetResponse;
+  };
+  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': {
+    args: WpcomV2VideopressPVideoGuidWPosterGetArgs;
+    response: WpcomV2VideopressPVideoGuidWPosterGetResponse;
+  };
 }
 
 /**
  * All "wpcom/v2" PATCH routes.
  */
 export interface WpcomV2PatchRoutes {
-  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': WpcomV2ServiceApiKeysPServiceAZPatchPostPutArgs;
-  '/wpcom/v2/tweetstorm/generate-cards': WpcomV2TweetstormGenerateCardsPatchPostPutArgs;
-  '/wpcom/v2/tweetstorm/parse': WpcomV2TweetstormParsePatchPostPutArgs;
-  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': WpcomV2VideopressPVideoGuidWPosterPatchPostPutArgs;
-  '/wpcom/v2/videopress/meta': WpcomV2VideopressMetaPatchPostPutArgs;
-  '/wpcom/v2/videopress/playback-jwt/(?P<video_guid>\\w+)': WpcomV2VideopressPlaybackJwtPVideoGuidWPatchPostPutArgs;
-  '/wpcom/v2/videopress/upload-jwt': WpcomV2VideopressUploadJwtPatchPostPutArgs;
+  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': {
+    args: WpcomV2ServiceApiKeysPServiceAZPatchPostPutArgs;
+    response: WpcomV2ServiceApiKeysPServiceAZPatchResponse;
+  };
+  '/wpcom/v2/tweetstorm/generate-cards': {
+    args: WpcomV2TweetstormGenerateCardsPatchPostPutArgs;
+    response: WpcomV2TweetstormGenerateCardsPatchResponse;
+  };
+  '/wpcom/v2/tweetstorm/parse': {
+    args: WpcomV2TweetstormParsePatchPostPutArgs;
+    response: WpcomV2TweetstormParsePatchResponse;
+  };
+  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': {
+    args: WpcomV2VideopressPVideoGuidWPosterPatchPostPutArgs;
+    response: WpcomV2VideopressPVideoGuidWPosterPatchResponse;
+  };
+  '/wpcom/v2/videopress/meta': {
+    args: WpcomV2VideopressMetaPatchPostPutArgs;
+    response: WpcomV2VideopressMetaPatchResponse;
+  };
+  '/wpcom/v2/videopress/playback-jwt/(?P<video_guid>\\w+)': {
+    args: WpcomV2VideopressPlaybackJwtPVideoGuidWPatchPostPutArgs;
+    response: WpcomV2VideopressPlaybackJwtPVideoGuidWPatchResponse;
+  };
+  '/wpcom/v2/videopress/upload-jwt': {
+    args: WpcomV2VideopressUploadJwtPatchPostPutArgs;
+    response: WpcomV2VideopressUploadJwtPatchResponse;
+  };
 }
 
 /**
  * All "wpcom/v2" POST routes.
  */
 export interface WpcomV2PostRoutes {
-  '/wpcom/v2/external-media/copy/(?P<service>google_photos|openverse|pexels)': WpcomV2ExternalMediaCopyPServiceGooglePhotosOpenversePexelsPostArgs;
-  '/wpcom/v2/forms/responses/bulk_actions': WpcomV2FormsResponsesBulkActionsPostArgs;
-  '/wpcom/v2/memberships/product': WpcomV2MembershipsProductPostArgs;
-  '/wpcom/v2/memberships/products': WpcomV2MembershipsProductsPostArgs;
-  '/wpcom/v2/posts/(?P<postId>\\d+)/publicize': WpcomV2PostsPPostidDPublicizePostArgs;
-  '/wpcom/v2/send-email-preview': WpcomV2SendEmailPreviewPostArgs;
-  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': WpcomV2ServiceApiKeysPServiceAZPatchPostPutArgs;
-  '/wpcom/v2/tweetstorm/generate-cards': WpcomV2TweetstormGenerateCardsPatchPostPutArgs;
-  '/wpcom/v2/tweetstorm/parse': WpcomV2TweetstormParsePatchPostPutArgs;
-  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': WpcomV2VideopressPVideoGuidWPosterPatchPostPutArgs;
-  '/wpcom/v2/videopress/meta': WpcomV2VideopressMetaPatchPostPutArgs;
-  '/wpcom/v2/videopress/playback-jwt/(?P<video_guid>\\w+)': WpcomV2VideopressPlaybackJwtPVideoGuidWPatchPostPutArgs;
-  '/wpcom/v2/videopress/upload-jwt': WpcomV2VideopressUploadJwtPatchPostPutArgs;
+  '/wpcom/v2/external-media/copy/(?P<service>google_photos|openverse|pexels)': {
+    args: WpcomV2ExternalMediaCopyPServiceGooglePhotosOpenversePexelsPostArgs;
+    response: WpcomV2ExternalMediaCopyPServiceGooglePhotosOpenversePexelsPostResponse;
+  };
+  '/wpcom/v2/forms/responses/bulk_actions': {
+    args: WpcomV2FormsResponsesBulkActionsPostArgs;
+    response: WpcomV2FormsResponsesBulkActionsPostResponse;
+  };
+  '/wpcom/v2/memberships/product': {
+    args: WpcomV2MembershipsProductPostArgs;
+    response: WpcomV2MembershipsProductPostResponse;
+  };
+  '/wpcom/v2/memberships/products': {
+    args: WpcomV2MembershipsProductsPostArgs;
+    response: WpcomV2MembershipsProductsPostResponse;
+  };
+  '/wpcom/v2/posts/(?P<postId>\\d+)/publicize': {
+    args: WpcomV2PostsPPostidDPublicizePostArgs;
+    response: WpcomV2PostsPPostidDPublicizePostResponse;
+  };
+  '/wpcom/v2/send-email-preview': {
+    args: WpcomV2SendEmailPreviewPostArgs;
+    response: WpcomV2SendEmailPreviewPostResponse;
+  };
+  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': {
+    args: WpcomV2ServiceApiKeysPServiceAZPatchPostPutArgs;
+    response: WpcomV2ServiceApiKeysPServiceAZPostResponse;
+  };
+  '/wpcom/v2/tweetstorm/generate-cards': {
+    args: WpcomV2TweetstormGenerateCardsPatchPostPutArgs;
+    response: WpcomV2TweetstormGenerateCardsPostResponse;
+  };
+  '/wpcom/v2/tweetstorm/parse': {
+    args: WpcomV2TweetstormParsePatchPostPutArgs;
+    response: WpcomV2TweetstormParsePostResponse;
+  };
+  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': {
+    args: WpcomV2VideopressPVideoGuidWPosterPatchPostPutArgs;
+    response: WpcomV2VideopressPVideoGuidWPosterPostResponse;
+  };
+  '/wpcom/v2/videopress/meta': {
+    args: WpcomV2VideopressMetaPatchPostPutArgs;
+    response: WpcomV2VideopressMetaPostResponse;
+  };
+  '/wpcom/v2/videopress/playback-jwt/(?P<video_guid>\\w+)': {
+    args: WpcomV2VideopressPlaybackJwtPVideoGuidWPatchPostPutArgs;
+    response: WpcomV2VideopressPlaybackJwtPVideoGuidWPostResponse;
+  };
+  '/wpcom/v2/videopress/upload-jwt': {
+    args: WpcomV2VideopressUploadJwtPatchPostPutArgs;
+    response: WpcomV2VideopressUploadJwtPostResponse;
+  };
 }
 
 /**
  * All "wpcom/v2" PUT routes.
  */
 export interface WpcomV2PutRoutes {
-  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': WpcomV2ServiceApiKeysPServiceAZPatchPostPutArgs;
-  '/wpcom/v2/tweetstorm/generate-cards': WpcomV2TweetstormGenerateCardsPatchPostPutArgs;
-  '/wpcom/v2/tweetstorm/parse': WpcomV2TweetstormParsePatchPostPutArgs;
-  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': WpcomV2VideopressPVideoGuidWPosterPatchPostPutArgs;
-  '/wpcom/v2/videopress/meta': WpcomV2VideopressMetaPatchPostPutArgs;
-  '/wpcom/v2/videopress/playback-jwt/(?P<video_guid>\\w+)': WpcomV2VideopressPlaybackJwtPVideoGuidWPatchPostPutArgs;
-  '/wpcom/v2/videopress/upload-jwt': WpcomV2VideopressUploadJwtPatchPostPutArgs;
+  '/wpcom/v2/service-api-keys/(?P<service>[a-z\\-_]+)': {
+    args: WpcomV2ServiceApiKeysPServiceAZPatchPostPutArgs;
+    response: WpcomV2ServiceApiKeysPServiceAZPutResponse;
+  };
+  '/wpcom/v2/tweetstorm/generate-cards': {
+    args: WpcomV2TweetstormGenerateCardsPatchPostPutArgs;
+    response: WpcomV2TweetstormGenerateCardsPutResponse;
+  };
+  '/wpcom/v2/tweetstorm/parse': {
+    args: WpcomV2TweetstormParsePatchPostPutArgs;
+    response: WpcomV2TweetstormParsePutResponse;
+  };
+  '/wpcom/v2/videopress/(?P<video_guid>\\w+)/poster': {
+    args: WpcomV2VideopressPVideoGuidWPosterPatchPostPutArgs;
+    response: WpcomV2VideopressPVideoGuidWPosterPutResponse;
+  };
+  '/wpcom/v2/videopress/meta': {
+    args: WpcomV2VideopressMetaPatchPostPutArgs;
+    response: WpcomV2VideopressMetaPutResponse;
+  };
+  '/wpcom/v2/videopress/playback-jwt/(?P<video_guid>\\w+)': {
+    args: WpcomV2VideopressPlaybackJwtPVideoGuidWPatchPostPutArgs;
+    response: WpcomV2VideopressPlaybackJwtPVideoGuidWPutResponse;
+  };
+  '/wpcom/v2/videopress/upload-jwt': {
+    args: WpcomV2VideopressUploadJwtPatchPostPutArgs;
+    response: WpcomV2VideopressUploadJwtPutResponse;
+  };
 }
 
 /**

@@ -1,6 +1,12 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "jetpack/v4/blaze" namespace
 
+import {
+  JetpackV4BlazeGetResponse,
+  JetpackV4BlazeDashboardGetResponse,
+  JetpackV4BlazeEligibilityGetResponse,
+} from './jetpack-v4-blaze-responses.js';
+
 /**
  * Arguments for `/jetpack/v4/blaze` route when calling GET method.
  */
@@ -25,9 +31,18 @@ export interface JetpackV4BlazeDeleteRoutes {}
  * All "jetpack/v4/blaze" GET routes.
  */
 export interface JetpackV4BlazeGetRoutes {
-  '/jetpack/v4/blaze': JetpackV4BlazeGetArgs;
-  '/jetpack/v4/blaze/dashboard': JetpackV4BlazeDashboardGetArgs;
-  '/jetpack/v4/blaze/eligibility': JetpackV4BlazeEligibilityGetArgs;
+  '/jetpack/v4/blaze': {
+    args: JetpackV4BlazeGetArgs;
+    response: JetpackV4BlazeGetResponse;
+  };
+  '/jetpack/v4/blaze/dashboard': {
+    args: JetpackV4BlazeDashboardGetArgs;
+    response: JetpackV4BlazeDashboardGetResponse;
+  };
+  '/jetpack/v4/blaze/eligibility': {
+    args: JetpackV4BlazeEligibilityGetArgs;
+    response: JetpackV4BlazeEligibilityGetResponse;
+  };
 }
 
 /**

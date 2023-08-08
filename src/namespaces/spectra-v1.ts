@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "spectra/v1" namespace
 
+import {
+  SpectraV1GetResponse,
+  SpectraV1AllTaxonomyGetResponse,
+} from './spectra-v1-responses.js';
+
 /**
  * Arguments for `/spectra/v1` route when calling GET method.
  */
@@ -20,8 +25,14 @@ export interface SpectraV1DeleteRoutes {}
  * All "spectra/v1" GET routes.
  */
 export interface SpectraV1GetRoutes {
-  '/spectra/v1': SpectraV1GetArgs;
-  '/spectra/v1/all_taxonomy': SpectraV1AllTaxonomyGetArgs;
+  '/spectra/v1': {
+    args: SpectraV1GetArgs;
+    response: SpectraV1GetResponse;
+  };
+  '/spectra/v1/all_taxonomy': {
+    args: SpectraV1AllTaxonomyGetArgs;
+    response: SpectraV1AllTaxonomyGetResponse;
+  };
 }
 
 /**

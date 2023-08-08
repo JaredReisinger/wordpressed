@@ -50,7 +50,7 @@ This package now also includes [a CLI](https://github.com/JaredReisinger/wordpre
 
 - [ ] Generate route path (regexp match) parameters
 
-- [ ] Generate response types for routes/endpoints _(It appears that the WordPress developers didn’t think reponses needed to be discoverable… I don’t believe there is **any** queryable/parseable response information at all, sadly.)_
+- [x] Generate response types for routes/endpoints _(It appears that the WordPress developers didn’t think reponses needed to be discoverable… I don’t believe there is **any** queryable/parseable response information at all, sadly.)_
 
 - [x] Create route/endpoint-to-argument type safety
 

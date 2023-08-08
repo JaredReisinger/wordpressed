@@ -206,7 +206,7 @@ export class Generate extends Command {
           },
         },
         {
-          title: 'write types',
+          title: 'create types',
           task: async (ctx) => {
             if (!ctx.data) {
               throw new Error('no parsed data available');
@@ -452,7 +452,7 @@ export class Generate extends Command {
     args: WpJsonRoute['endpoints'][number]['args'],
     e: GenEndpoint
   ) {
-    const typeName = `${e.typeName}Args`;
+    const typeName = Generate.argsTypeName(e);
 
     // Parse all of the argument types (after sorting).  Note that "discovered"
     // types (array items, objects) are pushed onto the endpoint types array as
@@ -546,38 +546,73 @@ export class Generate extends Command {
   }
 
   createGenerationTasks(data: GenData, dir?: string) {
-    // Create a generate/write task for each namespace, and one for the index,
-    // to be run concurrently.  Note that we commingle the type generation and
-    // the writing sothat we can take advantage of parallelizing generation
-    // while other writes are happening.
+    // Create two generate/write tasks for each namespace (a clobbery one for
+    // args, and a non-clobber to stub out responses), and one for the index, to
+    // be run concurrently.  Note that we commingle the type generation and the
+    // writing so that we can take advantage of parallelizing generation while
+    // other writes are happening.
     const tasks = Object.values(data)
       .sort(byProperty('namespace'))
-      .map<Listr.ListrTask<Context>>((ns) => ({
-        title: `write ${ns.namespace || ns.fileName}`,
-        // skip: (ctx) => ctx.dryRun && 'dry-run',
-        task: async (ctx, task) => {
-          // 'index' is a special name, and we *cannot* have a namespace that
-          // uses it!
-          if (ns.fileName === 'index') {
-            task.report(new Error('cannnot have namespace named "index"'));
-            return;
-          }
+      .flatMap<Listr.ListrTask<Context>>((ns) => [
+        {
+          title: `create ${ns.namespace || ns.fileName} args`,
+          task: async (ctx, task) => {
+            // 'index' is a special name, and we *cannot* have a namespace that
+            // uses it!
+            if (ns.fileName === 'index') {
+              task.report(new Error('cannnot have namespace named "index"'));
+              return;
+            }
 
-          const content = this.createNamespaceTypes(ns);
+            const content = this.createNamespaceTypes(ns);
 
-          if (ctx.dryRun || !dir) {
-            task.skip('skipping write to file system');
-            return;
-          }
+            if (ctx.dryRun || !dir) {
+              task.skip('skipping write to file system');
+              return;
+            }
 
-          await this.writeFile(`${ns.fileName}.ts`, dir, content);
+            await this.writeFile(`${ns.fileName}.ts`, dir, content);
+          },
         },
-      }));
+        {
+          title: `create ${ns.namespace || ns.fileName} responses`,
+          // TODO:skip if there's an existing file on disk?
+          task: async (ctx, task) => {
+            const content = this.createNamespaceResponseTypes(ns);
+
+            if (ctx.dryRun || !dir) {
+              task.skip('skipping write to file system');
+              return;
+            }
+
+            // do *not* write if the file already exists! (not an error!)
+            try {
+              await this.writeFile(
+                `${ns.fileName}-responses.ts`,
+                dir,
+                content,
+                false
+              );
+            } catch (err) {
+              if (
+                err &&
+                typeof err === 'object' &&
+                'code' in err &&
+                err.code === 'EEXIST'
+              ) {
+                // allowable!
+                task.skip('file already exists');
+              } else {
+                throw err;
+              }
+            }
+          },
+        },
+      ]);
 
     // also create a task to write the index file!
     tasks.push({
       title: `write index`,
-      // skip: (ctx) => ctx.dryRun && 'dry-run',
       task: async (ctx, task) => {
         const content = this.createIndexTypes(data);
 
@@ -593,7 +628,12 @@ export class Generate extends Command {
     return new Listr(tasks, { concurrent: true });
   }
 
-  async writeFile(filename: string, dir: string, content: string) {
+  async writeFile(
+    filename: string,
+    dir: string,
+    content: string,
+    allowClobber = true
+  ) {
     // note that we *could* check dryRun here, and skip the file-system call
 
     // const file = await fs.open(
@@ -602,7 +642,11 @@ export class Generate extends Command {
     // );
     // await file.write(content);
     // await file.close();
-    await fs.writeFile(path.join(dir, filename), content, { encoding: 'utf8' });
+
+    await fs.writeFile(path.join(dir, filename), content, {
+      encoding: 'utf8',
+      ...(!allowClobber ? { flag: 'wx' } : {}),
+    });
   }
 
   createNamespaceTypes(ns: GenNamespace) {
@@ -610,6 +654,24 @@ export class Generate extends Command {
 
     buf.add('// GENERATED FILE -- DO NOT EDIT');
     buf.add(`// WordPress REST API "${ns.namespace}" namespace`);
+
+    // we need to import the response types for referencing in the method maps
+    buf.ensureBlank();
+    buf.add('import {');
+    const indent = buf.indent();
+    Object.values(ns.routes)
+      .sort(byProperty('route'))
+      .forEach((r) => {
+        r.endpoints.forEach((e) => {
+          // Unlike input arguments, we need separate response types, becuase
+          // there's no guarantee that they will be the same just because the
+          // input arguments were.
+          e.methods.forEach((m) => {
+            indent.add(`${Generate.responseTypeName(r, m)},`);
+          });
+        });
+      });
+    buf.add(`} from './${ns.fileName}-responses.js';`);
 
     Object.values(ns.routes)
       .sort(byProperty('route'))
@@ -624,6 +686,60 @@ export class Generate extends Command {
     this.writeMethodMaps(buf, ns);
 
     return buf.toString();
+  }
+
+  createNamespaceResponseTypes(ns: GenNamespace) {
+    const buf = new LineBuffer();
+
+    buf.add('// RESPONSE TYPES FILE -- PLEASE *DO* EDIT!');
+    buf.addBlank();
+    buf.add(
+      "// This file is only created if it doesn't already exist. It is safe (and"
+    );
+    buf.add(
+      '// encouraged!) to edit this file to provide response types for the API calls.'
+    );
+    buf.addBlank();
+    buf.add(`// WordPress REST API "${ns.namespace}" responses`);
+
+    Object.values(ns.routes)
+      .sort(byProperty('route'))
+      .forEach((r) => {
+        r.endpoints.forEach((e) => {
+          // Unlike input arguments, we need separate response types, becuase
+          // there's no guarantee that they will be the same just because the
+          // input arguments were.
+          e.methods.forEach((m) => {
+            buf.ensureBlank();
+            buf.add('/**');
+            buf.add(
+              ` * Response for \`${
+                e.route.route
+              }\` route when calling ${humanizeMethodList([m], true)}.`
+            );
+            buf.add(' */');
+
+            // So here's an interesting philosophical question... can we tell
+            // when a response returns a list (array) of items, vs. just a
+            // single one?  This is mainly an issue for GET, but regardless, we
+            // need to know.  Perhaps stubbing out as interface{} is fine, and
+            // it can be hand-tweaked to an array type as needed?
+            buf.add(`export interface ${Generate.responseTypeName(r, m)} {}`);
+          });
+        });
+      });
+
+    return buf.toString();
+  }
+
+  static argsTypeName(e: GenEndpoint) {
+    return `${e.typeName}Args`;
+  }
+
+  static responseTypeName(r: GenRoute, m: WpJsonEndpointMethod) {
+    const methodName = inflection.humanize(m);
+    const methodResponseType = `${r.typeName}${methodName}Response`;
+    return methodResponseType;
   }
 
   writeEndpointTypes(buf: LineBuffer, e: GenEndpoint) {
@@ -732,9 +848,10 @@ export class Generate extends Command {
         .forEach((r) => {
           r.endpoints.forEach((e) => {
             if (e.methods.includes(m)) {
-              indented.add(
-                `${this.normalizePropertyKey(r.route)}: ${e.typeName}Args;`
-              );
+              indented.add(`${this.normalizePropertyKey(r.route)}: {`);
+              indented.add(`args: ${Generate.argsTypeName(e)}`, 1);
+              indented.add(`response: ${Generate.responseTypeName(r, m)}`, 1);
+              indented.add('};');
             }
           });
         });
@@ -769,13 +886,13 @@ export class Generate extends Command {
       buf.add('/**');
       buf.add(` * All known ${m} routes for WordPress REST API.`);
       buf.add(' */');
-      buf.add(`export type ${methodRoutesType} =`);
+      buf.add(`export interface ${methodRoutesType} extends`);
       const indented = buf.indent();
 
       for (let i = 0; i < nss.length; i++) {
         indented.add(
           `${nss[i].typeName}.${nss[i].typeName}${methodName}Routes${
-            i < nss.length - 1 ? ' &' : ';'
+            i < nss.length - 1 ? ',' : ' {}'
           }`
         );
       }

@@ -1,6 +1,12 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wpcom/v3" namespace
 
+import {
+  WpcomV3GetResponse,
+  WpcomV3BloggingPromptsGetResponse,
+  WpcomV3BloggingPromptsPIdDGetResponse,
+} from './wpcom-v3-responses.js';
+
 /**
  * Arguments for `/wpcom/v3` route when calling GET method.
  */
@@ -89,9 +95,18 @@ export interface WpcomV3DeleteRoutes {}
  * All "wpcom/v3" GET routes.
  */
 export interface WpcomV3GetRoutes {
-  '/wpcom/v3': WpcomV3GetArgs;
-  '/wpcom/v3/blogging-prompts': WpcomV3BloggingPromptsGetArgs;
-  '/wpcom/v3/blogging-prompts/(?P<id>[\\d]+)': WpcomV3BloggingPromptsPIdDGetArgs;
+  '/wpcom/v3': {
+    args: WpcomV3GetArgs;
+    response: WpcomV3GetResponse;
+  };
+  '/wpcom/v3/blogging-prompts': {
+    args: WpcomV3BloggingPromptsGetArgs;
+    response: WpcomV3BloggingPromptsGetResponse;
+  };
+  '/wpcom/v3/blogging-prompts/(?P<id>[\\d]+)': {
+    args: WpcomV3BloggingPromptsPIdDGetArgs;
+    response: WpcomV3BloggingPromptsPIdDGetResponse;
+  };
 }
 
 /**

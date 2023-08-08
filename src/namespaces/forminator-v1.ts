@@ -1,6 +1,13 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "forminator/v1" namespace
 
+import {
+  ForminatorV1GetResponse,
+  ForminatorV1PreviewFormsGetResponse,
+  ForminatorV1PreviewPollsGetResponse,
+  ForminatorV1PreviewQuizzesGetResponse,
+} from './forminator-v1-responses.js';
+
 /**
  * Arguments for `/forminator/v1` route when calling GET method.
  */
@@ -45,10 +52,22 @@ export interface ForminatorV1DeleteRoutes {}
  * All "forminator/v1" GET routes.
  */
 export interface ForminatorV1GetRoutes {
-  '/forminator/v1': ForminatorV1GetArgs;
-  '/forminator/v1/preview/forms': ForminatorV1PreviewFormsGetArgs;
-  '/forminator/v1/preview/polls': ForminatorV1PreviewPollsGetArgs;
-  '/forminator/v1/preview/quizzes': ForminatorV1PreviewQuizzesGetArgs;
+  '/forminator/v1': {
+    args: ForminatorV1GetArgs;
+    response: ForminatorV1GetResponse;
+  };
+  '/forminator/v1/preview/forms': {
+    args: ForminatorV1PreviewFormsGetArgs;
+    response: ForminatorV1PreviewFormsGetResponse;
+  };
+  '/forminator/v1/preview/polls': {
+    args: ForminatorV1PreviewPollsGetArgs;
+    response: ForminatorV1PreviewPollsGetResponse;
+  };
+  '/forminator/v1/preview/quizzes': {
+    args: ForminatorV1PreviewQuizzesGetArgs;
+    response: ForminatorV1PreviewQuizzesGetResponse;
+  };
 }
 
 /**

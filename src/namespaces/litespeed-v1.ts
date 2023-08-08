@@ -1,6 +1,23 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "litespeed/v1" namespace
 
+import {
+  LitespeedV1GetResponse,
+  LitespeedV1ApikeyPostResponse,
+  LitespeedV1CdnStatusPostResponse,
+  LitespeedV1CheckImgPostResponse,
+  LitespeedV1ErrDomainsPostResponse,
+  LitespeedV1IpValidatePostResponse,
+  LitespeedV1NotifyImgPostResponse,
+  LitespeedV1NotifyUcssPostResponse,
+  LitespeedV1NotifyVpiPostResponse,
+  LitespeedV1PingGetResponse,
+  LitespeedV1ToggleCrawlerStatePostResponse,
+  LitespeedV1TokenPostResponse,
+  LitespeedV1TokenGetResponse,
+  LitespeedV1ToolCheckIpGetResponse,
+} from './litespeed-v1-responses.js';
+
 /**
  * Arguments for `/litespeed/v1` route when calling GET method.
  */
@@ -80,10 +97,22 @@ export interface LitespeedV1DeleteRoutes {}
  * All "litespeed/v1" GET routes.
  */
 export interface LitespeedV1GetRoutes {
-  '/litespeed/v1': LitespeedV1GetArgs;
-  '/litespeed/v1/ping': LitespeedV1PingGetArgs;
-  '/litespeed/v1/token': LitespeedV1TokenGetArgs;
-  '/litespeed/v1/tool/check_ip': LitespeedV1ToolCheckIpGetArgs;
+  '/litespeed/v1': {
+    args: LitespeedV1GetArgs;
+    response: LitespeedV1GetResponse;
+  };
+  '/litespeed/v1/ping': {
+    args: LitespeedV1PingGetArgs;
+    response: LitespeedV1PingGetResponse;
+  };
+  '/litespeed/v1/token': {
+    args: LitespeedV1TokenGetArgs;
+    response: LitespeedV1TokenGetResponse;
+  };
+  '/litespeed/v1/tool/check_ip': {
+    args: LitespeedV1ToolCheckIpGetArgs;
+    response: LitespeedV1ToolCheckIpGetResponse;
+  };
 }
 
 /**
@@ -95,16 +124,46 @@ export interface LitespeedV1PatchRoutes {}
  * All "litespeed/v1" POST routes.
  */
 export interface LitespeedV1PostRoutes {
-  '/litespeed/v1/apikey': LitespeedV1ApikeyPostArgs;
-  '/litespeed/v1/cdn_status': LitespeedV1CdnStatusPostArgs;
-  '/litespeed/v1/check_img': LitespeedV1CheckImgPostArgs;
-  '/litespeed/v1/err_domains': LitespeedV1ErrDomainsPostArgs;
-  '/litespeed/v1/ip_validate': LitespeedV1IpValidatePostArgs;
-  '/litespeed/v1/notify_img': LitespeedV1NotifyImgPostArgs;
-  '/litespeed/v1/notify_ucss': LitespeedV1NotifyUcssPostArgs;
-  '/litespeed/v1/notify_vpi': LitespeedV1NotifyVpiPostArgs;
-  '/litespeed/v1/toggle_crawler_state': LitespeedV1ToggleCrawlerStatePostArgs;
-  '/litespeed/v1/token': LitespeedV1TokenPostArgs;
+  '/litespeed/v1/apikey': {
+    args: LitespeedV1ApikeyPostArgs;
+    response: LitespeedV1ApikeyPostResponse;
+  };
+  '/litespeed/v1/cdn_status': {
+    args: LitespeedV1CdnStatusPostArgs;
+    response: LitespeedV1CdnStatusPostResponse;
+  };
+  '/litespeed/v1/check_img': {
+    args: LitespeedV1CheckImgPostArgs;
+    response: LitespeedV1CheckImgPostResponse;
+  };
+  '/litespeed/v1/err_domains': {
+    args: LitespeedV1ErrDomainsPostArgs;
+    response: LitespeedV1ErrDomainsPostResponse;
+  };
+  '/litespeed/v1/ip_validate': {
+    args: LitespeedV1IpValidatePostArgs;
+    response: LitespeedV1IpValidatePostResponse;
+  };
+  '/litespeed/v1/notify_img': {
+    args: LitespeedV1NotifyImgPostArgs;
+    response: LitespeedV1NotifyImgPostResponse;
+  };
+  '/litespeed/v1/notify_ucss': {
+    args: LitespeedV1NotifyUcssPostArgs;
+    response: LitespeedV1NotifyUcssPostResponse;
+  };
+  '/litespeed/v1/notify_vpi': {
+    args: LitespeedV1NotifyVpiPostArgs;
+    response: LitespeedV1NotifyVpiPostResponse;
+  };
+  '/litespeed/v1/toggle_crawler_state': {
+    args: LitespeedV1ToggleCrawlerStatePostArgs;
+    response: LitespeedV1ToggleCrawlerStatePostResponse;
+  };
+  '/litespeed/v1/token': {
+    args: LitespeedV1TokenPostArgs;
+    response: LitespeedV1TokenPostResponse;
+  };
 }
 
 /**

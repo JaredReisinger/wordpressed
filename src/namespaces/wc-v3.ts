@@ -1,6 +1,213 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wc/v3" namespace
 
+import {
+  WcV3GetResponse,
+  WcV3CouponsGetResponse,
+  WcV3CouponsPostResponse,
+  WcV3CouponsPIdDGetResponse,
+  WcV3CouponsPIdDPatchResponse,
+  WcV3CouponsPIdDPostResponse,
+  WcV3CouponsPIdDPutResponse,
+  WcV3CouponsPIdDDeleteResponse,
+  WcV3CouponsBatchPatchResponse,
+  WcV3CouponsBatchPostResponse,
+  WcV3CouponsBatchPutResponse,
+  WcV3CustomersGetResponse,
+  WcV3CustomersPostResponse,
+  WcV3CustomersPCustomerIdDDownloadsGetResponse,
+  WcV3CustomersPIdDGetResponse,
+  WcV3CustomersPIdDPatchResponse,
+  WcV3CustomersPIdDPostResponse,
+  WcV3CustomersPIdDPutResponse,
+  WcV3CustomersPIdDDeleteResponse,
+  WcV3CustomersBatchPatchResponse,
+  WcV3CustomersBatchPostResponse,
+  WcV3CustomersBatchPutResponse,
+  WcV3DataGetResponse,
+  WcV3DataContinentsGetResponse,
+  WcV3DataContinentsPLocationWGetResponse,
+  WcV3DataCountriesGetResponse,
+  WcV3DataCountriesPLocationWGetResponse,
+  WcV3DataCurrenciesGetResponse,
+  WcV3DataCurrenciesPCurrencyW3GetResponse,
+  WcV3DataCurrenciesCurrentGetResponse,
+  WcV3OrdersGetResponse,
+  WcV3OrdersPostResponse,
+  WcV3OrdersPIdDGetResponse,
+  WcV3OrdersPIdDPatchResponse,
+  WcV3OrdersPIdDPostResponse,
+  WcV3OrdersPIdDPutResponse,
+  WcV3OrdersPIdDDeleteResponse,
+  WcV3OrdersPOrderIdDNotesGetResponse,
+  WcV3OrdersPOrderIdDNotesPostResponse,
+  WcV3OrdersPOrderIdDNotesPIdDGetResponse,
+  WcV3OrdersPOrderIdDNotesPIdDDeleteResponse,
+  WcV3OrdersPOrderIdDRefundsGetResponse,
+  WcV3OrdersPOrderIdDRefundsPostResponse,
+  WcV3OrdersPOrderIdDRefundsPIdDGetResponse,
+  WcV3OrdersPOrderIdDRefundsPIdDDeleteResponse,
+  WcV3OrdersBatchPatchResponse,
+  WcV3OrdersBatchPostResponse,
+  WcV3OrdersBatchPutResponse,
+  WcV3PaymentGatewaysGetResponse,
+  WcV3PaymentGatewaysPIdWGetResponse,
+  WcV3PaymentGatewaysPIdWPatchResponse,
+  WcV3PaymentGatewaysPIdWPostResponse,
+  WcV3PaymentGatewaysPIdWPutResponse,
+  WcV3ProductsGetResponse,
+  WcV3ProductsPostResponse,
+  WcV3ProductsPIdDGetResponse,
+  WcV3ProductsPIdDPatchResponse,
+  WcV3ProductsPIdDPostResponse,
+  WcV3ProductsPIdDPutResponse,
+  WcV3ProductsPIdDDeleteResponse,
+  WcV3ProductsPProductIdDVariationsGetResponse,
+  WcV3ProductsPProductIdDVariationsPostResponse,
+  WcV3ProductsPProductIdDVariationsPIdDGetResponse,
+  WcV3ProductsPProductIdDVariationsPIdDPatchResponse,
+  WcV3ProductsPProductIdDVariationsPIdDPostResponse,
+  WcV3ProductsPProductIdDVariationsPIdDPutResponse,
+  WcV3ProductsPProductIdDVariationsPIdDDeleteResponse,
+  WcV3ProductsPProductIdDVariationsBatchPatchResponse,
+  WcV3ProductsPProductIdDVariationsBatchPostResponse,
+  WcV3ProductsPProductIdDVariationsBatchPutResponse,
+  WcV3ProductsPProductIdDVariationsGeneratePostResponse,
+  WcV3ProductsAttributesGetResponse,
+  WcV3ProductsAttributesPostResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsGetResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsPostResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsPIdDGetResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsPIdDPostResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsPIdDPutResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsPIdDDeleteResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsBatchPatchResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsBatchPostResponse,
+  WcV3ProductsAttributesPAttributeIdDTermsBatchPutResponse,
+  WcV3ProductsAttributesPIdDGetResponse,
+  WcV3ProductsAttributesPIdDPatchResponse,
+  WcV3ProductsAttributesPIdDPostResponse,
+  WcV3ProductsAttributesPIdDPutResponse,
+  WcV3ProductsAttributesPIdDDeleteResponse,
+  WcV3ProductsAttributesBatchPatchResponse,
+  WcV3ProductsAttributesBatchPostResponse,
+  WcV3ProductsAttributesBatchPutResponse,
+  WcV3ProductsBatchPatchResponse,
+  WcV3ProductsBatchPostResponse,
+  WcV3ProductsBatchPutResponse,
+  WcV3ProductsCategoriesGetResponse,
+  WcV3ProductsCategoriesPostResponse,
+  WcV3ProductsCategoriesPIdDGetResponse,
+  WcV3ProductsCategoriesPIdDPatchResponse,
+  WcV3ProductsCategoriesPIdDPostResponse,
+  WcV3ProductsCategoriesPIdDPutResponse,
+  WcV3ProductsCategoriesPIdDDeleteResponse,
+  WcV3ProductsCategoriesBatchPatchResponse,
+  WcV3ProductsCategoriesBatchPostResponse,
+  WcV3ProductsCategoriesBatchPutResponse,
+  WcV3ProductsReviewsGetResponse,
+  WcV3ProductsReviewsPostResponse,
+  WcV3ProductsReviewsPIdDGetResponse,
+  WcV3ProductsReviewsPIdDPatchResponse,
+  WcV3ProductsReviewsPIdDPostResponse,
+  WcV3ProductsReviewsPIdDPutResponse,
+  WcV3ProductsReviewsPIdDDeleteResponse,
+  WcV3ProductsReviewsBatchPatchResponse,
+  WcV3ProductsReviewsBatchPostResponse,
+  WcV3ProductsReviewsBatchPutResponse,
+  WcV3ProductsShippingClassesGetResponse,
+  WcV3ProductsShippingClassesPostResponse,
+  WcV3ProductsShippingClassesPIdDGetResponse,
+  WcV3ProductsShippingClassesPIdDPatchResponse,
+  WcV3ProductsShippingClassesPIdDPostResponse,
+  WcV3ProductsShippingClassesPIdDPutResponse,
+  WcV3ProductsShippingClassesPIdDDeleteResponse,
+  WcV3ProductsShippingClassesBatchPatchResponse,
+  WcV3ProductsShippingClassesBatchPostResponse,
+  WcV3ProductsShippingClassesBatchPutResponse,
+  WcV3ProductsTagsGetResponse,
+  WcV3ProductsTagsPostResponse,
+  WcV3ProductsTagsPIdDGetResponse,
+  WcV3ProductsTagsPIdDPatchResponse,
+  WcV3ProductsTagsPIdDPostResponse,
+  WcV3ProductsTagsPIdDPutResponse,
+  WcV3ProductsTagsPIdDDeleteResponse,
+  WcV3ProductsTagsBatchPatchResponse,
+  WcV3ProductsTagsBatchPostResponse,
+  WcV3ProductsTagsBatchPutResponse,
+  WcV3ReportsGetResponse,
+  WcV3ReportsCouponsTotalsGetResponse,
+  WcV3ReportsCustomersTotalsGetResponse,
+  WcV3ReportsOrdersTotalsGetResponse,
+  WcV3ReportsProductsTotalsGetResponse,
+  WcV3ReportsReviewsTotalsGetResponse,
+  WcV3ReportsSalesGetResponse,
+  WcV3ReportsTopSellersGetResponse,
+  WcV3SettingsGetResponse,
+  WcV3SettingsPGroupIdWGetResponse,
+  WcV3SettingsPGroupIdWPIdWGetResponse,
+  WcV3SettingsPGroupIdWPIdWPatchResponse,
+  WcV3SettingsPGroupIdWPIdWPostResponse,
+  WcV3SettingsPGroupIdWPIdWPutResponse,
+  WcV3SettingsPGroupIdWBatchPatchResponse,
+  WcV3SettingsPGroupIdWBatchPostResponse,
+  WcV3SettingsPGroupIdWBatchPutResponse,
+  WcV3SettingsBatchPatchResponse,
+  WcV3SettingsBatchPostResponse,
+  WcV3SettingsBatchPutResponse,
+  WcV3ShippingMethodsGetResponse,
+  WcV3ShippingMethodsPIdWGetResponse,
+  WcV3ShippingZonesGetResponse,
+  WcV3ShippingZonesPostResponse,
+  WcV3ShippingZonesPIdDGetResponse,
+  WcV3ShippingZonesPIdDPatchResponse,
+  WcV3ShippingZonesPIdDPostResponse,
+  WcV3ShippingZonesPIdDPutResponse,
+  WcV3ShippingZonesPIdDDeleteResponse,
+  WcV3ShippingZonesPIdDLocationsGetResponse,
+  WcV3ShippingZonesPIdDLocationsPatchResponse,
+  WcV3ShippingZonesPIdDLocationsPostResponse,
+  WcV3ShippingZonesPIdDLocationsPutResponse,
+  WcV3ShippingZonesPZoneIdDMethodsGetResponse,
+  WcV3ShippingZonesPZoneIdDMethodsPostResponse,
+  WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDGetResponse,
+  WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchResponse,
+  WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPostResponse,
+  WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPutResponse,
+  WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDDeleteResponse,
+  WcV3SystemStatusGetResponse,
+  WcV3SystemStatusToolsGetResponse,
+  WcV3SystemStatusToolsPIdWGetResponse,
+  WcV3SystemStatusToolsPIdWPatchResponse,
+  WcV3SystemStatusToolsPIdWPostResponse,
+  WcV3SystemStatusToolsPIdWPutResponse,
+  WcV3TaxesGetResponse,
+  WcV3TaxesPostResponse,
+  WcV3TaxesPIdDGetResponse,
+  WcV3TaxesPIdDPatchResponse,
+  WcV3TaxesPIdDPostResponse,
+  WcV3TaxesPIdDPutResponse,
+  WcV3TaxesPIdDDeleteResponse,
+  WcV3TaxesBatchPatchResponse,
+  WcV3TaxesBatchPostResponse,
+  WcV3TaxesBatchPutResponse,
+  WcV3TaxesClassesGetResponse,
+  WcV3TaxesClassesPostResponse,
+  WcV3TaxesClassesPSlugWWSGetResponse,
+  WcV3TaxesClassesPSlugWWSDeleteResponse,
+  WcV3WebhooksGetResponse,
+  WcV3WebhooksPostResponse,
+  WcV3WebhooksPIdDGetResponse,
+  WcV3WebhooksPIdDPatchResponse,
+  WcV3WebhooksPIdDPostResponse,
+  WcV3WebhooksPIdDPutResponse,
+  WcV3WebhooksPIdDDeleteResponse,
+  WcV3WebhooksBatchPatchResponse,
+  WcV3WebhooksBatchPostResponse,
+  WcV3WebhooksBatchPutResponse,
+} from './wc-v3-responses.js';
+
 /**
  * Arguments for `/wc/v3` route when calling GET method.
  */
@@ -5341,234 +5548,846 @@ export interface WcV3WebhooksBatchPatchPostPutArgs {
  * All "wc/v3" DELETE routes.
  */
 export interface WcV3DeleteRoutes {
-  '/wc/v3/coupons/(?P<id>[\\d]+)': WcV3CouponsPIdDDeleteArgs;
-  '/wc/v3/customers/(?P<id>[\\d]+)': WcV3CustomersPIdDDeleteArgs;
-  '/wc/v3/orders/(?P<id>[\\d]+)': WcV3OrdersPIdDDeleteArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': WcV3OrdersPOrderIdDNotesPIdDDeleteArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': WcV3OrdersPOrderIdDRefundsPIdDDeleteArgs;
-  '/wc/v3/products/(?P<id>[\\d]+)': WcV3ProductsPIdDDeleteArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': WcV3ProductsPProductIdDVariationsPIdDDeleteArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV3ProductsAttributesPAttributeIdDTermsPIdDDeleteArgs;
-  '/wc/v3/products/attributes/(?P<id>[\\d]+)': WcV3ProductsAttributesPIdDDeleteArgs;
-  '/wc/v3/products/categories/(?P<id>[\\d]+)': WcV3ProductsCategoriesPIdDDeleteArgs;
-  '/wc/v3/products/reviews/(?P<id>[\\d]+)': WcV3ProductsReviewsPIdDDeleteArgs;
-  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': WcV3ProductsShippingClassesPIdDDeleteArgs;
-  '/wc/v3/products/tags/(?P<id>[\\d]+)': WcV3ProductsTagsPIdDDeleteArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': WcV3ShippingZonesPIdDDeleteArgs;
-  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDDeleteArgs;
-  '/wc/v3/taxes/(?P<id>[\\d]+)': WcV3TaxesPIdDDeleteArgs;
-  '/wc/v3/taxes/classes/(?P<slug>\\w[\\w\\s\\-]*)': WcV3TaxesClassesPSlugWWSDeleteArgs;
-  '/wc/v3/webhooks/(?P<id>[\\d]+)': WcV3WebhooksPIdDDeleteArgs;
+  '/wc/v3/coupons/(?P<id>[\\d]+)': {
+    args: WcV3CouponsPIdDDeleteArgs;
+    response: WcV3CouponsPIdDDeleteResponse;
+  };
+  '/wc/v3/customers/(?P<id>[\\d]+)': {
+    args: WcV3CustomersPIdDDeleteArgs;
+    response: WcV3CustomersPIdDDeleteResponse;
+  };
+  '/wc/v3/orders/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPIdDDeleteArgs;
+    response: WcV3OrdersPIdDDeleteResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPOrderIdDNotesPIdDDeleteArgs;
+    response: WcV3OrdersPOrderIdDNotesPIdDDeleteResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPOrderIdDRefundsPIdDDeleteArgs;
+    response: WcV3OrdersPOrderIdDRefundsPIdDDeleteResponse;
+  };
+  '/wc/v3/products/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPIdDDeleteArgs;
+    response: WcV3ProductsPIdDDeleteResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPProductIdDVariationsPIdDDeleteArgs;
+    response: WcV3ProductsPProductIdDVariationsPIdDDeleteResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsPIdDDeleteArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsPIdDDeleteResponse;
+  };
+  '/wc/v3/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPIdDDeleteArgs;
+    response: WcV3ProductsAttributesPIdDDeleteResponse;
+  };
+  '/wc/v3/products/categories/(?P<id>[\\d]+)': {
+    args: WcV3ProductsCategoriesPIdDDeleteArgs;
+    response: WcV3ProductsCategoriesPIdDDeleteResponse;
+  };
+  '/wc/v3/products/reviews/(?P<id>[\\d]+)': {
+    args: WcV3ProductsReviewsPIdDDeleteArgs;
+    response: WcV3ProductsReviewsPIdDDeleteResponse;
+  };
+  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsShippingClassesPIdDDeleteArgs;
+    response: WcV3ProductsShippingClassesPIdDDeleteResponse;
+  };
+  '/wc/v3/products/tags/(?P<id>[\\d]+)': {
+    args: WcV3ProductsTagsPIdDDeleteArgs;
+    response: WcV3ProductsTagsPIdDDeleteResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': {
+    args: WcV3ShippingZonesPIdDDeleteArgs;
+    response: WcV3ShippingZonesPIdDDeleteResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': {
+    args: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDDeleteArgs;
+    response: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDDeleteResponse;
+  };
+  '/wc/v3/taxes/(?P<id>[\\d]+)': {
+    args: WcV3TaxesPIdDDeleteArgs;
+    response: WcV3TaxesPIdDDeleteResponse;
+  };
+  '/wc/v3/taxes/classes/(?P<slug>\\w[\\w\\s\\-]*)': {
+    args: WcV3TaxesClassesPSlugWWSDeleteArgs;
+    response: WcV3TaxesClassesPSlugWWSDeleteResponse;
+  };
+  '/wc/v3/webhooks/(?P<id>[\\d]+)': {
+    args: WcV3WebhooksPIdDDeleteArgs;
+    response: WcV3WebhooksPIdDDeleteResponse;
+  };
 }
 
 /**
  * All "wc/v3" GET routes.
  */
 export interface WcV3GetRoutes {
-  '/wc/v3': WcV3GetArgs;
-  '/wc/v3/coupons': WcV3CouponsGetArgs;
-  '/wc/v3/coupons/(?P<id>[\\d]+)': WcV3CouponsPIdDGetArgs;
-  '/wc/v3/customers': WcV3CustomersGetArgs;
-  '/wc/v3/customers/(?P<customer_id>[\\d]+)/downloads': WcV3CustomersPCustomerIdDDownloadsGetArgs;
-  '/wc/v3/customers/(?P<id>[\\d]+)': WcV3CustomersPIdDGetArgs;
-  '/wc/v3/data': WcV3DataGetArgs;
-  '/wc/v3/data/continents': WcV3DataContinentsGetArgs;
-  '/wc/v3/data/continents/(?P<location>[\\w-]+)': WcV3DataContinentsPLocationWGetArgs;
-  '/wc/v3/data/countries': WcV3DataCountriesGetArgs;
-  '/wc/v3/data/countries/(?P<location>[\\w-]+)': WcV3DataCountriesPLocationWGetArgs;
-  '/wc/v3/data/currencies': WcV3DataCurrenciesGetArgs;
-  '/wc/v3/data/currencies/(?P<currency>[\\w-]{3})': WcV3DataCurrenciesPCurrencyW3GetArgs;
-  '/wc/v3/data/currencies/current': WcV3DataCurrenciesCurrentGetArgs;
-  '/wc/v3/orders': WcV3OrdersGetArgs;
-  '/wc/v3/orders/(?P<id>[\\d]+)': WcV3OrdersPIdDGetArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes': WcV3OrdersPOrderIdDNotesGetArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': WcV3OrdersPOrderIdDNotesPIdDGetArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds': WcV3OrdersPOrderIdDRefundsGetArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': WcV3OrdersPOrderIdDRefundsPIdDGetArgs;
-  '/wc/v3/payment_gateways': WcV3PaymentGatewaysGetArgs;
-  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': WcV3PaymentGatewaysPIdWGetArgs;
-  '/wc/v3/products': WcV3ProductsGetArgs;
-  '/wc/v3/products/(?P<id>[\\d]+)': WcV3ProductsPIdDGetArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations': WcV3ProductsPProductIdDVariationsGetArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': WcV3ProductsPProductIdDVariationsPIdDGetArgs;
-  '/wc/v3/products/attributes': WcV3ProductsAttributesGetArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms': WcV3ProductsAttributesPAttributeIdDTermsGetArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV3ProductsAttributesPAttributeIdDTermsPIdDGetArgs;
-  '/wc/v3/products/attributes/(?P<id>[\\d]+)': WcV3ProductsAttributesPIdDGetArgs;
-  '/wc/v3/products/categories': WcV3ProductsCategoriesGetArgs;
-  '/wc/v3/products/categories/(?P<id>[\\d]+)': WcV3ProductsCategoriesPIdDGetArgs;
-  '/wc/v3/products/reviews': WcV3ProductsReviewsGetArgs;
-  '/wc/v3/products/reviews/(?P<id>[\\d]+)': WcV3ProductsReviewsPIdDGetArgs;
-  '/wc/v3/products/shipping_classes': WcV3ProductsShippingClassesGetArgs;
-  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': WcV3ProductsShippingClassesPIdDGetArgs;
-  '/wc/v3/products/tags': WcV3ProductsTagsGetArgs;
-  '/wc/v3/products/tags/(?P<id>[\\d]+)': WcV3ProductsTagsPIdDGetArgs;
-  '/wc/v3/reports': WcV3ReportsGetArgs;
-  '/wc/v3/reports/coupons/totals': WcV3ReportsCouponsTotalsGetArgs;
-  '/wc/v3/reports/customers/totals': WcV3ReportsCustomersTotalsGetArgs;
-  '/wc/v3/reports/orders/totals': WcV3ReportsOrdersTotalsGetArgs;
-  '/wc/v3/reports/products/totals': WcV3ReportsProductsTotalsGetArgs;
-  '/wc/v3/reports/reviews/totals': WcV3ReportsReviewsTotalsGetArgs;
-  '/wc/v3/reports/sales': WcV3ReportsSalesGetArgs;
-  '/wc/v3/reports/top_sellers': WcV3ReportsTopSellersGetArgs;
-  '/wc/v3/settings': WcV3SettingsGetArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)': WcV3SettingsPGroupIdWGetArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': WcV3SettingsPGroupIdWPIdWGetArgs;
-  '/wc/v3/shipping_methods': WcV3ShippingMethodsGetArgs;
-  '/wc/v3/shipping_methods/(?P<id>[\\w-]+)': WcV3ShippingMethodsPIdWGetArgs;
-  '/wc/v3/shipping/zones': WcV3ShippingZonesGetArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': WcV3ShippingZonesPIdDGetArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': WcV3ShippingZonesPIdDLocationsGetArgs;
-  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods': WcV3ShippingZonesPZoneIdDMethodsGetArgs;
-  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDGetArgs;
-  '/wc/v3/system_status': WcV3SystemStatusGetArgs;
-  '/wc/v3/system_status/tools': WcV3SystemStatusToolsGetArgs;
-  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': WcV3SystemStatusToolsPIdWGetArgs;
-  '/wc/v3/taxes': WcV3TaxesGetArgs;
-  '/wc/v3/taxes/(?P<id>[\\d]+)': WcV3TaxesPIdDGetArgs;
-  '/wc/v3/taxes/classes': WcV3TaxesClassesGetArgs;
-  '/wc/v3/taxes/classes/(?P<slug>\\w[\\w\\s\\-]*)': WcV3TaxesClassesPSlugWWSGetArgs;
-  '/wc/v3/webhooks': WcV3WebhooksGetArgs;
-  '/wc/v3/webhooks/(?P<id>[\\d]+)': WcV3WebhooksPIdDGetArgs;
+  '/wc/v3': {
+    args: WcV3GetArgs;
+    response: WcV3GetResponse;
+  };
+  '/wc/v3/coupons': {
+    args: WcV3CouponsGetArgs;
+    response: WcV3CouponsGetResponse;
+  };
+  '/wc/v3/coupons/(?P<id>[\\d]+)': {
+    args: WcV3CouponsPIdDGetArgs;
+    response: WcV3CouponsPIdDGetResponse;
+  };
+  '/wc/v3/customers': {
+    args: WcV3CustomersGetArgs;
+    response: WcV3CustomersGetResponse;
+  };
+  '/wc/v3/customers/(?P<customer_id>[\\d]+)/downloads': {
+    args: WcV3CustomersPCustomerIdDDownloadsGetArgs;
+    response: WcV3CustomersPCustomerIdDDownloadsGetResponse;
+  };
+  '/wc/v3/customers/(?P<id>[\\d]+)': {
+    args: WcV3CustomersPIdDGetArgs;
+    response: WcV3CustomersPIdDGetResponse;
+  };
+  '/wc/v3/data': {
+    args: WcV3DataGetArgs;
+    response: WcV3DataGetResponse;
+  };
+  '/wc/v3/data/continents': {
+    args: WcV3DataContinentsGetArgs;
+    response: WcV3DataContinentsGetResponse;
+  };
+  '/wc/v3/data/continents/(?P<location>[\\w-]+)': {
+    args: WcV3DataContinentsPLocationWGetArgs;
+    response: WcV3DataContinentsPLocationWGetResponse;
+  };
+  '/wc/v3/data/countries': {
+    args: WcV3DataCountriesGetArgs;
+    response: WcV3DataCountriesGetResponse;
+  };
+  '/wc/v3/data/countries/(?P<location>[\\w-]+)': {
+    args: WcV3DataCountriesPLocationWGetArgs;
+    response: WcV3DataCountriesPLocationWGetResponse;
+  };
+  '/wc/v3/data/currencies': {
+    args: WcV3DataCurrenciesGetArgs;
+    response: WcV3DataCurrenciesGetResponse;
+  };
+  '/wc/v3/data/currencies/(?P<currency>[\\w-]{3})': {
+    args: WcV3DataCurrenciesPCurrencyW3GetArgs;
+    response: WcV3DataCurrenciesPCurrencyW3GetResponse;
+  };
+  '/wc/v3/data/currencies/current': {
+    args: WcV3DataCurrenciesCurrentGetArgs;
+    response: WcV3DataCurrenciesCurrentGetResponse;
+  };
+  '/wc/v3/orders': {
+    args: WcV3OrdersGetArgs;
+    response: WcV3OrdersGetResponse;
+  };
+  '/wc/v3/orders/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPIdDGetArgs;
+    response: WcV3OrdersPIdDGetResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes': {
+    args: WcV3OrdersPOrderIdDNotesGetArgs;
+    response: WcV3OrdersPOrderIdDNotesGetResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPOrderIdDNotesPIdDGetArgs;
+    response: WcV3OrdersPOrderIdDNotesPIdDGetResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds': {
+    args: WcV3OrdersPOrderIdDRefundsGetArgs;
+    response: WcV3OrdersPOrderIdDRefundsGetResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPOrderIdDRefundsPIdDGetArgs;
+    response: WcV3OrdersPOrderIdDRefundsPIdDGetResponse;
+  };
+  '/wc/v3/payment_gateways': {
+    args: WcV3PaymentGatewaysGetArgs;
+    response: WcV3PaymentGatewaysGetResponse;
+  };
+  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': {
+    args: WcV3PaymentGatewaysPIdWGetArgs;
+    response: WcV3PaymentGatewaysPIdWGetResponse;
+  };
+  '/wc/v3/products': {
+    args: WcV3ProductsGetArgs;
+    response: WcV3ProductsGetResponse;
+  };
+  '/wc/v3/products/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPIdDGetArgs;
+    response: WcV3ProductsPIdDGetResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations': {
+    args: WcV3ProductsPProductIdDVariationsGetArgs;
+    response: WcV3ProductsPProductIdDVariationsGetResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPProductIdDVariationsPIdDGetArgs;
+    response: WcV3ProductsPProductIdDVariationsPIdDGetResponse;
+  };
+  '/wc/v3/products/attributes': {
+    args: WcV3ProductsAttributesGetArgs;
+    response: WcV3ProductsAttributesGetResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsGetArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsGetResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsPIdDGetArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsPIdDGetResponse;
+  };
+  '/wc/v3/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPIdDGetArgs;
+    response: WcV3ProductsAttributesPIdDGetResponse;
+  };
+  '/wc/v3/products/categories': {
+    args: WcV3ProductsCategoriesGetArgs;
+    response: WcV3ProductsCategoriesGetResponse;
+  };
+  '/wc/v3/products/categories/(?P<id>[\\d]+)': {
+    args: WcV3ProductsCategoriesPIdDGetArgs;
+    response: WcV3ProductsCategoriesPIdDGetResponse;
+  };
+  '/wc/v3/products/reviews': {
+    args: WcV3ProductsReviewsGetArgs;
+    response: WcV3ProductsReviewsGetResponse;
+  };
+  '/wc/v3/products/reviews/(?P<id>[\\d]+)': {
+    args: WcV3ProductsReviewsPIdDGetArgs;
+    response: WcV3ProductsReviewsPIdDGetResponse;
+  };
+  '/wc/v3/products/shipping_classes': {
+    args: WcV3ProductsShippingClassesGetArgs;
+    response: WcV3ProductsShippingClassesGetResponse;
+  };
+  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsShippingClassesPIdDGetArgs;
+    response: WcV3ProductsShippingClassesPIdDGetResponse;
+  };
+  '/wc/v3/products/tags': {
+    args: WcV3ProductsTagsGetArgs;
+    response: WcV3ProductsTagsGetResponse;
+  };
+  '/wc/v3/products/tags/(?P<id>[\\d]+)': {
+    args: WcV3ProductsTagsPIdDGetArgs;
+    response: WcV3ProductsTagsPIdDGetResponse;
+  };
+  '/wc/v3/reports': {
+    args: WcV3ReportsGetArgs;
+    response: WcV3ReportsGetResponse;
+  };
+  '/wc/v3/reports/coupons/totals': {
+    args: WcV3ReportsCouponsTotalsGetArgs;
+    response: WcV3ReportsCouponsTotalsGetResponse;
+  };
+  '/wc/v3/reports/customers/totals': {
+    args: WcV3ReportsCustomersTotalsGetArgs;
+    response: WcV3ReportsCustomersTotalsGetResponse;
+  };
+  '/wc/v3/reports/orders/totals': {
+    args: WcV3ReportsOrdersTotalsGetArgs;
+    response: WcV3ReportsOrdersTotalsGetResponse;
+  };
+  '/wc/v3/reports/products/totals': {
+    args: WcV3ReportsProductsTotalsGetArgs;
+    response: WcV3ReportsProductsTotalsGetResponse;
+  };
+  '/wc/v3/reports/reviews/totals': {
+    args: WcV3ReportsReviewsTotalsGetArgs;
+    response: WcV3ReportsReviewsTotalsGetResponse;
+  };
+  '/wc/v3/reports/sales': {
+    args: WcV3ReportsSalesGetArgs;
+    response: WcV3ReportsSalesGetResponse;
+  };
+  '/wc/v3/reports/top_sellers': {
+    args: WcV3ReportsTopSellersGetArgs;
+    response: WcV3ReportsTopSellersGetResponse;
+  };
+  '/wc/v3/settings': {
+    args: WcV3SettingsGetArgs;
+    response: WcV3SettingsGetResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)': {
+    args: WcV3SettingsPGroupIdWGetArgs;
+    response: WcV3SettingsPGroupIdWGetResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': {
+    args: WcV3SettingsPGroupIdWPIdWGetArgs;
+    response: WcV3SettingsPGroupIdWPIdWGetResponse;
+  };
+  '/wc/v3/shipping_methods': {
+    args: WcV3ShippingMethodsGetArgs;
+    response: WcV3ShippingMethodsGetResponse;
+  };
+  '/wc/v3/shipping_methods/(?P<id>[\\w-]+)': {
+    args: WcV3ShippingMethodsPIdWGetArgs;
+    response: WcV3ShippingMethodsPIdWGetResponse;
+  };
+  '/wc/v3/shipping/zones': {
+    args: WcV3ShippingZonesGetArgs;
+    response: WcV3ShippingZonesGetResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': {
+    args: WcV3ShippingZonesPIdDGetArgs;
+    response: WcV3ShippingZonesPIdDGetResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': {
+    args: WcV3ShippingZonesPIdDLocationsGetArgs;
+    response: WcV3ShippingZonesPIdDLocationsGetResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods': {
+    args: WcV3ShippingZonesPZoneIdDMethodsGetArgs;
+    response: WcV3ShippingZonesPZoneIdDMethodsGetResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': {
+    args: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDGetArgs;
+    response: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDGetResponse;
+  };
+  '/wc/v3/system_status': {
+    args: WcV3SystemStatusGetArgs;
+    response: WcV3SystemStatusGetResponse;
+  };
+  '/wc/v3/system_status/tools': {
+    args: WcV3SystemStatusToolsGetArgs;
+    response: WcV3SystemStatusToolsGetResponse;
+  };
+  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': {
+    args: WcV3SystemStatusToolsPIdWGetArgs;
+    response: WcV3SystemStatusToolsPIdWGetResponse;
+  };
+  '/wc/v3/taxes': {
+    args: WcV3TaxesGetArgs;
+    response: WcV3TaxesGetResponse;
+  };
+  '/wc/v3/taxes/(?P<id>[\\d]+)': {
+    args: WcV3TaxesPIdDGetArgs;
+    response: WcV3TaxesPIdDGetResponse;
+  };
+  '/wc/v3/taxes/classes': {
+    args: WcV3TaxesClassesGetArgs;
+    response: WcV3TaxesClassesGetResponse;
+  };
+  '/wc/v3/taxes/classes/(?P<slug>\\w[\\w\\s\\-]*)': {
+    args: WcV3TaxesClassesPSlugWWSGetArgs;
+    response: WcV3TaxesClassesPSlugWWSGetResponse;
+  };
+  '/wc/v3/webhooks': {
+    args: WcV3WebhooksGetArgs;
+    response: WcV3WebhooksGetResponse;
+  };
+  '/wc/v3/webhooks/(?P<id>[\\d]+)': {
+    args: WcV3WebhooksPIdDGetArgs;
+    response: WcV3WebhooksPIdDGetResponse;
+  };
 }
 
 /**
  * All "wc/v3" PATCH routes.
  */
 export interface WcV3PatchRoutes {
-  '/wc/v3/coupons/(?P<id>[\\d]+)': WcV3CouponsPIdDPatchPostPutArgs;
-  '/wc/v3/coupons/batch': WcV3CouponsBatchPatchPostPutArgs;
-  '/wc/v3/customers/(?P<id>[\\d]+)': WcV3CustomersPIdDPatchPostPutArgs;
-  '/wc/v3/customers/batch': WcV3CustomersBatchPatchPostPutArgs;
-  '/wc/v3/orders/(?P<id>[\\d]+)': WcV3OrdersPIdDPatchPostPutArgs;
-  '/wc/v3/orders/batch': WcV3OrdersBatchPatchPostPutArgs;
-  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': WcV3PaymentGatewaysPIdWPatchPostPutArgs;
-  '/wc/v3/products/(?P<id>[\\d]+)': WcV3ProductsPIdDPatchPostPutArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': WcV3ProductsPProductIdDVariationsPIdDPatchPostPutArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/batch': WcV3ProductsPProductIdDVariationsBatchPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': WcV3ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<id>[\\d]+)': WcV3ProductsAttributesPIdDPatchPostPutArgs;
-  '/wc/v3/products/attributes/batch': WcV3ProductsAttributesBatchPatchPostPutArgs;
-  '/wc/v3/products/batch': WcV3ProductsBatchPatchPostPutArgs;
-  '/wc/v3/products/categories/(?P<id>[\\d]+)': WcV3ProductsCategoriesPIdDPatchPostPutArgs;
-  '/wc/v3/products/categories/batch': WcV3ProductsCategoriesBatchPatchPostPutArgs;
-  '/wc/v3/products/reviews/(?P<id>[\\d]+)': WcV3ProductsReviewsPIdDPatchPostPutArgs;
-  '/wc/v3/products/reviews/batch': WcV3ProductsReviewsBatchPatchPostPutArgs;
-  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': WcV3ProductsShippingClassesPIdDPatchPostPutArgs;
-  '/wc/v3/products/shipping_classes/batch': WcV3ProductsShippingClassesBatchPatchPostPutArgs;
-  '/wc/v3/products/tags/(?P<id>[\\d]+)': WcV3ProductsTagsPIdDPatchPostPutArgs;
-  '/wc/v3/products/tags/batch': WcV3ProductsTagsBatchPatchPostPutArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': WcV3SettingsPGroupIdWPIdWPatchPostPutArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)/batch': WcV3SettingsPGroupIdWBatchPatchPostPutArgs;
-  '/wc/v3/settings/batch': WcV3SettingsBatchPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': WcV3ShippingZonesPIdDPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': WcV3ShippingZonesPIdDLocationsPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchPostPutArgs;
-  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': WcV3SystemStatusToolsPIdWPatchPostPutArgs;
-  '/wc/v3/taxes/(?P<id>[\\d]+)': WcV3TaxesPIdDPatchPostPutArgs;
-  '/wc/v3/taxes/batch': WcV3TaxesBatchPatchPostPutArgs;
-  '/wc/v3/webhooks/(?P<id>[\\d]+)': WcV3WebhooksPIdDPatchPostPutArgs;
-  '/wc/v3/webhooks/batch': WcV3WebhooksBatchPatchPostPutArgs;
+  '/wc/v3/coupons/(?P<id>[\\d]+)': {
+    args: WcV3CouponsPIdDPatchPostPutArgs;
+    response: WcV3CouponsPIdDPatchResponse;
+  };
+  '/wc/v3/coupons/batch': {
+    args: WcV3CouponsBatchPatchPostPutArgs;
+    response: WcV3CouponsBatchPatchResponse;
+  };
+  '/wc/v3/customers/(?P<id>[\\d]+)': {
+    args: WcV3CustomersPIdDPatchPostPutArgs;
+    response: WcV3CustomersPIdDPatchResponse;
+  };
+  '/wc/v3/customers/batch': {
+    args: WcV3CustomersBatchPatchPostPutArgs;
+    response: WcV3CustomersBatchPatchResponse;
+  };
+  '/wc/v3/orders/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPIdDPatchPostPutArgs;
+    response: WcV3OrdersPIdDPatchResponse;
+  };
+  '/wc/v3/orders/batch': {
+    args: WcV3OrdersBatchPatchPostPutArgs;
+    response: WcV3OrdersBatchPatchResponse;
+  };
+  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': {
+    args: WcV3PaymentGatewaysPIdWPatchPostPutArgs;
+    response: WcV3PaymentGatewaysPIdWPatchResponse;
+  };
+  '/wc/v3/products/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPIdDPatchPostPutArgs;
+    response: WcV3ProductsPIdDPatchResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPProductIdDVariationsPIdDPatchPostPutArgs;
+    response: WcV3ProductsPProductIdDVariationsPIdDPatchResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/batch': {
+    args: WcV3ProductsPProductIdDVariationsBatchPatchPostPutArgs;
+    response: WcV3ProductsPProductIdDVariationsBatchPatchResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsBatchPatchResponse;
+  };
+  '/wc/v3/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPIdDPatchPostPutArgs;
+    response: WcV3ProductsAttributesPIdDPatchResponse;
+  };
+  '/wc/v3/products/attributes/batch': {
+    args: WcV3ProductsAttributesBatchPatchPostPutArgs;
+    response: WcV3ProductsAttributesBatchPatchResponse;
+  };
+  '/wc/v3/products/batch': {
+    args: WcV3ProductsBatchPatchPostPutArgs;
+    response: WcV3ProductsBatchPatchResponse;
+  };
+  '/wc/v3/products/categories/(?P<id>[\\d]+)': {
+    args: WcV3ProductsCategoriesPIdDPatchPostPutArgs;
+    response: WcV3ProductsCategoriesPIdDPatchResponse;
+  };
+  '/wc/v3/products/categories/batch': {
+    args: WcV3ProductsCategoriesBatchPatchPostPutArgs;
+    response: WcV3ProductsCategoriesBatchPatchResponse;
+  };
+  '/wc/v3/products/reviews/(?P<id>[\\d]+)': {
+    args: WcV3ProductsReviewsPIdDPatchPostPutArgs;
+    response: WcV3ProductsReviewsPIdDPatchResponse;
+  };
+  '/wc/v3/products/reviews/batch': {
+    args: WcV3ProductsReviewsBatchPatchPostPutArgs;
+    response: WcV3ProductsReviewsBatchPatchResponse;
+  };
+  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsShippingClassesPIdDPatchPostPutArgs;
+    response: WcV3ProductsShippingClassesPIdDPatchResponse;
+  };
+  '/wc/v3/products/shipping_classes/batch': {
+    args: WcV3ProductsShippingClassesBatchPatchPostPutArgs;
+    response: WcV3ProductsShippingClassesBatchPatchResponse;
+  };
+  '/wc/v3/products/tags/(?P<id>[\\d]+)': {
+    args: WcV3ProductsTagsPIdDPatchPostPutArgs;
+    response: WcV3ProductsTagsPIdDPatchResponse;
+  };
+  '/wc/v3/products/tags/batch': {
+    args: WcV3ProductsTagsBatchPatchPostPutArgs;
+    response: WcV3ProductsTagsBatchPatchResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': {
+    args: WcV3SettingsPGroupIdWPIdWPatchPostPutArgs;
+    response: WcV3SettingsPGroupIdWPIdWPatchResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)/batch': {
+    args: WcV3SettingsPGroupIdWBatchPatchPostPutArgs;
+    response: WcV3SettingsPGroupIdWBatchPatchResponse;
+  };
+  '/wc/v3/settings/batch': {
+    args: WcV3SettingsBatchPatchPostPutArgs;
+    response: WcV3SettingsBatchPatchResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': {
+    args: WcV3ShippingZonesPIdDPatchPostPutArgs;
+    response: WcV3ShippingZonesPIdDPatchResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': {
+    args: WcV3ShippingZonesPIdDLocationsPatchPostPutArgs;
+    response: WcV3ShippingZonesPIdDLocationsPatchResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': {
+    args: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchPostPutArgs;
+    response: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchResponse;
+  };
+  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': {
+    args: WcV3SystemStatusToolsPIdWPatchPostPutArgs;
+    response: WcV3SystemStatusToolsPIdWPatchResponse;
+  };
+  '/wc/v3/taxes/(?P<id>[\\d]+)': {
+    args: WcV3TaxesPIdDPatchPostPutArgs;
+    response: WcV3TaxesPIdDPatchResponse;
+  };
+  '/wc/v3/taxes/batch': {
+    args: WcV3TaxesBatchPatchPostPutArgs;
+    response: WcV3TaxesBatchPatchResponse;
+  };
+  '/wc/v3/webhooks/(?P<id>[\\d]+)': {
+    args: WcV3WebhooksPIdDPatchPostPutArgs;
+    response: WcV3WebhooksPIdDPatchResponse;
+  };
+  '/wc/v3/webhooks/batch': {
+    args: WcV3WebhooksBatchPatchPostPutArgs;
+    response: WcV3WebhooksBatchPatchResponse;
+  };
 }
 
 /**
  * All "wc/v3" POST routes.
  */
 export interface WcV3PostRoutes {
-  '/wc/v3/coupons': WcV3CouponsPostArgs;
-  '/wc/v3/coupons/(?P<id>[\\d]+)': WcV3CouponsPIdDPatchPostPutArgs;
-  '/wc/v3/coupons/batch': WcV3CouponsBatchPatchPostPutArgs;
-  '/wc/v3/customers': WcV3CustomersPostArgs;
-  '/wc/v3/customers/(?P<id>[\\d]+)': WcV3CustomersPIdDPatchPostPutArgs;
-  '/wc/v3/customers/batch': WcV3CustomersBatchPatchPostPutArgs;
-  '/wc/v3/orders': WcV3OrdersPostArgs;
-  '/wc/v3/orders/(?P<id>[\\d]+)': WcV3OrdersPIdDPatchPostPutArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes': WcV3OrdersPOrderIdDNotesPostArgs;
-  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds': WcV3OrdersPOrderIdDRefundsPostArgs;
-  '/wc/v3/orders/batch': WcV3OrdersBatchPatchPostPutArgs;
-  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': WcV3PaymentGatewaysPIdWPatchPostPutArgs;
-  '/wc/v3/products': WcV3ProductsPostArgs;
-  '/wc/v3/products/(?P<id>[\\d]+)': WcV3ProductsPIdDPatchPostPutArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations': WcV3ProductsPProductIdDVariationsPostArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': WcV3ProductsPProductIdDVariationsPIdDPatchPostPutArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/batch': WcV3ProductsPProductIdDVariationsBatchPatchPostPutArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/generate': WcV3ProductsPProductIdDVariationsGeneratePostArgs;
-  '/wc/v3/products/attributes': WcV3ProductsAttributesPostArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms': WcV3ProductsAttributesPAttributeIdDTermsPostArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': WcV3ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<id>[\\d]+)': WcV3ProductsAttributesPIdDPatchPostPutArgs;
-  '/wc/v3/products/attributes/batch': WcV3ProductsAttributesBatchPatchPostPutArgs;
-  '/wc/v3/products/batch': WcV3ProductsBatchPatchPostPutArgs;
-  '/wc/v3/products/categories': WcV3ProductsCategoriesPostArgs;
-  '/wc/v3/products/categories/(?P<id>[\\d]+)': WcV3ProductsCategoriesPIdDPatchPostPutArgs;
-  '/wc/v3/products/categories/batch': WcV3ProductsCategoriesBatchPatchPostPutArgs;
-  '/wc/v3/products/reviews': WcV3ProductsReviewsPostArgs;
-  '/wc/v3/products/reviews/(?P<id>[\\d]+)': WcV3ProductsReviewsPIdDPatchPostPutArgs;
-  '/wc/v3/products/reviews/batch': WcV3ProductsReviewsBatchPatchPostPutArgs;
-  '/wc/v3/products/shipping_classes': WcV3ProductsShippingClassesPostArgs;
-  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': WcV3ProductsShippingClassesPIdDPatchPostPutArgs;
-  '/wc/v3/products/shipping_classes/batch': WcV3ProductsShippingClassesBatchPatchPostPutArgs;
-  '/wc/v3/products/tags': WcV3ProductsTagsPostArgs;
-  '/wc/v3/products/tags/(?P<id>[\\d]+)': WcV3ProductsTagsPIdDPatchPostPutArgs;
-  '/wc/v3/products/tags/batch': WcV3ProductsTagsBatchPatchPostPutArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': WcV3SettingsPGroupIdWPIdWPatchPostPutArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)/batch': WcV3SettingsPGroupIdWBatchPatchPostPutArgs;
-  '/wc/v3/settings/batch': WcV3SettingsBatchPatchPostPutArgs;
-  '/wc/v3/shipping/zones': WcV3ShippingZonesPostArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': WcV3ShippingZonesPIdDPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': WcV3ShippingZonesPIdDLocationsPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods': WcV3ShippingZonesPZoneIdDMethodsPostArgs;
-  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchPostPutArgs;
-  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': WcV3SystemStatusToolsPIdWPatchPostPutArgs;
-  '/wc/v3/taxes': WcV3TaxesPostArgs;
-  '/wc/v3/taxes/(?P<id>[\\d]+)': WcV3TaxesPIdDPatchPostPutArgs;
-  '/wc/v3/taxes/batch': WcV3TaxesBatchPatchPostPutArgs;
-  '/wc/v3/taxes/classes': WcV3TaxesClassesPostArgs;
-  '/wc/v3/webhooks': WcV3WebhooksPostArgs;
-  '/wc/v3/webhooks/(?P<id>[\\d]+)': WcV3WebhooksPIdDPatchPostPutArgs;
-  '/wc/v3/webhooks/batch': WcV3WebhooksBatchPatchPostPutArgs;
+  '/wc/v3/coupons': {
+    args: WcV3CouponsPostArgs;
+    response: WcV3CouponsPostResponse;
+  };
+  '/wc/v3/coupons/(?P<id>[\\d]+)': {
+    args: WcV3CouponsPIdDPatchPostPutArgs;
+    response: WcV3CouponsPIdDPostResponse;
+  };
+  '/wc/v3/coupons/batch': {
+    args: WcV3CouponsBatchPatchPostPutArgs;
+    response: WcV3CouponsBatchPostResponse;
+  };
+  '/wc/v3/customers': {
+    args: WcV3CustomersPostArgs;
+    response: WcV3CustomersPostResponse;
+  };
+  '/wc/v3/customers/(?P<id>[\\d]+)': {
+    args: WcV3CustomersPIdDPatchPostPutArgs;
+    response: WcV3CustomersPIdDPostResponse;
+  };
+  '/wc/v3/customers/batch': {
+    args: WcV3CustomersBatchPatchPostPutArgs;
+    response: WcV3CustomersBatchPostResponse;
+  };
+  '/wc/v3/orders': {
+    args: WcV3OrdersPostArgs;
+    response: WcV3OrdersPostResponse;
+  };
+  '/wc/v3/orders/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPIdDPatchPostPutArgs;
+    response: WcV3OrdersPIdDPostResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/notes': {
+    args: WcV3OrdersPOrderIdDNotesPostArgs;
+    response: WcV3OrdersPOrderIdDNotesPostResponse;
+  };
+  '/wc/v3/orders/(?P<order_id>[\\d]+)/refunds': {
+    args: WcV3OrdersPOrderIdDRefundsPostArgs;
+    response: WcV3OrdersPOrderIdDRefundsPostResponse;
+  };
+  '/wc/v3/orders/batch': {
+    args: WcV3OrdersBatchPatchPostPutArgs;
+    response: WcV3OrdersBatchPostResponse;
+  };
+  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': {
+    args: WcV3PaymentGatewaysPIdWPatchPostPutArgs;
+    response: WcV3PaymentGatewaysPIdWPostResponse;
+  };
+  '/wc/v3/products': {
+    args: WcV3ProductsPostArgs;
+    response: WcV3ProductsPostResponse;
+  };
+  '/wc/v3/products/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPIdDPatchPostPutArgs;
+    response: WcV3ProductsPIdDPostResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations': {
+    args: WcV3ProductsPProductIdDVariationsPostArgs;
+    response: WcV3ProductsPProductIdDVariationsPostResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPProductIdDVariationsPIdDPatchPostPutArgs;
+    response: WcV3ProductsPProductIdDVariationsPIdDPostResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/batch': {
+    args: WcV3ProductsPProductIdDVariationsBatchPatchPostPutArgs;
+    response: WcV3ProductsPProductIdDVariationsBatchPostResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/generate': {
+    args: WcV3ProductsPProductIdDVariationsGeneratePostArgs;
+    response: WcV3ProductsPProductIdDVariationsGeneratePostResponse;
+  };
+  '/wc/v3/products/attributes': {
+    args: WcV3ProductsAttributesPostArgs;
+    response: WcV3ProductsAttributesPostResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsPostArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsPostResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsPIdDPostResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsBatchPostResponse;
+  };
+  '/wc/v3/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPIdDPatchPostPutArgs;
+    response: WcV3ProductsAttributesPIdDPostResponse;
+  };
+  '/wc/v3/products/attributes/batch': {
+    args: WcV3ProductsAttributesBatchPatchPostPutArgs;
+    response: WcV3ProductsAttributesBatchPostResponse;
+  };
+  '/wc/v3/products/batch': {
+    args: WcV3ProductsBatchPatchPostPutArgs;
+    response: WcV3ProductsBatchPostResponse;
+  };
+  '/wc/v3/products/categories': {
+    args: WcV3ProductsCategoriesPostArgs;
+    response: WcV3ProductsCategoriesPostResponse;
+  };
+  '/wc/v3/products/categories/(?P<id>[\\d]+)': {
+    args: WcV3ProductsCategoriesPIdDPatchPostPutArgs;
+    response: WcV3ProductsCategoriesPIdDPostResponse;
+  };
+  '/wc/v3/products/categories/batch': {
+    args: WcV3ProductsCategoriesBatchPatchPostPutArgs;
+    response: WcV3ProductsCategoriesBatchPostResponse;
+  };
+  '/wc/v3/products/reviews': {
+    args: WcV3ProductsReviewsPostArgs;
+    response: WcV3ProductsReviewsPostResponse;
+  };
+  '/wc/v3/products/reviews/(?P<id>[\\d]+)': {
+    args: WcV3ProductsReviewsPIdDPatchPostPutArgs;
+    response: WcV3ProductsReviewsPIdDPostResponse;
+  };
+  '/wc/v3/products/reviews/batch': {
+    args: WcV3ProductsReviewsBatchPatchPostPutArgs;
+    response: WcV3ProductsReviewsBatchPostResponse;
+  };
+  '/wc/v3/products/shipping_classes': {
+    args: WcV3ProductsShippingClassesPostArgs;
+    response: WcV3ProductsShippingClassesPostResponse;
+  };
+  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsShippingClassesPIdDPatchPostPutArgs;
+    response: WcV3ProductsShippingClassesPIdDPostResponse;
+  };
+  '/wc/v3/products/shipping_classes/batch': {
+    args: WcV3ProductsShippingClassesBatchPatchPostPutArgs;
+    response: WcV3ProductsShippingClassesBatchPostResponse;
+  };
+  '/wc/v3/products/tags': {
+    args: WcV3ProductsTagsPostArgs;
+    response: WcV3ProductsTagsPostResponse;
+  };
+  '/wc/v3/products/tags/(?P<id>[\\d]+)': {
+    args: WcV3ProductsTagsPIdDPatchPostPutArgs;
+    response: WcV3ProductsTagsPIdDPostResponse;
+  };
+  '/wc/v3/products/tags/batch': {
+    args: WcV3ProductsTagsBatchPatchPostPutArgs;
+    response: WcV3ProductsTagsBatchPostResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': {
+    args: WcV3SettingsPGroupIdWPIdWPatchPostPutArgs;
+    response: WcV3SettingsPGroupIdWPIdWPostResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)/batch': {
+    args: WcV3SettingsPGroupIdWBatchPatchPostPutArgs;
+    response: WcV3SettingsPGroupIdWBatchPostResponse;
+  };
+  '/wc/v3/settings/batch': {
+    args: WcV3SettingsBatchPatchPostPutArgs;
+    response: WcV3SettingsBatchPostResponse;
+  };
+  '/wc/v3/shipping/zones': {
+    args: WcV3ShippingZonesPostArgs;
+    response: WcV3ShippingZonesPostResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': {
+    args: WcV3ShippingZonesPIdDPatchPostPutArgs;
+    response: WcV3ShippingZonesPIdDPostResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': {
+    args: WcV3ShippingZonesPIdDLocationsPatchPostPutArgs;
+    response: WcV3ShippingZonesPIdDLocationsPostResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods': {
+    args: WcV3ShippingZonesPZoneIdDMethodsPostArgs;
+    response: WcV3ShippingZonesPZoneIdDMethodsPostResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': {
+    args: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchPostPutArgs;
+    response: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPostResponse;
+  };
+  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': {
+    args: WcV3SystemStatusToolsPIdWPatchPostPutArgs;
+    response: WcV3SystemStatusToolsPIdWPostResponse;
+  };
+  '/wc/v3/taxes': {
+    args: WcV3TaxesPostArgs;
+    response: WcV3TaxesPostResponse;
+  };
+  '/wc/v3/taxes/(?P<id>[\\d]+)': {
+    args: WcV3TaxesPIdDPatchPostPutArgs;
+    response: WcV3TaxesPIdDPostResponse;
+  };
+  '/wc/v3/taxes/batch': {
+    args: WcV3TaxesBatchPatchPostPutArgs;
+    response: WcV3TaxesBatchPostResponse;
+  };
+  '/wc/v3/taxes/classes': {
+    args: WcV3TaxesClassesPostArgs;
+    response: WcV3TaxesClassesPostResponse;
+  };
+  '/wc/v3/webhooks': {
+    args: WcV3WebhooksPostArgs;
+    response: WcV3WebhooksPostResponse;
+  };
+  '/wc/v3/webhooks/(?P<id>[\\d]+)': {
+    args: WcV3WebhooksPIdDPatchPostPutArgs;
+    response: WcV3WebhooksPIdDPostResponse;
+  };
+  '/wc/v3/webhooks/batch': {
+    args: WcV3WebhooksBatchPatchPostPutArgs;
+    response: WcV3WebhooksBatchPostResponse;
+  };
 }
 
 /**
  * All "wc/v3" PUT routes.
  */
 export interface WcV3PutRoutes {
-  '/wc/v3/coupons/(?P<id>[\\d]+)': WcV3CouponsPIdDPatchPostPutArgs;
-  '/wc/v3/coupons/batch': WcV3CouponsBatchPatchPostPutArgs;
-  '/wc/v3/customers/(?P<id>[\\d]+)': WcV3CustomersPIdDPatchPostPutArgs;
-  '/wc/v3/customers/batch': WcV3CustomersBatchPatchPostPutArgs;
-  '/wc/v3/orders/(?P<id>[\\d]+)': WcV3OrdersPIdDPatchPostPutArgs;
-  '/wc/v3/orders/batch': WcV3OrdersBatchPatchPostPutArgs;
-  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': WcV3PaymentGatewaysPIdWPatchPostPutArgs;
-  '/wc/v3/products/(?P<id>[\\d]+)': WcV3ProductsPIdDPatchPostPutArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': WcV3ProductsPProductIdDVariationsPIdDPatchPostPutArgs;
-  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/batch': WcV3ProductsPProductIdDVariationsBatchPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': WcV3ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
-  '/wc/v3/products/attributes/(?P<id>[\\d]+)': WcV3ProductsAttributesPIdDPatchPostPutArgs;
-  '/wc/v3/products/attributes/batch': WcV3ProductsAttributesBatchPatchPostPutArgs;
-  '/wc/v3/products/batch': WcV3ProductsBatchPatchPostPutArgs;
-  '/wc/v3/products/categories/(?P<id>[\\d]+)': WcV3ProductsCategoriesPIdDPatchPostPutArgs;
-  '/wc/v3/products/categories/batch': WcV3ProductsCategoriesBatchPatchPostPutArgs;
-  '/wc/v3/products/reviews/(?P<id>[\\d]+)': WcV3ProductsReviewsPIdDPatchPostPutArgs;
-  '/wc/v3/products/reviews/batch': WcV3ProductsReviewsBatchPatchPostPutArgs;
-  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': WcV3ProductsShippingClassesPIdDPatchPostPutArgs;
-  '/wc/v3/products/shipping_classes/batch': WcV3ProductsShippingClassesBatchPatchPostPutArgs;
-  '/wc/v3/products/tags/(?P<id>[\\d]+)': WcV3ProductsTagsPIdDPatchPostPutArgs;
-  '/wc/v3/products/tags/batch': WcV3ProductsTagsBatchPatchPostPutArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': WcV3SettingsPGroupIdWPIdWPatchPostPutArgs;
-  '/wc/v3/settings/(?P<group_id>[\\w-]+)/batch': WcV3SettingsPGroupIdWBatchPatchPostPutArgs;
-  '/wc/v3/settings/batch': WcV3SettingsBatchPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': WcV3ShippingZonesPIdDPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': WcV3ShippingZonesPIdDLocationsPatchPostPutArgs;
-  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchPostPutArgs;
-  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': WcV3SystemStatusToolsPIdWPatchPostPutArgs;
-  '/wc/v3/taxes/(?P<id>[\\d]+)': WcV3TaxesPIdDPatchPostPutArgs;
-  '/wc/v3/taxes/batch': WcV3TaxesBatchPatchPostPutArgs;
-  '/wc/v3/webhooks/(?P<id>[\\d]+)': WcV3WebhooksPIdDPatchPostPutArgs;
-  '/wc/v3/webhooks/batch': WcV3WebhooksBatchPatchPostPutArgs;
+  '/wc/v3/coupons/(?P<id>[\\d]+)': {
+    args: WcV3CouponsPIdDPatchPostPutArgs;
+    response: WcV3CouponsPIdDPutResponse;
+  };
+  '/wc/v3/coupons/batch': {
+    args: WcV3CouponsBatchPatchPostPutArgs;
+    response: WcV3CouponsBatchPutResponse;
+  };
+  '/wc/v3/customers/(?P<id>[\\d]+)': {
+    args: WcV3CustomersPIdDPatchPostPutArgs;
+    response: WcV3CustomersPIdDPutResponse;
+  };
+  '/wc/v3/customers/batch': {
+    args: WcV3CustomersBatchPatchPostPutArgs;
+    response: WcV3CustomersBatchPutResponse;
+  };
+  '/wc/v3/orders/(?P<id>[\\d]+)': {
+    args: WcV3OrdersPIdDPatchPostPutArgs;
+    response: WcV3OrdersPIdDPutResponse;
+  };
+  '/wc/v3/orders/batch': {
+    args: WcV3OrdersBatchPatchPostPutArgs;
+    response: WcV3OrdersBatchPutResponse;
+  };
+  '/wc/v3/payment_gateways/(?P<id>[\\w-]+)': {
+    args: WcV3PaymentGatewaysPIdWPatchPostPutArgs;
+    response: WcV3PaymentGatewaysPIdWPutResponse;
+  };
+  '/wc/v3/products/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPIdDPatchPostPutArgs;
+    response: WcV3ProductsPIdDPutResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/(?P<id>[\\d]+)': {
+    args: WcV3ProductsPProductIdDVariationsPIdDPatchPostPutArgs;
+    response: WcV3ProductsPProductIdDVariationsPIdDPutResponse;
+  };
+  '/wc/v3/products/(?P<product_id>[\\d]+)/variations/batch': {
+    args: WcV3ProductsPProductIdDVariationsBatchPatchPostPutArgs;
+    response: WcV3ProductsPProductIdDVariationsBatchPutResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsPIdDPutResponse;
+  };
+  '/wc/v3/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': {
+    args: WcV3ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
+    response: WcV3ProductsAttributesPAttributeIdDTermsBatchPutResponse;
+  };
+  '/wc/v3/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsAttributesPIdDPatchPostPutArgs;
+    response: WcV3ProductsAttributesPIdDPutResponse;
+  };
+  '/wc/v3/products/attributes/batch': {
+    args: WcV3ProductsAttributesBatchPatchPostPutArgs;
+    response: WcV3ProductsAttributesBatchPutResponse;
+  };
+  '/wc/v3/products/batch': {
+    args: WcV3ProductsBatchPatchPostPutArgs;
+    response: WcV3ProductsBatchPutResponse;
+  };
+  '/wc/v3/products/categories/(?P<id>[\\d]+)': {
+    args: WcV3ProductsCategoriesPIdDPatchPostPutArgs;
+    response: WcV3ProductsCategoriesPIdDPutResponse;
+  };
+  '/wc/v3/products/categories/batch': {
+    args: WcV3ProductsCategoriesBatchPatchPostPutArgs;
+    response: WcV3ProductsCategoriesBatchPutResponse;
+  };
+  '/wc/v3/products/reviews/(?P<id>[\\d]+)': {
+    args: WcV3ProductsReviewsPIdDPatchPostPutArgs;
+    response: WcV3ProductsReviewsPIdDPutResponse;
+  };
+  '/wc/v3/products/reviews/batch': {
+    args: WcV3ProductsReviewsBatchPatchPostPutArgs;
+    response: WcV3ProductsReviewsBatchPutResponse;
+  };
+  '/wc/v3/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV3ProductsShippingClassesPIdDPatchPostPutArgs;
+    response: WcV3ProductsShippingClassesPIdDPutResponse;
+  };
+  '/wc/v3/products/shipping_classes/batch': {
+    args: WcV3ProductsShippingClassesBatchPatchPostPutArgs;
+    response: WcV3ProductsShippingClassesBatchPutResponse;
+  };
+  '/wc/v3/products/tags/(?P<id>[\\d]+)': {
+    args: WcV3ProductsTagsPIdDPatchPostPutArgs;
+    response: WcV3ProductsTagsPIdDPutResponse;
+  };
+  '/wc/v3/products/tags/batch': {
+    args: WcV3ProductsTagsBatchPatchPostPutArgs;
+    response: WcV3ProductsTagsBatchPutResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)/(?P<id>[\\w-]+)': {
+    args: WcV3SettingsPGroupIdWPIdWPatchPostPutArgs;
+    response: WcV3SettingsPGroupIdWPIdWPutResponse;
+  };
+  '/wc/v3/settings/(?P<group_id>[\\w-]+)/batch': {
+    args: WcV3SettingsPGroupIdWBatchPatchPostPutArgs;
+    response: WcV3SettingsPGroupIdWBatchPutResponse;
+  };
+  '/wc/v3/settings/batch': {
+    args: WcV3SettingsBatchPatchPostPutArgs;
+    response: WcV3SettingsBatchPutResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)': {
+    args: WcV3ShippingZonesPIdDPatchPostPutArgs;
+    response: WcV3ShippingZonesPIdDPutResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<id>[\\d]+)/locations': {
+    args: WcV3ShippingZonesPIdDLocationsPatchPostPutArgs;
+    response: WcV3ShippingZonesPIdDLocationsPutResponse;
+  };
+  '/wc/v3/shipping/zones/(?P<zone_id>[\\d]+)/methods/(?P<instance_id>[\\d]+)': {
+    args: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPatchPostPutArgs;
+    response: WcV3ShippingZonesPZoneIdDMethodsPInstanceIdDPutResponse;
+  };
+  '/wc/v3/system_status/tools/(?P<id>[\\w-]+)': {
+    args: WcV3SystemStatusToolsPIdWPatchPostPutArgs;
+    response: WcV3SystemStatusToolsPIdWPutResponse;
+  };
+  '/wc/v3/taxes/(?P<id>[\\d]+)': {
+    args: WcV3TaxesPIdDPatchPostPutArgs;
+    response: WcV3TaxesPIdDPutResponse;
+  };
+  '/wc/v3/taxes/batch': {
+    args: WcV3TaxesBatchPatchPostPutArgs;
+    response: WcV3TaxesBatchPutResponse;
+  };
+  '/wc/v3/webhooks/(?P<id>[\\d]+)': {
+    args: WcV3WebhooksPIdDPatchPostPutArgs;
+    response: WcV3WebhooksPIdDPutResponse;
+  };
+  '/wc/v3/webhooks/batch': {
+    args: WcV3WebhooksBatchPatchPostPutArgs;
+    response: WcV3WebhooksBatchPutResponse;
+  };
 }
 
 /**

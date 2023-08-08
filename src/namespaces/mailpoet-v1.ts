@@ -1,6 +1,18 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "mailpoet/v1" namespace
 
+import {
+  MailpoetV1GetResponse,
+  MailpoetV1AutomationTemplatesGetResponse,
+  MailpoetV1AutomationAnalyticsOrdersGetResponse,
+  MailpoetV1AutomationAnalyticsOverviewGetResponse,
+  MailpoetV1AutomationsGetResponse,
+  MailpoetV1AutomationsPIdDPutResponse,
+  MailpoetV1AutomationsPIdDDeleteResponse,
+  MailpoetV1AutomationsPIdDDuplicatePostResponse,
+  MailpoetV1AutomationsCreateFromTemplatePostResponse,
+} from './mailpoet-v1-responses.js';
+
 /**
  * Arguments for `/mailpoet/v1` route when calling GET method.
  */
@@ -80,18 +92,36 @@ export interface MailpoetV1AutomationsCreateFromTemplatePostArgs {
  * All "mailpoet/v1" DELETE routes.
  */
 export interface MailpoetV1DeleteRoutes {
-  '/mailpoet/v1/automations/(?P<id>\\d+)': MailpoetV1AutomationsPIdDDeleteArgs;
+  '/mailpoet/v1/automations/(?P<id>\\d+)': {
+    args: MailpoetV1AutomationsPIdDDeleteArgs;
+    response: MailpoetV1AutomationsPIdDDeleteResponse;
+  };
 }
 
 /**
  * All "mailpoet/v1" GET routes.
  */
 export interface MailpoetV1GetRoutes {
-  '/mailpoet/v1': MailpoetV1GetArgs;
-  '/mailpoet/v1/automation-templates': MailpoetV1AutomationTemplatesGetArgs;
-  '/mailpoet/v1/automation/analytics/orders': MailpoetV1AutomationAnalyticsOrdersGetArgs;
-  '/mailpoet/v1/automation/analytics/overview': MailpoetV1AutomationAnalyticsOverviewGetArgs;
-  '/mailpoet/v1/automations': MailpoetV1AutomationsGetArgs;
+  '/mailpoet/v1': {
+    args: MailpoetV1GetArgs;
+    response: MailpoetV1GetResponse;
+  };
+  '/mailpoet/v1/automation-templates': {
+    args: MailpoetV1AutomationTemplatesGetArgs;
+    response: MailpoetV1AutomationTemplatesGetResponse;
+  };
+  '/mailpoet/v1/automation/analytics/orders': {
+    args: MailpoetV1AutomationAnalyticsOrdersGetArgs;
+    response: MailpoetV1AutomationAnalyticsOrdersGetResponse;
+  };
+  '/mailpoet/v1/automation/analytics/overview': {
+    args: MailpoetV1AutomationAnalyticsOverviewGetArgs;
+    response: MailpoetV1AutomationAnalyticsOverviewGetResponse;
+  };
+  '/mailpoet/v1/automations': {
+    args: MailpoetV1AutomationsGetArgs;
+    response: MailpoetV1AutomationsGetResponse;
+  };
 }
 
 /**
@@ -103,15 +133,24 @@ export interface MailpoetV1PatchRoutes {}
  * All "mailpoet/v1" POST routes.
  */
 export interface MailpoetV1PostRoutes {
-  '/mailpoet/v1/automations/(?P<id>\\d+)/duplicate': MailpoetV1AutomationsPIdDDuplicatePostArgs;
-  '/mailpoet/v1/automations/create-from-template': MailpoetV1AutomationsCreateFromTemplatePostArgs;
+  '/mailpoet/v1/automations/(?P<id>\\d+)/duplicate': {
+    args: MailpoetV1AutomationsPIdDDuplicatePostArgs;
+    response: MailpoetV1AutomationsPIdDDuplicatePostResponse;
+  };
+  '/mailpoet/v1/automations/create-from-template': {
+    args: MailpoetV1AutomationsCreateFromTemplatePostArgs;
+    response: MailpoetV1AutomationsCreateFromTemplatePostResponse;
+  };
 }
 
 /**
  * All "mailpoet/v1" PUT routes.
  */
 export interface MailpoetV1PutRoutes {
-  '/mailpoet/v1/automations/(?P<id>\\d+)': MailpoetV1AutomationsPIdDPutArgs;
+  '/mailpoet/v1/automations/(?P<id>\\d+)': {
+    args: MailpoetV1AutomationsPIdDPutArgs;
+    response: MailpoetV1AutomationsPIdDPutResponse;
+  };
 }
 
 /**

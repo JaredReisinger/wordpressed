@@ -355,10 +355,10 @@ test.serial('handles known argument types', async (t) => {
       )
     );
     // check to see if the files exist and what they look like!
-    const files = await fs.readdir(tmpDir);
+    const files = (await fs.readdir(tmpDir)).sort();
     // the deepEqual is redundant with the snapshot testing, but helps make
     // the logic here easier to understand
-    t.deepEqual(files, ['index.ts', 'test.ts']);
+    t.deepEqual(files, ['index.ts', 'test-responses.ts', 'test.ts']);
 
     // use snapshot testing to verify contents
     for (const file of files) {

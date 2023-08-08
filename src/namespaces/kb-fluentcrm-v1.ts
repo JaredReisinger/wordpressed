@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "kb-fluentcrm/v1" namespace
 
+import {
+  KbFluentcrmV1GetResponse,
+  KbFluentcrmV1GetGetResponse,
+} from './kb-fluentcrm-v1-responses.js';
+
 /**
  * Arguments for `/kb-fluentcrm/v1` route when calling GET method.
  */
@@ -43,8 +48,14 @@ export interface KbFluentcrmV1DeleteRoutes {}
  * All "kb-fluentcrm/v1" GET routes.
  */
 export interface KbFluentcrmV1GetRoutes {
-  '/kb-fluentcrm/v1': KbFluentcrmV1GetArgs;
-  '/kb-fluentcrm/v1/get': KbFluentcrmV1GetGetArgs;
+  '/kb-fluentcrm/v1': {
+    args: KbFluentcrmV1GetArgs;
+    response: KbFluentcrmV1GetResponse;
+  };
+  '/kb-fluentcrm/v1/get': {
+    args: KbFluentcrmV1GetGetArgs;
+    response: KbFluentcrmV1GetGetResponse;
+  };
 }
 
 /**

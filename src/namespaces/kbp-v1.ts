@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "kbp/v1" namespace
 
+import {
+  KbpV1GetResponse,
+  KbpV1PostQueryGetResponse,
+} from './kbp-v1-responses.js';
+
 /**
  * Arguments for `/kbp/v1` route when calling GET method.
  */
@@ -94,8 +99,14 @@ export interface KbpV1DeleteRoutes {}
  * All "kbp/v1" GET routes.
  */
 export interface KbpV1GetRoutes {
-  '/kbp/v1': KbpV1GetArgs;
-  '/kbp/v1/post-query': KbpV1PostQueryGetArgs;
+  '/kbp/v1': {
+    args: KbpV1GetArgs;
+    response: KbpV1GetResponse;
+  };
+  '/kbp/v1/post-query': {
+    args: KbpV1PostQueryGetArgs;
+    response: KbpV1PostQueryGetResponse;
+  };
 }
 
 /**

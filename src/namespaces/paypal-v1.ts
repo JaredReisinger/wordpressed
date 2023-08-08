@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "paypal/v1" namespace
 
+import {
+  PaypalV1GetResponse,
+  PaypalV1IncomingPostResponse,
+} from './paypal-v1-responses.js';
+
 /**
  * Arguments for `/paypal/v1` route when calling GET method.
  */
@@ -20,7 +25,10 @@ export interface PaypalV1DeleteRoutes {}
  * All "paypal/v1" GET routes.
  */
 export interface PaypalV1GetRoutes {
-  '/paypal/v1': PaypalV1GetArgs;
+  '/paypal/v1': {
+    args: PaypalV1GetArgs;
+    response: PaypalV1GetResponse;
+  };
 }
 
 /**
@@ -32,7 +40,10 @@ export interface PaypalV1PatchRoutes {}
  * All "paypal/v1" POST routes.
  */
 export interface PaypalV1PostRoutes {
-  '/paypal/v1/incoming': PaypalV1IncomingPostArgs;
+  '/paypal/v1/incoming': {
+    args: PaypalV1IncomingPostArgs;
+    response: PaypalV1IncomingPostResponse;
+  };
 }
 
 /**

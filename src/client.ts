@@ -17,27 +17,27 @@ export enum EndpointMethod {
 // trial-and-error went into finding something that works in an "extends" clause
 // *and* accepts both the pre-defined default routes, *and* custom route sets.
 
-interface Routes {} // placeholder for "some interface"
-
-type Endpoints = Record<
+/**
+ * A semi-dummy type used to enforce that a KnownRoutes-style interface must
+ * contain properties for each of the methods.
+ */
+type Methodable = Record<
   Capitalize<Lowercase<keyof typeof EndpointMethod>>,
-  Routes
+  unknown
 >;
 
-// We may need agnostic types here?  I'm not sure how to both put constraints
-// (extends) on the generic types *and also* let them be statically defined by
-// default.  Maybe this needs a "where" expression instead?
-// type RouteMethodKey = keyof KnownRoutes;
-// type RouteType = KnownRoutes[RouteMethodKey];
+/**
+ * A semi-dummy interface used to enforce that a KnownRoutes-style endpoint
+ * route-to-args/response mapping must contain the 'args' and 'response'
+ * properties (so that we can index into them). This is set up as a named
+ * property object so that it's easy to extend/add-to down the road.
+ */
+interface ArgResponse {
+  args: unknown;
+  response: unknown;
+}
 
-export class Client<
-  ROUTES extends Endpoints = KnownRoutes,
-  DELETE_ROUTES = ROUTES['Delete'],
-  GET_ROUTES = ROUTES['Get'],
-  PATCH_ROUTES = ROUTES['Patch'],
-  POST_ROUTES = ROUTES['Post'],
-  PUT_ROUTES = ROUTES['Put'],
-> {
+export class Client<ROUTES extends Methodable = KnownRoutes> {
   host: string;
 
   constructor(host: string) {
@@ -51,41 +51,46 @@ export class Client<
   // that *just* those routes can be called without the `args` argument.
 
   async delete<
-    T = unknown,
-    R extends keyof DELETE_ROUTES = keyof DELETE_ROUTES,
-    A extends DELETE_ROUTES[R] = DELETE_ROUTES[R],
+    R extends keyof ROUTES['Delete'] = keyof ROUTES['Delete'],
+    E extends ROUTES['Delete'][R] & ArgResponse = ROUTES['Delete'][R],
+    A extends E['args'] = E['args'],
+    T extends E['response'] = E['response'],
   >(route: R, args?: A) {
     return this._call<T, R, A>(EndpointMethod.DELETE, route, args);
   }
 
   async get<
-    T = unknown,
-    R extends keyof GET_ROUTES = keyof GET_ROUTES,
-    A extends GET_ROUTES[R] = GET_ROUTES[R],
+    R extends keyof ROUTES['Get'] = keyof ROUTES['Get'],
+    E extends ROUTES['Get'][R] & ArgResponse = ROUTES['Get'][R],
+    A extends E['args'] = E['args'],
+    T extends E['response'] = E['response'],
   >(route: R, args?: A) {
     return this._call<T, R, A>(EndpointMethod.GET, route, args);
   }
 
   async patch<
-    T = unknown,
-    R extends keyof PATCH_ROUTES = keyof PATCH_ROUTES,
-    A extends PATCH_ROUTES[R] = PATCH_ROUTES[R],
+    R extends keyof ROUTES['Patch'] = keyof ROUTES['Patch'],
+    E extends ROUTES['Patch'][R] & ArgResponse = ROUTES['Patch'][R],
+    A extends E['args'] = E['args'],
+    T extends E['response'] = E['response'],
   >(route: R, args?: A) {
     return this._call<T, R, A>(EndpointMethod.PATCH, route, args);
   }
 
   async post<
-    T = unknown,
-    R extends keyof POST_ROUTES = keyof POST_ROUTES,
-    A extends POST_ROUTES[R] = POST_ROUTES[R],
+    R extends keyof ROUTES['Post'] = keyof ROUTES['Post'],
+    E extends ROUTES['Post'][R] & ArgResponse = ROUTES['Post'][R],
+    A extends E['args'] = E['args'],
+    T extends E['response'] = E['response'],
   >(route: R, args?: A) {
     return this._call<T, R, A>(EndpointMethod.POST, route, args);
   }
 
   async put<
-    T = unknown,
-    R extends keyof PUT_ROUTES = keyof PUT_ROUTES,
-    A extends PUT_ROUTES[R] = PUT_ROUTES[R],
+    R extends keyof ROUTES['Put'] = keyof ROUTES['Put'],
+    E extends ROUTES['Put'][R] & ArgResponse = ROUTES['Put'][R],
+    A extends E['args'] = E['args'],
+    T extends E['response'] = E['response'],
   >(route: R, args?: A) {
     return this._call<T, R, A>(EndpointMethod.PUT, route, args);
   }
@@ -118,3 +123,27 @@ export class Client<
     return resp;
   }
 }
+
+// export async function adhoc() {
+//   const client = new Client('xxx');
+//   const resp = await client.get('/forminator/v1/preview/forms', {
+//     module_id: 3,
+//   });
+//   console.log(resp);
+//   // const resp = await client.delete('/jetpack/v4/backup-helper-script', {});
+
+//   interface CustomRoutes {
+//     Get: {
+//       '/something3': { args: { foo3: string }; response: { bar3: number } };
+//       '/somthing4': { args: { foo4: string }; response: { bar4: number } };
+//     };
+//     Delete: never;
+//     Post: never;
+//     Patch: never;
+//     Put: never;
+//   }
+
+//   const c2 = new Client<CustomRoutes>('ccc');
+//   const r2 = await c2.get('/something3', {foo3});
+//   console.log(r2);
+// }

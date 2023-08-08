@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "uag/v1" namespace
 
+import {
+  UagV1GetResponse,
+  UagV1AdminCommonsettingsGetResponse,
+} from './uag-v1-responses.js';
+
 /**
  * Arguments for `/uag/v1` route when calling GET method.
  */
@@ -20,8 +25,14 @@ export interface UagV1DeleteRoutes {}
  * All "uag/v1" GET routes.
  */
 export interface UagV1GetRoutes {
-  '/uag/v1': UagV1GetArgs;
-  '/uag/v1/admin/commonsettings': UagV1AdminCommonsettingsGetArgs;
+  '/uag/v1': {
+    args: UagV1GetArgs;
+    response: UagV1GetResponse;
+  };
+  '/uag/v1/admin/commonsettings': {
+    args: UagV1AdminCommonsettingsGetArgs;
+    response: UagV1AdminCommonsettingsGetResponse;
+  };
 }
 
 /**

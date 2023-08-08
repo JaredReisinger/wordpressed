@@ -1,6 +1,12 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "kb-lottieanimation/v1" namespace
 
+import {
+  KbLottieanimationV1GetResponse,
+  KbLottieanimationV1AnimationsPostResponse,
+  KbLottieanimationV1AnimationsPIdAZaZ09GetResponse,
+} from './kb-lottieanimation-v1-responses.js';
+
 /**
  * Arguments for `/kb-lottieanimation/v1` route when calling GET method.
  */
@@ -25,8 +31,14 @@ export interface KbLottieanimationV1DeleteRoutes {}
  * All "kb-lottieanimation/v1" GET routes.
  */
 export interface KbLottieanimationV1GetRoutes {
-  '/kb-lottieanimation/v1': KbLottieanimationV1GetArgs;
-  '/kb-lottieanimation/v1/animations/(?P<id>[\\a-zA-Z0-9]+)': KbLottieanimationV1AnimationsPIdAZaZ09GetArgs;
+  '/kb-lottieanimation/v1': {
+    args: KbLottieanimationV1GetArgs;
+    response: KbLottieanimationV1GetResponse;
+  };
+  '/kb-lottieanimation/v1/animations/(?P<id>[\\a-zA-Z0-9]+)': {
+    args: KbLottieanimationV1AnimationsPIdAZaZ09GetArgs;
+    response: KbLottieanimationV1AnimationsPIdAZaZ09GetResponse;
+  };
 }
 
 /**
@@ -38,7 +50,10 @@ export interface KbLottieanimationV1PatchRoutes {}
  * All "kb-lottieanimation/v1" POST routes.
  */
 export interface KbLottieanimationV1PostRoutes {
-  '/kb-lottieanimation/v1/animations': KbLottieanimationV1AnimationsPostArgs;
+  '/kb-lottieanimation/v1/animations': {
+    args: KbLottieanimationV1AnimationsPostArgs;
+    response: KbLottieanimationV1AnimationsPostResponse;
+  };
 }
 
 /**

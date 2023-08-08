@@ -1,6 +1,17 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wp-site-health/v1" namespace
 
+import {
+  WpSiteHealthV1GetResponse,
+  WpSiteHealthV1DirectorySizesGetResponse,
+  WpSiteHealthV1TestsAuthorizationHeaderGetResponse,
+  WpSiteHealthV1TestsBackgroundUpdatesGetResponse,
+  WpSiteHealthV1TestsDotorgCommunicationGetResponse,
+  WpSiteHealthV1TestsHttpsStatusGetResponse,
+  WpSiteHealthV1TestsLoopbackRequestsGetResponse,
+  WpSiteHealthV1TestsPageCacheGetResponse,
+} from './wp-site-health-v1-responses.js';
+
 /**
  * Arguments for `/wp-site-health/v1` route when calling GET method.
  */
@@ -50,14 +61,38 @@ export interface WpSiteHealthV1DeleteRoutes {}
  * All "wp-site-health/v1" GET routes.
  */
 export interface WpSiteHealthV1GetRoutes {
-  '/wp-site-health/v1': WpSiteHealthV1GetArgs;
-  '/wp-site-health/v1/directory-sizes': WpSiteHealthV1DirectorySizesGetArgs;
-  '/wp-site-health/v1/tests/authorization-header': WpSiteHealthV1TestsAuthorizationHeaderGetArgs;
-  '/wp-site-health/v1/tests/background-updates': WpSiteHealthV1TestsBackgroundUpdatesGetArgs;
-  '/wp-site-health/v1/tests/dotorg-communication': WpSiteHealthV1TestsDotorgCommunicationGetArgs;
-  '/wp-site-health/v1/tests/https-status': WpSiteHealthV1TestsHttpsStatusGetArgs;
-  '/wp-site-health/v1/tests/loopback-requests': WpSiteHealthV1TestsLoopbackRequestsGetArgs;
-  '/wp-site-health/v1/tests/page-cache': WpSiteHealthV1TestsPageCacheGetArgs;
+  '/wp-site-health/v1': {
+    args: WpSiteHealthV1GetArgs;
+    response: WpSiteHealthV1GetResponse;
+  };
+  '/wp-site-health/v1/directory-sizes': {
+    args: WpSiteHealthV1DirectorySizesGetArgs;
+    response: WpSiteHealthV1DirectorySizesGetResponse;
+  };
+  '/wp-site-health/v1/tests/authorization-header': {
+    args: WpSiteHealthV1TestsAuthorizationHeaderGetArgs;
+    response: WpSiteHealthV1TestsAuthorizationHeaderGetResponse;
+  };
+  '/wp-site-health/v1/tests/background-updates': {
+    args: WpSiteHealthV1TestsBackgroundUpdatesGetArgs;
+    response: WpSiteHealthV1TestsBackgroundUpdatesGetResponse;
+  };
+  '/wp-site-health/v1/tests/dotorg-communication': {
+    args: WpSiteHealthV1TestsDotorgCommunicationGetArgs;
+    response: WpSiteHealthV1TestsDotorgCommunicationGetResponse;
+  };
+  '/wp-site-health/v1/tests/https-status': {
+    args: WpSiteHealthV1TestsHttpsStatusGetArgs;
+    response: WpSiteHealthV1TestsHttpsStatusGetResponse;
+  };
+  '/wp-site-health/v1/tests/loopback-requests': {
+    args: WpSiteHealthV1TestsLoopbackRequestsGetArgs;
+    response: WpSiteHealthV1TestsLoopbackRequestsGetResponse;
+  };
+  '/wp-site-health/v1/tests/page-cache': {
+    args: WpSiteHealthV1TestsPageCacheGetArgs;
+    response: WpSiteHealthV1TestsPageCacheGetResponse;
+  };
 }
 
 /**

@@ -1,6 +1,12 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wp-block-editor/v1" namespace
 
+import {
+  WpBlockEditorV1GetResponse,
+  WpBlockEditorV1ExportGetResponse,
+  WpBlockEditorV1UrlDetailsGetResponse,
+} from './wp-block-editor-v1-responses.js';
+
 /**
  * Arguments for `/wp-block-editor/v1` route when calling GET method.
  */
@@ -30,9 +36,18 @@ export interface WpBlockEditorV1DeleteRoutes {}
  * All "wp-block-editor/v1" GET routes.
  */
 export interface WpBlockEditorV1GetRoutes {
-  '/wp-block-editor/v1': WpBlockEditorV1GetArgs;
-  '/wp-block-editor/v1/export': WpBlockEditorV1ExportGetArgs;
-  '/wp-block-editor/v1/url-details': WpBlockEditorV1UrlDetailsGetArgs;
+  '/wp-block-editor/v1': {
+    args: WpBlockEditorV1GetArgs;
+    response: WpBlockEditorV1GetResponse;
+  };
+  '/wp-block-editor/v1/export': {
+    args: WpBlockEditorV1ExportGetArgs;
+    response: WpBlockEditorV1ExportGetResponse;
+  };
+  '/wp-block-editor/v1/url-details': {
+    args: WpBlockEditorV1UrlDetailsGetArgs;
+    response: WpBlockEditorV1UrlDetailsGetResponse;
+  };
 }
 
 /**

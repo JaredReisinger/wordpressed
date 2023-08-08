@@ -1,6 +1,288 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wp/v2" namespace
 
+import {
+  WpV2GetResponse,
+  WpV2BlockDirectorySearchGetResponse,
+  WpV2BlockPatternsCategoriesGetResponse,
+  WpV2BlockPatternsPatternsGetResponse,
+  WpV2BlockRendererPNameAZ09AZ09GetResponse,
+  WpV2BlockRendererPNameAZ09AZ09PostResponse,
+  WpV2BlockTypesGetResponse,
+  WpV2BlockTypesPNamespaceAZaZ09GetResponse,
+  WpV2BlockTypesPNamespaceAZaZ09PNameAZaZ09GetResponse,
+  WpV2BlocksGetResponse,
+  WpV2BlocksPostResponse,
+  WpV2BlocksPIdDGetResponse,
+  WpV2BlocksPIdDPatchResponse,
+  WpV2BlocksPIdDPostResponse,
+  WpV2BlocksPIdDPutResponse,
+  WpV2BlocksPIdDDeleteResponse,
+  WpV2BlocksPIdDAutosavesGetResponse,
+  WpV2BlocksPIdDAutosavesPostResponse,
+  WpV2BlocksPParentDAutosavesPIdDGetResponse,
+  WpV2BlocksPParentDRevisionsGetResponse,
+  WpV2BlocksPParentDRevisionsPIdDGetResponse,
+  WpV2BlocksPParentDRevisionsPIdDDeleteResponse,
+  WpV2CategoriesGetResponse,
+  WpV2CategoriesPostResponse,
+  WpV2CategoriesPIdDGetResponse,
+  WpV2CategoriesPIdDPatchResponse,
+  WpV2CategoriesPIdDPostResponse,
+  WpV2CategoriesPIdDPutResponse,
+  WpV2CategoriesPIdDDeleteResponse,
+  WpV2CommentsGetResponse,
+  WpV2CommentsPostResponse,
+  WpV2CommentsPIdDGetResponse,
+  WpV2CommentsPIdDPatchResponse,
+  WpV2CommentsPIdDPostResponse,
+  WpV2CommentsPIdDPutResponse,
+  WpV2CommentsPIdDDeleteResponse,
+  WpV2FeedbackGetResponse,
+  WpV2FeedbackPostResponse,
+  WpV2FeedbackPIdDGetResponse,
+  WpV2FeedbackPIdDPatchResponse,
+  WpV2FeedbackPIdDPostResponse,
+  WpV2FeedbackPIdDPutResponse,
+  WpV2FeedbackPIdDDeleteResponse,
+  WpV2FeedbackPIdDAutosavesGetResponse,
+  WpV2FeedbackPIdDAutosavesPostResponse,
+  WpV2FeedbackPParentDAutosavesPIdDGetResponse,
+  WpV2GlobalStylesPIdWGetResponse,
+  WpV2GlobalStylesPIdWPatchResponse,
+  WpV2GlobalStylesPIdWPostResponse,
+  WpV2GlobalStylesPIdWPutResponse,
+  WpV2GlobalStylesThemesPStylesheetSWVariationsGetResponse,
+  WpV2GlobalStylesThemesPStylesheetGetResponse,
+  WpV2JpPayOrderGetResponse,
+  WpV2JpPayOrderPostResponse,
+  WpV2JpPayOrderPIdDGetResponse,
+  WpV2JpPayOrderPIdDPatchResponse,
+  WpV2JpPayOrderPIdDPostResponse,
+  WpV2JpPayOrderPIdDPutResponse,
+  WpV2JpPayOrderPIdDDeleteResponse,
+  WpV2JpPayOrderPIdDAutosavesGetResponse,
+  WpV2JpPayOrderPIdDAutosavesPostResponse,
+  WpV2JpPayOrderPParentDAutosavesPIdDGetResponse,
+  WpV2JpPayProductGetResponse,
+  WpV2JpPayProductPostResponse,
+  WpV2JpPayProductPIdDGetResponse,
+  WpV2JpPayProductPIdDPatchResponse,
+  WpV2JpPayProductPIdDPostResponse,
+  WpV2JpPayProductPIdDPutResponse,
+  WpV2JpPayProductPIdDDeleteResponse,
+  WpV2JpPayProductPIdDAutosavesGetResponse,
+  WpV2JpPayProductPIdDAutosavesPostResponse,
+  WpV2JpPayProductPParentDAutosavesPIdDGetResponse,
+  WpV2KadenceLottieGetResponse,
+  WpV2KadenceLottiePostResponse,
+  WpV2KadenceLottiePIdDGetResponse,
+  WpV2KadenceLottiePIdDPatchResponse,
+  WpV2KadenceLottiePIdDPostResponse,
+  WpV2KadenceLottiePIdDPutResponse,
+  WpV2KadenceLottiePIdDDeleteResponse,
+  WpV2KadenceLottiePIdDAutosavesGetResponse,
+  WpV2KadenceLottiePIdDAutosavesPostResponse,
+  WpV2KadenceLottiePParentDAutosavesPIdDGetResponse,
+  WpV2KadenceLottiePParentDRevisionsGetResponse,
+  WpV2KadenceLottiePParentDRevisionsPIdDGetResponse,
+  WpV2KadenceLottiePParentDRevisionsPIdDDeleteResponse,
+  WpV2MediaGetResponse,
+  WpV2MediaPostResponse,
+  WpV2MediaPIdDGetResponse,
+  WpV2MediaPIdDPatchResponse,
+  WpV2MediaPIdDPostResponse,
+  WpV2MediaPIdDPutResponse,
+  WpV2MediaPIdDDeleteResponse,
+  WpV2MediaPIdDEditPostResponse,
+  WpV2MediaPIdDPostProcessPostResponse,
+  WpV2MenuItemsGetResponse,
+  WpV2MenuItemsPostResponse,
+  WpV2MenuItemsPIdDGetResponse,
+  WpV2MenuItemsPIdDPatchResponse,
+  WpV2MenuItemsPIdDPostResponse,
+  WpV2MenuItemsPIdDPutResponse,
+  WpV2MenuItemsPIdDDeleteResponse,
+  WpV2MenuItemsPIdDAutosavesGetResponse,
+  WpV2MenuItemsPIdDAutosavesPostResponse,
+  WpV2MenuItemsPParentDAutosavesPIdDGetResponse,
+  WpV2MenuLocationsGetResponse,
+  WpV2MenuLocationsPLocationWGetResponse,
+  WpV2MenusGetResponse,
+  WpV2MenusPostResponse,
+  WpV2MenusPIdDGetResponse,
+  WpV2MenusPIdDPatchResponse,
+  WpV2MenusPIdDPostResponse,
+  WpV2MenusPIdDPutResponse,
+  WpV2MenusPIdDDeleteResponse,
+  WpV2NavigationGetResponse,
+  WpV2NavigationPostResponse,
+  WpV2NavigationPIdDGetResponse,
+  WpV2NavigationPIdDPatchResponse,
+  WpV2NavigationPIdDPostResponse,
+  WpV2NavigationPIdDPutResponse,
+  WpV2NavigationPIdDDeleteResponse,
+  WpV2NavigationPIdDAutosavesGetResponse,
+  WpV2NavigationPIdDAutosavesPostResponse,
+  WpV2NavigationPParentDAutosavesPIdDGetResponse,
+  WpV2NavigationPParentDRevisionsGetResponse,
+  WpV2NavigationPParentDRevisionsPIdDGetResponse,
+  WpV2NavigationPParentDRevisionsPIdDDeleteResponse,
+  WpV2PagesGetResponse,
+  WpV2PagesPostResponse,
+  WpV2PagesPIdDGetResponse,
+  WpV2PagesPIdDPatchResponse,
+  WpV2PagesPIdDPostResponse,
+  WpV2PagesPIdDPutResponse,
+  WpV2PagesPIdDDeleteResponse,
+  WpV2PagesPIdDAutosavesGetResponse,
+  WpV2PagesPIdDAutosavesPostResponse,
+  WpV2PagesPParentDAutosavesPIdDGetResponse,
+  WpV2PagesPParentDRevisionsGetResponse,
+  WpV2PagesPParentDRevisionsPIdDGetResponse,
+  WpV2PagesPParentDRevisionsPIdDDeleteResponse,
+  WpV2PatternDirectoryPatternsGetResponse,
+  WpV2PluginsGetResponse,
+  WpV2PluginsPostResponse,
+  WpV2PluginsPPluginGetResponse,
+  WpV2PluginsPPluginPatchResponse,
+  WpV2PluginsPPluginPostResponse,
+  WpV2PluginsPPluginPutResponse,
+  WpV2PluginsPPluginDeleteResponse,
+  WpV2PostsGetResponse,
+  WpV2PostsPostResponse,
+  WpV2PostsPIdDGetResponse,
+  WpV2PostsPIdDPatchResponse,
+  WpV2PostsPIdDPostResponse,
+  WpV2PostsPIdDPutResponse,
+  WpV2PostsPIdDDeleteResponse,
+  WpV2PostsPIdDAutosavesGetResponse,
+  WpV2PostsPIdDAutosavesPostResponse,
+  WpV2PostsPParentDAutosavesPIdDGetResponse,
+  WpV2PostsPParentDRevisionsGetResponse,
+  WpV2PostsPParentDRevisionsPIdDGetResponse,
+  WpV2PostsPParentDRevisionsPIdDDeleteResponse,
+  WpV2ProductGetResponse,
+  WpV2ProductPostResponse,
+  WpV2ProductCatGetResponse,
+  WpV2ProductCatPostResponse,
+  WpV2ProductCatPIdDGetResponse,
+  WpV2ProductCatPIdDPatchResponse,
+  WpV2ProductCatPIdDPostResponse,
+  WpV2ProductCatPIdDPutResponse,
+  WpV2ProductCatPIdDDeleteResponse,
+  WpV2ProductTagGetResponse,
+  WpV2ProductTagPostResponse,
+  WpV2ProductTagPIdDGetResponse,
+  WpV2ProductTagPIdDPatchResponse,
+  WpV2ProductTagPIdDPostResponse,
+  WpV2ProductTagPIdDPutResponse,
+  WpV2ProductTagPIdDDeleteResponse,
+  WpV2ProductPIdDGetResponse,
+  WpV2ProductPIdDPatchResponse,
+  WpV2ProductPIdDPostResponse,
+  WpV2ProductPIdDPutResponse,
+  WpV2ProductPIdDDeleteResponse,
+  WpV2ProductPIdDAutosavesGetResponse,
+  WpV2ProductPIdDAutosavesPostResponse,
+  WpV2ProductPParentDAutosavesPIdDGetResponse,
+  WpV2SearchGetResponse,
+  WpV2SettingsGetResponse,
+  WpV2SettingsPatchResponse,
+  WpV2SettingsPostResponse,
+  WpV2SettingsPutResponse,
+  WpV2SidebarsGetResponse,
+  WpV2SidebarsPIdWGetResponse,
+  WpV2SidebarsPIdWPatchResponse,
+  WpV2SidebarsPIdWPostResponse,
+  WpV2SidebarsPIdWPutResponse,
+  WpV2SpectraPopupGetResponse,
+  WpV2SpectraPopupPostResponse,
+  WpV2SpectraPopupPIdDGetResponse,
+  WpV2SpectraPopupPIdDPatchResponse,
+  WpV2SpectraPopupPIdDPostResponse,
+  WpV2SpectraPopupPIdDPutResponse,
+  WpV2SpectraPopupPIdDDeleteResponse,
+  WpV2SpectraPopupPIdDAutosavesGetResponse,
+  WpV2SpectraPopupPIdDAutosavesPostResponse,
+  WpV2SpectraPopupPParentDAutosavesPIdDGetResponse,
+  WpV2StatusesGetResponse,
+  WpV2StatusesPStatusWGetResponse,
+  WpV2TagsGetResponse,
+  WpV2TagsPostResponse,
+  WpV2TagsPIdDGetResponse,
+  WpV2TagsPIdDPatchResponse,
+  WpV2TagsPIdDPostResponse,
+  WpV2TagsPIdDPutResponse,
+  WpV2TagsPIdDDeleteResponse,
+  WpV2TaxonomiesGetResponse,
+  WpV2TaxonomiesPTaxonomyWGetResponse,
+  WpV2TemplatePartsGetResponse,
+  WpV2TemplatePartsPostResponse,
+  WpV2TemplatePartsPIdWGetResponse,
+  WpV2TemplatePartsPIdWPatchResponse,
+  WpV2TemplatePartsPIdWPostResponse,
+  WpV2TemplatePartsPIdWPutResponse,
+  WpV2TemplatePartsPIdWDeleteResponse,
+  WpV2TemplatePartsPIdDAutosavesGetResponse,
+  WpV2TemplatePartsPIdDAutosavesPostResponse,
+  WpV2TemplatePartsPParentDAutosavesPIdDGetResponse,
+  WpV2TemplatePartsPParentDRevisionsGetResponse,
+  WpV2TemplatePartsPParentDRevisionsPIdDGetResponse,
+  WpV2TemplatePartsPParentDRevisionsPIdDDeleteResponse,
+  WpV2TemplatePartsLookupGetResponse,
+  WpV2TemplatesGetResponse,
+  WpV2TemplatesPostResponse,
+  WpV2TemplatesPIdWGetResponse,
+  WpV2TemplatesPIdWPatchResponse,
+  WpV2TemplatesPIdWPostResponse,
+  WpV2TemplatesPIdWPutResponse,
+  WpV2TemplatesPIdWDeleteResponse,
+  WpV2TemplatesPIdDAutosavesGetResponse,
+  WpV2TemplatesPIdDAutosavesPostResponse,
+  WpV2TemplatesPParentDAutosavesPIdDGetResponse,
+  WpV2TemplatesPParentDRevisionsGetResponse,
+  WpV2TemplatesPParentDRevisionsPIdDGetResponse,
+  WpV2TemplatesPParentDRevisionsPIdDDeleteResponse,
+  WpV2TemplatesLookupGetResponse,
+  WpV2ThemesGetResponse,
+  WpV2ThemesPStylesheetGetResponse,
+  WpV2TypesGetResponse,
+  WpV2TypesPTypeWGetResponse,
+  WpV2UsersGetResponse,
+  WpV2UsersPostResponse,
+  WpV2UsersPIdDGetResponse,
+  WpV2UsersPIdDPatchResponse,
+  WpV2UsersPIdDPostResponse,
+  WpV2UsersPIdDPutResponse,
+  WpV2UsersPIdDDeleteResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsGetResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsPostResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsDeleteResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsPUuidWGetResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPostResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPutResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsPUuidWDeleteResponse,
+  WpV2UsersPUserIdDMeApplicationPasswordsIntrospectGetResponse,
+  WpV2UsersMeGetResponse,
+  WpV2UsersMePatchResponse,
+  WpV2UsersMePostResponse,
+  WpV2UsersMePutResponse,
+  WpV2UsersMeDeleteResponse,
+  WpV2WidgetTypesGetResponse,
+  WpV2WidgetTypesPIdAZaZ09GetResponse,
+  WpV2WidgetTypesPIdAZaZ09EncodePostResponse,
+  WpV2WidgetTypesPIdAZaZ09RenderPostResponse,
+  WpV2WidgetsGetResponse,
+  WpV2WidgetsPostResponse,
+  WpV2WidgetsPIdWGetResponse,
+  WpV2WidgetsPIdWPatchResponse,
+  WpV2WidgetsPIdWPostResponse,
+  WpV2WidgetsPIdWPutResponse,
+  WpV2WidgetsPIdWDeleteResponse,
+} from './wp-v2-responses.js';
+
 /**
  * Arguments for `/wp/v2` route when calling GET method.
  */
@@ -7787,309 +8069,1146 @@ export interface WpV2WidgetsPIdWDeleteArgs {
  * All "wp/v2" DELETE routes.
  */
 export interface WpV2DeleteRoutes {
-  '/wp/v2/blocks/(?P<id>[\\d]+)': WpV2BlocksPIdDDeleteArgs;
-  '/wp/v2/blocks/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2BlocksPParentDRevisionsPIdDDeleteArgs;
-  '/wp/v2/categories/(?P<id>[\\d]+)': WpV2CategoriesPIdDDeleteArgs;
-  '/wp/v2/comments/(?P<id>[\\d]+)': WpV2CommentsPIdDDeleteArgs;
-  '/wp/v2/feedback/(?P<id>[\\d]+)': WpV2FeedbackPIdDDeleteArgs;
-  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': WpV2JpPayOrderPIdDDeleteArgs;
-  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': WpV2JpPayProductPIdDDeleteArgs;
-  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': WpV2KadenceLottiePIdDDeleteArgs;
-  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2KadenceLottiePParentDRevisionsPIdDDeleteArgs;
-  '/wp/v2/media/(?P<id>[\\d]+)': WpV2MediaPIdDDeleteArgs;
-  '/wp/v2/menu-items/(?P<id>[\\d]+)': WpV2MenuItemsPIdDDeleteArgs;
-  '/wp/v2/menus/(?P<id>[\\d]+)': WpV2MenusPIdDDeleteArgs;
-  '/wp/v2/navigation/(?P<id>[\\d]+)': WpV2NavigationPIdDDeleteArgs;
-  '/wp/v2/navigation/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2NavigationPParentDRevisionsPIdDDeleteArgs;
-  '/wp/v2/pages/(?P<id>[\\d]+)': WpV2PagesPIdDDeleteArgs;
-  '/wp/v2/pages/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2PagesPParentDRevisionsPIdDDeleteArgs;
-  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': WpV2PluginsPPluginDeleteArgs;
-  '/wp/v2/posts/(?P<id>[\\d]+)': WpV2PostsPIdDDeleteArgs;
-  '/wp/v2/posts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2PostsPParentDRevisionsPIdDDeleteArgs;
-  '/wp/v2/product_cat/(?P<id>[\\d]+)': WpV2ProductCatPIdDDeleteArgs;
-  '/wp/v2/product_tag/(?P<id>[\\d]+)': WpV2ProductTagPIdDDeleteArgs;
-  '/wp/v2/product/(?P<id>[\\d]+)': WpV2ProductPIdDDeleteArgs;
-  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': WpV2SpectraPopupPIdDDeleteArgs;
-  '/wp/v2/tags/(?P<id>[\\d]+)': WpV2TagsPIdDDeleteArgs;
-  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatePartsPIdWDeleteArgs;
-  '/wp/v2/template-parts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2TemplatePartsPParentDRevisionsPIdDDeleteArgs;
-  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatesPIdWDeleteArgs;
-  '/wp/v2/templates/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2TemplatesPParentDRevisionsPIdDDeleteArgs;
-  '/wp/v2/users/(?P<id>[\\d]+)': WpV2UsersPIdDDeleteArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords': WpV2UsersPUserIdDMeApplicationPasswordsDeleteArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': WpV2UsersPUserIdDMeApplicationPasswordsPUuidWDeleteArgs;
-  '/wp/v2/users/me': WpV2UsersMeDeleteArgs;
-  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': WpV2WidgetsPIdWDeleteArgs;
+  '/wp/v2/blocks/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPIdDDeleteArgs;
+    response: WpV2BlocksPIdDDeleteResponse;
+  };
+  '/wp/v2/blocks/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPParentDRevisionsPIdDDeleteArgs;
+    response: WpV2BlocksPParentDRevisionsPIdDDeleteResponse;
+  };
+  '/wp/v2/categories/(?P<id>[\\d]+)': {
+    args: WpV2CategoriesPIdDDeleteArgs;
+    response: WpV2CategoriesPIdDDeleteResponse;
+  };
+  '/wp/v2/comments/(?P<id>[\\d]+)': {
+    args: WpV2CommentsPIdDDeleteArgs;
+    response: WpV2CommentsPIdDDeleteResponse;
+  };
+  '/wp/v2/feedback/(?P<id>[\\d]+)': {
+    args: WpV2FeedbackPIdDDeleteArgs;
+    response: WpV2FeedbackPIdDDeleteResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': {
+    args: WpV2JpPayOrderPIdDDeleteArgs;
+    response: WpV2JpPayOrderPIdDDeleteResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': {
+    args: WpV2JpPayProductPIdDDeleteArgs;
+    response: WpV2JpPayProductPIdDDeleteResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePIdDDeleteArgs;
+    response: WpV2KadenceLottiePIdDDeleteResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePParentDRevisionsPIdDDeleteArgs;
+    response: WpV2KadenceLottiePParentDRevisionsPIdDDeleteResponse;
+  };
+  '/wp/v2/media/(?P<id>[\\d]+)': {
+    args: WpV2MediaPIdDDeleteArgs;
+    response: WpV2MediaPIdDDeleteResponse;
+  };
+  '/wp/v2/menu-items/(?P<id>[\\d]+)': {
+    args: WpV2MenuItemsPIdDDeleteArgs;
+    response: WpV2MenuItemsPIdDDeleteResponse;
+  };
+  '/wp/v2/menus/(?P<id>[\\d]+)': {
+    args: WpV2MenusPIdDDeleteArgs;
+    response: WpV2MenusPIdDDeleteResponse;
+  };
+  '/wp/v2/navigation/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPIdDDeleteArgs;
+    response: WpV2NavigationPIdDDeleteResponse;
+  };
+  '/wp/v2/navigation/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPParentDRevisionsPIdDDeleteArgs;
+    response: WpV2NavigationPParentDRevisionsPIdDDeleteResponse;
+  };
+  '/wp/v2/pages/(?P<id>[\\d]+)': {
+    args: WpV2PagesPIdDDeleteArgs;
+    response: WpV2PagesPIdDDeleteResponse;
+  };
+  '/wp/v2/pages/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2PagesPParentDRevisionsPIdDDeleteArgs;
+    response: WpV2PagesPParentDRevisionsPIdDDeleteResponse;
+  };
+  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: WpV2PluginsPPluginDeleteArgs;
+    response: WpV2PluginsPPluginDeleteResponse;
+  };
+  '/wp/v2/posts/(?P<id>[\\d]+)': {
+    args: WpV2PostsPIdDDeleteArgs;
+    response: WpV2PostsPIdDDeleteResponse;
+  };
+  '/wp/v2/posts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2PostsPParentDRevisionsPIdDDeleteArgs;
+    response: WpV2PostsPParentDRevisionsPIdDDeleteResponse;
+  };
+  '/wp/v2/product_cat/(?P<id>[\\d]+)': {
+    args: WpV2ProductCatPIdDDeleteArgs;
+    response: WpV2ProductCatPIdDDeleteResponse;
+  };
+  '/wp/v2/product_tag/(?P<id>[\\d]+)': {
+    args: WpV2ProductTagPIdDDeleteArgs;
+    response: WpV2ProductTagPIdDDeleteResponse;
+  };
+  '/wp/v2/product/(?P<id>[\\d]+)': {
+    args: WpV2ProductPIdDDeleteArgs;
+    response: WpV2ProductPIdDDeleteResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': {
+    args: WpV2SpectraPopupPIdDDeleteArgs;
+    response: WpV2SpectraPopupPIdDDeleteResponse;
+  };
+  '/wp/v2/tags/(?P<id>[\\d]+)': {
+    args: WpV2TagsPIdDDeleteArgs;
+    response: WpV2TagsPIdDDeleteResponse;
+  };
+  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatePartsPIdWDeleteArgs;
+    response: WpV2TemplatePartsPIdWDeleteResponse;
+  };
+  '/wp/v2/template-parts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2TemplatePartsPParentDRevisionsPIdDDeleteArgs;
+    response: WpV2TemplatePartsPParentDRevisionsPIdDDeleteResponse;
+  };
+  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatesPIdWDeleteArgs;
+    response: WpV2TemplatesPIdWDeleteResponse;
+  };
+  '/wp/v2/templates/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2TemplatesPParentDRevisionsPIdDDeleteArgs;
+    response: WpV2TemplatesPParentDRevisionsPIdDDeleteResponse;
+  };
+  '/wp/v2/users/(?P<id>[\\d]+)': {
+    args: WpV2UsersPIdDDeleteArgs;
+    response: WpV2UsersPIdDDeleteResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsDeleteArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsDeleteResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWDeleteArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWDeleteResponse;
+  };
+  '/wp/v2/users/me': {
+    args: WpV2UsersMeDeleteArgs;
+    response: WpV2UsersMeDeleteResponse;
+  };
+  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': {
+    args: WpV2WidgetsPIdWDeleteArgs;
+    response: WpV2WidgetsPIdWDeleteResponse;
+  };
 }
 
 /**
  * All "wp/v2" GET routes.
  */
 export interface WpV2GetRoutes {
-  '/wp/v2': WpV2GetArgs;
-  '/wp/v2/block-directory/search': WpV2BlockDirectorySearchGetArgs;
-  '/wp/v2/block-patterns/categories': WpV2BlockPatternsCategoriesGetArgs;
-  '/wp/v2/block-patterns/patterns': WpV2BlockPatternsPatternsGetArgs;
-  '/wp/v2/block-renderer/(?P<name>[a-z0-9-]+/[a-z0-9-]+)': WpV2BlockRendererPNameAZ09AZ09GetPostArgs;
-  '/wp/v2/block-types': WpV2BlockTypesGetArgs;
-  '/wp/v2/block-types/(?P<namespace>[a-zA-Z0-9_-]+)': WpV2BlockTypesPNamespaceAZaZ09GetArgs;
-  '/wp/v2/block-types/(?P<namespace>[a-zA-Z0-9_-]+)/(?P<name>[a-zA-Z0-9_-]+)': WpV2BlockTypesPNamespaceAZaZ09PNameAZaZ09GetArgs;
-  '/wp/v2/blocks': WpV2BlocksGetArgs;
-  '/wp/v2/blocks/(?P<id>[\\d]+)': WpV2BlocksPIdDGetArgs;
-  '/wp/v2/blocks/(?P<id>[\\d]+)/autosaves': WpV2BlocksPIdDAutosavesGetArgs;
-  '/wp/v2/blocks/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2BlocksPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/blocks/(?P<parent>[\\d]+)/revisions': WpV2BlocksPParentDRevisionsGetArgs;
-  '/wp/v2/blocks/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2BlocksPParentDRevisionsPIdDGetArgs;
-  '/wp/v2/categories': WpV2CategoriesGetArgs;
-  '/wp/v2/categories/(?P<id>[\\d]+)': WpV2CategoriesPIdDGetArgs;
-  '/wp/v2/comments': WpV2CommentsGetArgs;
-  '/wp/v2/comments/(?P<id>[\\d]+)': WpV2CommentsPIdDGetArgs;
-  '/wp/v2/feedback': WpV2FeedbackGetArgs;
-  '/wp/v2/feedback/(?P<id>[\\d]+)': WpV2FeedbackPIdDGetArgs;
-  '/wp/v2/feedback/(?P<id>[\\d]+)/autosaves': WpV2FeedbackPIdDAutosavesGetArgs;
-  '/wp/v2/feedback/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2FeedbackPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': WpV2GlobalStylesPIdWGetArgs;
-  '/wp/v2/global-styles/themes/(?P<stylesheet>[\\/\\s%\\w\\.\\(\\)\\[\\]\\@_\\-]+)/variations': WpV2GlobalStylesThemesPStylesheetSWVariationsGetArgs;
-  '/wp/v2/global-styles/themes/(?P<stylesheet>[^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)': WpV2GlobalStylesThemesPStylesheetGetArgs;
-  '/wp/v2/jp_pay_order': WpV2JpPayOrderGetArgs;
-  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': WpV2JpPayOrderPIdDGetArgs;
-  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)/autosaves': WpV2JpPayOrderPIdDAutosavesGetArgs;
-  '/wp/v2/jp_pay_order/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2JpPayOrderPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/jp_pay_product': WpV2JpPayProductGetArgs;
-  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': WpV2JpPayProductPIdDGetArgs;
-  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)/autosaves': WpV2JpPayProductPIdDAutosavesGetArgs;
-  '/wp/v2/jp_pay_product/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2JpPayProductPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/kadence_lottie': WpV2KadenceLottieGetArgs;
-  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': WpV2KadenceLottiePIdDGetArgs;
-  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)/autosaves': WpV2KadenceLottiePIdDAutosavesGetArgs;
-  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2KadenceLottiePParentDAutosavesPIdDGetArgs;
-  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/revisions': WpV2KadenceLottiePParentDRevisionsGetArgs;
-  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2KadenceLottiePParentDRevisionsPIdDGetArgs;
-  '/wp/v2/media': WpV2MediaGetArgs;
-  '/wp/v2/media/(?P<id>[\\d]+)': WpV2MediaPIdDGetArgs;
-  '/wp/v2/menu-items': WpV2MenuItemsGetArgs;
-  '/wp/v2/menu-items/(?P<id>[\\d]+)': WpV2MenuItemsPIdDGetArgs;
-  '/wp/v2/menu-items/(?P<id>[\\d]+)/autosaves': WpV2MenuItemsPIdDAutosavesGetArgs;
-  '/wp/v2/menu-items/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2MenuItemsPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/menu-locations': WpV2MenuLocationsGetArgs;
-  '/wp/v2/menu-locations/(?P<location>[\\w-]+)': WpV2MenuLocationsPLocationWGetArgs;
-  '/wp/v2/menus': WpV2MenusGetArgs;
-  '/wp/v2/menus/(?P<id>[\\d]+)': WpV2MenusPIdDGetArgs;
-  '/wp/v2/navigation': WpV2NavigationGetArgs;
-  '/wp/v2/navigation/(?P<id>[\\d]+)': WpV2NavigationPIdDGetArgs;
-  '/wp/v2/navigation/(?P<id>[\\d]+)/autosaves': WpV2NavigationPIdDAutosavesGetArgs;
-  '/wp/v2/navigation/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2NavigationPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/navigation/(?P<parent>[\\d]+)/revisions': WpV2NavigationPParentDRevisionsGetArgs;
-  '/wp/v2/navigation/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2NavigationPParentDRevisionsPIdDGetArgs;
-  '/wp/v2/pages': WpV2PagesGetArgs;
-  '/wp/v2/pages/(?P<id>[\\d]+)': WpV2PagesPIdDGetArgs;
-  '/wp/v2/pages/(?P<id>[\\d]+)/autosaves': WpV2PagesPIdDAutosavesGetArgs;
-  '/wp/v2/pages/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2PagesPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/pages/(?P<parent>[\\d]+)/revisions': WpV2PagesPParentDRevisionsGetArgs;
-  '/wp/v2/pages/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2PagesPParentDRevisionsPIdDGetArgs;
-  '/wp/v2/pattern-directory/patterns': WpV2PatternDirectoryPatternsGetArgs;
-  '/wp/v2/plugins': WpV2PluginsGetArgs;
-  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': WpV2PluginsPPluginGetArgs;
-  '/wp/v2/posts': WpV2PostsGetArgs;
-  '/wp/v2/posts/(?P<id>[\\d]+)': WpV2PostsPIdDGetArgs;
-  '/wp/v2/posts/(?P<id>[\\d]+)/autosaves': WpV2PostsPIdDAutosavesGetArgs;
-  '/wp/v2/posts/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2PostsPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/posts/(?P<parent>[\\d]+)/revisions': WpV2PostsPParentDRevisionsGetArgs;
-  '/wp/v2/posts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2PostsPParentDRevisionsPIdDGetArgs;
-  '/wp/v2/product': WpV2ProductGetArgs;
-  '/wp/v2/product_cat': WpV2ProductCatGetArgs;
-  '/wp/v2/product_cat/(?P<id>[\\d]+)': WpV2ProductCatPIdDGetArgs;
-  '/wp/v2/product_tag': WpV2ProductTagGetArgs;
-  '/wp/v2/product_tag/(?P<id>[\\d]+)': WpV2ProductTagPIdDGetArgs;
-  '/wp/v2/product/(?P<id>[\\d]+)': WpV2ProductPIdDGetArgs;
-  '/wp/v2/product/(?P<id>[\\d]+)/autosaves': WpV2ProductPIdDAutosavesGetArgs;
-  '/wp/v2/product/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2ProductPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/search': WpV2SearchGetArgs;
-  '/wp/v2/settings': WpV2SettingsGetArgs;
-  '/wp/v2/sidebars': WpV2SidebarsGetArgs;
-  '/wp/v2/sidebars/(?P<id>[\\w-]+)': WpV2SidebarsPIdWGetArgs;
-  '/wp/v2/spectra-popup': WpV2SpectraPopupGetArgs;
-  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': WpV2SpectraPopupPIdDGetArgs;
-  '/wp/v2/spectra-popup/(?P<id>[\\d]+)/autosaves': WpV2SpectraPopupPIdDAutosavesGetArgs;
-  '/wp/v2/spectra-popup/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2SpectraPopupPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/statuses': WpV2StatusesGetArgs;
-  '/wp/v2/statuses/(?P<status>[\\w-]+)': WpV2StatusesPStatusWGetArgs;
-  '/wp/v2/tags': WpV2TagsGetArgs;
-  '/wp/v2/tags/(?P<id>[\\d]+)': WpV2TagsPIdDGetArgs;
-  '/wp/v2/taxonomies': WpV2TaxonomiesGetArgs;
-  '/wp/v2/taxonomies/(?P<taxonomy>[\\w-]+)': WpV2TaxonomiesPTaxonomyWGetArgs;
-  '/wp/v2/template-parts': WpV2TemplatePartsGetArgs;
-  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatePartsPIdWGetArgs;
-  '/wp/v2/template-parts/(?P<id>[\\d]+)/autosaves': WpV2TemplatePartsPIdDAutosavesGetArgs;
-  '/wp/v2/template-parts/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2TemplatePartsPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/template-parts/(?P<parent>[\\d]+)/revisions': WpV2TemplatePartsPParentDRevisionsGetArgs;
-  '/wp/v2/template-parts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2TemplatePartsPParentDRevisionsPIdDGetArgs;
-  '/wp/v2/template-parts/lookup': WpV2TemplatePartsLookupGetArgs;
-  '/wp/v2/templates': WpV2TemplatesGetArgs;
-  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatesPIdWGetArgs;
-  '/wp/v2/templates/(?P<id>[\\d]+)/autosaves': WpV2TemplatesPIdDAutosavesGetArgs;
-  '/wp/v2/templates/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': WpV2TemplatesPParentDAutosavesPIdDGetArgs;
-  '/wp/v2/templates/(?P<parent>[\\d]+)/revisions': WpV2TemplatesPParentDRevisionsGetArgs;
-  '/wp/v2/templates/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': WpV2TemplatesPParentDRevisionsPIdDGetArgs;
-  '/wp/v2/templates/lookup': WpV2TemplatesLookupGetArgs;
-  '/wp/v2/themes': WpV2ThemesGetArgs;
-  '/wp/v2/themes/(?P<stylesheet>[^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)': WpV2ThemesPStylesheetGetArgs;
-  '/wp/v2/types': WpV2TypesGetArgs;
-  '/wp/v2/types/(?P<type>[\\w-]+)': WpV2TypesPTypeWGetArgs;
-  '/wp/v2/users': WpV2UsersGetArgs;
-  '/wp/v2/users/(?P<id>[\\d]+)': WpV2UsersPIdDGetArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords': WpV2UsersPUserIdDMeApplicationPasswordsGetArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': WpV2UsersPUserIdDMeApplicationPasswordsPUuidWGetArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/introspect': WpV2UsersPUserIdDMeApplicationPasswordsIntrospectGetArgs;
-  '/wp/v2/users/me': WpV2UsersMeGetArgs;
-  '/wp/v2/widget-types': WpV2WidgetTypesGetArgs;
-  '/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)': WpV2WidgetTypesPIdAZaZ09GetArgs;
-  '/wp/v2/widgets': WpV2WidgetsGetArgs;
-  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': WpV2WidgetsPIdWGetArgs;
+  '/wp/v2': {
+    args: WpV2GetArgs;
+    response: WpV2GetResponse;
+  };
+  '/wp/v2/block-directory/search': {
+    args: WpV2BlockDirectorySearchGetArgs;
+    response: WpV2BlockDirectorySearchGetResponse;
+  };
+  '/wp/v2/block-patterns/categories': {
+    args: WpV2BlockPatternsCategoriesGetArgs;
+    response: WpV2BlockPatternsCategoriesGetResponse;
+  };
+  '/wp/v2/block-patterns/patterns': {
+    args: WpV2BlockPatternsPatternsGetArgs;
+    response: WpV2BlockPatternsPatternsGetResponse;
+  };
+  '/wp/v2/block-renderer/(?P<name>[a-z0-9-]+/[a-z0-9-]+)': {
+    args: WpV2BlockRendererPNameAZ09AZ09GetPostArgs;
+    response: WpV2BlockRendererPNameAZ09AZ09GetResponse;
+  };
+  '/wp/v2/block-types': {
+    args: WpV2BlockTypesGetArgs;
+    response: WpV2BlockTypesGetResponse;
+  };
+  '/wp/v2/block-types/(?P<namespace>[a-zA-Z0-9_-]+)': {
+    args: WpV2BlockTypesPNamespaceAZaZ09GetArgs;
+    response: WpV2BlockTypesPNamespaceAZaZ09GetResponse;
+  };
+  '/wp/v2/block-types/(?P<namespace>[a-zA-Z0-9_-]+)/(?P<name>[a-zA-Z0-9_-]+)': {
+    args: WpV2BlockTypesPNamespaceAZaZ09PNameAZaZ09GetArgs;
+    response: WpV2BlockTypesPNamespaceAZaZ09PNameAZaZ09GetResponse;
+  };
+  '/wp/v2/blocks': {
+    args: WpV2BlocksGetArgs;
+    response: WpV2BlocksGetResponse;
+  };
+  '/wp/v2/blocks/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPIdDGetArgs;
+    response: WpV2BlocksPIdDGetResponse;
+  };
+  '/wp/v2/blocks/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2BlocksPIdDAutosavesGetArgs;
+    response: WpV2BlocksPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/blocks/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPParentDAutosavesPIdDGetArgs;
+    response: WpV2BlocksPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/blocks/(?P<parent>[\\d]+)/revisions': {
+    args: WpV2BlocksPParentDRevisionsGetArgs;
+    response: WpV2BlocksPParentDRevisionsGetResponse;
+  };
+  '/wp/v2/blocks/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPParentDRevisionsPIdDGetArgs;
+    response: WpV2BlocksPParentDRevisionsPIdDGetResponse;
+  };
+  '/wp/v2/categories': {
+    args: WpV2CategoriesGetArgs;
+    response: WpV2CategoriesGetResponse;
+  };
+  '/wp/v2/categories/(?P<id>[\\d]+)': {
+    args: WpV2CategoriesPIdDGetArgs;
+    response: WpV2CategoriesPIdDGetResponse;
+  };
+  '/wp/v2/comments': {
+    args: WpV2CommentsGetArgs;
+    response: WpV2CommentsGetResponse;
+  };
+  '/wp/v2/comments/(?P<id>[\\d]+)': {
+    args: WpV2CommentsPIdDGetArgs;
+    response: WpV2CommentsPIdDGetResponse;
+  };
+  '/wp/v2/feedback': {
+    args: WpV2FeedbackGetArgs;
+    response: WpV2FeedbackGetResponse;
+  };
+  '/wp/v2/feedback/(?P<id>[\\d]+)': {
+    args: WpV2FeedbackPIdDGetArgs;
+    response: WpV2FeedbackPIdDGetResponse;
+  };
+  '/wp/v2/feedback/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2FeedbackPIdDAutosavesGetArgs;
+    response: WpV2FeedbackPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/feedback/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2FeedbackPParentDAutosavesPIdDGetArgs;
+    response: WpV2FeedbackPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': {
+    args: WpV2GlobalStylesPIdWGetArgs;
+    response: WpV2GlobalStylesPIdWGetResponse;
+  };
+  '/wp/v2/global-styles/themes/(?P<stylesheet>[\\/\\s%\\w\\.\\(\\)\\[\\]\\@_\\-]+)/variations': {
+    args: WpV2GlobalStylesThemesPStylesheetSWVariationsGetArgs;
+    response: WpV2GlobalStylesThemesPStylesheetSWVariationsGetResponse;
+  };
+  '/wp/v2/global-styles/themes/(?P<stylesheet>[^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)': {
+    args: WpV2GlobalStylesThemesPStylesheetGetArgs;
+    response: WpV2GlobalStylesThemesPStylesheetGetResponse;
+  };
+  '/wp/v2/jp_pay_order': {
+    args: WpV2JpPayOrderGetArgs;
+    response: WpV2JpPayOrderGetResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': {
+    args: WpV2JpPayOrderPIdDGetArgs;
+    response: WpV2JpPayOrderPIdDGetResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2JpPayOrderPIdDAutosavesGetArgs;
+    response: WpV2JpPayOrderPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2JpPayOrderPParentDAutosavesPIdDGetArgs;
+    response: WpV2JpPayOrderPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/jp_pay_product': {
+    args: WpV2JpPayProductGetArgs;
+    response: WpV2JpPayProductGetResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': {
+    args: WpV2JpPayProductPIdDGetArgs;
+    response: WpV2JpPayProductPIdDGetResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2JpPayProductPIdDAutosavesGetArgs;
+    response: WpV2JpPayProductPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2JpPayProductPParentDAutosavesPIdDGetArgs;
+    response: WpV2JpPayProductPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/kadence_lottie': {
+    args: WpV2KadenceLottieGetArgs;
+    response: WpV2KadenceLottieGetResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePIdDGetArgs;
+    response: WpV2KadenceLottiePIdDGetResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2KadenceLottiePIdDAutosavesGetArgs;
+    response: WpV2KadenceLottiePIdDAutosavesGetResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePParentDAutosavesPIdDGetArgs;
+    response: WpV2KadenceLottiePParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/revisions': {
+    args: WpV2KadenceLottiePParentDRevisionsGetArgs;
+    response: WpV2KadenceLottiePParentDRevisionsGetResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePParentDRevisionsPIdDGetArgs;
+    response: WpV2KadenceLottiePParentDRevisionsPIdDGetResponse;
+  };
+  '/wp/v2/media': {
+    args: WpV2MediaGetArgs;
+    response: WpV2MediaGetResponse;
+  };
+  '/wp/v2/media/(?P<id>[\\d]+)': {
+    args: WpV2MediaPIdDGetArgs;
+    response: WpV2MediaPIdDGetResponse;
+  };
+  '/wp/v2/menu-items': {
+    args: WpV2MenuItemsGetArgs;
+    response: WpV2MenuItemsGetResponse;
+  };
+  '/wp/v2/menu-items/(?P<id>[\\d]+)': {
+    args: WpV2MenuItemsPIdDGetArgs;
+    response: WpV2MenuItemsPIdDGetResponse;
+  };
+  '/wp/v2/menu-items/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2MenuItemsPIdDAutosavesGetArgs;
+    response: WpV2MenuItemsPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/menu-items/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2MenuItemsPParentDAutosavesPIdDGetArgs;
+    response: WpV2MenuItemsPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/menu-locations': {
+    args: WpV2MenuLocationsGetArgs;
+    response: WpV2MenuLocationsGetResponse;
+  };
+  '/wp/v2/menu-locations/(?P<location>[\\w-]+)': {
+    args: WpV2MenuLocationsPLocationWGetArgs;
+    response: WpV2MenuLocationsPLocationWGetResponse;
+  };
+  '/wp/v2/menus': {
+    args: WpV2MenusGetArgs;
+    response: WpV2MenusGetResponse;
+  };
+  '/wp/v2/menus/(?P<id>[\\d]+)': {
+    args: WpV2MenusPIdDGetArgs;
+    response: WpV2MenusPIdDGetResponse;
+  };
+  '/wp/v2/navigation': {
+    args: WpV2NavigationGetArgs;
+    response: WpV2NavigationGetResponse;
+  };
+  '/wp/v2/navigation/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPIdDGetArgs;
+    response: WpV2NavigationPIdDGetResponse;
+  };
+  '/wp/v2/navigation/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2NavigationPIdDAutosavesGetArgs;
+    response: WpV2NavigationPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/navigation/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPParentDAutosavesPIdDGetArgs;
+    response: WpV2NavigationPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/navigation/(?P<parent>[\\d]+)/revisions': {
+    args: WpV2NavigationPParentDRevisionsGetArgs;
+    response: WpV2NavigationPParentDRevisionsGetResponse;
+  };
+  '/wp/v2/navigation/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPParentDRevisionsPIdDGetArgs;
+    response: WpV2NavigationPParentDRevisionsPIdDGetResponse;
+  };
+  '/wp/v2/pages': {
+    args: WpV2PagesGetArgs;
+    response: WpV2PagesGetResponse;
+  };
+  '/wp/v2/pages/(?P<id>[\\d]+)': {
+    args: WpV2PagesPIdDGetArgs;
+    response: WpV2PagesPIdDGetResponse;
+  };
+  '/wp/v2/pages/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2PagesPIdDAutosavesGetArgs;
+    response: WpV2PagesPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/pages/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2PagesPParentDAutosavesPIdDGetArgs;
+    response: WpV2PagesPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/pages/(?P<parent>[\\d]+)/revisions': {
+    args: WpV2PagesPParentDRevisionsGetArgs;
+    response: WpV2PagesPParentDRevisionsGetResponse;
+  };
+  '/wp/v2/pages/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2PagesPParentDRevisionsPIdDGetArgs;
+    response: WpV2PagesPParentDRevisionsPIdDGetResponse;
+  };
+  '/wp/v2/pattern-directory/patterns': {
+    args: WpV2PatternDirectoryPatternsGetArgs;
+    response: WpV2PatternDirectoryPatternsGetResponse;
+  };
+  '/wp/v2/plugins': {
+    args: WpV2PluginsGetArgs;
+    response: WpV2PluginsGetResponse;
+  };
+  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: WpV2PluginsPPluginGetArgs;
+    response: WpV2PluginsPPluginGetResponse;
+  };
+  '/wp/v2/posts': {
+    args: WpV2PostsGetArgs;
+    response: WpV2PostsGetResponse;
+  };
+  '/wp/v2/posts/(?P<id>[\\d]+)': {
+    args: WpV2PostsPIdDGetArgs;
+    response: WpV2PostsPIdDGetResponse;
+  };
+  '/wp/v2/posts/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2PostsPIdDAutosavesGetArgs;
+    response: WpV2PostsPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/posts/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2PostsPParentDAutosavesPIdDGetArgs;
+    response: WpV2PostsPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/posts/(?P<parent>[\\d]+)/revisions': {
+    args: WpV2PostsPParentDRevisionsGetArgs;
+    response: WpV2PostsPParentDRevisionsGetResponse;
+  };
+  '/wp/v2/posts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2PostsPParentDRevisionsPIdDGetArgs;
+    response: WpV2PostsPParentDRevisionsPIdDGetResponse;
+  };
+  '/wp/v2/product': {
+    args: WpV2ProductGetArgs;
+    response: WpV2ProductGetResponse;
+  };
+  '/wp/v2/product_cat': {
+    args: WpV2ProductCatGetArgs;
+    response: WpV2ProductCatGetResponse;
+  };
+  '/wp/v2/product_cat/(?P<id>[\\d]+)': {
+    args: WpV2ProductCatPIdDGetArgs;
+    response: WpV2ProductCatPIdDGetResponse;
+  };
+  '/wp/v2/product_tag': {
+    args: WpV2ProductTagGetArgs;
+    response: WpV2ProductTagGetResponse;
+  };
+  '/wp/v2/product_tag/(?P<id>[\\d]+)': {
+    args: WpV2ProductTagPIdDGetArgs;
+    response: WpV2ProductTagPIdDGetResponse;
+  };
+  '/wp/v2/product/(?P<id>[\\d]+)': {
+    args: WpV2ProductPIdDGetArgs;
+    response: WpV2ProductPIdDGetResponse;
+  };
+  '/wp/v2/product/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2ProductPIdDAutosavesGetArgs;
+    response: WpV2ProductPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/product/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2ProductPParentDAutosavesPIdDGetArgs;
+    response: WpV2ProductPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/search': {
+    args: WpV2SearchGetArgs;
+    response: WpV2SearchGetResponse;
+  };
+  '/wp/v2/settings': {
+    args: WpV2SettingsGetArgs;
+    response: WpV2SettingsGetResponse;
+  };
+  '/wp/v2/sidebars': {
+    args: WpV2SidebarsGetArgs;
+    response: WpV2SidebarsGetResponse;
+  };
+  '/wp/v2/sidebars/(?P<id>[\\w-]+)': {
+    args: WpV2SidebarsPIdWGetArgs;
+    response: WpV2SidebarsPIdWGetResponse;
+  };
+  '/wp/v2/spectra-popup': {
+    args: WpV2SpectraPopupGetArgs;
+    response: WpV2SpectraPopupGetResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': {
+    args: WpV2SpectraPopupPIdDGetArgs;
+    response: WpV2SpectraPopupPIdDGetResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2SpectraPopupPIdDAutosavesGetArgs;
+    response: WpV2SpectraPopupPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2SpectraPopupPParentDAutosavesPIdDGetArgs;
+    response: WpV2SpectraPopupPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/statuses': {
+    args: WpV2StatusesGetArgs;
+    response: WpV2StatusesGetResponse;
+  };
+  '/wp/v2/statuses/(?P<status>[\\w-]+)': {
+    args: WpV2StatusesPStatusWGetArgs;
+    response: WpV2StatusesPStatusWGetResponse;
+  };
+  '/wp/v2/tags': {
+    args: WpV2TagsGetArgs;
+    response: WpV2TagsGetResponse;
+  };
+  '/wp/v2/tags/(?P<id>[\\d]+)': {
+    args: WpV2TagsPIdDGetArgs;
+    response: WpV2TagsPIdDGetResponse;
+  };
+  '/wp/v2/taxonomies': {
+    args: WpV2TaxonomiesGetArgs;
+    response: WpV2TaxonomiesGetResponse;
+  };
+  '/wp/v2/taxonomies/(?P<taxonomy>[\\w-]+)': {
+    args: WpV2TaxonomiesPTaxonomyWGetArgs;
+    response: WpV2TaxonomiesPTaxonomyWGetResponse;
+  };
+  '/wp/v2/template-parts': {
+    args: WpV2TemplatePartsGetArgs;
+    response: WpV2TemplatePartsGetResponse;
+  };
+  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatePartsPIdWGetArgs;
+    response: WpV2TemplatePartsPIdWGetResponse;
+  };
+  '/wp/v2/template-parts/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2TemplatePartsPIdDAutosavesGetArgs;
+    response: WpV2TemplatePartsPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/template-parts/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2TemplatePartsPParentDAutosavesPIdDGetArgs;
+    response: WpV2TemplatePartsPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/template-parts/(?P<parent>[\\d]+)/revisions': {
+    args: WpV2TemplatePartsPParentDRevisionsGetArgs;
+    response: WpV2TemplatePartsPParentDRevisionsGetResponse;
+  };
+  '/wp/v2/template-parts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2TemplatePartsPParentDRevisionsPIdDGetArgs;
+    response: WpV2TemplatePartsPParentDRevisionsPIdDGetResponse;
+  };
+  '/wp/v2/template-parts/lookup': {
+    args: WpV2TemplatePartsLookupGetArgs;
+    response: WpV2TemplatePartsLookupGetResponse;
+  };
+  '/wp/v2/templates': {
+    args: WpV2TemplatesGetArgs;
+    response: WpV2TemplatesGetResponse;
+  };
+  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatesPIdWGetArgs;
+    response: WpV2TemplatesPIdWGetResponse;
+  };
+  '/wp/v2/templates/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2TemplatesPIdDAutosavesGetArgs;
+    response: WpV2TemplatesPIdDAutosavesGetResponse;
+  };
+  '/wp/v2/templates/(?P<parent>[\\d]+)/autosaves/(?P<id>[\\d]+)': {
+    args: WpV2TemplatesPParentDAutosavesPIdDGetArgs;
+    response: WpV2TemplatesPParentDAutosavesPIdDGetResponse;
+  };
+  '/wp/v2/templates/(?P<parent>[\\d]+)/revisions': {
+    args: WpV2TemplatesPParentDRevisionsGetArgs;
+    response: WpV2TemplatesPParentDRevisionsGetResponse;
+  };
+  '/wp/v2/templates/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)': {
+    args: WpV2TemplatesPParentDRevisionsPIdDGetArgs;
+    response: WpV2TemplatesPParentDRevisionsPIdDGetResponse;
+  };
+  '/wp/v2/templates/lookup': {
+    args: WpV2TemplatesLookupGetArgs;
+    response: WpV2TemplatesLookupGetResponse;
+  };
+  '/wp/v2/themes': {
+    args: WpV2ThemesGetArgs;
+    response: WpV2ThemesGetResponse;
+  };
+  '/wp/v2/themes/(?P<stylesheet>[^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)': {
+    args: WpV2ThemesPStylesheetGetArgs;
+    response: WpV2ThemesPStylesheetGetResponse;
+  };
+  '/wp/v2/types': {
+    args: WpV2TypesGetArgs;
+    response: WpV2TypesGetResponse;
+  };
+  '/wp/v2/types/(?P<type>[\\w-]+)': {
+    args: WpV2TypesPTypeWGetArgs;
+    response: WpV2TypesPTypeWGetResponse;
+  };
+  '/wp/v2/users': {
+    args: WpV2UsersGetArgs;
+    response: WpV2UsersGetResponse;
+  };
+  '/wp/v2/users/(?P<id>[\\d]+)': {
+    args: WpV2UsersPIdDGetArgs;
+    response: WpV2UsersPIdDGetResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsGetArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsGetResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWGetArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWGetResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/introspect': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsIntrospectGetArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsIntrospectGetResponse;
+  };
+  '/wp/v2/users/me': {
+    args: WpV2UsersMeGetArgs;
+    response: WpV2UsersMeGetResponse;
+  };
+  '/wp/v2/widget-types': {
+    args: WpV2WidgetTypesGetArgs;
+    response: WpV2WidgetTypesGetResponse;
+  };
+  '/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)': {
+    args: WpV2WidgetTypesPIdAZaZ09GetArgs;
+    response: WpV2WidgetTypesPIdAZaZ09GetResponse;
+  };
+  '/wp/v2/widgets': {
+    args: WpV2WidgetsGetArgs;
+    response: WpV2WidgetsGetResponse;
+  };
+  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': {
+    args: WpV2WidgetsPIdWGetArgs;
+    response: WpV2WidgetsPIdWGetResponse;
+  };
 }
 
 /**
  * All "wp/v2" PATCH routes.
  */
 export interface WpV2PatchRoutes {
-  '/wp/v2/blocks/(?P<id>[\\d]+)': WpV2BlocksPIdDPatchPostPutArgs;
-  '/wp/v2/categories/(?P<id>[\\d]+)': WpV2CategoriesPIdDPatchPostPutArgs;
-  '/wp/v2/comments/(?P<id>[\\d]+)': WpV2CommentsPIdDPatchPostPutArgs;
-  '/wp/v2/feedback/(?P<id>[\\d]+)': WpV2FeedbackPIdDPatchPostPutArgs;
-  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': WpV2GlobalStylesPIdWPatchPostPutArgs;
-  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': WpV2JpPayOrderPIdDPatchPostPutArgs;
-  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': WpV2JpPayProductPIdDPatchPostPutArgs;
-  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': WpV2KadenceLottiePIdDPatchPostPutArgs;
-  '/wp/v2/media/(?P<id>[\\d]+)': WpV2MediaPIdDPatchPostPutArgs;
-  '/wp/v2/menu-items/(?P<id>[\\d]+)': WpV2MenuItemsPIdDPatchPostPutArgs;
-  '/wp/v2/menus/(?P<id>[\\d]+)': WpV2MenusPIdDPatchPostPutArgs;
-  '/wp/v2/navigation/(?P<id>[\\d]+)': WpV2NavigationPIdDPatchPostPutArgs;
-  '/wp/v2/pages/(?P<id>[\\d]+)': WpV2PagesPIdDPatchPostPutArgs;
-  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': WpV2PluginsPPluginPatchPostPutArgs;
-  '/wp/v2/posts/(?P<id>[\\d]+)': WpV2PostsPIdDPatchPostPutArgs;
-  '/wp/v2/product_cat/(?P<id>[\\d]+)': WpV2ProductCatPIdDPatchPostPutArgs;
-  '/wp/v2/product_tag/(?P<id>[\\d]+)': WpV2ProductTagPIdDPatchPostPutArgs;
-  '/wp/v2/product/(?P<id>[\\d]+)': WpV2ProductPIdDPatchPostPutArgs;
-  '/wp/v2/settings': WpV2SettingsPatchPostPutArgs;
-  '/wp/v2/sidebars/(?P<id>[\\w-]+)': WpV2SidebarsPIdWPatchPostPutArgs;
-  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': WpV2SpectraPopupPIdDPatchPostPutArgs;
-  '/wp/v2/tags/(?P<id>[\\d]+)': WpV2TagsPIdDPatchPostPutArgs;
-  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatePartsPIdWPatchPostPutArgs;
-  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatesPIdWPatchPostPutArgs;
-  '/wp/v2/users/(?P<id>[\\d]+)': WpV2UsersPIdDPatchPostPutArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchPostPutArgs;
-  '/wp/v2/users/me': WpV2UsersMePatchPostPutArgs;
-  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': WpV2WidgetsPIdWPatchPostPutArgs;
+  '/wp/v2/blocks/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPIdDPatchPostPutArgs;
+    response: WpV2BlocksPIdDPatchResponse;
+  };
+  '/wp/v2/categories/(?P<id>[\\d]+)': {
+    args: WpV2CategoriesPIdDPatchPostPutArgs;
+    response: WpV2CategoriesPIdDPatchResponse;
+  };
+  '/wp/v2/comments/(?P<id>[\\d]+)': {
+    args: WpV2CommentsPIdDPatchPostPutArgs;
+    response: WpV2CommentsPIdDPatchResponse;
+  };
+  '/wp/v2/feedback/(?P<id>[\\d]+)': {
+    args: WpV2FeedbackPIdDPatchPostPutArgs;
+    response: WpV2FeedbackPIdDPatchResponse;
+  };
+  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': {
+    args: WpV2GlobalStylesPIdWPatchPostPutArgs;
+    response: WpV2GlobalStylesPIdWPatchResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': {
+    args: WpV2JpPayOrderPIdDPatchPostPutArgs;
+    response: WpV2JpPayOrderPIdDPatchResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': {
+    args: WpV2JpPayProductPIdDPatchPostPutArgs;
+    response: WpV2JpPayProductPIdDPatchResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePIdDPatchPostPutArgs;
+    response: WpV2KadenceLottiePIdDPatchResponse;
+  };
+  '/wp/v2/media/(?P<id>[\\d]+)': {
+    args: WpV2MediaPIdDPatchPostPutArgs;
+    response: WpV2MediaPIdDPatchResponse;
+  };
+  '/wp/v2/menu-items/(?P<id>[\\d]+)': {
+    args: WpV2MenuItemsPIdDPatchPostPutArgs;
+    response: WpV2MenuItemsPIdDPatchResponse;
+  };
+  '/wp/v2/menus/(?P<id>[\\d]+)': {
+    args: WpV2MenusPIdDPatchPostPutArgs;
+    response: WpV2MenusPIdDPatchResponse;
+  };
+  '/wp/v2/navigation/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPIdDPatchPostPutArgs;
+    response: WpV2NavigationPIdDPatchResponse;
+  };
+  '/wp/v2/pages/(?P<id>[\\d]+)': {
+    args: WpV2PagesPIdDPatchPostPutArgs;
+    response: WpV2PagesPIdDPatchResponse;
+  };
+  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: WpV2PluginsPPluginPatchPostPutArgs;
+    response: WpV2PluginsPPluginPatchResponse;
+  };
+  '/wp/v2/posts/(?P<id>[\\d]+)': {
+    args: WpV2PostsPIdDPatchPostPutArgs;
+    response: WpV2PostsPIdDPatchResponse;
+  };
+  '/wp/v2/product_cat/(?P<id>[\\d]+)': {
+    args: WpV2ProductCatPIdDPatchPostPutArgs;
+    response: WpV2ProductCatPIdDPatchResponse;
+  };
+  '/wp/v2/product_tag/(?P<id>[\\d]+)': {
+    args: WpV2ProductTagPIdDPatchPostPutArgs;
+    response: WpV2ProductTagPIdDPatchResponse;
+  };
+  '/wp/v2/product/(?P<id>[\\d]+)': {
+    args: WpV2ProductPIdDPatchPostPutArgs;
+    response: WpV2ProductPIdDPatchResponse;
+  };
+  '/wp/v2/settings': {
+    args: WpV2SettingsPatchPostPutArgs;
+    response: WpV2SettingsPatchResponse;
+  };
+  '/wp/v2/sidebars/(?P<id>[\\w-]+)': {
+    args: WpV2SidebarsPIdWPatchPostPutArgs;
+    response: WpV2SidebarsPIdWPatchResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': {
+    args: WpV2SpectraPopupPIdDPatchPostPutArgs;
+    response: WpV2SpectraPopupPIdDPatchResponse;
+  };
+  '/wp/v2/tags/(?P<id>[\\d]+)': {
+    args: WpV2TagsPIdDPatchPostPutArgs;
+    response: WpV2TagsPIdDPatchResponse;
+  };
+  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatePartsPIdWPatchPostPutArgs;
+    response: WpV2TemplatePartsPIdWPatchResponse;
+  };
+  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatesPIdWPatchPostPutArgs;
+    response: WpV2TemplatesPIdWPatchResponse;
+  };
+  '/wp/v2/users/(?P<id>[\\d]+)': {
+    args: WpV2UsersPIdDPatchPostPutArgs;
+    response: WpV2UsersPIdDPatchResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchPostPutArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchResponse;
+  };
+  '/wp/v2/users/me': {
+    args: WpV2UsersMePatchPostPutArgs;
+    response: WpV2UsersMePatchResponse;
+  };
+  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': {
+    args: WpV2WidgetsPIdWPatchPostPutArgs;
+    response: WpV2WidgetsPIdWPatchResponse;
+  };
 }
 
 /**
  * All "wp/v2" POST routes.
  */
 export interface WpV2PostRoutes {
-  '/wp/v2/block-renderer/(?P<name>[a-z0-9-]+/[a-z0-9-]+)': WpV2BlockRendererPNameAZ09AZ09GetPostArgs;
-  '/wp/v2/blocks': WpV2BlocksPostArgs;
-  '/wp/v2/blocks/(?P<id>[\\d]+)': WpV2BlocksPIdDPatchPostPutArgs;
-  '/wp/v2/blocks/(?P<id>[\\d]+)/autosaves': WpV2BlocksPIdDAutosavesPostArgs;
-  '/wp/v2/categories': WpV2CategoriesPostArgs;
-  '/wp/v2/categories/(?P<id>[\\d]+)': WpV2CategoriesPIdDPatchPostPutArgs;
-  '/wp/v2/comments': WpV2CommentsPostArgs;
-  '/wp/v2/comments/(?P<id>[\\d]+)': WpV2CommentsPIdDPatchPostPutArgs;
-  '/wp/v2/feedback': WpV2FeedbackPostArgs;
-  '/wp/v2/feedback/(?P<id>[\\d]+)': WpV2FeedbackPIdDPatchPostPutArgs;
-  '/wp/v2/feedback/(?P<id>[\\d]+)/autosaves': WpV2FeedbackPIdDAutosavesPostArgs;
-  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': WpV2GlobalStylesPIdWPatchPostPutArgs;
-  '/wp/v2/jp_pay_order': WpV2JpPayOrderPostArgs;
-  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': WpV2JpPayOrderPIdDPatchPostPutArgs;
-  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)/autosaves': WpV2JpPayOrderPIdDAutosavesPostArgs;
-  '/wp/v2/jp_pay_product': WpV2JpPayProductPostArgs;
-  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': WpV2JpPayProductPIdDPatchPostPutArgs;
-  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)/autosaves': WpV2JpPayProductPIdDAutosavesPostArgs;
-  '/wp/v2/kadence_lottie': WpV2KadenceLottiePostArgs;
-  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': WpV2KadenceLottiePIdDPatchPostPutArgs;
-  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)/autosaves': WpV2KadenceLottiePIdDAutosavesPostArgs;
-  '/wp/v2/media': WpV2MediaPostArgs;
-  '/wp/v2/media/(?P<id>[\\d]+)': WpV2MediaPIdDPatchPostPutArgs;
-  '/wp/v2/media/(?P<id>[\\d]+)/edit': WpV2MediaPIdDEditPostArgs;
-  '/wp/v2/media/(?P<id>[\\d]+)/post-process': WpV2MediaPIdDPostProcessPostArgs;
-  '/wp/v2/menu-items': WpV2MenuItemsPostArgs;
-  '/wp/v2/menu-items/(?P<id>[\\d]+)': WpV2MenuItemsPIdDPatchPostPutArgs;
-  '/wp/v2/menu-items/(?P<id>[\\d]+)/autosaves': WpV2MenuItemsPIdDAutosavesPostArgs;
-  '/wp/v2/menus': WpV2MenusPostArgs;
-  '/wp/v2/menus/(?P<id>[\\d]+)': WpV2MenusPIdDPatchPostPutArgs;
-  '/wp/v2/navigation': WpV2NavigationPostArgs;
-  '/wp/v2/navigation/(?P<id>[\\d]+)': WpV2NavigationPIdDPatchPostPutArgs;
-  '/wp/v2/navigation/(?P<id>[\\d]+)/autosaves': WpV2NavigationPIdDAutosavesPostArgs;
-  '/wp/v2/pages': WpV2PagesPostArgs;
-  '/wp/v2/pages/(?P<id>[\\d]+)': WpV2PagesPIdDPatchPostPutArgs;
-  '/wp/v2/pages/(?P<id>[\\d]+)/autosaves': WpV2PagesPIdDAutosavesPostArgs;
-  '/wp/v2/plugins': WpV2PluginsPostArgs;
-  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': WpV2PluginsPPluginPatchPostPutArgs;
-  '/wp/v2/posts': WpV2PostsPostArgs;
-  '/wp/v2/posts/(?P<id>[\\d]+)': WpV2PostsPIdDPatchPostPutArgs;
-  '/wp/v2/posts/(?P<id>[\\d]+)/autosaves': WpV2PostsPIdDAutosavesPostArgs;
-  '/wp/v2/product': WpV2ProductPostArgs;
-  '/wp/v2/product_cat': WpV2ProductCatPostArgs;
-  '/wp/v2/product_cat/(?P<id>[\\d]+)': WpV2ProductCatPIdDPatchPostPutArgs;
-  '/wp/v2/product_tag': WpV2ProductTagPostArgs;
-  '/wp/v2/product_tag/(?P<id>[\\d]+)': WpV2ProductTagPIdDPatchPostPutArgs;
-  '/wp/v2/product/(?P<id>[\\d]+)': WpV2ProductPIdDPatchPostPutArgs;
-  '/wp/v2/product/(?P<id>[\\d]+)/autosaves': WpV2ProductPIdDAutosavesPostArgs;
-  '/wp/v2/settings': WpV2SettingsPatchPostPutArgs;
-  '/wp/v2/sidebars/(?P<id>[\\w-]+)': WpV2SidebarsPIdWPatchPostPutArgs;
-  '/wp/v2/spectra-popup': WpV2SpectraPopupPostArgs;
-  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': WpV2SpectraPopupPIdDPatchPostPutArgs;
-  '/wp/v2/spectra-popup/(?P<id>[\\d]+)/autosaves': WpV2SpectraPopupPIdDAutosavesPostArgs;
-  '/wp/v2/tags': WpV2TagsPostArgs;
-  '/wp/v2/tags/(?P<id>[\\d]+)': WpV2TagsPIdDPatchPostPutArgs;
-  '/wp/v2/template-parts': WpV2TemplatePartsPostArgs;
-  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatePartsPIdWPatchPostPutArgs;
-  '/wp/v2/template-parts/(?P<id>[\\d]+)/autosaves': WpV2TemplatePartsPIdDAutosavesPostArgs;
-  '/wp/v2/templates': WpV2TemplatesPostArgs;
-  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatesPIdWPatchPostPutArgs;
-  '/wp/v2/templates/(?P<id>[\\d]+)/autosaves': WpV2TemplatesPIdDAutosavesPostArgs;
-  '/wp/v2/users': WpV2UsersPostArgs;
-  '/wp/v2/users/(?P<id>[\\d]+)': WpV2UsersPIdDPatchPostPutArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords': WpV2UsersPUserIdDMeApplicationPasswordsPostArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchPostPutArgs;
-  '/wp/v2/users/me': WpV2UsersMePatchPostPutArgs;
-  '/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)/encode': WpV2WidgetTypesPIdAZaZ09EncodePostArgs;
-  '/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)/render': WpV2WidgetTypesPIdAZaZ09RenderPostArgs;
-  '/wp/v2/widgets': WpV2WidgetsPostArgs;
-  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': WpV2WidgetsPIdWPatchPostPutArgs;
+  '/wp/v2/block-renderer/(?P<name>[a-z0-9-]+/[a-z0-9-]+)': {
+    args: WpV2BlockRendererPNameAZ09AZ09GetPostArgs;
+    response: WpV2BlockRendererPNameAZ09AZ09PostResponse;
+  };
+  '/wp/v2/blocks': {
+    args: WpV2BlocksPostArgs;
+    response: WpV2BlocksPostResponse;
+  };
+  '/wp/v2/blocks/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPIdDPatchPostPutArgs;
+    response: WpV2BlocksPIdDPostResponse;
+  };
+  '/wp/v2/blocks/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2BlocksPIdDAutosavesPostArgs;
+    response: WpV2BlocksPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/categories': {
+    args: WpV2CategoriesPostArgs;
+    response: WpV2CategoriesPostResponse;
+  };
+  '/wp/v2/categories/(?P<id>[\\d]+)': {
+    args: WpV2CategoriesPIdDPatchPostPutArgs;
+    response: WpV2CategoriesPIdDPostResponse;
+  };
+  '/wp/v2/comments': {
+    args: WpV2CommentsPostArgs;
+    response: WpV2CommentsPostResponse;
+  };
+  '/wp/v2/comments/(?P<id>[\\d]+)': {
+    args: WpV2CommentsPIdDPatchPostPutArgs;
+    response: WpV2CommentsPIdDPostResponse;
+  };
+  '/wp/v2/feedback': {
+    args: WpV2FeedbackPostArgs;
+    response: WpV2FeedbackPostResponse;
+  };
+  '/wp/v2/feedback/(?P<id>[\\d]+)': {
+    args: WpV2FeedbackPIdDPatchPostPutArgs;
+    response: WpV2FeedbackPIdDPostResponse;
+  };
+  '/wp/v2/feedback/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2FeedbackPIdDAutosavesPostArgs;
+    response: WpV2FeedbackPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': {
+    args: WpV2GlobalStylesPIdWPatchPostPutArgs;
+    response: WpV2GlobalStylesPIdWPostResponse;
+  };
+  '/wp/v2/jp_pay_order': {
+    args: WpV2JpPayOrderPostArgs;
+    response: WpV2JpPayOrderPostResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': {
+    args: WpV2JpPayOrderPIdDPatchPostPutArgs;
+    response: WpV2JpPayOrderPIdDPostResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2JpPayOrderPIdDAutosavesPostArgs;
+    response: WpV2JpPayOrderPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/jp_pay_product': {
+    args: WpV2JpPayProductPostArgs;
+    response: WpV2JpPayProductPostResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': {
+    args: WpV2JpPayProductPIdDPatchPostPutArgs;
+    response: WpV2JpPayProductPIdDPostResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2JpPayProductPIdDAutosavesPostArgs;
+    response: WpV2JpPayProductPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/kadence_lottie': {
+    args: WpV2KadenceLottiePostArgs;
+    response: WpV2KadenceLottiePostResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePIdDPatchPostPutArgs;
+    response: WpV2KadenceLottiePIdDPostResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2KadenceLottiePIdDAutosavesPostArgs;
+    response: WpV2KadenceLottiePIdDAutosavesPostResponse;
+  };
+  '/wp/v2/media': {
+    args: WpV2MediaPostArgs;
+    response: WpV2MediaPostResponse;
+  };
+  '/wp/v2/media/(?P<id>[\\d]+)': {
+    args: WpV2MediaPIdDPatchPostPutArgs;
+    response: WpV2MediaPIdDPostResponse;
+  };
+  '/wp/v2/media/(?P<id>[\\d]+)/edit': {
+    args: WpV2MediaPIdDEditPostArgs;
+    response: WpV2MediaPIdDEditPostResponse;
+  };
+  '/wp/v2/media/(?P<id>[\\d]+)/post-process': {
+    args: WpV2MediaPIdDPostProcessPostArgs;
+    response: WpV2MediaPIdDPostProcessPostResponse;
+  };
+  '/wp/v2/menu-items': {
+    args: WpV2MenuItemsPostArgs;
+    response: WpV2MenuItemsPostResponse;
+  };
+  '/wp/v2/menu-items/(?P<id>[\\d]+)': {
+    args: WpV2MenuItemsPIdDPatchPostPutArgs;
+    response: WpV2MenuItemsPIdDPostResponse;
+  };
+  '/wp/v2/menu-items/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2MenuItemsPIdDAutosavesPostArgs;
+    response: WpV2MenuItemsPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/menus': {
+    args: WpV2MenusPostArgs;
+    response: WpV2MenusPostResponse;
+  };
+  '/wp/v2/menus/(?P<id>[\\d]+)': {
+    args: WpV2MenusPIdDPatchPostPutArgs;
+    response: WpV2MenusPIdDPostResponse;
+  };
+  '/wp/v2/navigation': {
+    args: WpV2NavigationPostArgs;
+    response: WpV2NavigationPostResponse;
+  };
+  '/wp/v2/navigation/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPIdDPatchPostPutArgs;
+    response: WpV2NavigationPIdDPostResponse;
+  };
+  '/wp/v2/navigation/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2NavigationPIdDAutosavesPostArgs;
+    response: WpV2NavigationPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/pages': {
+    args: WpV2PagesPostArgs;
+    response: WpV2PagesPostResponse;
+  };
+  '/wp/v2/pages/(?P<id>[\\d]+)': {
+    args: WpV2PagesPIdDPatchPostPutArgs;
+    response: WpV2PagesPIdDPostResponse;
+  };
+  '/wp/v2/pages/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2PagesPIdDAutosavesPostArgs;
+    response: WpV2PagesPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/plugins': {
+    args: WpV2PluginsPostArgs;
+    response: WpV2PluginsPostResponse;
+  };
+  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: WpV2PluginsPPluginPatchPostPutArgs;
+    response: WpV2PluginsPPluginPostResponse;
+  };
+  '/wp/v2/posts': {
+    args: WpV2PostsPostArgs;
+    response: WpV2PostsPostResponse;
+  };
+  '/wp/v2/posts/(?P<id>[\\d]+)': {
+    args: WpV2PostsPIdDPatchPostPutArgs;
+    response: WpV2PostsPIdDPostResponse;
+  };
+  '/wp/v2/posts/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2PostsPIdDAutosavesPostArgs;
+    response: WpV2PostsPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/product': {
+    args: WpV2ProductPostArgs;
+    response: WpV2ProductPostResponse;
+  };
+  '/wp/v2/product_cat': {
+    args: WpV2ProductCatPostArgs;
+    response: WpV2ProductCatPostResponse;
+  };
+  '/wp/v2/product_cat/(?P<id>[\\d]+)': {
+    args: WpV2ProductCatPIdDPatchPostPutArgs;
+    response: WpV2ProductCatPIdDPostResponse;
+  };
+  '/wp/v2/product_tag': {
+    args: WpV2ProductTagPostArgs;
+    response: WpV2ProductTagPostResponse;
+  };
+  '/wp/v2/product_tag/(?P<id>[\\d]+)': {
+    args: WpV2ProductTagPIdDPatchPostPutArgs;
+    response: WpV2ProductTagPIdDPostResponse;
+  };
+  '/wp/v2/product/(?P<id>[\\d]+)': {
+    args: WpV2ProductPIdDPatchPostPutArgs;
+    response: WpV2ProductPIdDPostResponse;
+  };
+  '/wp/v2/product/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2ProductPIdDAutosavesPostArgs;
+    response: WpV2ProductPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/settings': {
+    args: WpV2SettingsPatchPostPutArgs;
+    response: WpV2SettingsPostResponse;
+  };
+  '/wp/v2/sidebars/(?P<id>[\\w-]+)': {
+    args: WpV2SidebarsPIdWPatchPostPutArgs;
+    response: WpV2SidebarsPIdWPostResponse;
+  };
+  '/wp/v2/spectra-popup': {
+    args: WpV2SpectraPopupPostArgs;
+    response: WpV2SpectraPopupPostResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': {
+    args: WpV2SpectraPopupPIdDPatchPostPutArgs;
+    response: WpV2SpectraPopupPIdDPostResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2SpectraPopupPIdDAutosavesPostArgs;
+    response: WpV2SpectraPopupPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/tags': {
+    args: WpV2TagsPostArgs;
+    response: WpV2TagsPostResponse;
+  };
+  '/wp/v2/tags/(?P<id>[\\d]+)': {
+    args: WpV2TagsPIdDPatchPostPutArgs;
+    response: WpV2TagsPIdDPostResponse;
+  };
+  '/wp/v2/template-parts': {
+    args: WpV2TemplatePartsPostArgs;
+    response: WpV2TemplatePartsPostResponse;
+  };
+  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatePartsPIdWPatchPostPutArgs;
+    response: WpV2TemplatePartsPIdWPostResponse;
+  };
+  '/wp/v2/template-parts/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2TemplatePartsPIdDAutosavesPostArgs;
+    response: WpV2TemplatePartsPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/templates': {
+    args: WpV2TemplatesPostArgs;
+    response: WpV2TemplatesPostResponse;
+  };
+  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatesPIdWPatchPostPutArgs;
+    response: WpV2TemplatesPIdWPostResponse;
+  };
+  '/wp/v2/templates/(?P<id>[\\d]+)/autosaves': {
+    args: WpV2TemplatesPIdDAutosavesPostArgs;
+    response: WpV2TemplatesPIdDAutosavesPostResponse;
+  };
+  '/wp/v2/users': {
+    args: WpV2UsersPostArgs;
+    response: WpV2UsersPostResponse;
+  };
+  '/wp/v2/users/(?P<id>[\\d]+)': {
+    args: WpV2UsersPIdDPatchPostPutArgs;
+    response: WpV2UsersPIdDPostResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsPostArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsPostResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchPostPutArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPostResponse;
+  };
+  '/wp/v2/users/me': {
+    args: WpV2UsersMePatchPostPutArgs;
+    response: WpV2UsersMePostResponse;
+  };
+  '/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)/encode': {
+    args: WpV2WidgetTypesPIdAZaZ09EncodePostArgs;
+    response: WpV2WidgetTypesPIdAZaZ09EncodePostResponse;
+  };
+  '/wp/v2/widget-types/(?P<id>[a-zA-Z0-9_-]+)/render': {
+    args: WpV2WidgetTypesPIdAZaZ09RenderPostArgs;
+    response: WpV2WidgetTypesPIdAZaZ09RenderPostResponse;
+  };
+  '/wp/v2/widgets': {
+    args: WpV2WidgetsPostArgs;
+    response: WpV2WidgetsPostResponse;
+  };
+  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': {
+    args: WpV2WidgetsPIdWPatchPostPutArgs;
+    response: WpV2WidgetsPIdWPostResponse;
+  };
 }
 
 /**
  * All "wp/v2" PUT routes.
  */
 export interface WpV2PutRoutes {
-  '/wp/v2/blocks/(?P<id>[\\d]+)': WpV2BlocksPIdDPatchPostPutArgs;
-  '/wp/v2/categories/(?P<id>[\\d]+)': WpV2CategoriesPIdDPatchPostPutArgs;
-  '/wp/v2/comments/(?P<id>[\\d]+)': WpV2CommentsPIdDPatchPostPutArgs;
-  '/wp/v2/feedback/(?P<id>[\\d]+)': WpV2FeedbackPIdDPatchPostPutArgs;
-  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': WpV2GlobalStylesPIdWPatchPostPutArgs;
-  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': WpV2JpPayOrderPIdDPatchPostPutArgs;
-  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': WpV2JpPayProductPIdDPatchPostPutArgs;
-  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': WpV2KadenceLottiePIdDPatchPostPutArgs;
-  '/wp/v2/media/(?P<id>[\\d]+)': WpV2MediaPIdDPatchPostPutArgs;
-  '/wp/v2/menu-items/(?P<id>[\\d]+)': WpV2MenuItemsPIdDPatchPostPutArgs;
-  '/wp/v2/menus/(?P<id>[\\d]+)': WpV2MenusPIdDPatchPostPutArgs;
-  '/wp/v2/navigation/(?P<id>[\\d]+)': WpV2NavigationPIdDPatchPostPutArgs;
-  '/wp/v2/pages/(?P<id>[\\d]+)': WpV2PagesPIdDPatchPostPutArgs;
-  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': WpV2PluginsPPluginPatchPostPutArgs;
-  '/wp/v2/posts/(?P<id>[\\d]+)': WpV2PostsPIdDPatchPostPutArgs;
-  '/wp/v2/product_cat/(?P<id>[\\d]+)': WpV2ProductCatPIdDPatchPostPutArgs;
-  '/wp/v2/product_tag/(?P<id>[\\d]+)': WpV2ProductTagPIdDPatchPostPutArgs;
-  '/wp/v2/product/(?P<id>[\\d]+)': WpV2ProductPIdDPatchPostPutArgs;
-  '/wp/v2/settings': WpV2SettingsPatchPostPutArgs;
-  '/wp/v2/sidebars/(?P<id>[\\w-]+)': WpV2SidebarsPIdWPatchPostPutArgs;
-  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': WpV2SpectraPopupPIdDPatchPostPutArgs;
-  '/wp/v2/tags/(?P<id>[\\d]+)': WpV2TagsPIdDPatchPostPutArgs;
-  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatePartsPIdWPatchPostPutArgs;
-  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': WpV2TemplatesPIdWPatchPostPutArgs;
-  '/wp/v2/users/(?P<id>[\\d]+)': WpV2UsersPIdDPatchPostPutArgs;
-  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchPostPutArgs;
-  '/wp/v2/users/me': WpV2UsersMePatchPostPutArgs;
-  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': WpV2WidgetsPIdWPatchPostPutArgs;
+  '/wp/v2/blocks/(?P<id>[\\d]+)': {
+    args: WpV2BlocksPIdDPatchPostPutArgs;
+    response: WpV2BlocksPIdDPutResponse;
+  };
+  '/wp/v2/categories/(?P<id>[\\d]+)': {
+    args: WpV2CategoriesPIdDPatchPostPutArgs;
+    response: WpV2CategoriesPIdDPutResponse;
+  };
+  '/wp/v2/comments/(?P<id>[\\d]+)': {
+    args: WpV2CommentsPIdDPatchPostPutArgs;
+    response: WpV2CommentsPIdDPutResponse;
+  };
+  '/wp/v2/feedback/(?P<id>[\\d]+)': {
+    args: WpV2FeedbackPIdDPatchPostPutArgs;
+    response: WpV2FeedbackPIdDPutResponse;
+  };
+  '/wp/v2/global-styles/(?P<id>[\\/\\w-]+)': {
+    args: WpV2GlobalStylesPIdWPatchPostPutArgs;
+    response: WpV2GlobalStylesPIdWPutResponse;
+  };
+  '/wp/v2/jp_pay_order/(?P<id>[\\d]+)': {
+    args: WpV2JpPayOrderPIdDPatchPostPutArgs;
+    response: WpV2JpPayOrderPIdDPutResponse;
+  };
+  '/wp/v2/jp_pay_product/(?P<id>[\\d]+)': {
+    args: WpV2JpPayProductPIdDPatchPostPutArgs;
+    response: WpV2JpPayProductPIdDPutResponse;
+  };
+  '/wp/v2/kadence_lottie/(?P<id>[\\d]+)': {
+    args: WpV2KadenceLottiePIdDPatchPostPutArgs;
+    response: WpV2KadenceLottiePIdDPutResponse;
+  };
+  '/wp/v2/media/(?P<id>[\\d]+)': {
+    args: WpV2MediaPIdDPatchPostPutArgs;
+    response: WpV2MediaPIdDPutResponse;
+  };
+  '/wp/v2/menu-items/(?P<id>[\\d]+)': {
+    args: WpV2MenuItemsPIdDPatchPostPutArgs;
+    response: WpV2MenuItemsPIdDPutResponse;
+  };
+  '/wp/v2/menus/(?P<id>[\\d]+)': {
+    args: WpV2MenusPIdDPatchPostPutArgs;
+    response: WpV2MenusPIdDPutResponse;
+  };
+  '/wp/v2/navigation/(?P<id>[\\d]+)': {
+    args: WpV2NavigationPIdDPatchPostPutArgs;
+    response: WpV2NavigationPIdDPutResponse;
+  };
+  '/wp/v2/pages/(?P<id>[\\d]+)': {
+    args: WpV2PagesPIdDPatchPostPutArgs;
+    response: WpV2PagesPIdDPutResponse;
+  };
+  '/wp/v2/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: WpV2PluginsPPluginPatchPostPutArgs;
+    response: WpV2PluginsPPluginPutResponse;
+  };
+  '/wp/v2/posts/(?P<id>[\\d]+)': {
+    args: WpV2PostsPIdDPatchPostPutArgs;
+    response: WpV2PostsPIdDPutResponse;
+  };
+  '/wp/v2/product_cat/(?P<id>[\\d]+)': {
+    args: WpV2ProductCatPIdDPatchPostPutArgs;
+    response: WpV2ProductCatPIdDPutResponse;
+  };
+  '/wp/v2/product_tag/(?P<id>[\\d]+)': {
+    args: WpV2ProductTagPIdDPatchPostPutArgs;
+    response: WpV2ProductTagPIdDPutResponse;
+  };
+  '/wp/v2/product/(?P<id>[\\d]+)': {
+    args: WpV2ProductPIdDPatchPostPutArgs;
+    response: WpV2ProductPIdDPutResponse;
+  };
+  '/wp/v2/settings': {
+    args: WpV2SettingsPatchPostPutArgs;
+    response: WpV2SettingsPutResponse;
+  };
+  '/wp/v2/sidebars/(?P<id>[\\w-]+)': {
+    args: WpV2SidebarsPIdWPatchPostPutArgs;
+    response: WpV2SidebarsPIdWPutResponse;
+  };
+  '/wp/v2/spectra-popup/(?P<id>[\\d]+)': {
+    args: WpV2SpectraPopupPIdDPatchPostPutArgs;
+    response: WpV2SpectraPopupPIdDPutResponse;
+  };
+  '/wp/v2/tags/(?P<id>[\\d]+)': {
+    args: WpV2TagsPIdDPatchPostPutArgs;
+    response: WpV2TagsPIdDPutResponse;
+  };
+  '/wp/v2/template-parts/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatePartsPIdWPatchPostPutArgs;
+    response: WpV2TemplatePartsPIdWPutResponse;
+  };
+  '/wp/v2/templates/(?P<id>([^\\/:<>\\*\\?"\\|]+(?:\\/[^\\/:<>\\*\\?"\\|]+)?)[\\/\\w%-]+)': {
+    args: WpV2TemplatesPIdWPatchPostPutArgs;
+    response: WpV2TemplatesPIdWPutResponse;
+  };
+  '/wp/v2/users/(?P<id>[\\d]+)': {
+    args: WpV2UsersPIdDPatchPostPutArgs;
+    response: WpV2UsersPIdDPutResponse;
+  };
+  '/wp/v2/users/(?P<user_id>(?:[\\d]+|me))/application-passwords/(?P<uuid>[\\w\\-]+)': {
+    args: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPatchPostPutArgs;
+    response: WpV2UsersPUserIdDMeApplicationPasswordsPUuidWPutResponse;
+  };
+  '/wp/v2/users/me': {
+    args: WpV2UsersMePatchPostPutArgs;
+    response: WpV2UsersMePutResponse;
+  };
+  '/wp/v2/widgets/(?P<id>[\\w\\-]+)': {
+    args: WpV2WidgetsPIdWPatchPostPutArgs;
+    response: WpV2WidgetsPIdWPutResponse;
+  };
 }
 
 /**

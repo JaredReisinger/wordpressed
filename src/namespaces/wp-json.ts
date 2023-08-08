@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "" namespace
 
+import {
+  WpJsonGetResponse,
+  WpJsonBatchV1PostResponse,
+} from './wp-json-responses.js';
+
 /**
  * Arguments for `/` route when calling GET method.
  */
@@ -25,7 +30,10 @@ export interface WpJsonDeleteRoutes {}
  * All "" GET routes.
  */
 export interface WpJsonGetRoutes {
-  '/': WpJsonGetArgs;
+  '/': {
+    args: WpJsonGetArgs;
+    response: WpJsonGetResponse;
+  };
 }
 
 /**
@@ -37,7 +45,10 @@ export interface WpJsonPatchRoutes {}
  * All "" POST routes.
  */
 export interface WpJsonPostRoutes {
-  '/batch/v1': WpJsonBatchV1PostArgs;
+  '/batch/v1': {
+    args: WpJsonBatchV1PostArgs;
+    response: WpJsonBatchV1PostResponse;
+  };
 }
 
 /**

@@ -1,6 +1,144 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wc/v1" namespace
 
+import {
+  WcV1GetResponse,
+  WcV1CouponsGetResponse,
+  WcV1CouponsPostResponse,
+  WcV1CouponsPIdDGetResponse,
+  WcV1CouponsPIdDPatchResponse,
+  WcV1CouponsPIdDPostResponse,
+  WcV1CouponsPIdDPutResponse,
+  WcV1CouponsPIdDDeleteResponse,
+  WcV1CouponsBatchPatchResponse,
+  WcV1CouponsBatchPostResponse,
+  WcV1CouponsBatchPutResponse,
+  WcV1CustomersGetResponse,
+  WcV1CustomersPostResponse,
+  WcV1CustomersPCustomerIdDDownloadsGetResponse,
+  WcV1CustomersPIdDGetResponse,
+  WcV1CustomersPIdDPatchResponse,
+  WcV1CustomersPIdDPostResponse,
+  WcV1CustomersPIdDPutResponse,
+  WcV1CustomersPIdDDeleteResponse,
+  WcV1CustomersBatchPatchResponse,
+  WcV1CustomersBatchPostResponse,
+  WcV1CustomersBatchPutResponse,
+  WcV1OrdersGetResponse,
+  WcV1OrdersPostResponse,
+  WcV1OrdersPIdDGetResponse,
+  WcV1OrdersPIdDPatchResponse,
+  WcV1OrdersPIdDPostResponse,
+  WcV1OrdersPIdDPutResponse,
+  WcV1OrdersPIdDDeleteResponse,
+  WcV1OrdersPOrderIdDNotesGetResponse,
+  WcV1OrdersPOrderIdDNotesPostResponse,
+  WcV1OrdersPOrderIdDNotesPIdDGetResponse,
+  WcV1OrdersPOrderIdDNotesPIdDDeleteResponse,
+  WcV1OrdersPOrderIdDRefundsGetResponse,
+  WcV1OrdersPOrderIdDRefundsPostResponse,
+  WcV1OrdersPOrderIdDRefundsPIdDGetResponse,
+  WcV1OrdersPOrderIdDRefundsPIdDDeleteResponse,
+  WcV1OrdersBatchPatchResponse,
+  WcV1OrdersBatchPostResponse,
+  WcV1OrdersBatchPutResponse,
+  WcV1ProductsGetResponse,
+  WcV1ProductsPostResponse,
+  WcV1ProductsPIdDGetResponse,
+  WcV1ProductsPIdDPatchResponse,
+  WcV1ProductsPIdDPostResponse,
+  WcV1ProductsPIdDPutResponse,
+  WcV1ProductsPIdDDeleteResponse,
+  WcV1ProductsPProductIdDReviewsGetResponse,
+  WcV1ProductsPProductIdDReviewsPostResponse,
+  WcV1ProductsPProductIdDReviewsPIdDGetResponse,
+  WcV1ProductsPProductIdDReviewsPIdDPatchResponse,
+  WcV1ProductsPProductIdDReviewsPIdDPostResponse,
+  WcV1ProductsPProductIdDReviewsPIdDPutResponse,
+  WcV1ProductsPProductIdDReviewsPIdDDeleteResponse,
+  WcV1ProductsAttributesGetResponse,
+  WcV1ProductsAttributesPostResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsGetResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsPostResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsPIdDGetResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsPIdDPostResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsPIdDPutResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsPIdDDeleteResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsBatchPatchResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsBatchPostResponse,
+  WcV1ProductsAttributesPAttributeIdDTermsBatchPutResponse,
+  WcV1ProductsAttributesPIdDGetResponse,
+  WcV1ProductsAttributesPIdDPatchResponse,
+  WcV1ProductsAttributesPIdDPostResponse,
+  WcV1ProductsAttributesPIdDPutResponse,
+  WcV1ProductsAttributesPIdDDeleteResponse,
+  WcV1ProductsAttributesBatchPatchResponse,
+  WcV1ProductsAttributesBatchPostResponse,
+  WcV1ProductsAttributesBatchPutResponse,
+  WcV1ProductsBatchPatchResponse,
+  WcV1ProductsBatchPostResponse,
+  WcV1ProductsBatchPutResponse,
+  WcV1ProductsCategoriesGetResponse,
+  WcV1ProductsCategoriesPostResponse,
+  WcV1ProductsCategoriesPIdDGetResponse,
+  WcV1ProductsCategoriesPIdDPatchResponse,
+  WcV1ProductsCategoriesPIdDPostResponse,
+  WcV1ProductsCategoriesPIdDPutResponse,
+  WcV1ProductsCategoriesPIdDDeleteResponse,
+  WcV1ProductsCategoriesBatchPatchResponse,
+  WcV1ProductsCategoriesBatchPostResponse,
+  WcV1ProductsCategoriesBatchPutResponse,
+  WcV1ProductsShippingClassesGetResponse,
+  WcV1ProductsShippingClassesPostResponse,
+  WcV1ProductsShippingClassesPIdDGetResponse,
+  WcV1ProductsShippingClassesPIdDPatchResponse,
+  WcV1ProductsShippingClassesPIdDPostResponse,
+  WcV1ProductsShippingClassesPIdDPutResponse,
+  WcV1ProductsShippingClassesPIdDDeleteResponse,
+  WcV1ProductsShippingClassesBatchPatchResponse,
+  WcV1ProductsShippingClassesBatchPostResponse,
+  WcV1ProductsShippingClassesBatchPutResponse,
+  WcV1ProductsTagsGetResponse,
+  WcV1ProductsTagsPostResponse,
+  WcV1ProductsTagsPIdDGetResponse,
+  WcV1ProductsTagsPIdDPatchResponse,
+  WcV1ProductsTagsPIdDPostResponse,
+  WcV1ProductsTagsPIdDPutResponse,
+  WcV1ProductsTagsPIdDDeleteResponse,
+  WcV1ProductsTagsBatchPatchResponse,
+  WcV1ProductsTagsBatchPostResponse,
+  WcV1ProductsTagsBatchPutResponse,
+  WcV1ReportsGetResponse,
+  WcV1ReportsSalesGetResponse,
+  WcV1ReportsTopSellersGetResponse,
+  WcV1TaxesGetResponse,
+  WcV1TaxesPostResponse,
+  WcV1TaxesPIdDGetResponse,
+  WcV1TaxesPIdDPatchResponse,
+  WcV1TaxesPIdDPostResponse,
+  WcV1TaxesPIdDPutResponse,
+  WcV1TaxesPIdDDeleteResponse,
+  WcV1TaxesBatchPatchResponse,
+  WcV1TaxesBatchPostResponse,
+  WcV1TaxesBatchPutResponse,
+  WcV1TaxesClassesGetResponse,
+  WcV1TaxesClassesPostResponse,
+  WcV1TaxesClassesPSlugWWSDeleteResponse,
+  WcV1WebhooksGetResponse,
+  WcV1WebhooksPostResponse,
+  WcV1WebhooksPIdDGetResponse,
+  WcV1WebhooksPIdDPatchResponse,
+  WcV1WebhooksPIdDPostResponse,
+  WcV1WebhooksPIdDPutResponse,
+  WcV1WebhooksPIdDDeleteResponse,
+  WcV1WebhooksPWebhookIdDDeliveriesGetResponse,
+  WcV1WebhooksPWebhookIdDDeliveriesPIdDGetResponse,
+  WcV1WebhooksBatchPatchResponse,
+  WcV1WebhooksBatchPostResponse,
+  WcV1WebhooksBatchPutResponse,
+} from './wc-v1-responses.js';
+
 /**
  * Arguments for `/wc/v1` route when calling GET method.
  */
@@ -3902,165 +4040,570 @@ export interface WcV1WebhooksBatchPatchPostPutArgs {
  * All "wc/v1" DELETE routes.
  */
 export interface WcV1DeleteRoutes {
-  '/wc/v1/coupons/(?P<id>[\\d]+)': WcV1CouponsPIdDDeleteArgs;
-  '/wc/v1/customers/(?P<id>[\\d]+)': WcV1CustomersPIdDDeleteArgs;
-  '/wc/v1/orders/(?P<id>[\\d]+)': WcV1OrdersPIdDDeleteArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': WcV1OrdersPOrderIdDNotesPIdDDeleteArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': WcV1OrdersPOrderIdDRefundsPIdDDeleteArgs;
-  '/wc/v1/products/(?P<id>[\\d]+)': WcV1ProductsPIdDDeleteArgs;
-  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': WcV1ProductsPProductIdDReviewsPIdDDeleteArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV1ProductsAttributesPAttributeIdDTermsPIdDDeleteArgs;
-  '/wc/v1/products/attributes/(?P<id>[\\d]+)': WcV1ProductsAttributesPIdDDeleteArgs;
-  '/wc/v1/products/categories/(?P<id>[\\d]+)': WcV1ProductsCategoriesPIdDDeleteArgs;
-  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': WcV1ProductsShippingClassesPIdDDeleteArgs;
-  '/wc/v1/products/tags/(?P<id>[\\d]+)': WcV1ProductsTagsPIdDDeleteArgs;
-  '/wc/v1/taxes/(?P<id>[\\d]+)': WcV1TaxesPIdDDeleteArgs;
-  '/wc/v1/taxes/classes/(?P<slug>\\w[\\w\\s\\-]*)': WcV1TaxesClassesPSlugWWSDeleteArgs;
-  '/wc/v1/webhooks/(?P<id>[\\d]+)': WcV1WebhooksPIdDDeleteArgs;
+  '/wc/v1/coupons/(?P<id>[\\d]+)': {
+    args: WcV1CouponsPIdDDeleteArgs;
+    response: WcV1CouponsPIdDDeleteResponse;
+  };
+  '/wc/v1/customers/(?P<id>[\\d]+)': {
+    args: WcV1CustomersPIdDDeleteArgs;
+    response: WcV1CustomersPIdDDeleteResponse;
+  };
+  '/wc/v1/orders/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPIdDDeleteArgs;
+    response: WcV1OrdersPIdDDeleteResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPOrderIdDNotesPIdDDeleteArgs;
+    response: WcV1OrdersPOrderIdDNotesPIdDDeleteResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPOrderIdDRefundsPIdDDeleteArgs;
+    response: WcV1OrdersPOrderIdDRefundsPIdDDeleteResponse;
+  };
+  '/wc/v1/products/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPIdDDeleteArgs;
+    response: WcV1ProductsPIdDDeleteResponse;
+  };
+  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPProductIdDReviewsPIdDDeleteArgs;
+    response: WcV1ProductsPProductIdDReviewsPIdDDeleteResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsPIdDDeleteArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsPIdDDeleteResponse;
+  };
+  '/wc/v1/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPIdDDeleteArgs;
+    response: WcV1ProductsAttributesPIdDDeleteResponse;
+  };
+  '/wc/v1/products/categories/(?P<id>[\\d]+)': {
+    args: WcV1ProductsCategoriesPIdDDeleteArgs;
+    response: WcV1ProductsCategoriesPIdDDeleteResponse;
+  };
+  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsShippingClassesPIdDDeleteArgs;
+    response: WcV1ProductsShippingClassesPIdDDeleteResponse;
+  };
+  '/wc/v1/products/tags/(?P<id>[\\d]+)': {
+    args: WcV1ProductsTagsPIdDDeleteArgs;
+    response: WcV1ProductsTagsPIdDDeleteResponse;
+  };
+  '/wc/v1/taxes/(?P<id>[\\d]+)': {
+    args: WcV1TaxesPIdDDeleteArgs;
+    response: WcV1TaxesPIdDDeleteResponse;
+  };
+  '/wc/v1/taxes/classes/(?P<slug>\\w[\\w\\s\\-]*)': {
+    args: WcV1TaxesClassesPSlugWWSDeleteArgs;
+    response: WcV1TaxesClassesPSlugWWSDeleteResponse;
+  };
+  '/wc/v1/webhooks/(?P<id>[\\d]+)': {
+    args: WcV1WebhooksPIdDDeleteArgs;
+    response: WcV1WebhooksPIdDDeleteResponse;
+  };
 }
 
 /**
  * All "wc/v1" GET routes.
  */
 export interface WcV1GetRoutes {
-  '/wc/v1': WcV1GetArgs;
-  '/wc/v1/coupons': WcV1CouponsGetArgs;
-  '/wc/v1/coupons/(?P<id>[\\d]+)': WcV1CouponsPIdDGetArgs;
-  '/wc/v1/customers': WcV1CustomersGetArgs;
-  '/wc/v1/customers/(?P<customer_id>[\\d]+)/downloads': WcV1CustomersPCustomerIdDDownloadsGetArgs;
-  '/wc/v1/customers/(?P<id>[\\d]+)': WcV1CustomersPIdDGetArgs;
-  '/wc/v1/orders': WcV1OrdersGetArgs;
-  '/wc/v1/orders/(?P<id>[\\d]+)': WcV1OrdersPIdDGetArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes': WcV1OrdersPOrderIdDNotesGetArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': WcV1OrdersPOrderIdDNotesPIdDGetArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds': WcV1OrdersPOrderIdDRefundsGetArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': WcV1OrdersPOrderIdDRefundsPIdDGetArgs;
-  '/wc/v1/products': WcV1ProductsGetArgs;
-  '/wc/v1/products/(?P<id>[\\d]+)': WcV1ProductsPIdDGetArgs;
-  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews': WcV1ProductsPProductIdDReviewsGetArgs;
-  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': WcV1ProductsPProductIdDReviewsPIdDGetArgs;
-  '/wc/v1/products/attributes': WcV1ProductsAttributesGetArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms': WcV1ProductsAttributesPAttributeIdDTermsGetArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV1ProductsAttributesPAttributeIdDTermsPIdDGetArgs;
-  '/wc/v1/products/attributes/(?P<id>[\\d]+)': WcV1ProductsAttributesPIdDGetArgs;
-  '/wc/v1/products/categories': WcV1ProductsCategoriesGetArgs;
-  '/wc/v1/products/categories/(?P<id>[\\d]+)': WcV1ProductsCategoriesPIdDGetArgs;
-  '/wc/v1/products/shipping_classes': WcV1ProductsShippingClassesGetArgs;
-  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': WcV1ProductsShippingClassesPIdDGetArgs;
-  '/wc/v1/products/tags': WcV1ProductsTagsGetArgs;
-  '/wc/v1/products/tags/(?P<id>[\\d]+)': WcV1ProductsTagsPIdDGetArgs;
-  '/wc/v1/reports': WcV1ReportsGetArgs;
-  '/wc/v1/reports/sales': WcV1ReportsSalesGetArgs;
-  '/wc/v1/reports/top_sellers': WcV1ReportsTopSellersGetArgs;
-  '/wc/v1/taxes': WcV1TaxesGetArgs;
-  '/wc/v1/taxes/(?P<id>[\\d]+)': WcV1TaxesPIdDGetArgs;
-  '/wc/v1/taxes/classes': WcV1TaxesClassesGetArgs;
-  '/wc/v1/webhooks': WcV1WebhooksGetArgs;
-  '/wc/v1/webhooks/(?P<id>[\\d]+)': WcV1WebhooksPIdDGetArgs;
-  '/wc/v1/webhooks/(?P<webhook_id>[\\d]+)/deliveries': WcV1WebhooksPWebhookIdDDeliveriesGetArgs;
-  '/wc/v1/webhooks/(?P<webhook_id>[\\d]+)/deliveries/(?P<id>[\\d]+)': WcV1WebhooksPWebhookIdDDeliveriesPIdDGetArgs;
+  '/wc/v1': {
+    args: WcV1GetArgs;
+    response: WcV1GetResponse;
+  };
+  '/wc/v1/coupons': {
+    args: WcV1CouponsGetArgs;
+    response: WcV1CouponsGetResponse;
+  };
+  '/wc/v1/coupons/(?P<id>[\\d]+)': {
+    args: WcV1CouponsPIdDGetArgs;
+    response: WcV1CouponsPIdDGetResponse;
+  };
+  '/wc/v1/customers': {
+    args: WcV1CustomersGetArgs;
+    response: WcV1CustomersGetResponse;
+  };
+  '/wc/v1/customers/(?P<customer_id>[\\d]+)/downloads': {
+    args: WcV1CustomersPCustomerIdDDownloadsGetArgs;
+    response: WcV1CustomersPCustomerIdDDownloadsGetResponse;
+  };
+  '/wc/v1/customers/(?P<id>[\\d]+)': {
+    args: WcV1CustomersPIdDGetArgs;
+    response: WcV1CustomersPIdDGetResponse;
+  };
+  '/wc/v1/orders': {
+    args: WcV1OrdersGetArgs;
+    response: WcV1OrdersGetResponse;
+  };
+  '/wc/v1/orders/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPIdDGetArgs;
+    response: WcV1OrdersPIdDGetResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes': {
+    args: WcV1OrdersPOrderIdDNotesGetArgs;
+    response: WcV1OrdersPOrderIdDNotesGetResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPOrderIdDNotesPIdDGetArgs;
+    response: WcV1OrdersPOrderIdDNotesPIdDGetResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds': {
+    args: WcV1OrdersPOrderIdDRefundsGetArgs;
+    response: WcV1OrdersPOrderIdDRefundsGetResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPOrderIdDRefundsPIdDGetArgs;
+    response: WcV1OrdersPOrderIdDRefundsPIdDGetResponse;
+  };
+  '/wc/v1/products': {
+    args: WcV1ProductsGetArgs;
+    response: WcV1ProductsGetResponse;
+  };
+  '/wc/v1/products/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPIdDGetArgs;
+    response: WcV1ProductsPIdDGetResponse;
+  };
+  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews': {
+    args: WcV1ProductsPProductIdDReviewsGetArgs;
+    response: WcV1ProductsPProductIdDReviewsGetResponse;
+  };
+  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPProductIdDReviewsPIdDGetArgs;
+    response: WcV1ProductsPProductIdDReviewsPIdDGetResponse;
+  };
+  '/wc/v1/products/attributes': {
+    args: WcV1ProductsAttributesGetArgs;
+    response: WcV1ProductsAttributesGetResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsGetArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsGetResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsPIdDGetArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsPIdDGetResponse;
+  };
+  '/wc/v1/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPIdDGetArgs;
+    response: WcV1ProductsAttributesPIdDGetResponse;
+  };
+  '/wc/v1/products/categories': {
+    args: WcV1ProductsCategoriesGetArgs;
+    response: WcV1ProductsCategoriesGetResponse;
+  };
+  '/wc/v1/products/categories/(?P<id>[\\d]+)': {
+    args: WcV1ProductsCategoriesPIdDGetArgs;
+    response: WcV1ProductsCategoriesPIdDGetResponse;
+  };
+  '/wc/v1/products/shipping_classes': {
+    args: WcV1ProductsShippingClassesGetArgs;
+    response: WcV1ProductsShippingClassesGetResponse;
+  };
+  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsShippingClassesPIdDGetArgs;
+    response: WcV1ProductsShippingClassesPIdDGetResponse;
+  };
+  '/wc/v1/products/tags': {
+    args: WcV1ProductsTagsGetArgs;
+    response: WcV1ProductsTagsGetResponse;
+  };
+  '/wc/v1/products/tags/(?P<id>[\\d]+)': {
+    args: WcV1ProductsTagsPIdDGetArgs;
+    response: WcV1ProductsTagsPIdDGetResponse;
+  };
+  '/wc/v1/reports': {
+    args: WcV1ReportsGetArgs;
+    response: WcV1ReportsGetResponse;
+  };
+  '/wc/v1/reports/sales': {
+    args: WcV1ReportsSalesGetArgs;
+    response: WcV1ReportsSalesGetResponse;
+  };
+  '/wc/v1/reports/top_sellers': {
+    args: WcV1ReportsTopSellersGetArgs;
+    response: WcV1ReportsTopSellersGetResponse;
+  };
+  '/wc/v1/taxes': {
+    args: WcV1TaxesGetArgs;
+    response: WcV1TaxesGetResponse;
+  };
+  '/wc/v1/taxes/(?P<id>[\\d]+)': {
+    args: WcV1TaxesPIdDGetArgs;
+    response: WcV1TaxesPIdDGetResponse;
+  };
+  '/wc/v1/taxes/classes': {
+    args: WcV1TaxesClassesGetArgs;
+    response: WcV1TaxesClassesGetResponse;
+  };
+  '/wc/v1/webhooks': {
+    args: WcV1WebhooksGetArgs;
+    response: WcV1WebhooksGetResponse;
+  };
+  '/wc/v1/webhooks/(?P<id>[\\d]+)': {
+    args: WcV1WebhooksPIdDGetArgs;
+    response: WcV1WebhooksPIdDGetResponse;
+  };
+  '/wc/v1/webhooks/(?P<webhook_id>[\\d]+)/deliveries': {
+    args: WcV1WebhooksPWebhookIdDDeliveriesGetArgs;
+    response: WcV1WebhooksPWebhookIdDDeliveriesGetResponse;
+  };
+  '/wc/v1/webhooks/(?P<webhook_id>[\\d]+)/deliveries/(?P<id>[\\d]+)': {
+    args: WcV1WebhooksPWebhookIdDDeliveriesPIdDGetArgs;
+    response: WcV1WebhooksPWebhookIdDDeliveriesPIdDGetResponse;
+  };
 }
 
 /**
  * All "wc/v1" PATCH routes.
  */
 export interface WcV1PatchRoutes {
-  '/wc/v1/coupons/(?P<id>[\\d]+)': WcV1CouponsPIdDPatchPostPutArgs;
-  '/wc/v1/coupons/batch': WcV1CouponsBatchPatchPostPutArgs;
-  '/wc/v1/customers/(?P<id>[\\d]+)': WcV1CustomersPIdDPatchPostPutArgs;
-  '/wc/v1/customers/batch': WcV1CustomersBatchPatchPostPutArgs;
-  '/wc/v1/orders/(?P<id>[\\d]+)': WcV1OrdersPIdDPatchPostPutArgs;
-  '/wc/v1/orders/batch': WcV1OrdersBatchPatchPostPutArgs;
-  '/wc/v1/products/(?P<id>[\\d]+)': WcV1ProductsPIdDPatchPostPutArgs;
-  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': WcV1ProductsPProductIdDReviewsPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': WcV1ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<id>[\\d]+)': WcV1ProductsAttributesPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/batch': WcV1ProductsAttributesBatchPatchPostPutArgs;
-  '/wc/v1/products/batch': WcV1ProductsBatchPatchPostPutArgs;
-  '/wc/v1/products/categories/(?P<id>[\\d]+)': WcV1ProductsCategoriesPIdDPatchPostPutArgs;
-  '/wc/v1/products/categories/batch': WcV1ProductsCategoriesBatchPatchPostPutArgs;
-  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': WcV1ProductsShippingClassesPIdDPatchPostPutArgs;
-  '/wc/v1/products/shipping_classes/batch': WcV1ProductsShippingClassesBatchPatchPostPutArgs;
-  '/wc/v1/products/tags/(?P<id>[\\d]+)': WcV1ProductsTagsPIdDPatchPostPutArgs;
-  '/wc/v1/products/tags/batch': WcV1ProductsTagsBatchPatchPostPutArgs;
-  '/wc/v1/taxes/(?P<id>[\\d]+)': WcV1TaxesPIdDPatchPostPutArgs;
-  '/wc/v1/taxes/batch': WcV1TaxesBatchPatchPostPutArgs;
-  '/wc/v1/webhooks/(?P<id>[\\d]+)': WcV1WebhooksPIdDPatchPostPutArgs;
-  '/wc/v1/webhooks/batch': WcV1WebhooksBatchPatchPostPutArgs;
+  '/wc/v1/coupons/(?P<id>[\\d]+)': {
+    args: WcV1CouponsPIdDPatchPostPutArgs;
+    response: WcV1CouponsPIdDPatchResponse;
+  };
+  '/wc/v1/coupons/batch': {
+    args: WcV1CouponsBatchPatchPostPutArgs;
+    response: WcV1CouponsBatchPatchResponse;
+  };
+  '/wc/v1/customers/(?P<id>[\\d]+)': {
+    args: WcV1CustomersPIdDPatchPostPutArgs;
+    response: WcV1CustomersPIdDPatchResponse;
+  };
+  '/wc/v1/customers/batch': {
+    args: WcV1CustomersBatchPatchPostPutArgs;
+    response: WcV1CustomersBatchPatchResponse;
+  };
+  '/wc/v1/orders/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPIdDPatchPostPutArgs;
+    response: WcV1OrdersPIdDPatchResponse;
+  };
+  '/wc/v1/orders/batch': {
+    args: WcV1OrdersBatchPatchPostPutArgs;
+    response: WcV1OrdersBatchPatchResponse;
+  };
+  '/wc/v1/products/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPIdDPatchPostPutArgs;
+    response: WcV1ProductsPIdDPatchResponse;
+  };
+  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPProductIdDReviewsPIdDPatchPostPutArgs;
+    response: WcV1ProductsPProductIdDReviewsPIdDPatchResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsBatchPatchResponse;
+  };
+  '/wc/v1/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPIdDPatchPostPutArgs;
+    response: WcV1ProductsAttributesPIdDPatchResponse;
+  };
+  '/wc/v1/products/attributes/batch': {
+    args: WcV1ProductsAttributesBatchPatchPostPutArgs;
+    response: WcV1ProductsAttributesBatchPatchResponse;
+  };
+  '/wc/v1/products/batch': {
+    args: WcV1ProductsBatchPatchPostPutArgs;
+    response: WcV1ProductsBatchPatchResponse;
+  };
+  '/wc/v1/products/categories/(?P<id>[\\d]+)': {
+    args: WcV1ProductsCategoriesPIdDPatchPostPutArgs;
+    response: WcV1ProductsCategoriesPIdDPatchResponse;
+  };
+  '/wc/v1/products/categories/batch': {
+    args: WcV1ProductsCategoriesBatchPatchPostPutArgs;
+    response: WcV1ProductsCategoriesBatchPatchResponse;
+  };
+  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsShippingClassesPIdDPatchPostPutArgs;
+    response: WcV1ProductsShippingClassesPIdDPatchResponse;
+  };
+  '/wc/v1/products/shipping_classes/batch': {
+    args: WcV1ProductsShippingClassesBatchPatchPostPutArgs;
+    response: WcV1ProductsShippingClassesBatchPatchResponse;
+  };
+  '/wc/v1/products/tags/(?P<id>[\\d]+)': {
+    args: WcV1ProductsTagsPIdDPatchPostPutArgs;
+    response: WcV1ProductsTagsPIdDPatchResponse;
+  };
+  '/wc/v1/products/tags/batch': {
+    args: WcV1ProductsTagsBatchPatchPostPutArgs;
+    response: WcV1ProductsTagsBatchPatchResponse;
+  };
+  '/wc/v1/taxes/(?P<id>[\\d]+)': {
+    args: WcV1TaxesPIdDPatchPostPutArgs;
+    response: WcV1TaxesPIdDPatchResponse;
+  };
+  '/wc/v1/taxes/batch': {
+    args: WcV1TaxesBatchPatchPostPutArgs;
+    response: WcV1TaxesBatchPatchResponse;
+  };
+  '/wc/v1/webhooks/(?P<id>[\\d]+)': {
+    args: WcV1WebhooksPIdDPatchPostPutArgs;
+    response: WcV1WebhooksPIdDPatchResponse;
+  };
+  '/wc/v1/webhooks/batch': {
+    args: WcV1WebhooksBatchPatchPostPutArgs;
+    response: WcV1WebhooksBatchPatchResponse;
+  };
 }
 
 /**
  * All "wc/v1" POST routes.
  */
 export interface WcV1PostRoutes {
-  '/wc/v1/coupons': WcV1CouponsPostArgs;
-  '/wc/v1/coupons/(?P<id>[\\d]+)': WcV1CouponsPIdDPatchPostPutArgs;
-  '/wc/v1/coupons/batch': WcV1CouponsBatchPatchPostPutArgs;
-  '/wc/v1/customers': WcV1CustomersPostArgs;
-  '/wc/v1/customers/(?P<id>[\\d]+)': WcV1CustomersPIdDPatchPostPutArgs;
-  '/wc/v1/customers/batch': WcV1CustomersBatchPatchPostPutArgs;
-  '/wc/v1/orders': WcV1OrdersPostArgs;
-  '/wc/v1/orders/(?P<id>[\\d]+)': WcV1OrdersPIdDPatchPostPutArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes': WcV1OrdersPOrderIdDNotesPostArgs;
-  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds': WcV1OrdersPOrderIdDRefundsPostArgs;
-  '/wc/v1/orders/batch': WcV1OrdersBatchPatchPostPutArgs;
-  '/wc/v1/products': WcV1ProductsPostArgs;
-  '/wc/v1/products/(?P<id>[\\d]+)': WcV1ProductsPIdDPatchPostPutArgs;
-  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews': WcV1ProductsPProductIdDReviewsPostArgs;
-  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': WcV1ProductsPProductIdDReviewsPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes': WcV1ProductsAttributesPostArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms': WcV1ProductsAttributesPAttributeIdDTermsPostArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': WcV1ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<id>[\\d]+)': WcV1ProductsAttributesPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/batch': WcV1ProductsAttributesBatchPatchPostPutArgs;
-  '/wc/v1/products/batch': WcV1ProductsBatchPatchPostPutArgs;
-  '/wc/v1/products/categories': WcV1ProductsCategoriesPostArgs;
-  '/wc/v1/products/categories/(?P<id>[\\d]+)': WcV1ProductsCategoriesPIdDPatchPostPutArgs;
-  '/wc/v1/products/categories/batch': WcV1ProductsCategoriesBatchPatchPostPutArgs;
-  '/wc/v1/products/shipping_classes': WcV1ProductsShippingClassesPostArgs;
-  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': WcV1ProductsShippingClassesPIdDPatchPostPutArgs;
-  '/wc/v1/products/shipping_classes/batch': WcV1ProductsShippingClassesBatchPatchPostPutArgs;
-  '/wc/v1/products/tags': WcV1ProductsTagsPostArgs;
-  '/wc/v1/products/tags/(?P<id>[\\d]+)': WcV1ProductsTagsPIdDPatchPostPutArgs;
-  '/wc/v1/products/tags/batch': WcV1ProductsTagsBatchPatchPostPutArgs;
-  '/wc/v1/taxes': WcV1TaxesPostArgs;
-  '/wc/v1/taxes/(?P<id>[\\d]+)': WcV1TaxesPIdDPatchPostPutArgs;
-  '/wc/v1/taxes/batch': WcV1TaxesBatchPatchPostPutArgs;
-  '/wc/v1/taxes/classes': WcV1TaxesClassesPostArgs;
-  '/wc/v1/webhooks': WcV1WebhooksPostArgs;
-  '/wc/v1/webhooks/(?P<id>[\\d]+)': WcV1WebhooksPIdDPatchPostPutArgs;
-  '/wc/v1/webhooks/batch': WcV1WebhooksBatchPatchPostPutArgs;
+  '/wc/v1/coupons': {
+    args: WcV1CouponsPostArgs;
+    response: WcV1CouponsPostResponse;
+  };
+  '/wc/v1/coupons/(?P<id>[\\d]+)': {
+    args: WcV1CouponsPIdDPatchPostPutArgs;
+    response: WcV1CouponsPIdDPostResponse;
+  };
+  '/wc/v1/coupons/batch': {
+    args: WcV1CouponsBatchPatchPostPutArgs;
+    response: WcV1CouponsBatchPostResponse;
+  };
+  '/wc/v1/customers': {
+    args: WcV1CustomersPostArgs;
+    response: WcV1CustomersPostResponse;
+  };
+  '/wc/v1/customers/(?P<id>[\\d]+)': {
+    args: WcV1CustomersPIdDPatchPostPutArgs;
+    response: WcV1CustomersPIdDPostResponse;
+  };
+  '/wc/v1/customers/batch': {
+    args: WcV1CustomersBatchPatchPostPutArgs;
+    response: WcV1CustomersBatchPostResponse;
+  };
+  '/wc/v1/orders': {
+    args: WcV1OrdersPostArgs;
+    response: WcV1OrdersPostResponse;
+  };
+  '/wc/v1/orders/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPIdDPatchPostPutArgs;
+    response: WcV1OrdersPIdDPostResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/notes': {
+    args: WcV1OrdersPOrderIdDNotesPostArgs;
+    response: WcV1OrdersPOrderIdDNotesPostResponse;
+  };
+  '/wc/v1/orders/(?P<order_id>[\\d]+)/refunds': {
+    args: WcV1OrdersPOrderIdDRefundsPostArgs;
+    response: WcV1OrdersPOrderIdDRefundsPostResponse;
+  };
+  '/wc/v1/orders/batch': {
+    args: WcV1OrdersBatchPatchPostPutArgs;
+    response: WcV1OrdersBatchPostResponse;
+  };
+  '/wc/v1/products': {
+    args: WcV1ProductsPostArgs;
+    response: WcV1ProductsPostResponse;
+  };
+  '/wc/v1/products/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPIdDPatchPostPutArgs;
+    response: WcV1ProductsPIdDPostResponse;
+  };
+  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews': {
+    args: WcV1ProductsPProductIdDReviewsPostArgs;
+    response: WcV1ProductsPProductIdDReviewsPostResponse;
+  };
+  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPProductIdDReviewsPIdDPatchPostPutArgs;
+    response: WcV1ProductsPProductIdDReviewsPIdDPostResponse;
+  };
+  '/wc/v1/products/attributes': {
+    args: WcV1ProductsAttributesPostArgs;
+    response: WcV1ProductsAttributesPostResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsPostArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsPostResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsPIdDPostResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsBatchPostResponse;
+  };
+  '/wc/v1/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPIdDPatchPostPutArgs;
+    response: WcV1ProductsAttributesPIdDPostResponse;
+  };
+  '/wc/v1/products/attributes/batch': {
+    args: WcV1ProductsAttributesBatchPatchPostPutArgs;
+    response: WcV1ProductsAttributesBatchPostResponse;
+  };
+  '/wc/v1/products/batch': {
+    args: WcV1ProductsBatchPatchPostPutArgs;
+    response: WcV1ProductsBatchPostResponse;
+  };
+  '/wc/v1/products/categories': {
+    args: WcV1ProductsCategoriesPostArgs;
+    response: WcV1ProductsCategoriesPostResponse;
+  };
+  '/wc/v1/products/categories/(?P<id>[\\d]+)': {
+    args: WcV1ProductsCategoriesPIdDPatchPostPutArgs;
+    response: WcV1ProductsCategoriesPIdDPostResponse;
+  };
+  '/wc/v1/products/categories/batch': {
+    args: WcV1ProductsCategoriesBatchPatchPostPutArgs;
+    response: WcV1ProductsCategoriesBatchPostResponse;
+  };
+  '/wc/v1/products/shipping_classes': {
+    args: WcV1ProductsShippingClassesPostArgs;
+    response: WcV1ProductsShippingClassesPostResponse;
+  };
+  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsShippingClassesPIdDPatchPostPutArgs;
+    response: WcV1ProductsShippingClassesPIdDPostResponse;
+  };
+  '/wc/v1/products/shipping_classes/batch': {
+    args: WcV1ProductsShippingClassesBatchPatchPostPutArgs;
+    response: WcV1ProductsShippingClassesBatchPostResponse;
+  };
+  '/wc/v1/products/tags': {
+    args: WcV1ProductsTagsPostArgs;
+    response: WcV1ProductsTagsPostResponse;
+  };
+  '/wc/v1/products/tags/(?P<id>[\\d]+)': {
+    args: WcV1ProductsTagsPIdDPatchPostPutArgs;
+    response: WcV1ProductsTagsPIdDPostResponse;
+  };
+  '/wc/v1/products/tags/batch': {
+    args: WcV1ProductsTagsBatchPatchPostPutArgs;
+    response: WcV1ProductsTagsBatchPostResponse;
+  };
+  '/wc/v1/taxes': {
+    args: WcV1TaxesPostArgs;
+    response: WcV1TaxesPostResponse;
+  };
+  '/wc/v1/taxes/(?P<id>[\\d]+)': {
+    args: WcV1TaxesPIdDPatchPostPutArgs;
+    response: WcV1TaxesPIdDPostResponse;
+  };
+  '/wc/v1/taxes/batch': {
+    args: WcV1TaxesBatchPatchPostPutArgs;
+    response: WcV1TaxesBatchPostResponse;
+  };
+  '/wc/v1/taxes/classes': {
+    args: WcV1TaxesClassesPostArgs;
+    response: WcV1TaxesClassesPostResponse;
+  };
+  '/wc/v1/webhooks': {
+    args: WcV1WebhooksPostArgs;
+    response: WcV1WebhooksPostResponse;
+  };
+  '/wc/v1/webhooks/(?P<id>[\\d]+)': {
+    args: WcV1WebhooksPIdDPatchPostPutArgs;
+    response: WcV1WebhooksPIdDPostResponse;
+  };
+  '/wc/v1/webhooks/batch': {
+    args: WcV1WebhooksBatchPatchPostPutArgs;
+    response: WcV1WebhooksBatchPostResponse;
+  };
 }
 
 /**
  * All "wc/v1" PUT routes.
  */
 export interface WcV1PutRoutes {
-  '/wc/v1/coupons/(?P<id>[\\d]+)': WcV1CouponsPIdDPatchPostPutArgs;
-  '/wc/v1/coupons/batch': WcV1CouponsBatchPatchPostPutArgs;
-  '/wc/v1/customers/(?P<id>[\\d]+)': WcV1CustomersPIdDPatchPostPutArgs;
-  '/wc/v1/customers/batch': WcV1CustomersBatchPatchPostPutArgs;
-  '/wc/v1/orders/(?P<id>[\\d]+)': WcV1OrdersPIdDPatchPostPutArgs;
-  '/wc/v1/orders/batch': WcV1OrdersBatchPatchPostPutArgs;
-  '/wc/v1/products/(?P<id>[\\d]+)': WcV1ProductsPIdDPatchPostPutArgs;
-  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': WcV1ProductsPProductIdDReviewsPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': WcV1ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
-  '/wc/v1/products/attributes/(?P<id>[\\d]+)': WcV1ProductsAttributesPIdDPatchPostPutArgs;
-  '/wc/v1/products/attributes/batch': WcV1ProductsAttributesBatchPatchPostPutArgs;
-  '/wc/v1/products/batch': WcV1ProductsBatchPatchPostPutArgs;
-  '/wc/v1/products/categories/(?P<id>[\\d]+)': WcV1ProductsCategoriesPIdDPatchPostPutArgs;
-  '/wc/v1/products/categories/batch': WcV1ProductsCategoriesBatchPatchPostPutArgs;
-  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': WcV1ProductsShippingClassesPIdDPatchPostPutArgs;
-  '/wc/v1/products/shipping_classes/batch': WcV1ProductsShippingClassesBatchPatchPostPutArgs;
-  '/wc/v1/products/tags/(?P<id>[\\d]+)': WcV1ProductsTagsPIdDPatchPostPutArgs;
-  '/wc/v1/products/tags/batch': WcV1ProductsTagsBatchPatchPostPutArgs;
-  '/wc/v1/taxes/(?P<id>[\\d]+)': WcV1TaxesPIdDPatchPostPutArgs;
-  '/wc/v1/taxes/batch': WcV1TaxesBatchPatchPostPutArgs;
-  '/wc/v1/webhooks/(?P<id>[\\d]+)': WcV1WebhooksPIdDPatchPostPutArgs;
-  '/wc/v1/webhooks/batch': WcV1WebhooksBatchPatchPostPutArgs;
+  '/wc/v1/coupons/(?P<id>[\\d]+)': {
+    args: WcV1CouponsPIdDPatchPostPutArgs;
+    response: WcV1CouponsPIdDPutResponse;
+  };
+  '/wc/v1/coupons/batch': {
+    args: WcV1CouponsBatchPatchPostPutArgs;
+    response: WcV1CouponsBatchPutResponse;
+  };
+  '/wc/v1/customers/(?P<id>[\\d]+)': {
+    args: WcV1CustomersPIdDPatchPostPutArgs;
+    response: WcV1CustomersPIdDPutResponse;
+  };
+  '/wc/v1/customers/batch': {
+    args: WcV1CustomersBatchPatchPostPutArgs;
+    response: WcV1CustomersBatchPutResponse;
+  };
+  '/wc/v1/orders/(?P<id>[\\d]+)': {
+    args: WcV1OrdersPIdDPatchPostPutArgs;
+    response: WcV1OrdersPIdDPutResponse;
+  };
+  '/wc/v1/orders/batch': {
+    args: WcV1OrdersBatchPatchPostPutArgs;
+    response: WcV1OrdersBatchPutResponse;
+  };
+  '/wc/v1/products/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPIdDPatchPostPutArgs;
+    response: WcV1ProductsPIdDPutResponse;
+  };
+  '/wc/v1/products/(?P<product_id>[\\d]+)/reviews/(?P<id>[\\d]+)': {
+    args: WcV1ProductsPProductIdDReviewsPIdDPatchPostPutArgs;
+    response: WcV1ProductsPProductIdDReviewsPIdDPutResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsPIdDPatchPostPutArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsPIdDPutResponse;
+  };
+  '/wc/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms/batch': {
+    args: WcV1ProductsAttributesPAttributeIdDTermsBatchPatchPostPutArgs;
+    response: WcV1ProductsAttributesPAttributeIdDTermsBatchPutResponse;
+  };
+  '/wc/v1/products/attributes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsAttributesPIdDPatchPostPutArgs;
+    response: WcV1ProductsAttributesPIdDPutResponse;
+  };
+  '/wc/v1/products/attributes/batch': {
+    args: WcV1ProductsAttributesBatchPatchPostPutArgs;
+    response: WcV1ProductsAttributesBatchPutResponse;
+  };
+  '/wc/v1/products/batch': {
+    args: WcV1ProductsBatchPatchPostPutArgs;
+    response: WcV1ProductsBatchPutResponse;
+  };
+  '/wc/v1/products/categories/(?P<id>[\\d]+)': {
+    args: WcV1ProductsCategoriesPIdDPatchPostPutArgs;
+    response: WcV1ProductsCategoriesPIdDPutResponse;
+  };
+  '/wc/v1/products/categories/batch': {
+    args: WcV1ProductsCategoriesBatchPatchPostPutArgs;
+    response: WcV1ProductsCategoriesBatchPutResponse;
+  };
+  '/wc/v1/products/shipping_classes/(?P<id>[\\d]+)': {
+    args: WcV1ProductsShippingClassesPIdDPatchPostPutArgs;
+    response: WcV1ProductsShippingClassesPIdDPutResponse;
+  };
+  '/wc/v1/products/shipping_classes/batch': {
+    args: WcV1ProductsShippingClassesBatchPatchPostPutArgs;
+    response: WcV1ProductsShippingClassesBatchPutResponse;
+  };
+  '/wc/v1/products/tags/(?P<id>[\\d]+)': {
+    args: WcV1ProductsTagsPIdDPatchPostPutArgs;
+    response: WcV1ProductsTagsPIdDPutResponse;
+  };
+  '/wc/v1/products/tags/batch': {
+    args: WcV1ProductsTagsBatchPatchPostPutArgs;
+    response: WcV1ProductsTagsBatchPutResponse;
+  };
+  '/wc/v1/taxes/(?P<id>[\\d]+)': {
+    args: WcV1TaxesPIdDPatchPostPutArgs;
+    response: WcV1TaxesPIdDPutResponse;
+  };
+  '/wc/v1/taxes/batch': {
+    args: WcV1TaxesBatchPatchPostPutArgs;
+    response: WcV1TaxesBatchPutResponse;
+  };
+  '/wc/v1/webhooks/(?P<id>[\\d]+)': {
+    args: WcV1WebhooksPIdDPatchPostPutArgs;
+    response: WcV1WebhooksPIdDPutResponse;
+  };
+  '/wc/v1/webhooks/batch': {
+    args: WcV1WebhooksBatchPatchPostPutArgs;
+    response: WcV1WebhooksBatchPutResponse;
+  };
 }
 
 /**

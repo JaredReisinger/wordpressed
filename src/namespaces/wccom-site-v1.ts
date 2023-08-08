@@ -1,6 +1,14 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wccom-site/v1" namespace
 
+import {
+  WccomSiteV1GetResponse,
+  WccomSiteV1InstallerGetResponse,
+  WccomSiteV1InstallerPostResponse,
+  WccomSiteV1InstallerDeleteResponse,
+  WccomSiteV1SsrGetResponse,
+} from './wccom-site-v1-responses.js';
+
 /**
  * Arguments for `/wccom-site/v1` route when calling GET method.
  */
@@ -34,16 +42,28 @@ export interface WccomSiteV1SsrGetArgs {}
  * All "wccom-site/v1" DELETE routes.
  */
 export interface WccomSiteV1DeleteRoutes {
-  '/wccom-site/v1/installer': WccomSiteV1InstallerDeleteArgs;
+  '/wccom-site/v1/installer': {
+    args: WccomSiteV1InstallerDeleteArgs;
+    response: WccomSiteV1InstallerDeleteResponse;
+  };
 }
 
 /**
  * All "wccom-site/v1" GET routes.
  */
 export interface WccomSiteV1GetRoutes {
-  '/wccom-site/v1': WccomSiteV1GetArgs;
-  '/wccom-site/v1/installer': WccomSiteV1InstallerGetArgs;
-  '/wccom-site/v1/ssr': WccomSiteV1SsrGetArgs;
+  '/wccom-site/v1': {
+    args: WccomSiteV1GetArgs;
+    response: WccomSiteV1GetResponse;
+  };
+  '/wccom-site/v1/installer': {
+    args: WccomSiteV1InstallerGetArgs;
+    response: WccomSiteV1InstallerGetResponse;
+  };
+  '/wccom-site/v1/ssr': {
+    args: WccomSiteV1SsrGetArgs;
+    response: WccomSiteV1SsrGetResponse;
+  };
 }
 
 /**
@@ -55,7 +75,10 @@ export interface WccomSiteV1PatchRoutes {}
  * All "wccom-site/v1" POST routes.
  */
 export interface WccomSiteV1PostRoutes {
-  '/wccom-site/v1/installer': WccomSiteV1InstallerPostArgs;
+  '/wccom-site/v1/installer': {
+    args: WccomSiteV1InstallerPostArgs;
+    response: WccomSiteV1InstallerPostResponse;
+  };
 }
 
 /**

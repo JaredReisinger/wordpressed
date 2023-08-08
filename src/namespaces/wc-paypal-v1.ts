@@ -1,6 +1,13 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wc-paypal/v1" namespace
 
+import {
+  WcPaypalV1GetResponse,
+  WcPaypalV1OnboardingGetParamsPostResponse,
+  WcPaypalV1OnboardingGetStatusGetResponse,
+  WcPaypalV1OnboardingSetCredentialsPostResponse,
+} from './wc-paypal-v1-responses.js';
+
 /**
  * Arguments for `/wc-paypal/v1` route when calling GET method.
  */
@@ -30,8 +37,14 @@ export interface WcPaypalV1DeleteRoutes {}
  * All "wc-paypal/v1" GET routes.
  */
 export interface WcPaypalV1GetRoutes {
-  '/wc-paypal/v1': WcPaypalV1GetArgs;
-  '/wc-paypal/v1/onboarding/get-status': WcPaypalV1OnboardingGetStatusGetArgs;
+  '/wc-paypal/v1': {
+    args: WcPaypalV1GetArgs;
+    response: WcPaypalV1GetResponse;
+  };
+  '/wc-paypal/v1/onboarding/get-status': {
+    args: WcPaypalV1OnboardingGetStatusGetArgs;
+    response: WcPaypalV1OnboardingGetStatusGetResponse;
+  };
 }
 
 /**
@@ -43,8 +56,14 @@ export interface WcPaypalV1PatchRoutes {}
  * All "wc-paypal/v1" POST routes.
  */
 export interface WcPaypalV1PostRoutes {
-  '/wc-paypal/v1/onboarding/get-params': WcPaypalV1OnboardingGetParamsPostArgs;
-  '/wc-paypal/v1/onboarding/set-credentials': WcPaypalV1OnboardingSetCredentialsPostArgs;
+  '/wc-paypal/v1/onboarding/get-params': {
+    args: WcPaypalV1OnboardingGetParamsPostArgs;
+    response: WcPaypalV1OnboardingGetParamsPostResponse;
+  };
+  '/wc-paypal/v1/onboarding/set-credentials': {
+    args: WcPaypalV1OnboardingSetCredentialsPostArgs;
+    response: WcPaypalV1OnboardingSetCredentialsPostResponse;
+  };
 }
 
 /**

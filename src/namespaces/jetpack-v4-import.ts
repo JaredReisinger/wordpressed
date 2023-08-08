@@ -1,6 +1,30 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "jetpack/v4/import" namespace
 
+import {
+  JetpackV4ImportGetResponse,
+  JetpackV4ImportBlocksPostResponse,
+  JetpackV4ImportCategoriesPostResponse,
+  JetpackV4ImportCommentsPostResponse,
+  JetpackV4ImportCustomCssPostResponse,
+  JetpackV4ImportEndPostResponse,
+  JetpackV4ImportGlobalStylesPostResponse,
+  JetpackV4ImportMediaPostResponse,
+  JetpackV4ImportMediaPIdDPatchResponse,
+  JetpackV4ImportMediaPIdDPostResponse,
+  JetpackV4ImportMediaPIdDPutResponse,
+  JetpackV4ImportMediaPIdDPostProcessPostResponse,
+  JetpackV4ImportMenuItemsPostResponse,
+  JetpackV4ImportMenusPostResponse,
+  JetpackV4ImportNavigationPostResponse,
+  JetpackV4ImportPagesPostResponse,
+  JetpackV4ImportPostsPostResponse,
+  JetpackV4ImportStartGetResponse,
+  JetpackV4ImportTagsPostResponse,
+  JetpackV4ImportTemplatePartsPostResponse,
+  JetpackV4ImportTemplatesPostResponse,
+} from './jetpack-v4-import-responses.js';
+
 /**
  * Arguments for `/jetpack/v4/import` route when calling GET method.
  */
@@ -955,45 +979,108 @@ export interface JetpackV4ImportDeleteRoutes {}
  * All "jetpack/v4/import" GET routes.
  */
 export interface JetpackV4ImportGetRoutes {
-  '/jetpack/v4/import': JetpackV4ImportGetArgs;
-  '/jetpack/v4/import/start': JetpackV4ImportStartGetArgs;
+  '/jetpack/v4/import': {
+    args: JetpackV4ImportGetArgs;
+    response: JetpackV4ImportGetResponse;
+  };
+  '/jetpack/v4/import/start': {
+    args: JetpackV4ImportStartGetArgs;
+    response: JetpackV4ImportStartGetResponse;
+  };
 }
 
 /**
  * All "jetpack/v4/import" PATCH routes.
  */
 export interface JetpackV4ImportPatchRoutes {
-  '/jetpack/v4/import/media/(?P<id>[\\d]+)': JetpackV4ImportMediaPIdDPatchPostPutArgs;
+  '/jetpack/v4/import/media/(?P<id>[\\d]+)': {
+    args: JetpackV4ImportMediaPIdDPatchPostPutArgs;
+    response: JetpackV4ImportMediaPIdDPatchResponse;
+  };
 }
 
 /**
  * All "jetpack/v4/import" POST routes.
  */
 export interface JetpackV4ImportPostRoutes {
-  '/jetpack/v4/import/blocks': JetpackV4ImportBlocksPostArgs;
-  '/jetpack/v4/import/categories': JetpackV4ImportCategoriesPostArgs;
-  '/jetpack/v4/import/comments': JetpackV4ImportCommentsPostArgs;
-  '/jetpack/v4/import/custom-css': JetpackV4ImportCustomCssPostArgs;
-  '/jetpack/v4/import/end': JetpackV4ImportEndPostArgs;
-  '/jetpack/v4/import/global-styles': JetpackV4ImportGlobalStylesPostArgs;
-  '/jetpack/v4/import/media': JetpackV4ImportMediaPostArgs;
-  '/jetpack/v4/import/media/(?P<id>[\\d]+)': JetpackV4ImportMediaPIdDPatchPostPutArgs;
-  '/jetpack/v4/import/media/(?P<id>[\\d]+)/post-process': JetpackV4ImportMediaPIdDPostProcessPostArgs;
-  '/jetpack/v4/import/menu-items': JetpackV4ImportMenuItemsPostArgs;
-  '/jetpack/v4/import/menus': JetpackV4ImportMenusPostArgs;
-  '/jetpack/v4/import/navigation': JetpackV4ImportNavigationPostArgs;
-  '/jetpack/v4/import/pages': JetpackV4ImportPagesPostArgs;
-  '/jetpack/v4/import/posts': JetpackV4ImportPostsPostArgs;
-  '/jetpack/v4/import/tags': JetpackV4ImportTagsPostArgs;
-  '/jetpack/v4/import/template-parts': JetpackV4ImportTemplatePartsPostArgs;
-  '/jetpack/v4/import/templates': JetpackV4ImportTemplatesPostArgs;
+  '/jetpack/v4/import/blocks': {
+    args: JetpackV4ImportBlocksPostArgs;
+    response: JetpackV4ImportBlocksPostResponse;
+  };
+  '/jetpack/v4/import/categories': {
+    args: JetpackV4ImportCategoriesPostArgs;
+    response: JetpackV4ImportCategoriesPostResponse;
+  };
+  '/jetpack/v4/import/comments': {
+    args: JetpackV4ImportCommentsPostArgs;
+    response: JetpackV4ImportCommentsPostResponse;
+  };
+  '/jetpack/v4/import/custom-css': {
+    args: JetpackV4ImportCustomCssPostArgs;
+    response: JetpackV4ImportCustomCssPostResponse;
+  };
+  '/jetpack/v4/import/end': {
+    args: JetpackV4ImportEndPostArgs;
+    response: JetpackV4ImportEndPostResponse;
+  };
+  '/jetpack/v4/import/global-styles': {
+    args: JetpackV4ImportGlobalStylesPostArgs;
+    response: JetpackV4ImportGlobalStylesPostResponse;
+  };
+  '/jetpack/v4/import/media': {
+    args: JetpackV4ImportMediaPostArgs;
+    response: JetpackV4ImportMediaPostResponse;
+  };
+  '/jetpack/v4/import/media/(?P<id>[\\d]+)': {
+    args: JetpackV4ImportMediaPIdDPatchPostPutArgs;
+    response: JetpackV4ImportMediaPIdDPostResponse;
+  };
+  '/jetpack/v4/import/media/(?P<id>[\\d]+)/post-process': {
+    args: JetpackV4ImportMediaPIdDPostProcessPostArgs;
+    response: JetpackV4ImportMediaPIdDPostProcessPostResponse;
+  };
+  '/jetpack/v4/import/menu-items': {
+    args: JetpackV4ImportMenuItemsPostArgs;
+    response: JetpackV4ImportMenuItemsPostResponse;
+  };
+  '/jetpack/v4/import/menus': {
+    args: JetpackV4ImportMenusPostArgs;
+    response: JetpackV4ImportMenusPostResponse;
+  };
+  '/jetpack/v4/import/navigation': {
+    args: JetpackV4ImportNavigationPostArgs;
+    response: JetpackV4ImportNavigationPostResponse;
+  };
+  '/jetpack/v4/import/pages': {
+    args: JetpackV4ImportPagesPostArgs;
+    response: JetpackV4ImportPagesPostResponse;
+  };
+  '/jetpack/v4/import/posts': {
+    args: JetpackV4ImportPostsPostArgs;
+    response: JetpackV4ImportPostsPostResponse;
+  };
+  '/jetpack/v4/import/tags': {
+    args: JetpackV4ImportTagsPostArgs;
+    response: JetpackV4ImportTagsPostResponse;
+  };
+  '/jetpack/v4/import/template-parts': {
+    args: JetpackV4ImportTemplatePartsPostArgs;
+    response: JetpackV4ImportTemplatePartsPostResponse;
+  };
+  '/jetpack/v4/import/templates': {
+    args: JetpackV4ImportTemplatesPostArgs;
+    response: JetpackV4ImportTemplatesPostResponse;
+  };
 }
 
 /**
  * All "jetpack/v4/import" PUT routes.
  */
 export interface JetpackV4ImportPutRoutes {
-  '/jetpack/v4/import/media/(?P<id>[\\d]+)': JetpackV4ImportMediaPIdDPatchPostPutArgs;
+  '/jetpack/v4/import/media/(?P<id>[\\d]+)': {
+    args: JetpackV4ImportMediaPIdDPatchPostPutArgs;
+    response: JetpackV4ImportMediaPIdDPutResponse;
+  };
 }
 
 /**

@@ -1,6 +1,99 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wc-admin" namespace
 
+import {
+  WcAdminGetResponse,
+  WcAdminExperimentsAssignmentGetResponse,
+  WcAdminFeaturesGetResponse,
+  WcAdminMarketingCampaignTypesGetResponse,
+  WcAdminMarketingCampaignsGetResponse,
+  WcAdminMarketingChannelsGetResponse,
+  WcAdminMarketingKnowledgeBaseGetResponse,
+  WcAdminMarketingOverviewActivatePluginPatchResponse,
+  WcAdminMarketingOverviewActivatePluginPostResponse,
+  WcAdminMarketingOverviewActivatePluginPutResponse,
+  WcAdminMarketingOverviewInstalledPluginsGetResponse,
+  WcAdminMarketingRecommendationsGetResponse,
+  WcAdminMarketingRecommendedGetResponse,
+  WcAdminMobileAppGetResponse,
+  WcAdminMobileAppSendMagicLinkGetResponse,
+  WcAdminNavigationFavoritesMeGetResponse,
+  WcAdminNavigationFavoritesMePostResponse,
+  WcAdminNavigationFavoritesMeDeleteResponse,
+  WcAdminOnboardingFreeExtensionsGetResponse,
+  WcAdminOnboardingPluginsInstallAndActivatePostResponse,
+  WcAdminOnboardingPluginsInstallAndActivateAsyncPostResponse,
+  WcAdminOnboardingPluginsJetpackAuthorizationUrlGetResponse,
+  WcAdminOnboardingPluginsScheduledInstallsPJobIdWGetResponse,
+  WcAdminOnboardingProductTypesGetResponse,
+  WcAdminOnboardingProfileGetResponse,
+  WcAdminOnboardingProfilePatchResponse,
+  WcAdminOnboardingProfilePostResponse,
+  WcAdminOnboardingProfilePutResponse,
+  WcAdminOnboardingProfileExperimentalGetEmailPrefillGetResponse,
+  WcAdminOnboardingTasksGetResponse,
+  WcAdminOnboardingTasksPostResponse,
+  WcAdminOnboardingTasksPIdAZ09SnoozePostResponse,
+  WcAdminOnboardingTasksPIdAZ09ActionPatchResponse,
+  WcAdminOnboardingTasksPIdAZ09ActionPostResponse,
+  WcAdminOnboardingTasksPIdAZ09ActionPutResponse,
+  WcAdminOnboardingTasksPIdAZ09DismissPatchResponse,
+  WcAdminOnboardingTasksPIdAZ09DismissPostResponse,
+  WcAdminOnboardingTasksPIdAZ09DismissPutResponse,
+  WcAdminOnboardingTasksPIdAZ09HidePatchResponse,
+  WcAdminOnboardingTasksPIdAZ09HidePostResponse,
+  WcAdminOnboardingTasksPIdAZ09HidePutResponse,
+  WcAdminOnboardingTasksPIdAZ09UndoDismissPatchResponse,
+  WcAdminOnboardingTasksPIdAZ09UndoDismissPostResponse,
+  WcAdminOnboardingTasksPIdAZ09UndoDismissPutResponse,
+  WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchResponse,
+  WcAdminOnboardingTasksPIdAZ09UndoSnoozePostResponse,
+  WcAdminOnboardingTasksPIdAZ09UndoSnoozePutResponse,
+  WcAdminOnboardingTasksPIdAZ09UnhidePatchResponse,
+  WcAdminOnboardingTasksPIdAZ09UnhidePostResponse,
+  WcAdminOnboardingTasksPIdAZ09UnhidePutResponse,
+  WcAdminOnboardingTasksCreateHomepagePostResponse,
+  WcAdminOnboardingTasksCreateProductFromTemplatePostResponse,
+  WcAdminOnboardingTasksImportSampleProductsPostResponse,
+  WcAdminOnboardingThemesActivatePatchResponse,
+  WcAdminOnboardingThemesActivatePostResponse,
+  WcAdminOnboardingThemesActivatePutResponse,
+  WcAdminOnboardingThemesInstallPatchResponse,
+  WcAdminOnboardingThemesInstallPostResponse,
+  WcAdminOnboardingThemesInstallPutResponse,
+  WcAdminOptionsGetResponse,
+  WcAdminOptionsPatchResponse,
+  WcAdminOptionsPostResponse,
+  WcAdminOptionsPutResponse,
+  WcAdminPaymentGatewaySuggestionsGetResponse,
+  WcAdminPaymentGatewaySuggestionsDismissPostResponse,
+  WcAdminPluginsActivatePatchResponse,
+  WcAdminPluginsActivatePostResponse,
+  WcAdminPluginsActivatePutResponse,
+  WcAdminPluginsActivateStatusGetResponse,
+  WcAdminPluginsActivateStatusPJobIdAZ09GetResponse,
+  WcAdminPluginsActiveGetResponse,
+  WcAdminPluginsConnectJetpackGetResponse,
+  WcAdminPluginsConnectSquarePatchResponse,
+  WcAdminPluginsConnectSquarePostResponse,
+  WcAdminPluginsConnectSquarePutResponse,
+  WcAdminPluginsConnectWcpayPatchResponse,
+  WcAdminPluginsConnectWcpayPostResponse,
+  WcAdminPluginsConnectWcpayPutResponse,
+  WcAdminPluginsFinishWccomConnectPostResponse,
+  WcAdminPluginsInstallPatchResponse,
+  WcAdminPluginsInstallPostResponse,
+  WcAdminPluginsInstallPutResponse,
+  WcAdminPluginsInstallStatusGetResponse,
+  WcAdminPluginsInstallStatusPJobIdAZ09GetResponse,
+  WcAdminPluginsInstalledGetResponse,
+  WcAdminPluginsRequestWccomConnectPostResponse,
+  WcAdminShippingPartnerSuggestionsGetResponse,
+  WcAdminThemesPatchResponse,
+  WcAdminThemesPostResponse,
+  WcAdminThemesPutResponse,
+} from './wc-admin-responses.js';
+
 /**
  * Arguments for `/wc-admin` route when calling GET method.
  */
@@ -508,120 +601,390 @@ export interface WcAdminThemesPatchPostPutArgs {
  * All "wc-admin" DELETE routes.
  */
 export interface WcAdminDeleteRoutes {
-  '/wc-admin/navigation/favorites/me': WcAdminNavigationFavoritesMeDeleteArgs;
+  '/wc-admin/navigation/favorites/me': {
+    args: WcAdminNavigationFavoritesMeDeleteArgs;
+    response: WcAdminNavigationFavoritesMeDeleteResponse;
+  };
 }
 
 /**
  * All "wc-admin" GET routes.
  */
 export interface WcAdminGetRoutes {
-  '/wc-admin': WcAdminGetArgs;
-  '/wc-admin/experiments/assignment': WcAdminExperimentsAssignmentGetArgs;
-  '/wc-admin/features': WcAdminFeaturesGetArgs;
-  '/wc-admin/marketing/campaign-types': WcAdminMarketingCampaignTypesGetArgs;
-  '/wc-admin/marketing/campaigns': WcAdminMarketingCampaignsGetArgs;
-  '/wc-admin/marketing/channels': WcAdminMarketingChannelsGetArgs;
-  '/wc-admin/marketing/knowledge-base': WcAdminMarketingKnowledgeBaseGetArgs;
-  '/wc-admin/marketing/overview/installed-plugins': WcAdminMarketingOverviewInstalledPluginsGetArgs;
-  '/wc-admin/marketing/recommendations': WcAdminMarketingRecommendationsGetArgs;
-  '/wc-admin/marketing/recommended': WcAdminMarketingRecommendedGetArgs;
-  '/wc-admin/mobile-app': WcAdminMobileAppGetArgs;
-  '/wc-admin/mobile-app/send-magic-link': WcAdminMobileAppSendMagicLinkGetArgs;
-  '/wc-admin/navigation/favorites/me': WcAdminNavigationFavoritesMeGetArgs;
-  '/wc-admin/onboarding/free-extensions': WcAdminOnboardingFreeExtensionsGetArgs;
-  '/wc-admin/onboarding/plugins/jetpack-authorization-url': WcAdminOnboardingPluginsJetpackAuthorizationUrlGetArgs;
-  '/wc-admin/onboarding/plugins/scheduled-installs/(?P<job_id>\\w+)': WcAdminOnboardingPluginsScheduledInstallsPJobIdWGetArgs;
-  '/wc-admin/onboarding/product-types': WcAdminOnboardingProductTypesGetArgs;
-  '/wc-admin/onboarding/profile': WcAdminOnboardingProfileGetArgs;
-  '/wc-admin/onboarding/profile/experimental_get_email_prefill': WcAdminOnboardingProfileExperimentalGetEmailPrefillGetArgs;
-  '/wc-admin/onboarding/tasks': WcAdminOnboardingTasksGetArgs;
-  '/wc-admin/options': WcAdminOptionsGetArgs;
-  '/wc-admin/payment-gateway-suggestions': WcAdminPaymentGatewaySuggestionsGetArgs;
-  '/wc-admin/plugins/activate/status': WcAdminPluginsActivateStatusGetArgs;
-  '/wc-admin/plugins/activate/status/(?P<job_id>[a-z0-9_\\-]+)': WcAdminPluginsActivateStatusPJobIdAZ09GetArgs;
-  '/wc-admin/plugins/active': WcAdminPluginsActiveGetArgs;
-  '/wc-admin/plugins/connect-jetpack': WcAdminPluginsConnectJetpackGetArgs;
-  '/wc-admin/plugins/install/status': WcAdminPluginsInstallStatusGetArgs;
-  '/wc-admin/plugins/install/status/(?P<job_id>[a-z0-9_\\-]+)': WcAdminPluginsInstallStatusPJobIdAZ09GetArgs;
-  '/wc-admin/plugins/installed': WcAdminPluginsInstalledGetArgs;
-  '/wc-admin/shipping-partner-suggestions': WcAdminShippingPartnerSuggestionsGetArgs;
+  '/wc-admin': {
+    args: WcAdminGetArgs;
+    response: WcAdminGetResponse;
+  };
+  '/wc-admin/experiments/assignment': {
+    args: WcAdminExperimentsAssignmentGetArgs;
+    response: WcAdminExperimentsAssignmentGetResponse;
+  };
+  '/wc-admin/features': {
+    args: WcAdminFeaturesGetArgs;
+    response: WcAdminFeaturesGetResponse;
+  };
+  '/wc-admin/marketing/campaign-types': {
+    args: WcAdminMarketingCampaignTypesGetArgs;
+    response: WcAdminMarketingCampaignTypesGetResponse;
+  };
+  '/wc-admin/marketing/campaigns': {
+    args: WcAdminMarketingCampaignsGetArgs;
+    response: WcAdminMarketingCampaignsGetResponse;
+  };
+  '/wc-admin/marketing/channels': {
+    args: WcAdminMarketingChannelsGetArgs;
+    response: WcAdminMarketingChannelsGetResponse;
+  };
+  '/wc-admin/marketing/knowledge-base': {
+    args: WcAdminMarketingKnowledgeBaseGetArgs;
+    response: WcAdminMarketingKnowledgeBaseGetResponse;
+  };
+  '/wc-admin/marketing/overview/installed-plugins': {
+    args: WcAdminMarketingOverviewInstalledPluginsGetArgs;
+    response: WcAdminMarketingOverviewInstalledPluginsGetResponse;
+  };
+  '/wc-admin/marketing/recommendations': {
+    args: WcAdminMarketingRecommendationsGetArgs;
+    response: WcAdminMarketingRecommendationsGetResponse;
+  };
+  '/wc-admin/marketing/recommended': {
+    args: WcAdminMarketingRecommendedGetArgs;
+    response: WcAdminMarketingRecommendedGetResponse;
+  };
+  '/wc-admin/mobile-app': {
+    args: WcAdminMobileAppGetArgs;
+    response: WcAdminMobileAppGetResponse;
+  };
+  '/wc-admin/mobile-app/send-magic-link': {
+    args: WcAdminMobileAppSendMagicLinkGetArgs;
+    response: WcAdminMobileAppSendMagicLinkGetResponse;
+  };
+  '/wc-admin/navigation/favorites/me': {
+    args: WcAdminNavigationFavoritesMeGetArgs;
+    response: WcAdminNavigationFavoritesMeGetResponse;
+  };
+  '/wc-admin/onboarding/free-extensions': {
+    args: WcAdminOnboardingFreeExtensionsGetArgs;
+    response: WcAdminOnboardingFreeExtensionsGetResponse;
+  };
+  '/wc-admin/onboarding/plugins/jetpack-authorization-url': {
+    args: WcAdminOnboardingPluginsJetpackAuthorizationUrlGetArgs;
+    response: WcAdminOnboardingPluginsJetpackAuthorizationUrlGetResponse;
+  };
+  '/wc-admin/onboarding/plugins/scheduled-installs/(?P<job_id>\\w+)': {
+    args: WcAdminOnboardingPluginsScheduledInstallsPJobIdWGetArgs;
+    response: WcAdminOnboardingPluginsScheduledInstallsPJobIdWGetResponse;
+  };
+  '/wc-admin/onboarding/product-types': {
+    args: WcAdminOnboardingProductTypesGetArgs;
+    response: WcAdminOnboardingProductTypesGetResponse;
+  };
+  '/wc-admin/onboarding/profile': {
+    args: WcAdminOnboardingProfileGetArgs;
+    response: WcAdminOnboardingProfileGetResponse;
+  };
+  '/wc-admin/onboarding/profile/experimental_get_email_prefill': {
+    args: WcAdminOnboardingProfileExperimentalGetEmailPrefillGetArgs;
+    response: WcAdminOnboardingProfileExperimentalGetEmailPrefillGetResponse;
+  };
+  '/wc-admin/onboarding/tasks': {
+    args: WcAdminOnboardingTasksGetArgs;
+    response: WcAdminOnboardingTasksGetResponse;
+  };
+  '/wc-admin/options': {
+    args: WcAdminOptionsGetArgs;
+    response: WcAdminOptionsGetResponse;
+  };
+  '/wc-admin/payment-gateway-suggestions': {
+    args: WcAdminPaymentGatewaySuggestionsGetArgs;
+    response: WcAdminPaymentGatewaySuggestionsGetResponse;
+  };
+  '/wc-admin/plugins/activate/status': {
+    args: WcAdminPluginsActivateStatusGetArgs;
+    response: WcAdminPluginsActivateStatusGetResponse;
+  };
+  '/wc-admin/plugins/activate/status/(?P<job_id>[a-z0-9_\\-]+)': {
+    args: WcAdminPluginsActivateStatusPJobIdAZ09GetArgs;
+    response: WcAdminPluginsActivateStatusPJobIdAZ09GetResponse;
+  };
+  '/wc-admin/plugins/active': {
+    args: WcAdminPluginsActiveGetArgs;
+    response: WcAdminPluginsActiveGetResponse;
+  };
+  '/wc-admin/plugins/connect-jetpack': {
+    args: WcAdminPluginsConnectJetpackGetArgs;
+    response: WcAdminPluginsConnectJetpackGetResponse;
+  };
+  '/wc-admin/plugins/install/status': {
+    args: WcAdminPluginsInstallStatusGetArgs;
+    response: WcAdminPluginsInstallStatusGetResponse;
+  };
+  '/wc-admin/plugins/install/status/(?P<job_id>[a-z0-9_\\-]+)': {
+    args: WcAdminPluginsInstallStatusPJobIdAZ09GetArgs;
+    response: WcAdminPluginsInstallStatusPJobIdAZ09GetResponse;
+  };
+  '/wc-admin/plugins/installed': {
+    args: WcAdminPluginsInstalledGetArgs;
+    response: WcAdminPluginsInstalledGetResponse;
+  };
+  '/wc-admin/shipping-partner-suggestions': {
+    args: WcAdminShippingPartnerSuggestionsGetArgs;
+    response: WcAdminShippingPartnerSuggestionsGetResponse;
+  };
 }
 
 /**
  * All "wc-admin" PATCH routes.
  */
 export interface WcAdminPatchRoutes {
-  '/wc-admin/marketing/overview/activate-plugin': WcAdminMarketingOverviewActivatePluginPatchPostPutArgs;
-  '/wc-admin/onboarding/profile': WcAdminOnboardingProfilePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/action': WcAdminOnboardingTasksPIdAZ09ActionPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/dismiss': WcAdminOnboardingTasksPIdAZ09DismissPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/hide': WcAdminOnboardingTasksPIdAZ09HidePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_dismiss': WcAdminOnboardingTasksPIdAZ09UndoDismissPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_snooze': WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/unhide': WcAdminOnboardingTasksPIdAZ09UnhidePatchPostPutArgs;
-  '/wc-admin/onboarding/themes/activate': WcAdminOnboardingThemesActivatePatchPostPutArgs;
-  '/wc-admin/onboarding/themes/install': WcAdminOnboardingThemesInstallPatchPostPutArgs;
-  '/wc-admin/options': WcAdminOptionsPatchPostPutArgs;
-  '/wc-admin/plugins/activate': WcAdminPluginsActivatePatchPostPutArgs;
-  '/wc-admin/plugins/connect-square': WcAdminPluginsConnectSquarePatchPostPutArgs;
-  '/wc-admin/plugins/connect-wcpay': WcAdminPluginsConnectWcpayPatchPostPutArgs;
-  '/wc-admin/plugins/install': WcAdminPluginsInstallPatchPostPutArgs;
-  '/wc-admin/themes': WcAdminThemesPatchPostPutArgs;
+  '/wc-admin/marketing/overview/activate-plugin': {
+    args: WcAdminMarketingOverviewActivatePluginPatchPostPutArgs;
+    response: WcAdminMarketingOverviewActivatePluginPatchResponse;
+  };
+  '/wc-admin/onboarding/profile': {
+    args: WcAdminOnboardingProfilePatchPostPutArgs;
+    response: WcAdminOnboardingProfilePatchResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/action': {
+    args: WcAdminOnboardingTasksPIdAZ09ActionPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09ActionPatchResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/dismiss': {
+    args: WcAdminOnboardingTasksPIdAZ09DismissPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09DismissPatchResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/hide': {
+    args: WcAdminOnboardingTasksPIdAZ09HidePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09HidePatchResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_dismiss': {
+    args: WcAdminOnboardingTasksPIdAZ09UndoDismissPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UndoDismissPatchResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_snooze': {
+    args: WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/unhide': {
+    args: WcAdminOnboardingTasksPIdAZ09UnhidePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UnhidePatchResponse;
+  };
+  '/wc-admin/onboarding/themes/activate': {
+    args: WcAdminOnboardingThemesActivatePatchPostPutArgs;
+    response: WcAdminOnboardingThemesActivatePatchResponse;
+  };
+  '/wc-admin/onboarding/themes/install': {
+    args: WcAdminOnboardingThemesInstallPatchPostPutArgs;
+    response: WcAdminOnboardingThemesInstallPatchResponse;
+  };
+  '/wc-admin/options': {
+    args: WcAdminOptionsPatchPostPutArgs;
+    response: WcAdminOptionsPatchResponse;
+  };
+  '/wc-admin/plugins/activate': {
+    args: WcAdminPluginsActivatePatchPostPutArgs;
+    response: WcAdminPluginsActivatePatchResponse;
+  };
+  '/wc-admin/plugins/connect-square': {
+    args: WcAdminPluginsConnectSquarePatchPostPutArgs;
+    response: WcAdminPluginsConnectSquarePatchResponse;
+  };
+  '/wc-admin/plugins/connect-wcpay': {
+    args: WcAdminPluginsConnectWcpayPatchPostPutArgs;
+    response: WcAdminPluginsConnectWcpayPatchResponse;
+  };
+  '/wc-admin/plugins/install': {
+    args: WcAdminPluginsInstallPatchPostPutArgs;
+    response: WcAdminPluginsInstallPatchResponse;
+  };
+  '/wc-admin/themes': {
+    args: WcAdminThemesPatchPostPutArgs;
+    response: WcAdminThemesPatchResponse;
+  };
 }
 
 /**
  * All "wc-admin" POST routes.
  */
 export interface WcAdminPostRoutes {
-  '/wc-admin/marketing/overview/activate-plugin': WcAdminMarketingOverviewActivatePluginPatchPostPutArgs;
-  '/wc-admin/navigation/favorites/me': WcAdminNavigationFavoritesMePostArgs;
-  '/wc-admin/onboarding/plugins/install-and-activate': WcAdminOnboardingPluginsInstallAndActivatePostArgs;
-  '/wc-admin/onboarding/plugins/install-and-activate-async': WcAdminOnboardingPluginsInstallAndActivateAsyncPostArgs;
-  '/wc-admin/onboarding/profile': WcAdminOnboardingProfilePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks': WcAdminOnboardingTasksPostArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_-]+)/snooze': WcAdminOnboardingTasksPIdAZ09SnoozePostArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/action': WcAdminOnboardingTasksPIdAZ09ActionPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/dismiss': WcAdminOnboardingTasksPIdAZ09DismissPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/hide': WcAdminOnboardingTasksPIdAZ09HidePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_dismiss': WcAdminOnboardingTasksPIdAZ09UndoDismissPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_snooze': WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/unhide': WcAdminOnboardingTasksPIdAZ09UnhidePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/create_homepage': WcAdminOnboardingTasksCreateHomepagePostArgs;
-  '/wc-admin/onboarding/tasks/create_product_from_template': WcAdminOnboardingTasksCreateProductFromTemplatePostArgs;
-  '/wc-admin/onboarding/tasks/import_sample_products': WcAdminOnboardingTasksImportSampleProductsPostArgs;
-  '/wc-admin/onboarding/themes/activate': WcAdminOnboardingThemesActivatePatchPostPutArgs;
-  '/wc-admin/onboarding/themes/install': WcAdminOnboardingThemesInstallPatchPostPutArgs;
-  '/wc-admin/options': WcAdminOptionsPatchPostPutArgs;
-  '/wc-admin/payment-gateway-suggestions/dismiss': WcAdminPaymentGatewaySuggestionsDismissPostArgs;
-  '/wc-admin/plugins/activate': WcAdminPluginsActivatePatchPostPutArgs;
-  '/wc-admin/plugins/connect-square': WcAdminPluginsConnectSquarePatchPostPutArgs;
-  '/wc-admin/plugins/connect-wcpay': WcAdminPluginsConnectWcpayPatchPostPutArgs;
-  '/wc-admin/plugins/finish-wccom-connect': WcAdminPluginsFinishWccomConnectPostArgs;
-  '/wc-admin/plugins/install': WcAdminPluginsInstallPatchPostPutArgs;
-  '/wc-admin/plugins/request-wccom-connect': WcAdminPluginsRequestWccomConnectPostArgs;
-  '/wc-admin/themes': WcAdminThemesPatchPostPutArgs;
+  '/wc-admin/marketing/overview/activate-plugin': {
+    args: WcAdminMarketingOverviewActivatePluginPatchPostPutArgs;
+    response: WcAdminMarketingOverviewActivatePluginPostResponse;
+  };
+  '/wc-admin/navigation/favorites/me': {
+    args: WcAdminNavigationFavoritesMePostArgs;
+    response: WcAdminNavigationFavoritesMePostResponse;
+  };
+  '/wc-admin/onboarding/plugins/install-and-activate': {
+    args: WcAdminOnboardingPluginsInstallAndActivatePostArgs;
+    response: WcAdminOnboardingPluginsInstallAndActivatePostResponse;
+  };
+  '/wc-admin/onboarding/plugins/install-and-activate-async': {
+    args: WcAdminOnboardingPluginsInstallAndActivateAsyncPostArgs;
+    response: WcAdminOnboardingPluginsInstallAndActivateAsyncPostResponse;
+  };
+  '/wc-admin/onboarding/profile': {
+    args: WcAdminOnboardingProfilePatchPostPutArgs;
+    response: WcAdminOnboardingProfilePostResponse;
+  };
+  '/wc-admin/onboarding/tasks': {
+    args: WcAdminOnboardingTasksPostArgs;
+    response: WcAdminOnboardingTasksPostResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_-]+)/snooze': {
+    args: WcAdminOnboardingTasksPIdAZ09SnoozePostArgs;
+    response: WcAdminOnboardingTasksPIdAZ09SnoozePostResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/action': {
+    args: WcAdminOnboardingTasksPIdAZ09ActionPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09ActionPostResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/dismiss': {
+    args: WcAdminOnboardingTasksPIdAZ09DismissPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09DismissPostResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/hide': {
+    args: WcAdminOnboardingTasksPIdAZ09HidePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09HidePostResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_dismiss': {
+    args: WcAdminOnboardingTasksPIdAZ09UndoDismissPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UndoDismissPostResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_snooze': {
+    args: WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UndoSnoozePostResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/unhide': {
+    args: WcAdminOnboardingTasksPIdAZ09UnhidePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UnhidePostResponse;
+  };
+  '/wc-admin/onboarding/tasks/create_homepage': {
+    args: WcAdminOnboardingTasksCreateHomepagePostArgs;
+    response: WcAdminOnboardingTasksCreateHomepagePostResponse;
+  };
+  '/wc-admin/onboarding/tasks/create_product_from_template': {
+    args: WcAdminOnboardingTasksCreateProductFromTemplatePostArgs;
+    response: WcAdminOnboardingTasksCreateProductFromTemplatePostResponse;
+  };
+  '/wc-admin/onboarding/tasks/import_sample_products': {
+    args: WcAdminOnboardingTasksImportSampleProductsPostArgs;
+    response: WcAdminOnboardingTasksImportSampleProductsPostResponse;
+  };
+  '/wc-admin/onboarding/themes/activate': {
+    args: WcAdminOnboardingThemesActivatePatchPostPutArgs;
+    response: WcAdminOnboardingThemesActivatePostResponse;
+  };
+  '/wc-admin/onboarding/themes/install': {
+    args: WcAdminOnboardingThemesInstallPatchPostPutArgs;
+    response: WcAdminOnboardingThemesInstallPostResponse;
+  };
+  '/wc-admin/options': {
+    args: WcAdminOptionsPatchPostPutArgs;
+    response: WcAdminOptionsPostResponse;
+  };
+  '/wc-admin/payment-gateway-suggestions/dismiss': {
+    args: WcAdminPaymentGatewaySuggestionsDismissPostArgs;
+    response: WcAdminPaymentGatewaySuggestionsDismissPostResponse;
+  };
+  '/wc-admin/plugins/activate': {
+    args: WcAdminPluginsActivatePatchPostPutArgs;
+    response: WcAdminPluginsActivatePostResponse;
+  };
+  '/wc-admin/plugins/connect-square': {
+    args: WcAdminPluginsConnectSquarePatchPostPutArgs;
+    response: WcAdminPluginsConnectSquarePostResponse;
+  };
+  '/wc-admin/plugins/connect-wcpay': {
+    args: WcAdminPluginsConnectWcpayPatchPostPutArgs;
+    response: WcAdminPluginsConnectWcpayPostResponse;
+  };
+  '/wc-admin/plugins/finish-wccom-connect': {
+    args: WcAdminPluginsFinishWccomConnectPostArgs;
+    response: WcAdminPluginsFinishWccomConnectPostResponse;
+  };
+  '/wc-admin/plugins/install': {
+    args: WcAdminPluginsInstallPatchPostPutArgs;
+    response: WcAdminPluginsInstallPostResponse;
+  };
+  '/wc-admin/plugins/request-wccom-connect': {
+    args: WcAdminPluginsRequestWccomConnectPostArgs;
+    response: WcAdminPluginsRequestWccomConnectPostResponse;
+  };
+  '/wc-admin/themes': {
+    args: WcAdminThemesPatchPostPutArgs;
+    response: WcAdminThemesPostResponse;
+  };
 }
 
 /**
  * All "wc-admin" PUT routes.
  */
 export interface WcAdminPutRoutes {
-  '/wc-admin/marketing/overview/activate-plugin': WcAdminMarketingOverviewActivatePluginPatchPostPutArgs;
-  '/wc-admin/onboarding/profile': WcAdminOnboardingProfilePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/action': WcAdminOnboardingTasksPIdAZ09ActionPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/dismiss': WcAdminOnboardingTasksPIdAZ09DismissPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/hide': WcAdminOnboardingTasksPIdAZ09HidePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_dismiss': WcAdminOnboardingTasksPIdAZ09UndoDismissPatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_snooze': WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchPostPutArgs;
-  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/unhide': WcAdminOnboardingTasksPIdAZ09UnhidePatchPostPutArgs;
-  '/wc-admin/onboarding/themes/activate': WcAdminOnboardingThemesActivatePatchPostPutArgs;
-  '/wc-admin/onboarding/themes/install': WcAdminOnboardingThemesInstallPatchPostPutArgs;
-  '/wc-admin/options': WcAdminOptionsPatchPostPutArgs;
-  '/wc-admin/plugins/activate': WcAdminPluginsActivatePatchPostPutArgs;
-  '/wc-admin/plugins/connect-square': WcAdminPluginsConnectSquarePatchPostPutArgs;
-  '/wc-admin/plugins/connect-wcpay': WcAdminPluginsConnectWcpayPatchPostPutArgs;
-  '/wc-admin/plugins/install': WcAdminPluginsInstallPatchPostPutArgs;
-  '/wc-admin/themes': WcAdminThemesPatchPostPutArgs;
+  '/wc-admin/marketing/overview/activate-plugin': {
+    args: WcAdminMarketingOverviewActivatePluginPatchPostPutArgs;
+    response: WcAdminMarketingOverviewActivatePluginPutResponse;
+  };
+  '/wc-admin/onboarding/profile': {
+    args: WcAdminOnboardingProfilePatchPostPutArgs;
+    response: WcAdminOnboardingProfilePutResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/action': {
+    args: WcAdminOnboardingTasksPIdAZ09ActionPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09ActionPutResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/dismiss': {
+    args: WcAdminOnboardingTasksPIdAZ09DismissPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09DismissPutResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/hide': {
+    args: WcAdminOnboardingTasksPIdAZ09HidePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09HidePutResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_dismiss': {
+    args: WcAdminOnboardingTasksPIdAZ09UndoDismissPatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UndoDismissPutResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/undo_snooze': {
+    args: WcAdminOnboardingTasksPIdAZ09UndoSnoozePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UndoSnoozePutResponse;
+  };
+  '/wc-admin/onboarding/tasks/(?P<id>[a-z0-9_\\-]+)/unhide': {
+    args: WcAdminOnboardingTasksPIdAZ09UnhidePatchPostPutArgs;
+    response: WcAdminOnboardingTasksPIdAZ09UnhidePutResponse;
+  };
+  '/wc-admin/onboarding/themes/activate': {
+    args: WcAdminOnboardingThemesActivatePatchPostPutArgs;
+    response: WcAdminOnboardingThemesActivatePutResponse;
+  };
+  '/wc-admin/onboarding/themes/install': {
+    args: WcAdminOnboardingThemesInstallPatchPostPutArgs;
+    response: WcAdminOnboardingThemesInstallPutResponse;
+  };
+  '/wc-admin/options': {
+    args: WcAdminOptionsPatchPostPutArgs;
+    response: WcAdminOptionsPutResponse;
+  };
+  '/wc-admin/plugins/activate': {
+    args: WcAdminPluginsActivatePatchPostPutArgs;
+    response: WcAdminPluginsActivatePutResponse;
+  };
+  '/wc-admin/plugins/connect-square': {
+    args: WcAdminPluginsConnectSquarePatchPostPutArgs;
+    response: WcAdminPluginsConnectSquarePutResponse;
+  };
+  '/wc-admin/plugins/connect-wcpay': {
+    args: WcAdminPluginsConnectWcpayPatchPostPutArgs;
+    response: WcAdminPluginsConnectWcpayPutResponse;
+  };
+  '/wc-admin/plugins/install': {
+    args: WcAdminPluginsInstallPatchPostPutArgs;
+    response: WcAdminPluginsInstallPutResponse;
+  };
+  '/wc-admin/themes': {
+    args: WcAdminThemesPatchPostPutArgs;
+    response: WcAdminThemesPutResponse;
+  };
 }
 
 /**

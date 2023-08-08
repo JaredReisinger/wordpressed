@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "kb-mailerlite/v1" namespace
 
+import {
+  KbMailerliteV1GetResponse,
+  KbMailerliteV1GetGetResponse,
+} from './kb-mailerlite-v1-responses.js';
+
 /**
  * Arguments for `/kb-mailerlite/v1` route when calling GET method.
  */
@@ -53,8 +58,14 @@ export interface KbMailerliteV1DeleteRoutes {}
  * All "kb-mailerlite/v1" GET routes.
  */
 export interface KbMailerliteV1GetRoutes {
-  '/kb-mailerlite/v1': KbMailerliteV1GetArgs;
-  '/kb-mailerlite/v1/get': KbMailerliteV1GetGetArgs;
+  '/kb-mailerlite/v1': {
+    args: KbMailerliteV1GetArgs;
+    response: KbMailerliteV1GetResponse;
+  };
+  '/kb-mailerlite/v1/get': {
+    args: KbMailerliteV1GetGetArgs;
+    response: KbMailerliteV1GetGetResponse;
+  };
 }
 
 /**

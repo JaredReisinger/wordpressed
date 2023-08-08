@@ -1,6 +1,46 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wc/store/v1" namespace
 
+import {
+  WcStoreV1GetResponse,
+  WcStoreV1BatchPostResponse,
+  WcStoreV1CartGetResponse,
+  WcStoreV1CartAddItemPostResponse,
+  WcStoreV1CartApplyCouponPostResponse,
+  WcStoreV1CartCouponsGetResponse,
+  WcStoreV1CartCouponsPostResponse,
+  WcStoreV1CartCouponsDeleteResponse,
+  WcStoreV1CartCouponsPCodeWGetResponse,
+  WcStoreV1CartCouponsPCodeWDeleteResponse,
+  WcStoreV1CartExtensionsPostResponse,
+  WcStoreV1CartItemsGetResponse,
+  WcStoreV1CartItemsPostResponse,
+  WcStoreV1CartItemsDeleteResponse,
+  WcStoreV1CartItemsPKeyW32GetResponse,
+  WcStoreV1CartItemsPKeyW32PatchResponse,
+  WcStoreV1CartItemsPKeyW32PostResponse,
+  WcStoreV1CartItemsPKeyW32PutResponse,
+  WcStoreV1CartItemsPKeyW32DeleteResponse,
+  WcStoreV1CartRemoveCouponPostResponse,
+  WcStoreV1CartRemoveItemPostResponse,
+  WcStoreV1CartSelectShippingRatePostResponse,
+  WcStoreV1CartUpdateCustomerPostResponse,
+  WcStoreV1CartUpdateItemPostResponse,
+  WcStoreV1CheckoutGetResponse,
+  WcStoreV1CheckoutPostResponse,
+  WcStoreV1ProductsGetResponse,
+  WcStoreV1ProductsPIdDGetResponse,
+  WcStoreV1ProductsPSlugSGetResponse,
+  WcStoreV1ProductsAttributesGetResponse,
+  WcStoreV1ProductsAttributesPAttributeIdDTermsGetResponse,
+  WcStoreV1ProductsAttributesPIdDGetResponse,
+  WcStoreV1ProductsCategoriesGetResponse,
+  WcStoreV1ProductsCategoriesPIdDGetResponse,
+  WcStoreV1ProductsCollectionDataGetResponse,
+  WcStoreV1ProductsReviewsGetResponse,
+  WcStoreV1ProductsTagsGetResponse,
+} from './wc-store-v1-responses.js';
+
 /**
  * Arguments for `/wc/store/v1` route when calling GET method.
  */
@@ -903,67 +943,178 @@ export interface WcStoreV1ProductsTagsGetArgs {
  * All "wc/store/v1" DELETE routes.
  */
 export interface WcStoreV1DeleteRoutes {
-  '/wc/store/v1/cart/coupons': WcStoreV1CartCouponsDeleteArgs;
-  '/wc/store/v1/cart/coupons/(?P<code>[\\w-]+)': WcStoreV1CartCouponsPCodeWDeleteArgs;
-  '/wc/store/v1/cart/items': WcStoreV1CartItemsDeleteArgs;
-  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': WcStoreV1CartItemsPKeyW32DeleteArgs;
+  '/wc/store/v1/cart/coupons': {
+    args: WcStoreV1CartCouponsDeleteArgs;
+    response: WcStoreV1CartCouponsDeleteResponse;
+  };
+  '/wc/store/v1/cart/coupons/(?P<code>[\\w-]+)': {
+    args: WcStoreV1CartCouponsPCodeWDeleteArgs;
+    response: WcStoreV1CartCouponsPCodeWDeleteResponse;
+  };
+  '/wc/store/v1/cart/items': {
+    args: WcStoreV1CartItemsDeleteArgs;
+    response: WcStoreV1CartItemsDeleteResponse;
+  };
+  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': {
+    args: WcStoreV1CartItemsPKeyW32DeleteArgs;
+    response: WcStoreV1CartItemsPKeyW32DeleteResponse;
+  };
 }
 
 /**
  * All "wc/store/v1" GET routes.
  */
 export interface WcStoreV1GetRoutes {
-  '/wc/store/v1': WcStoreV1GetArgs;
-  '/wc/store/v1/cart': WcStoreV1CartGetArgs;
-  '/wc/store/v1/cart/coupons': WcStoreV1CartCouponsGetArgs;
-  '/wc/store/v1/cart/coupons/(?P<code>[\\w-]+)': WcStoreV1CartCouponsPCodeWGetArgs;
-  '/wc/store/v1/cart/items': WcStoreV1CartItemsGetArgs;
-  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': WcStoreV1CartItemsPKeyW32GetArgs;
-  '/wc/store/v1/checkout': WcStoreV1CheckoutGetArgs;
-  '/wc/store/v1/products': WcStoreV1ProductsGetArgs;
-  '/wc/store/v1/products/(?P<id>[\\d]+)': WcStoreV1ProductsPIdDGetArgs;
-  '/wc/store/v1/products/(?P<slug>[\\S]+)': WcStoreV1ProductsPSlugSGetArgs;
-  '/wc/store/v1/products/attributes': WcStoreV1ProductsAttributesGetArgs;
-  '/wc/store/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms': WcStoreV1ProductsAttributesPAttributeIdDTermsGetArgs;
-  '/wc/store/v1/products/attributes/(?P<id>[\\d]+)': WcStoreV1ProductsAttributesPIdDGetArgs;
-  '/wc/store/v1/products/categories': WcStoreV1ProductsCategoriesGetArgs;
-  '/wc/store/v1/products/categories/(?P<id>[\\d]+)': WcStoreV1ProductsCategoriesPIdDGetArgs;
-  '/wc/store/v1/products/collection-data': WcStoreV1ProductsCollectionDataGetArgs;
-  '/wc/store/v1/products/reviews': WcStoreV1ProductsReviewsGetArgs;
-  '/wc/store/v1/products/tags': WcStoreV1ProductsTagsGetArgs;
+  '/wc/store/v1': {
+    args: WcStoreV1GetArgs;
+    response: WcStoreV1GetResponse;
+  };
+  '/wc/store/v1/cart': {
+    args: WcStoreV1CartGetArgs;
+    response: WcStoreV1CartGetResponse;
+  };
+  '/wc/store/v1/cart/coupons': {
+    args: WcStoreV1CartCouponsGetArgs;
+    response: WcStoreV1CartCouponsGetResponse;
+  };
+  '/wc/store/v1/cart/coupons/(?P<code>[\\w-]+)': {
+    args: WcStoreV1CartCouponsPCodeWGetArgs;
+    response: WcStoreV1CartCouponsPCodeWGetResponse;
+  };
+  '/wc/store/v1/cart/items': {
+    args: WcStoreV1CartItemsGetArgs;
+    response: WcStoreV1CartItemsGetResponse;
+  };
+  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': {
+    args: WcStoreV1CartItemsPKeyW32GetArgs;
+    response: WcStoreV1CartItemsPKeyW32GetResponse;
+  };
+  '/wc/store/v1/checkout': {
+    args: WcStoreV1CheckoutGetArgs;
+    response: WcStoreV1CheckoutGetResponse;
+  };
+  '/wc/store/v1/products': {
+    args: WcStoreV1ProductsGetArgs;
+    response: WcStoreV1ProductsGetResponse;
+  };
+  '/wc/store/v1/products/(?P<id>[\\d]+)': {
+    args: WcStoreV1ProductsPIdDGetArgs;
+    response: WcStoreV1ProductsPIdDGetResponse;
+  };
+  '/wc/store/v1/products/(?P<slug>[\\S]+)': {
+    args: WcStoreV1ProductsPSlugSGetArgs;
+    response: WcStoreV1ProductsPSlugSGetResponse;
+  };
+  '/wc/store/v1/products/attributes': {
+    args: WcStoreV1ProductsAttributesGetArgs;
+    response: WcStoreV1ProductsAttributesGetResponse;
+  };
+  '/wc/store/v1/products/attributes/(?P<attribute_id>[\\d]+)/terms': {
+    args: WcStoreV1ProductsAttributesPAttributeIdDTermsGetArgs;
+    response: WcStoreV1ProductsAttributesPAttributeIdDTermsGetResponse;
+  };
+  '/wc/store/v1/products/attributes/(?P<id>[\\d]+)': {
+    args: WcStoreV1ProductsAttributesPIdDGetArgs;
+    response: WcStoreV1ProductsAttributesPIdDGetResponse;
+  };
+  '/wc/store/v1/products/categories': {
+    args: WcStoreV1ProductsCategoriesGetArgs;
+    response: WcStoreV1ProductsCategoriesGetResponse;
+  };
+  '/wc/store/v1/products/categories/(?P<id>[\\d]+)': {
+    args: WcStoreV1ProductsCategoriesPIdDGetArgs;
+    response: WcStoreV1ProductsCategoriesPIdDGetResponse;
+  };
+  '/wc/store/v1/products/collection-data': {
+    args: WcStoreV1ProductsCollectionDataGetArgs;
+    response: WcStoreV1ProductsCollectionDataGetResponse;
+  };
+  '/wc/store/v1/products/reviews': {
+    args: WcStoreV1ProductsReviewsGetArgs;
+    response: WcStoreV1ProductsReviewsGetResponse;
+  };
+  '/wc/store/v1/products/tags': {
+    args: WcStoreV1ProductsTagsGetArgs;
+    response: WcStoreV1ProductsTagsGetResponse;
+  };
 }
 
 /**
  * All "wc/store/v1" PATCH routes.
  */
 export interface WcStoreV1PatchRoutes {
-  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': WcStoreV1CartItemsPKeyW32PatchPostPutArgs;
+  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': {
+    args: WcStoreV1CartItemsPKeyW32PatchPostPutArgs;
+    response: WcStoreV1CartItemsPKeyW32PatchResponse;
+  };
 }
 
 /**
  * All "wc/store/v1" POST routes.
  */
 export interface WcStoreV1PostRoutes {
-  '/wc/store/v1/batch': WcStoreV1BatchPostArgs;
-  '/wc/store/v1/cart/add-item': WcStoreV1CartAddItemPostArgs;
-  '/wc/store/v1/cart/apply-coupon': WcStoreV1CartApplyCouponPostArgs;
-  '/wc/store/v1/cart/coupons': WcStoreV1CartCouponsPostArgs;
-  '/wc/store/v1/cart/extensions': WcStoreV1CartExtensionsPostArgs;
-  '/wc/store/v1/cart/items': WcStoreV1CartItemsPostArgs;
-  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': WcStoreV1CartItemsPKeyW32PatchPostPutArgs;
-  '/wc/store/v1/cart/remove-coupon': WcStoreV1CartRemoveCouponPostArgs;
-  '/wc/store/v1/cart/remove-item': WcStoreV1CartRemoveItemPostArgs;
-  '/wc/store/v1/cart/select-shipping-rate': WcStoreV1CartSelectShippingRatePostArgs;
-  '/wc/store/v1/cart/update-customer': WcStoreV1CartUpdateCustomerPostArgs;
-  '/wc/store/v1/cart/update-item': WcStoreV1CartUpdateItemPostArgs;
-  '/wc/store/v1/checkout': WcStoreV1CheckoutPostArgs;
+  '/wc/store/v1/batch': {
+    args: WcStoreV1BatchPostArgs;
+    response: WcStoreV1BatchPostResponse;
+  };
+  '/wc/store/v1/cart/add-item': {
+    args: WcStoreV1CartAddItemPostArgs;
+    response: WcStoreV1CartAddItemPostResponse;
+  };
+  '/wc/store/v1/cart/apply-coupon': {
+    args: WcStoreV1CartApplyCouponPostArgs;
+    response: WcStoreV1CartApplyCouponPostResponse;
+  };
+  '/wc/store/v1/cart/coupons': {
+    args: WcStoreV1CartCouponsPostArgs;
+    response: WcStoreV1CartCouponsPostResponse;
+  };
+  '/wc/store/v1/cart/extensions': {
+    args: WcStoreV1CartExtensionsPostArgs;
+    response: WcStoreV1CartExtensionsPostResponse;
+  };
+  '/wc/store/v1/cart/items': {
+    args: WcStoreV1CartItemsPostArgs;
+    response: WcStoreV1CartItemsPostResponse;
+  };
+  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': {
+    args: WcStoreV1CartItemsPKeyW32PatchPostPutArgs;
+    response: WcStoreV1CartItemsPKeyW32PostResponse;
+  };
+  '/wc/store/v1/cart/remove-coupon': {
+    args: WcStoreV1CartRemoveCouponPostArgs;
+    response: WcStoreV1CartRemoveCouponPostResponse;
+  };
+  '/wc/store/v1/cart/remove-item': {
+    args: WcStoreV1CartRemoveItemPostArgs;
+    response: WcStoreV1CartRemoveItemPostResponse;
+  };
+  '/wc/store/v1/cart/select-shipping-rate': {
+    args: WcStoreV1CartSelectShippingRatePostArgs;
+    response: WcStoreV1CartSelectShippingRatePostResponse;
+  };
+  '/wc/store/v1/cart/update-customer': {
+    args: WcStoreV1CartUpdateCustomerPostArgs;
+    response: WcStoreV1CartUpdateCustomerPostResponse;
+  };
+  '/wc/store/v1/cart/update-item': {
+    args: WcStoreV1CartUpdateItemPostArgs;
+    response: WcStoreV1CartUpdateItemPostResponse;
+  };
+  '/wc/store/v1/checkout': {
+    args: WcStoreV1CheckoutPostArgs;
+    response: WcStoreV1CheckoutPostResponse;
+  };
 }
 
 /**
  * All "wc/store/v1" PUT routes.
  */
 export interface WcStoreV1PutRoutes {
-  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': WcStoreV1CartItemsPKeyW32PatchPostPutArgs;
+  '/wc/store/v1/cart/items/(?P<key>[\\w-]{32})': {
+    args: WcStoreV1CartItemsPKeyW32PatchPostPutArgs;
+    response: WcStoreV1CartItemsPKeyW32PutResponse;
+  };
 }
 
 /**

@@ -1,6 +1,12 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "oembed/1.0" namespace
 
+import {
+  Oembed10GetResponse,
+  Oembed10EmbedGetResponse,
+  Oembed10ProxyGetResponse,
+} from './oembed-1-0-responses.js';
+
 /**
  * Arguments for `/oembed/1.0` route when calling GET method.
  */
@@ -54,9 +60,18 @@ export interface Oembed10DeleteRoutes {}
  * All "oembed/1.0" GET routes.
  */
 export interface Oembed10GetRoutes {
-  '/oembed/1.0': Oembed10GetArgs;
-  '/oembed/1.0/embed': Oembed10EmbedGetArgs;
-  '/oembed/1.0/proxy': Oembed10ProxyGetArgs;
+  '/oembed/1.0': {
+    args: Oembed10GetArgs;
+    response: Oembed10GetResponse;
+  };
+  '/oembed/1.0/embed': {
+    args: Oembed10EmbedGetArgs;
+    response: Oembed10EmbedGetResponse;
+  };
+  '/oembed/1.0/proxy': {
+    args: Oembed10ProxyGetArgs;
+    response: Oembed10ProxyGetResponse;
+  };
 }
 
 /**

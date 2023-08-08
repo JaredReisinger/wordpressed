@@ -1,6 +1,11 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "wc-telemetry" namespace
 
+import {
+  WcTelemetryGetResponse,
+  WcTelemetryTrackerPostResponse,
+} from './wc-telemetry-responses.js';
+
 /**
  * Arguments for `/wc-telemetry` route when calling GET method.
  */
@@ -29,7 +34,10 @@ export interface WcTelemetryDeleteRoutes {}
  * All "wc-telemetry" GET routes.
  */
 export interface WcTelemetryGetRoutes {
-  '/wc-telemetry': WcTelemetryGetArgs;
+  '/wc-telemetry': {
+    args: WcTelemetryGetArgs;
+    response: WcTelemetryGetResponse;
+  };
 }
 
 /**
@@ -41,7 +49,10 @@ export interface WcTelemetryPatchRoutes {}
  * All "wc-telemetry" POST routes.
  */
 export interface WcTelemetryPostRoutes {
-  '/wc-telemetry/tracker': WcTelemetryTrackerPostArgs;
+  '/wc-telemetry/tracker': {
+    args: WcTelemetryTrackerPostArgs;
+    response: WcTelemetryTrackerPostResponse;
+  };
 }
 
 /**

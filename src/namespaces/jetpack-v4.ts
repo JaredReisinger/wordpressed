@@ -1,6 +1,215 @@
 // GENERATED FILE -- DO NOT EDIT
 // WordPress REST API "jetpack/v4" namespace
 
+import {
+  JetpackV4GetResponse,
+  JetpackV4BackupHelperScriptPostResponse,
+  JetpackV4BackupHelperScriptDeleteResponse,
+  JetpackV4CommentsPIdDBackupGetResponse,
+  JetpackV4ConnectionGetResponse,
+  JetpackV4ConnectionPatchResponse,
+  JetpackV4ConnectionPostResponse,
+  JetpackV4ConnectionPutResponse,
+  JetpackV4ConnectionAuthorizeUrlGetResponse,
+  JetpackV4ConnectionDataGetResponse,
+  JetpackV4ConnectionOwnerPatchResponse,
+  JetpackV4ConnectionOwnerPostResponse,
+  JetpackV4ConnectionOwnerPutResponse,
+  JetpackV4ConnectionPluginsGetResponse,
+  JetpackV4ConnectionReconnectPatchResponse,
+  JetpackV4ConnectionReconnectPostResponse,
+  JetpackV4ConnectionReconnectPutResponse,
+  JetpackV4ConnectionRegisterPatchResponse,
+  JetpackV4ConnectionRegisterPostResponse,
+  JetpackV4ConnectionRegisterPutResponse,
+  JetpackV4ConnectionTestGetResponse,
+  JetpackV4ConnectionTestWpcomGetResponse,
+  JetpackV4ConnectionUrlGetResponse,
+  JetpackV4ConnectionUserPatchResponse,
+  JetpackV4ConnectionUserPostResponse,
+  JetpackV4ConnectionUserPutResponse,
+  JetpackV4DatabaseObjectBackupGetResponse,
+  JetpackV4HintsPatchResponse,
+  JetpackV4HintsPostResponse,
+  JetpackV4HintsPutResponse,
+  JetpackV4IdentityCrisisConfirmSafeModePatchResponse,
+  JetpackV4IdentityCrisisConfirmSafeModePostResponse,
+  JetpackV4IdentityCrisisConfirmSafeModePutResponse,
+  JetpackV4IdentityCrisisMigratePatchResponse,
+  JetpackV4IdentityCrisisMigratePostResponse,
+  JetpackV4IdentityCrisisMigratePutResponse,
+  JetpackV4IdentityCrisisStartFreshPatchResponse,
+  JetpackV4IdentityCrisisStartFreshPostResponse,
+  JetpackV4IdentityCrisisStartFreshPutResponse,
+  JetpackV4IntroOffersGetResponse,
+  JetpackV4JetpackCrmGetResponse,
+  JetpackV4JetpackCrmPatchResponse,
+  JetpackV4JetpackCrmPostResponse,
+  JetpackV4JetpackCrmPutResponse,
+  JetpackV4JetpackAiJwtPatchResponse,
+  JetpackV4JetpackAiJwtPostResponse,
+  JetpackV4JetpackAiJwtPutResponse,
+  JetpackV4JitmGetResponse,
+  JetpackV4JitmPostResponse,
+  JetpackV4LicensingAttachLicensesPatchResponse,
+  JetpackV4LicensingAttachLicensesPostResponse,
+  JetpackV4LicensingAttachLicensesPutResponse,
+  JetpackV4LicensingErrorGetResponse,
+  JetpackV4LicensingErrorPatchResponse,
+  JetpackV4LicensingErrorPostResponse,
+  JetpackV4LicensingErrorPutResponse,
+  JetpackV4LicensingSetLicensePatchResponse,
+  JetpackV4LicensingSetLicensePostResponse,
+  JetpackV4LicensingSetLicensePutResponse,
+  JetpackV4LicensingUserActivationNoticeDismissPatchResponse,
+  JetpackV4LicensingUserActivationNoticeDismissPostResponse,
+  JetpackV4LicensingUserActivationNoticeDismissPutResponse,
+  JetpackV4LicensingUserCountsGetResponse,
+  JetpackV4LicensingUserLicensesGetResponse,
+  JetpackV4MarketingSurveyPostResponse,
+  JetpackV4ModulePServiceAZKeyCheckGetResponse,
+  JetpackV4ModulePServiceAZKeyCheckPatchResponse,
+  JetpackV4ModulePServiceAZKeyCheckPostResponse,
+  JetpackV4ModulePServiceAZKeyCheckPutResponse,
+  JetpackV4ModulePSlugAZGetResponse,
+  JetpackV4ModulePSlugAZPatchResponse,
+  JetpackV4ModulePSlugAZPostResponse,
+  JetpackV4ModulePSlugAZPutResponse,
+  JetpackV4ModulePSlugAZActivePatchResponse,
+  JetpackV4ModulePSlugAZActivePostResponse,
+  JetpackV4ModulePSlugAZActivePutResponse,
+  JetpackV4ModulePSlugAZDataGetResponse,
+  JetpackV4ModuleAllGetResponse,
+  JetpackV4ModuleAllActivePatchResponse,
+  JetpackV4ModuleAllActivePostResponse,
+  JetpackV4ModuleAllActivePutResponse,
+  JetpackV4NoticePNoticeAZPatchResponse,
+  JetpackV4NoticePNoticeAZPostResponse,
+  JetpackV4NoticePNoticeAZPutResponse,
+  JetpackV4OptionsPOptionsAZPatchResponse,
+  JetpackV4OptionsPOptionsAZPostResponse,
+  JetpackV4OptionsPOptionsAZPutResponse,
+  JetpackV4OptionsBackupGetResponse,
+  JetpackV4PlansGetResponse,
+  JetpackV4PluginPPluginAZGetResponse,
+  JetpackV4PluginsGetResponse,
+  JetpackV4PluginsPostResponse,
+  JetpackV4PluginsPPluginPatchResponse,
+  JetpackV4PluginsPPluginPostResponse,
+  JetpackV4PluginsPPluginPutResponse,
+  JetpackV4PostsPIdDBackupGetResponse,
+  JetpackV4ProductsGetResponse,
+  JetpackV4PurchaseTokenGetResponse,
+  JetpackV4PurchaseTokenPostResponse,
+  JetpackV4RecommendationsConditionalGetResponse,
+  JetpackV4RecommendationsDataGetResponse,
+  JetpackV4RecommendationsDataPatchResponse,
+  JetpackV4RecommendationsDataPostResponse,
+  JetpackV4RecommendationsDataPutResponse,
+  JetpackV4RecommendationsProductSuggestionsGetResponse,
+  JetpackV4RecommendationsStepGetResponse,
+  JetpackV4RecommendationsStepPatchResponse,
+  JetpackV4RecommendationsStepPostResponse,
+  JetpackV4RecommendationsStepPutResponse,
+  JetpackV4RecommendationsUpsellGetResponse,
+  JetpackV4RemoteAuthorizePatchResponse,
+  JetpackV4RemoteAuthorizePostResponse,
+  JetpackV4RemoteAuthorizePutResponse,
+  JetpackV4RewindGetResponse,
+  JetpackV4ScanGetResponse,
+  JetpackV4SearchGetResponse,
+  JetpackV4SearchLocalStatsGetResponse,
+  JetpackV4SearchPlanGetResponse,
+  JetpackV4SearchPlanActivatePatchResponse,
+  JetpackV4SearchPlanActivatePostResponse,
+  JetpackV4SearchPlanActivatePutResponse,
+  JetpackV4SearchPlanDeactivatePatchResponse,
+  JetpackV4SearchPlanDeactivatePostResponse,
+  JetpackV4SearchPlanDeactivatePutResponse,
+  JetpackV4SearchPricingGetResponse,
+  JetpackV4SearchSettingsPatchResponse,
+  JetpackV4SearchSettingsPostResponse,
+  JetpackV4SearchSettingsPutResponse,
+  JetpackV4SearchSettingsGetResponse,
+  JetpackV4SearchStatsGetResponse,
+  JetpackV4SeenWcConnectionModalPatchResponse,
+  JetpackV4SeenWcConnectionModalPostResponse,
+  JetpackV4SeenWcConnectionModalPutResponse,
+  JetpackV4SettingsPatchResponse,
+  JetpackV4SettingsPostResponse,
+  JetpackV4SettingsPutResponse,
+  JetpackV4SettingsGetResponse,
+  JetpackV4SettingsPSlugAZPatchResponse,
+  JetpackV4SettingsPSlugAZPostResponse,
+  JetpackV4SettingsPSlugAZPutResponse,
+  JetpackV4SiteGetResponse,
+  JetpackV4SiteActivityGetResponse,
+  JetpackV4SiteBenefitsGetResponse,
+  JetpackV4SiteDiscountGetResponse,
+  JetpackV4SiteFeaturesGetResponse,
+  JetpackV4SiteProductsGetResponse,
+  JetpackV4SitePurchasesGetResponse,
+  JetpackV4SyncCheckoutPatchResponse,
+  JetpackV4SyncCheckoutPostResponse,
+  JetpackV4SyncCheckoutPutResponse,
+  JetpackV4SyncClosePatchResponse,
+  JetpackV4SyncClosePostResponse,
+  JetpackV4SyncClosePutResponse,
+  JetpackV4SyncDataCheckGetResponse,
+  JetpackV4SyncDataHistogramPatchResponse,
+  JetpackV4SyncDataHistogramPostResponse,
+  JetpackV4SyncDataHistogramPutResponse,
+  JetpackV4SyncFullSyncPatchResponse,
+  JetpackV4SyncFullSyncPostResponse,
+  JetpackV4SyncFullSyncPutResponse,
+  JetpackV4SyncHealthPatchResponse,
+  JetpackV4SyncHealthPostResponse,
+  JetpackV4SyncHealthPutResponse,
+  JetpackV4SyncLocksDeleteResponse,
+  JetpackV4SyncNowPatchResponse,
+  JetpackV4SyncNowPostResponse,
+  JetpackV4SyncNowPutResponse,
+  JetpackV4SyncObjectDeleteResponse,
+  JetpackV4SyncObjectGetResponse,
+  JetpackV4SyncObjectPatchResponse,
+  JetpackV4SyncObjectPostResponse,
+  JetpackV4SyncObjectPutResponse,
+  JetpackV4SyncObjectIdRangeGetResponse,
+  JetpackV4SyncSettingsGetResponse,
+  JetpackV4SyncSettingsPatchResponse,
+  JetpackV4SyncSettingsPostResponse,
+  JetpackV4SyncSettingsPutResponse,
+  JetpackV4SyncSpawnSyncGetResponse,
+  JetpackV4SyncStatusGetResponse,
+  JetpackV4SyncUnlockPatchResponse,
+  JetpackV4SyncUnlockPostResponse,
+  JetpackV4SyncUnlockPutResponse,
+  JetpackV4TermsPIdDBackupGetResponse,
+  JetpackV4TrackingSettingsGetResponse,
+  JetpackV4TrackingSettingsPatchResponse,
+  JetpackV4TrackingSettingsPostResponse,
+  JetpackV4TrackingSettingsPutResponse,
+  JetpackV4UpdatesPluginsGetResponse,
+  JetpackV4UserTokenPatchResponse,
+  JetpackV4UserTokenPostResponse,
+  JetpackV4UserTokenPutResponse,
+  JetpackV4UsersPIdDBackupGetResponse,
+  JetpackV4VerifyXmlrpcErrorPostResponse,
+  JetpackV4VerifySitePServiceAZGetResponse,
+  JetpackV4VerifySitePServiceAZPatchResponse,
+  JetpackV4VerifySitePServiceAZPostResponse,
+  JetpackV4VerifySitePServiceAZPutResponse,
+  JetpackV4VerifySitePServiceAZKeyringId09GetResponse,
+  JetpackV4WafGetResponse,
+  JetpackV4WafPatchResponse,
+  JetpackV4WafPostResponse,
+  JetpackV4WafPutResponse,
+  JetpackV4WafUpdateRulesPatchResponse,
+  JetpackV4WafUpdateRulesPostResponse,
+  JetpackV4WafUpdateRulesPutResponse,
+  JetpackV4WidgetsPId09aZGetResponse,
+} from './jetpack-v4-responses.js';
+
 /**
  * Arguments for `/jetpack/v4` route when calling GET method.
  */
@@ -1666,236 +1875,854 @@ export interface JetpackV4WidgetsPId09aZGetArgs {}
  * All "jetpack/v4" DELETE routes.
  */
 export interface JetpackV4DeleteRoutes {
-  '/jetpack/v4/backup-helper-script': JetpackV4BackupHelperScriptDeleteArgs;
-  '/jetpack/v4/sync/locks': JetpackV4SyncLocksDeleteArgs;
-  '/jetpack/v4/sync/object': JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
+  '/jetpack/v4/backup-helper-script': {
+    args: JetpackV4BackupHelperScriptDeleteArgs;
+    response: JetpackV4BackupHelperScriptDeleteResponse;
+  };
+  '/jetpack/v4/sync/locks': {
+    args: JetpackV4SyncLocksDeleteArgs;
+    response: JetpackV4SyncLocksDeleteResponse;
+  };
+  '/jetpack/v4/sync/object': {
+    args: JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
+    response: JetpackV4SyncObjectDeleteResponse;
+  };
 }
 
 /**
  * All "jetpack/v4" GET routes.
  */
 export interface JetpackV4GetRoutes {
-  '/jetpack/v4': JetpackV4GetArgs;
-  '/jetpack/v4/comments/(?P<id>\\d+)/backup': JetpackV4CommentsPIdDBackupGetArgs;
-  '/jetpack/v4/connection': JetpackV4ConnectionGetArgs;
-  '/jetpack/v4/connection/authorize_url': JetpackV4ConnectionAuthorizeUrlGetArgs;
-  '/jetpack/v4/connection/data': JetpackV4ConnectionDataGetArgs;
-  '/jetpack/v4/connection/plugins': JetpackV4ConnectionPluginsGetArgs;
-  '/jetpack/v4/connection/test': JetpackV4ConnectionTestGetArgs;
-  '/jetpack/v4/connection/test-wpcom': JetpackV4ConnectionTestWpcomGetArgs;
-  '/jetpack/v4/connection/url': JetpackV4ConnectionUrlGetArgs;
-  '/jetpack/v4/database-object/backup': JetpackV4DatabaseObjectBackupGetArgs;
-  '/jetpack/v4/intro-offers': JetpackV4IntroOffersGetArgs;
-  '/jetpack/v4/jetpack_crm': JetpackV4JetpackCrmGetArgs;
-  '/jetpack/v4/jitm': JetpackV4JitmGetArgs;
-  '/jetpack/v4/licensing/error': JetpackV4LicensingErrorGetArgs;
-  '/jetpack/v4/licensing/user/counts': JetpackV4LicensingUserCountsGetArgs;
-  '/jetpack/v4/licensing/user/licenses': JetpackV4LicensingUserLicensesGetArgs;
-  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': JetpackV4ModulePServiceAZKeyCheckGetArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': JetpackV4ModulePSlugAZGetArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/data': JetpackV4ModulePSlugAZDataGetArgs;
-  '/jetpack/v4/module/all': JetpackV4ModuleAllGetArgs;
-  '/jetpack/v4/options/backup': JetpackV4OptionsBackupGetArgs;
-  '/jetpack/v4/plans': JetpackV4PlansGetArgs;
-  '/jetpack/v4/plugin/(?P<plugin>[a-z\\/\\.\\-_]+)': JetpackV4PluginPPluginAZGetArgs;
-  '/jetpack/v4/plugins': JetpackV4PluginsGetArgs;
-  '/jetpack/v4/posts/(?P<id>\\d+)/backup': JetpackV4PostsPIdDBackupGetArgs;
-  '/jetpack/v4/products': JetpackV4ProductsGetArgs;
-  '/jetpack/v4/purchase-token': JetpackV4PurchaseTokenGetArgs;
-  '/jetpack/v4/recommendations/conditional': JetpackV4RecommendationsConditionalGetArgs;
-  '/jetpack/v4/recommendations/data': JetpackV4RecommendationsDataGetArgs;
-  '/jetpack/v4/recommendations/product-suggestions': JetpackV4RecommendationsProductSuggestionsGetArgs;
-  '/jetpack/v4/recommendations/step': JetpackV4RecommendationsStepGetArgs;
-  '/jetpack/v4/recommendations/upsell': JetpackV4RecommendationsUpsellGetArgs;
-  '/jetpack/v4/rewind': JetpackV4RewindGetArgs;
-  '/jetpack/v4/scan': JetpackV4ScanGetArgs;
-  '/jetpack/v4/search': JetpackV4SearchGetArgs;
-  '/jetpack/v4/search/local-stats': JetpackV4SearchLocalStatsGetArgs;
-  '/jetpack/v4/search/plan': JetpackV4SearchPlanGetArgs;
-  '/jetpack/v4/search/pricing': JetpackV4SearchPricingGetArgs;
-  '/jetpack/v4/search/settings': JetpackV4SearchSettingsGetArgs;
-  '/jetpack/v4/search/stats': JetpackV4SearchStatsGetArgs;
-  '/jetpack/v4/settings': JetpackV4SettingsGetArgs;
-  '/jetpack/v4/site': JetpackV4SiteGetArgs;
-  '/jetpack/v4/site/activity': JetpackV4SiteActivityGetArgs;
-  '/jetpack/v4/site/benefits': JetpackV4SiteBenefitsGetArgs;
-  '/jetpack/v4/site/discount': JetpackV4SiteDiscountGetArgs;
-  '/jetpack/v4/site/features': JetpackV4SiteFeaturesGetArgs;
-  '/jetpack/v4/site/products': JetpackV4SiteProductsGetArgs;
-  '/jetpack/v4/site/purchases': JetpackV4SitePurchasesGetArgs;
-  '/jetpack/v4/sync/data-check': JetpackV4SyncDataCheckGetArgs;
-  '/jetpack/v4/sync/object': JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
-  '/jetpack/v4/sync/object-id-range': JetpackV4SyncObjectIdRangeGetArgs;
-  '/jetpack/v4/sync/settings': JetpackV4SyncSettingsGetArgs;
-  '/jetpack/v4/sync/spawn-sync': JetpackV4SyncSpawnSyncGetArgs;
-  '/jetpack/v4/sync/status': JetpackV4SyncStatusGetArgs;
-  '/jetpack/v4/terms/(?P<id>\\d+)/backup': JetpackV4TermsPIdDBackupGetArgs;
-  '/jetpack/v4/tracking/settings': JetpackV4TrackingSettingsGetArgs;
-  '/jetpack/v4/updates/plugins': JetpackV4UpdatesPluginsGetArgs;
-  '/jetpack/v4/users/(?P<id>\\d+)/backup': JetpackV4UsersPIdDBackupGetArgs;
-  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': JetpackV4VerifySitePServiceAZGetArgs;
-  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)/(?<keyring_id>[0-9]+)': JetpackV4VerifySitePServiceAZKeyringId09GetArgs;
-  '/jetpack/v4/waf': JetpackV4WafGetArgs;
-  '/jetpack/v4/widgets/(?P<id>[0-9a-z\\-_]+)': JetpackV4WidgetsPId09aZGetArgs;
+  '/jetpack/v4': {
+    args: JetpackV4GetArgs;
+    response: JetpackV4GetResponse;
+  };
+  '/jetpack/v4/comments/(?P<id>\\d+)/backup': {
+    args: JetpackV4CommentsPIdDBackupGetArgs;
+    response: JetpackV4CommentsPIdDBackupGetResponse;
+  };
+  '/jetpack/v4/connection': {
+    args: JetpackV4ConnectionGetArgs;
+    response: JetpackV4ConnectionGetResponse;
+  };
+  '/jetpack/v4/connection/authorize_url': {
+    args: JetpackV4ConnectionAuthorizeUrlGetArgs;
+    response: JetpackV4ConnectionAuthorizeUrlGetResponse;
+  };
+  '/jetpack/v4/connection/data': {
+    args: JetpackV4ConnectionDataGetArgs;
+    response: JetpackV4ConnectionDataGetResponse;
+  };
+  '/jetpack/v4/connection/plugins': {
+    args: JetpackV4ConnectionPluginsGetArgs;
+    response: JetpackV4ConnectionPluginsGetResponse;
+  };
+  '/jetpack/v4/connection/test': {
+    args: JetpackV4ConnectionTestGetArgs;
+    response: JetpackV4ConnectionTestGetResponse;
+  };
+  '/jetpack/v4/connection/test-wpcom': {
+    args: JetpackV4ConnectionTestWpcomGetArgs;
+    response: JetpackV4ConnectionTestWpcomGetResponse;
+  };
+  '/jetpack/v4/connection/url': {
+    args: JetpackV4ConnectionUrlGetArgs;
+    response: JetpackV4ConnectionUrlGetResponse;
+  };
+  '/jetpack/v4/database-object/backup': {
+    args: JetpackV4DatabaseObjectBackupGetArgs;
+    response: JetpackV4DatabaseObjectBackupGetResponse;
+  };
+  '/jetpack/v4/intro-offers': {
+    args: JetpackV4IntroOffersGetArgs;
+    response: JetpackV4IntroOffersGetResponse;
+  };
+  '/jetpack/v4/jetpack_crm': {
+    args: JetpackV4JetpackCrmGetArgs;
+    response: JetpackV4JetpackCrmGetResponse;
+  };
+  '/jetpack/v4/jitm': {
+    args: JetpackV4JitmGetArgs;
+    response: JetpackV4JitmGetResponse;
+  };
+  '/jetpack/v4/licensing/error': {
+    args: JetpackV4LicensingErrorGetArgs;
+    response: JetpackV4LicensingErrorGetResponse;
+  };
+  '/jetpack/v4/licensing/user/counts': {
+    args: JetpackV4LicensingUserCountsGetArgs;
+    response: JetpackV4LicensingUserCountsGetResponse;
+  };
+  '/jetpack/v4/licensing/user/licenses': {
+    args: JetpackV4LicensingUserLicensesGetArgs;
+    response: JetpackV4LicensingUserLicensesGetResponse;
+  };
+  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': {
+    args: JetpackV4ModulePServiceAZKeyCheckGetArgs;
+    response: JetpackV4ModulePServiceAZKeyCheckGetResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': {
+    args: JetpackV4ModulePSlugAZGetArgs;
+    response: JetpackV4ModulePSlugAZGetResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/data': {
+    args: JetpackV4ModulePSlugAZDataGetArgs;
+    response: JetpackV4ModulePSlugAZDataGetResponse;
+  };
+  '/jetpack/v4/module/all': {
+    args: JetpackV4ModuleAllGetArgs;
+    response: JetpackV4ModuleAllGetResponse;
+  };
+  '/jetpack/v4/options/backup': {
+    args: JetpackV4OptionsBackupGetArgs;
+    response: JetpackV4OptionsBackupGetResponse;
+  };
+  '/jetpack/v4/plans': {
+    args: JetpackV4PlansGetArgs;
+    response: JetpackV4PlansGetResponse;
+  };
+  '/jetpack/v4/plugin/(?P<plugin>[a-z\\/\\.\\-_]+)': {
+    args: JetpackV4PluginPPluginAZGetArgs;
+    response: JetpackV4PluginPPluginAZGetResponse;
+  };
+  '/jetpack/v4/plugins': {
+    args: JetpackV4PluginsGetArgs;
+    response: JetpackV4PluginsGetResponse;
+  };
+  '/jetpack/v4/posts/(?P<id>\\d+)/backup': {
+    args: JetpackV4PostsPIdDBackupGetArgs;
+    response: JetpackV4PostsPIdDBackupGetResponse;
+  };
+  '/jetpack/v4/products': {
+    args: JetpackV4ProductsGetArgs;
+    response: JetpackV4ProductsGetResponse;
+  };
+  '/jetpack/v4/purchase-token': {
+    args: JetpackV4PurchaseTokenGetArgs;
+    response: JetpackV4PurchaseTokenGetResponse;
+  };
+  '/jetpack/v4/recommendations/conditional': {
+    args: JetpackV4RecommendationsConditionalGetArgs;
+    response: JetpackV4RecommendationsConditionalGetResponse;
+  };
+  '/jetpack/v4/recommendations/data': {
+    args: JetpackV4RecommendationsDataGetArgs;
+    response: JetpackV4RecommendationsDataGetResponse;
+  };
+  '/jetpack/v4/recommendations/product-suggestions': {
+    args: JetpackV4RecommendationsProductSuggestionsGetArgs;
+    response: JetpackV4RecommendationsProductSuggestionsGetResponse;
+  };
+  '/jetpack/v4/recommendations/step': {
+    args: JetpackV4RecommendationsStepGetArgs;
+    response: JetpackV4RecommendationsStepGetResponse;
+  };
+  '/jetpack/v4/recommendations/upsell': {
+    args: JetpackV4RecommendationsUpsellGetArgs;
+    response: JetpackV4RecommendationsUpsellGetResponse;
+  };
+  '/jetpack/v4/rewind': {
+    args: JetpackV4RewindGetArgs;
+    response: JetpackV4RewindGetResponse;
+  };
+  '/jetpack/v4/scan': {
+    args: JetpackV4ScanGetArgs;
+    response: JetpackV4ScanGetResponse;
+  };
+  '/jetpack/v4/search': {
+    args: JetpackV4SearchGetArgs;
+    response: JetpackV4SearchGetResponse;
+  };
+  '/jetpack/v4/search/local-stats': {
+    args: JetpackV4SearchLocalStatsGetArgs;
+    response: JetpackV4SearchLocalStatsGetResponse;
+  };
+  '/jetpack/v4/search/plan': {
+    args: JetpackV4SearchPlanGetArgs;
+    response: JetpackV4SearchPlanGetResponse;
+  };
+  '/jetpack/v4/search/pricing': {
+    args: JetpackV4SearchPricingGetArgs;
+    response: JetpackV4SearchPricingGetResponse;
+  };
+  '/jetpack/v4/search/settings': {
+    args: JetpackV4SearchSettingsGetArgs;
+    response: JetpackV4SearchSettingsGetResponse;
+  };
+  '/jetpack/v4/search/stats': {
+    args: JetpackV4SearchStatsGetArgs;
+    response: JetpackV4SearchStatsGetResponse;
+  };
+  '/jetpack/v4/settings': {
+    args: JetpackV4SettingsGetArgs;
+    response: JetpackV4SettingsGetResponse;
+  };
+  '/jetpack/v4/site': {
+    args: JetpackV4SiteGetArgs;
+    response: JetpackV4SiteGetResponse;
+  };
+  '/jetpack/v4/site/activity': {
+    args: JetpackV4SiteActivityGetArgs;
+    response: JetpackV4SiteActivityGetResponse;
+  };
+  '/jetpack/v4/site/benefits': {
+    args: JetpackV4SiteBenefitsGetArgs;
+    response: JetpackV4SiteBenefitsGetResponse;
+  };
+  '/jetpack/v4/site/discount': {
+    args: JetpackV4SiteDiscountGetArgs;
+    response: JetpackV4SiteDiscountGetResponse;
+  };
+  '/jetpack/v4/site/features': {
+    args: JetpackV4SiteFeaturesGetArgs;
+    response: JetpackV4SiteFeaturesGetResponse;
+  };
+  '/jetpack/v4/site/products': {
+    args: JetpackV4SiteProductsGetArgs;
+    response: JetpackV4SiteProductsGetResponse;
+  };
+  '/jetpack/v4/site/purchases': {
+    args: JetpackV4SitePurchasesGetArgs;
+    response: JetpackV4SitePurchasesGetResponse;
+  };
+  '/jetpack/v4/sync/data-check': {
+    args: JetpackV4SyncDataCheckGetArgs;
+    response: JetpackV4SyncDataCheckGetResponse;
+  };
+  '/jetpack/v4/sync/object': {
+    args: JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
+    response: JetpackV4SyncObjectGetResponse;
+  };
+  '/jetpack/v4/sync/object-id-range': {
+    args: JetpackV4SyncObjectIdRangeGetArgs;
+    response: JetpackV4SyncObjectIdRangeGetResponse;
+  };
+  '/jetpack/v4/sync/settings': {
+    args: JetpackV4SyncSettingsGetArgs;
+    response: JetpackV4SyncSettingsGetResponse;
+  };
+  '/jetpack/v4/sync/spawn-sync': {
+    args: JetpackV4SyncSpawnSyncGetArgs;
+    response: JetpackV4SyncSpawnSyncGetResponse;
+  };
+  '/jetpack/v4/sync/status': {
+    args: JetpackV4SyncStatusGetArgs;
+    response: JetpackV4SyncStatusGetResponse;
+  };
+  '/jetpack/v4/terms/(?P<id>\\d+)/backup': {
+    args: JetpackV4TermsPIdDBackupGetArgs;
+    response: JetpackV4TermsPIdDBackupGetResponse;
+  };
+  '/jetpack/v4/tracking/settings': {
+    args: JetpackV4TrackingSettingsGetArgs;
+    response: JetpackV4TrackingSettingsGetResponse;
+  };
+  '/jetpack/v4/updates/plugins': {
+    args: JetpackV4UpdatesPluginsGetArgs;
+    response: JetpackV4UpdatesPluginsGetResponse;
+  };
+  '/jetpack/v4/users/(?P<id>\\d+)/backup': {
+    args: JetpackV4UsersPIdDBackupGetArgs;
+    response: JetpackV4UsersPIdDBackupGetResponse;
+  };
+  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': {
+    args: JetpackV4VerifySitePServiceAZGetArgs;
+    response: JetpackV4VerifySitePServiceAZGetResponse;
+  };
+  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)/(?<keyring_id>[0-9]+)': {
+    args: JetpackV4VerifySitePServiceAZKeyringId09GetArgs;
+    response: JetpackV4VerifySitePServiceAZKeyringId09GetResponse;
+  };
+  '/jetpack/v4/waf': {
+    args: JetpackV4WafGetArgs;
+    response: JetpackV4WafGetResponse;
+  };
+  '/jetpack/v4/widgets/(?P<id>[0-9a-z\\-_]+)': {
+    args: JetpackV4WidgetsPId09aZGetArgs;
+    response: JetpackV4WidgetsPId09aZGetResponse;
+  };
 }
 
 /**
  * All "jetpack/v4" PATCH routes.
  */
 export interface JetpackV4PatchRoutes {
-  '/jetpack/v4/connection': JetpackV4ConnectionPatchPostPutArgs;
-  '/jetpack/v4/connection/owner': JetpackV4ConnectionOwnerPatchPostPutArgs;
-  '/jetpack/v4/connection/reconnect': JetpackV4ConnectionReconnectPatchPostPutArgs;
-  '/jetpack/v4/connection/register': JetpackV4ConnectionRegisterPatchPostPutArgs;
-  '/jetpack/v4/connection/user': JetpackV4ConnectionUserPatchPostPutArgs;
-  '/jetpack/v4/hints': JetpackV4HintsPatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/confirm-safe-mode': JetpackV4IdentityCrisisConfirmSafeModePatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/migrate': JetpackV4IdentityCrisisMigratePatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/start-fresh': JetpackV4IdentityCrisisStartFreshPatchPostPutArgs;
-  '/jetpack/v4/jetpack_crm': JetpackV4JetpackCrmPatchPostPutArgs;
-  '/jetpack/v4/jetpack-ai-jwt': JetpackV4JetpackAiJwtPatchPostPutArgs;
-  '/jetpack/v4/licensing/attach-licenses': JetpackV4LicensingAttachLicensesPatchPostPutArgs;
-  '/jetpack/v4/licensing/error': JetpackV4LicensingErrorPatchPostPutArgs;
-  '/jetpack/v4/licensing/set-license': JetpackV4LicensingSetLicensePatchPostPutArgs;
-  '/jetpack/v4/licensing/user/activation-notice-dismiss': JetpackV4LicensingUserActivationNoticeDismissPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': JetpackV4ModulePServiceAZKeyCheckPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': JetpackV4ModulePSlugAZPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/active': JetpackV4ModulePSlugAZActivePatchPostPutArgs;
-  '/jetpack/v4/module/all/active': JetpackV4ModuleAllActivePatchPostPutArgs;
-  '/jetpack/v4/notice/(?P<notice>[a-z\\-_]+)': JetpackV4NoticePNoticeAZPatchPostPutArgs;
-  '/jetpack/v4/options/(?P<options>[a-z\\-]+)': JetpackV4OptionsPOptionsAZPatchPostPutArgs;
-  '/jetpack/v4/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': JetpackV4PluginsPPluginPatchPostPutArgs;
-  '/jetpack/v4/recommendations/data': JetpackV4RecommendationsDataPatchPostPutArgs;
-  '/jetpack/v4/recommendations/step': JetpackV4RecommendationsStepPatchPostPutArgs;
-  '/jetpack/v4/remote_authorize': JetpackV4RemoteAuthorizePatchPostPutArgs;
-  '/jetpack/v4/search/plan/activate': JetpackV4SearchPlanActivatePatchPostPutArgs;
-  '/jetpack/v4/search/plan/deactivate': JetpackV4SearchPlanDeactivatePatchPostPutArgs;
-  '/jetpack/v4/search/settings': JetpackV4SearchSettingsPatchPostPutArgs;
-  '/jetpack/v4/seen-wc-connection-modal': JetpackV4SeenWcConnectionModalPatchPostPutArgs;
-  '/jetpack/v4/settings': JetpackV4SettingsPatchPostPutArgs;
-  '/jetpack/v4/settings/(?P<slug>[a-z\\-]+)': JetpackV4SettingsPSlugAZPatchPostPutArgs;
-  '/jetpack/v4/sync/checkout': JetpackV4SyncCheckoutPatchPostPutArgs;
-  '/jetpack/v4/sync/close': JetpackV4SyncClosePatchPostPutArgs;
-  '/jetpack/v4/sync/data-histogram': JetpackV4SyncDataHistogramPatchPostPutArgs;
-  '/jetpack/v4/sync/full-sync': JetpackV4SyncFullSyncPatchPostPutArgs;
-  '/jetpack/v4/sync/health': JetpackV4SyncHealthPatchPostPutArgs;
-  '/jetpack/v4/sync/now': JetpackV4SyncNowPatchPostPutArgs;
-  '/jetpack/v4/sync/object': JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
-  '/jetpack/v4/sync/settings': JetpackV4SyncSettingsPatchPostPutArgs;
-  '/jetpack/v4/sync/unlock': JetpackV4SyncUnlockPatchPostPutArgs;
-  '/jetpack/v4/tracking/settings': JetpackV4TrackingSettingsPatchPostPutArgs;
-  '/jetpack/v4/user-token': JetpackV4UserTokenPatchPostPutArgs;
-  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': JetpackV4VerifySitePServiceAZPatchPostPutArgs;
-  '/jetpack/v4/waf': JetpackV4WafPatchPostPutArgs;
-  '/jetpack/v4/waf/update-rules': JetpackV4WafUpdateRulesPatchPostPutArgs;
+  '/jetpack/v4/connection': {
+    args: JetpackV4ConnectionPatchPostPutArgs;
+    response: JetpackV4ConnectionPatchResponse;
+  };
+  '/jetpack/v4/connection/owner': {
+    args: JetpackV4ConnectionOwnerPatchPostPutArgs;
+    response: JetpackV4ConnectionOwnerPatchResponse;
+  };
+  '/jetpack/v4/connection/reconnect': {
+    args: JetpackV4ConnectionReconnectPatchPostPutArgs;
+    response: JetpackV4ConnectionReconnectPatchResponse;
+  };
+  '/jetpack/v4/connection/register': {
+    args: JetpackV4ConnectionRegisterPatchPostPutArgs;
+    response: JetpackV4ConnectionRegisterPatchResponse;
+  };
+  '/jetpack/v4/connection/user': {
+    args: JetpackV4ConnectionUserPatchPostPutArgs;
+    response: JetpackV4ConnectionUserPatchResponse;
+  };
+  '/jetpack/v4/hints': {
+    args: JetpackV4HintsPatchPostPutArgs;
+    response: JetpackV4HintsPatchResponse;
+  };
+  '/jetpack/v4/identity-crisis/confirm-safe-mode': {
+    args: JetpackV4IdentityCrisisConfirmSafeModePatchPostPutArgs;
+    response: JetpackV4IdentityCrisisConfirmSafeModePatchResponse;
+  };
+  '/jetpack/v4/identity-crisis/migrate': {
+    args: JetpackV4IdentityCrisisMigratePatchPostPutArgs;
+    response: JetpackV4IdentityCrisisMigratePatchResponse;
+  };
+  '/jetpack/v4/identity-crisis/start-fresh': {
+    args: JetpackV4IdentityCrisisStartFreshPatchPostPutArgs;
+    response: JetpackV4IdentityCrisisStartFreshPatchResponse;
+  };
+  '/jetpack/v4/jetpack_crm': {
+    args: JetpackV4JetpackCrmPatchPostPutArgs;
+    response: JetpackV4JetpackCrmPatchResponse;
+  };
+  '/jetpack/v4/jetpack-ai-jwt': {
+    args: JetpackV4JetpackAiJwtPatchPostPutArgs;
+    response: JetpackV4JetpackAiJwtPatchResponse;
+  };
+  '/jetpack/v4/licensing/attach-licenses': {
+    args: JetpackV4LicensingAttachLicensesPatchPostPutArgs;
+    response: JetpackV4LicensingAttachLicensesPatchResponse;
+  };
+  '/jetpack/v4/licensing/error': {
+    args: JetpackV4LicensingErrorPatchPostPutArgs;
+    response: JetpackV4LicensingErrorPatchResponse;
+  };
+  '/jetpack/v4/licensing/set-license': {
+    args: JetpackV4LicensingSetLicensePatchPostPutArgs;
+    response: JetpackV4LicensingSetLicensePatchResponse;
+  };
+  '/jetpack/v4/licensing/user/activation-notice-dismiss': {
+    args: JetpackV4LicensingUserActivationNoticeDismissPatchPostPutArgs;
+    response: JetpackV4LicensingUserActivationNoticeDismissPatchResponse;
+  };
+  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': {
+    args: JetpackV4ModulePServiceAZKeyCheckPatchPostPutArgs;
+    response: JetpackV4ModulePServiceAZKeyCheckPatchResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': {
+    args: JetpackV4ModulePSlugAZPatchPostPutArgs;
+    response: JetpackV4ModulePSlugAZPatchResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/active': {
+    args: JetpackV4ModulePSlugAZActivePatchPostPutArgs;
+    response: JetpackV4ModulePSlugAZActivePatchResponse;
+  };
+  '/jetpack/v4/module/all/active': {
+    args: JetpackV4ModuleAllActivePatchPostPutArgs;
+    response: JetpackV4ModuleAllActivePatchResponse;
+  };
+  '/jetpack/v4/notice/(?P<notice>[a-z\\-_]+)': {
+    args: JetpackV4NoticePNoticeAZPatchPostPutArgs;
+    response: JetpackV4NoticePNoticeAZPatchResponse;
+  };
+  '/jetpack/v4/options/(?P<options>[a-z\\-]+)': {
+    args: JetpackV4OptionsPOptionsAZPatchPostPutArgs;
+    response: JetpackV4OptionsPOptionsAZPatchResponse;
+  };
+  '/jetpack/v4/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: JetpackV4PluginsPPluginPatchPostPutArgs;
+    response: JetpackV4PluginsPPluginPatchResponse;
+  };
+  '/jetpack/v4/recommendations/data': {
+    args: JetpackV4RecommendationsDataPatchPostPutArgs;
+    response: JetpackV4RecommendationsDataPatchResponse;
+  };
+  '/jetpack/v4/recommendations/step': {
+    args: JetpackV4RecommendationsStepPatchPostPutArgs;
+    response: JetpackV4RecommendationsStepPatchResponse;
+  };
+  '/jetpack/v4/remote_authorize': {
+    args: JetpackV4RemoteAuthorizePatchPostPutArgs;
+    response: JetpackV4RemoteAuthorizePatchResponse;
+  };
+  '/jetpack/v4/search/plan/activate': {
+    args: JetpackV4SearchPlanActivatePatchPostPutArgs;
+    response: JetpackV4SearchPlanActivatePatchResponse;
+  };
+  '/jetpack/v4/search/plan/deactivate': {
+    args: JetpackV4SearchPlanDeactivatePatchPostPutArgs;
+    response: JetpackV4SearchPlanDeactivatePatchResponse;
+  };
+  '/jetpack/v4/search/settings': {
+    args: JetpackV4SearchSettingsPatchPostPutArgs;
+    response: JetpackV4SearchSettingsPatchResponse;
+  };
+  '/jetpack/v4/seen-wc-connection-modal': {
+    args: JetpackV4SeenWcConnectionModalPatchPostPutArgs;
+    response: JetpackV4SeenWcConnectionModalPatchResponse;
+  };
+  '/jetpack/v4/settings': {
+    args: JetpackV4SettingsPatchPostPutArgs;
+    response: JetpackV4SettingsPatchResponse;
+  };
+  '/jetpack/v4/settings/(?P<slug>[a-z\\-]+)': {
+    args: JetpackV4SettingsPSlugAZPatchPostPutArgs;
+    response: JetpackV4SettingsPSlugAZPatchResponse;
+  };
+  '/jetpack/v4/sync/checkout': {
+    args: JetpackV4SyncCheckoutPatchPostPutArgs;
+    response: JetpackV4SyncCheckoutPatchResponse;
+  };
+  '/jetpack/v4/sync/close': {
+    args: JetpackV4SyncClosePatchPostPutArgs;
+    response: JetpackV4SyncClosePatchResponse;
+  };
+  '/jetpack/v4/sync/data-histogram': {
+    args: JetpackV4SyncDataHistogramPatchPostPutArgs;
+    response: JetpackV4SyncDataHistogramPatchResponse;
+  };
+  '/jetpack/v4/sync/full-sync': {
+    args: JetpackV4SyncFullSyncPatchPostPutArgs;
+    response: JetpackV4SyncFullSyncPatchResponse;
+  };
+  '/jetpack/v4/sync/health': {
+    args: JetpackV4SyncHealthPatchPostPutArgs;
+    response: JetpackV4SyncHealthPatchResponse;
+  };
+  '/jetpack/v4/sync/now': {
+    args: JetpackV4SyncNowPatchPostPutArgs;
+    response: JetpackV4SyncNowPatchResponse;
+  };
+  '/jetpack/v4/sync/object': {
+    args: JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
+    response: JetpackV4SyncObjectPatchResponse;
+  };
+  '/jetpack/v4/sync/settings': {
+    args: JetpackV4SyncSettingsPatchPostPutArgs;
+    response: JetpackV4SyncSettingsPatchResponse;
+  };
+  '/jetpack/v4/sync/unlock': {
+    args: JetpackV4SyncUnlockPatchPostPutArgs;
+    response: JetpackV4SyncUnlockPatchResponse;
+  };
+  '/jetpack/v4/tracking/settings': {
+    args: JetpackV4TrackingSettingsPatchPostPutArgs;
+    response: JetpackV4TrackingSettingsPatchResponse;
+  };
+  '/jetpack/v4/user-token': {
+    args: JetpackV4UserTokenPatchPostPutArgs;
+    response: JetpackV4UserTokenPatchResponse;
+  };
+  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': {
+    args: JetpackV4VerifySitePServiceAZPatchPostPutArgs;
+    response: JetpackV4VerifySitePServiceAZPatchResponse;
+  };
+  '/jetpack/v4/waf': {
+    args: JetpackV4WafPatchPostPutArgs;
+    response: JetpackV4WafPatchResponse;
+  };
+  '/jetpack/v4/waf/update-rules': {
+    args: JetpackV4WafUpdateRulesPatchPostPutArgs;
+    response: JetpackV4WafUpdateRulesPatchResponse;
+  };
 }
 
 /**
  * All "jetpack/v4" POST routes.
  */
 export interface JetpackV4PostRoutes {
-  '/jetpack/v4/backup-helper-script': JetpackV4BackupHelperScriptPostArgs;
-  '/jetpack/v4/connection': JetpackV4ConnectionPatchPostPutArgs;
-  '/jetpack/v4/connection/owner': JetpackV4ConnectionOwnerPatchPostPutArgs;
-  '/jetpack/v4/connection/reconnect': JetpackV4ConnectionReconnectPatchPostPutArgs;
-  '/jetpack/v4/connection/register': JetpackV4ConnectionRegisterPatchPostPutArgs;
-  '/jetpack/v4/connection/user': JetpackV4ConnectionUserPatchPostPutArgs;
-  '/jetpack/v4/hints': JetpackV4HintsPatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/confirm-safe-mode': JetpackV4IdentityCrisisConfirmSafeModePatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/migrate': JetpackV4IdentityCrisisMigratePatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/start-fresh': JetpackV4IdentityCrisisStartFreshPatchPostPutArgs;
-  '/jetpack/v4/jetpack_crm': JetpackV4JetpackCrmPatchPostPutArgs;
-  '/jetpack/v4/jetpack-ai-jwt': JetpackV4JetpackAiJwtPatchPostPutArgs;
-  '/jetpack/v4/jitm': JetpackV4JitmPostArgs;
-  '/jetpack/v4/licensing/attach-licenses': JetpackV4LicensingAttachLicensesPatchPostPutArgs;
-  '/jetpack/v4/licensing/error': JetpackV4LicensingErrorPatchPostPutArgs;
-  '/jetpack/v4/licensing/set-license': JetpackV4LicensingSetLicensePatchPostPutArgs;
-  '/jetpack/v4/licensing/user/activation-notice-dismiss': JetpackV4LicensingUserActivationNoticeDismissPatchPostPutArgs;
-  '/jetpack/v4/marketing/survey': JetpackV4MarketingSurveyPostArgs;
-  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': JetpackV4ModulePServiceAZKeyCheckPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': JetpackV4ModulePSlugAZPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/active': JetpackV4ModulePSlugAZActivePatchPostPutArgs;
-  '/jetpack/v4/module/all/active': JetpackV4ModuleAllActivePatchPostPutArgs;
-  '/jetpack/v4/notice/(?P<notice>[a-z\\-_]+)': JetpackV4NoticePNoticeAZPatchPostPutArgs;
-  '/jetpack/v4/options/(?P<options>[a-z\\-]+)': JetpackV4OptionsPOptionsAZPatchPostPutArgs;
-  '/jetpack/v4/plugins': JetpackV4PluginsPostArgs;
-  '/jetpack/v4/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': JetpackV4PluginsPPluginPatchPostPutArgs;
-  '/jetpack/v4/purchase-token': JetpackV4PurchaseTokenPostArgs;
-  '/jetpack/v4/recommendations/data': JetpackV4RecommendationsDataPatchPostPutArgs;
-  '/jetpack/v4/recommendations/step': JetpackV4RecommendationsStepPatchPostPutArgs;
-  '/jetpack/v4/remote_authorize': JetpackV4RemoteAuthorizePatchPostPutArgs;
-  '/jetpack/v4/search/plan/activate': JetpackV4SearchPlanActivatePatchPostPutArgs;
-  '/jetpack/v4/search/plan/deactivate': JetpackV4SearchPlanDeactivatePatchPostPutArgs;
-  '/jetpack/v4/search/settings': JetpackV4SearchSettingsPatchPostPutArgs;
-  '/jetpack/v4/seen-wc-connection-modal': JetpackV4SeenWcConnectionModalPatchPostPutArgs;
-  '/jetpack/v4/settings': JetpackV4SettingsPatchPostPutArgs;
-  '/jetpack/v4/settings/(?P<slug>[a-z\\-]+)': JetpackV4SettingsPSlugAZPatchPostPutArgs;
-  '/jetpack/v4/sync/checkout': JetpackV4SyncCheckoutPatchPostPutArgs;
-  '/jetpack/v4/sync/close': JetpackV4SyncClosePatchPostPutArgs;
-  '/jetpack/v4/sync/data-histogram': JetpackV4SyncDataHistogramPatchPostPutArgs;
-  '/jetpack/v4/sync/full-sync': JetpackV4SyncFullSyncPatchPostPutArgs;
-  '/jetpack/v4/sync/health': JetpackV4SyncHealthPatchPostPutArgs;
-  '/jetpack/v4/sync/now': JetpackV4SyncNowPatchPostPutArgs;
-  '/jetpack/v4/sync/object': JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
-  '/jetpack/v4/sync/settings': JetpackV4SyncSettingsPatchPostPutArgs;
-  '/jetpack/v4/sync/unlock': JetpackV4SyncUnlockPatchPostPutArgs;
-  '/jetpack/v4/tracking/settings': JetpackV4TrackingSettingsPatchPostPutArgs;
-  '/jetpack/v4/user-token': JetpackV4UserTokenPatchPostPutArgs;
-  '/jetpack/v4/verify_xmlrpc_error': JetpackV4VerifyXmlrpcErrorPostArgs;
-  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': JetpackV4VerifySitePServiceAZPatchPostPutArgs;
-  '/jetpack/v4/waf': JetpackV4WafPatchPostPutArgs;
-  '/jetpack/v4/waf/update-rules': JetpackV4WafUpdateRulesPatchPostPutArgs;
+  '/jetpack/v4/backup-helper-script': {
+    args: JetpackV4BackupHelperScriptPostArgs;
+    response: JetpackV4BackupHelperScriptPostResponse;
+  };
+  '/jetpack/v4/connection': {
+    args: JetpackV4ConnectionPatchPostPutArgs;
+    response: JetpackV4ConnectionPostResponse;
+  };
+  '/jetpack/v4/connection/owner': {
+    args: JetpackV4ConnectionOwnerPatchPostPutArgs;
+    response: JetpackV4ConnectionOwnerPostResponse;
+  };
+  '/jetpack/v4/connection/reconnect': {
+    args: JetpackV4ConnectionReconnectPatchPostPutArgs;
+    response: JetpackV4ConnectionReconnectPostResponse;
+  };
+  '/jetpack/v4/connection/register': {
+    args: JetpackV4ConnectionRegisterPatchPostPutArgs;
+    response: JetpackV4ConnectionRegisterPostResponse;
+  };
+  '/jetpack/v4/connection/user': {
+    args: JetpackV4ConnectionUserPatchPostPutArgs;
+    response: JetpackV4ConnectionUserPostResponse;
+  };
+  '/jetpack/v4/hints': {
+    args: JetpackV4HintsPatchPostPutArgs;
+    response: JetpackV4HintsPostResponse;
+  };
+  '/jetpack/v4/identity-crisis/confirm-safe-mode': {
+    args: JetpackV4IdentityCrisisConfirmSafeModePatchPostPutArgs;
+    response: JetpackV4IdentityCrisisConfirmSafeModePostResponse;
+  };
+  '/jetpack/v4/identity-crisis/migrate': {
+    args: JetpackV4IdentityCrisisMigratePatchPostPutArgs;
+    response: JetpackV4IdentityCrisisMigratePostResponse;
+  };
+  '/jetpack/v4/identity-crisis/start-fresh': {
+    args: JetpackV4IdentityCrisisStartFreshPatchPostPutArgs;
+    response: JetpackV4IdentityCrisisStartFreshPostResponse;
+  };
+  '/jetpack/v4/jetpack_crm': {
+    args: JetpackV4JetpackCrmPatchPostPutArgs;
+    response: JetpackV4JetpackCrmPostResponse;
+  };
+  '/jetpack/v4/jetpack-ai-jwt': {
+    args: JetpackV4JetpackAiJwtPatchPostPutArgs;
+    response: JetpackV4JetpackAiJwtPostResponse;
+  };
+  '/jetpack/v4/jitm': {
+    args: JetpackV4JitmPostArgs;
+    response: JetpackV4JitmPostResponse;
+  };
+  '/jetpack/v4/licensing/attach-licenses': {
+    args: JetpackV4LicensingAttachLicensesPatchPostPutArgs;
+    response: JetpackV4LicensingAttachLicensesPostResponse;
+  };
+  '/jetpack/v4/licensing/error': {
+    args: JetpackV4LicensingErrorPatchPostPutArgs;
+    response: JetpackV4LicensingErrorPostResponse;
+  };
+  '/jetpack/v4/licensing/set-license': {
+    args: JetpackV4LicensingSetLicensePatchPostPutArgs;
+    response: JetpackV4LicensingSetLicensePostResponse;
+  };
+  '/jetpack/v4/licensing/user/activation-notice-dismiss': {
+    args: JetpackV4LicensingUserActivationNoticeDismissPatchPostPutArgs;
+    response: JetpackV4LicensingUserActivationNoticeDismissPostResponse;
+  };
+  '/jetpack/v4/marketing/survey': {
+    args: JetpackV4MarketingSurveyPostArgs;
+    response: JetpackV4MarketingSurveyPostResponse;
+  };
+  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': {
+    args: JetpackV4ModulePServiceAZKeyCheckPatchPostPutArgs;
+    response: JetpackV4ModulePServiceAZKeyCheckPostResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': {
+    args: JetpackV4ModulePSlugAZPatchPostPutArgs;
+    response: JetpackV4ModulePSlugAZPostResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/active': {
+    args: JetpackV4ModulePSlugAZActivePatchPostPutArgs;
+    response: JetpackV4ModulePSlugAZActivePostResponse;
+  };
+  '/jetpack/v4/module/all/active': {
+    args: JetpackV4ModuleAllActivePatchPostPutArgs;
+    response: JetpackV4ModuleAllActivePostResponse;
+  };
+  '/jetpack/v4/notice/(?P<notice>[a-z\\-_]+)': {
+    args: JetpackV4NoticePNoticeAZPatchPostPutArgs;
+    response: JetpackV4NoticePNoticeAZPostResponse;
+  };
+  '/jetpack/v4/options/(?P<options>[a-z\\-]+)': {
+    args: JetpackV4OptionsPOptionsAZPatchPostPutArgs;
+    response: JetpackV4OptionsPOptionsAZPostResponse;
+  };
+  '/jetpack/v4/plugins': {
+    args: JetpackV4PluginsPostArgs;
+    response: JetpackV4PluginsPostResponse;
+  };
+  '/jetpack/v4/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: JetpackV4PluginsPPluginPatchPostPutArgs;
+    response: JetpackV4PluginsPPluginPostResponse;
+  };
+  '/jetpack/v4/purchase-token': {
+    args: JetpackV4PurchaseTokenPostArgs;
+    response: JetpackV4PurchaseTokenPostResponse;
+  };
+  '/jetpack/v4/recommendations/data': {
+    args: JetpackV4RecommendationsDataPatchPostPutArgs;
+    response: JetpackV4RecommendationsDataPostResponse;
+  };
+  '/jetpack/v4/recommendations/step': {
+    args: JetpackV4RecommendationsStepPatchPostPutArgs;
+    response: JetpackV4RecommendationsStepPostResponse;
+  };
+  '/jetpack/v4/remote_authorize': {
+    args: JetpackV4RemoteAuthorizePatchPostPutArgs;
+    response: JetpackV4RemoteAuthorizePostResponse;
+  };
+  '/jetpack/v4/search/plan/activate': {
+    args: JetpackV4SearchPlanActivatePatchPostPutArgs;
+    response: JetpackV4SearchPlanActivatePostResponse;
+  };
+  '/jetpack/v4/search/plan/deactivate': {
+    args: JetpackV4SearchPlanDeactivatePatchPostPutArgs;
+    response: JetpackV4SearchPlanDeactivatePostResponse;
+  };
+  '/jetpack/v4/search/settings': {
+    args: JetpackV4SearchSettingsPatchPostPutArgs;
+    response: JetpackV4SearchSettingsPostResponse;
+  };
+  '/jetpack/v4/seen-wc-connection-modal': {
+    args: JetpackV4SeenWcConnectionModalPatchPostPutArgs;
+    response: JetpackV4SeenWcConnectionModalPostResponse;
+  };
+  '/jetpack/v4/settings': {
+    args: JetpackV4SettingsPatchPostPutArgs;
+    response: JetpackV4SettingsPostResponse;
+  };
+  '/jetpack/v4/settings/(?P<slug>[a-z\\-]+)': {
+    args: JetpackV4SettingsPSlugAZPatchPostPutArgs;
+    response: JetpackV4SettingsPSlugAZPostResponse;
+  };
+  '/jetpack/v4/sync/checkout': {
+    args: JetpackV4SyncCheckoutPatchPostPutArgs;
+    response: JetpackV4SyncCheckoutPostResponse;
+  };
+  '/jetpack/v4/sync/close': {
+    args: JetpackV4SyncClosePatchPostPutArgs;
+    response: JetpackV4SyncClosePostResponse;
+  };
+  '/jetpack/v4/sync/data-histogram': {
+    args: JetpackV4SyncDataHistogramPatchPostPutArgs;
+    response: JetpackV4SyncDataHistogramPostResponse;
+  };
+  '/jetpack/v4/sync/full-sync': {
+    args: JetpackV4SyncFullSyncPatchPostPutArgs;
+    response: JetpackV4SyncFullSyncPostResponse;
+  };
+  '/jetpack/v4/sync/health': {
+    args: JetpackV4SyncHealthPatchPostPutArgs;
+    response: JetpackV4SyncHealthPostResponse;
+  };
+  '/jetpack/v4/sync/now': {
+    args: JetpackV4SyncNowPatchPostPutArgs;
+    response: JetpackV4SyncNowPostResponse;
+  };
+  '/jetpack/v4/sync/object': {
+    args: JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
+    response: JetpackV4SyncObjectPostResponse;
+  };
+  '/jetpack/v4/sync/settings': {
+    args: JetpackV4SyncSettingsPatchPostPutArgs;
+    response: JetpackV4SyncSettingsPostResponse;
+  };
+  '/jetpack/v4/sync/unlock': {
+    args: JetpackV4SyncUnlockPatchPostPutArgs;
+    response: JetpackV4SyncUnlockPostResponse;
+  };
+  '/jetpack/v4/tracking/settings': {
+    args: JetpackV4TrackingSettingsPatchPostPutArgs;
+    response: JetpackV4TrackingSettingsPostResponse;
+  };
+  '/jetpack/v4/user-token': {
+    args: JetpackV4UserTokenPatchPostPutArgs;
+    response: JetpackV4UserTokenPostResponse;
+  };
+  '/jetpack/v4/verify_xmlrpc_error': {
+    args: JetpackV4VerifyXmlrpcErrorPostArgs;
+    response: JetpackV4VerifyXmlrpcErrorPostResponse;
+  };
+  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': {
+    args: JetpackV4VerifySitePServiceAZPatchPostPutArgs;
+    response: JetpackV4VerifySitePServiceAZPostResponse;
+  };
+  '/jetpack/v4/waf': {
+    args: JetpackV4WafPatchPostPutArgs;
+    response: JetpackV4WafPostResponse;
+  };
+  '/jetpack/v4/waf/update-rules': {
+    args: JetpackV4WafUpdateRulesPatchPostPutArgs;
+    response: JetpackV4WafUpdateRulesPostResponse;
+  };
 }
 
 /**
  * All "jetpack/v4" PUT routes.
  */
 export interface JetpackV4PutRoutes {
-  '/jetpack/v4/connection': JetpackV4ConnectionPatchPostPutArgs;
-  '/jetpack/v4/connection/owner': JetpackV4ConnectionOwnerPatchPostPutArgs;
-  '/jetpack/v4/connection/reconnect': JetpackV4ConnectionReconnectPatchPostPutArgs;
-  '/jetpack/v4/connection/register': JetpackV4ConnectionRegisterPatchPostPutArgs;
-  '/jetpack/v4/connection/user': JetpackV4ConnectionUserPatchPostPutArgs;
-  '/jetpack/v4/hints': JetpackV4HintsPatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/confirm-safe-mode': JetpackV4IdentityCrisisConfirmSafeModePatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/migrate': JetpackV4IdentityCrisisMigratePatchPostPutArgs;
-  '/jetpack/v4/identity-crisis/start-fresh': JetpackV4IdentityCrisisStartFreshPatchPostPutArgs;
-  '/jetpack/v4/jetpack_crm': JetpackV4JetpackCrmPatchPostPutArgs;
-  '/jetpack/v4/jetpack-ai-jwt': JetpackV4JetpackAiJwtPatchPostPutArgs;
-  '/jetpack/v4/licensing/attach-licenses': JetpackV4LicensingAttachLicensesPatchPostPutArgs;
-  '/jetpack/v4/licensing/error': JetpackV4LicensingErrorPatchPostPutArgs;
-  '/jetpack/v4/licensing/set-license': JetpackV4LicensingSetLicensePatchPostPutArgs;
-  '/jetpack/v4/licensing/user/activation-notice-dismiss': JetpackV4LicensingUserActivationNoticeDismissPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': JetpackV4ModulePServiceAZKeyCheckPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': JetpackV4ModulePSlugAZPatchPostPutArgs;
-  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/active': JetpackV4ModulePSlugAZActivePatchPostPutArgs;
-  '/jetpack/v4/module/all/active': JetpackV4ModuleAllActivePatchPostPutArgs;
-  '/jetpack/v4/notice/(?P<notice>[a-z\\-_]+)': JetpackV4NoticePNoticeAZPatchPostPutArgs;
-  '/jetpack/v4/options/(?P<options>[a-z\\-]+)': JetpackV4OptionsPOptionsAZPatchPostPutArgs;
-  '/jetpack/v4/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': JetpackV4PluginsPPluginPatchPostPutArgs;
-  '/jetpack/v4/recommendations/data': JetpackV4RecommendationsDataPatchPostPutArgs;
-  '/jetpack/v4/recommendations/step': JetpackV4RecommendationsStepPatchPostPutArgs;
-  '/jetpack/v4/remote_authorize': JetpackV4RemoteAuthorizePatchPostPutArgs;
-  '/jetpack/v4/search/plan/activate': JetpackV4SearchPlanActivatePatchPostPutArgs;
-  '/jetpack/v4/search/plan/deactivate': JetpackV4SearchPlanDeactivatePatchPostPutArgs;
-  '/jetpack/v4/search/settings': JetpackV4SearchSettingsPatchPostPutArgs;
-  '/jetpack/v4/seen-wc-connection-modal': JetpackV4SeenWcConnectionModalPatchPostPutArgs;
-  '/jetpack/v4/settings': JetpackV4SettingsPatchPostPutArgs;
-  '/jetpack/v4/settings/(?P<slug>[a-z\\-]+)': JetpackV4SettingsPSlugAZPatchPostPutArgs;
-  '/jetpack/v4/sync/checkout': JetpackV4SyncCheckoutPatchPostPutArgs;
-  '/jetpack/v4/sync/close': JetpackV4SyncClosePatchPostPutArgs;
-  '/jetpack/v4/sync/data-histogram': JetpackV4SyncDataHistogramPatchPostPutArgs;
-  '/jetpack/v4/sync/full-sync': JetpackV4SyncFullSyncPatchPostPutArgs;
-  '/jetpack/v4/sync/health': JetpackV4SyncHealthPatchPostPutArgs;
-  '/jetpack/v4/sync/now': JetpackV4SyncNowPatchPostPutArgs;
-  '/jetpack/v4/sync/object': JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
-  '/jetpack/v4/sync/settings': JetpackV4SyncSettingsPatchPostPutArgs;
-  '/jetpack/v4/sync/unlock': JetpackV4SyncUnlockPatchPostPutArgs;
-  '/jetpack/v4/tracking/settings': JetpackV4TrackingSettingsPatchPostPutArgs;
-  '/jetpack/v4/user-token': JetpackV4UserTokenPatchPostPutArgs;
-  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': JetpackV4VerifySitePServiceAZPatchPostPutArgs;
-  '/jetpack/v4/waf': JetpackV4WafPatchPostPutArgs;
-  '/jetpack/v4/waf/update-rules': JetpackV4WafUpdateRulesPatchPostPutArgs;
+  '/jetpack/v4/connection': {
+    args: JetpackV4ConnectionPatchPostPutArgs;
+    response: JetpackV4ConnectionPutResponse;
+  };
+  '/jetpack/v4/connection/owner': {
+    args: JetpackV4ConnectionOwnerPatchPostPutArgs;
+    response: JetpackV4ConnectionOwnerPutResponse;
+  };
+  '/jetpack/v4/connection/reconnect': {
+    args: JetpackV4ConnectionReconnectPatchPostPutArgs;
+    response: JetpackV4ConnectionReconnectPutResponse;
+  };
+  '/jetpack/v4/connection/register': {
+    args: JetpackV4ConnectionRegisterPatchPostPutArgs;
+    response: JetpackV4ConnectionRegisterPutResponse;
+  };
+  '/jetpack/v4/connection/user': {
+    args: JetpackV4ConnectionUserPatchPostPutArgs;
+    response: JetpackV4ConnectionUserPutResponse;
+  };
+  '/jetpack/v4/hints': {
+    args: JetpackV4HintsPatchPostPutArgs;
+    response: JetpackV4HintsPutResponse;
+  };
+  '/jetpack/v4/identity-crisis/confirm-safe-mode': {
+    args: JetpackV4IdentityCrisisConfirmSafeModePatchPostPutArgs;
+    response: JetpackV4IdentityCrisisConfirmSafeModePutResponse;
+  };
+  '/jetpack/v4/identity-crisis/migrate': {
+    args: JetpackV4IdentityCrisisMigratePatchPostPutArgs;
+    response: JetpackV4IdentityCrisisMigratePutResponse;
+  };
+  '/jetpack/v4/identity-crisis/start-fresh': {
+    args: JetpackV4IdentityCrisisStartFreshPatchPostPutArgs;
+    response: JetpackV4IdentityCrisisStartFreshPutResponse;
+  };
+  '/jetpack/v4/jetpack_crm': {
+    args: JetpackV4JetpackCrmPatchPostPutArgs;
+    response: JetpackV4JetpackCrmPutResponse;
+  };
+  '/jetpack/v4/jetpack-ai-jwt': {
+    args: JetpackV4JetpackAiJwtPatchPostPutArgs;
+    response: JetpackV4JetpackAiJwtPutResponse;
+  };
+  '/jetpack/v4/licensing/attach-licenses': {
+    args: JetpackV4LicensingAttachLicensesPatchPostPutArgs;
+    response: JetpackV4LicensingAttachLicensesPutResponse;
+  };
+  '/jetpack/v4/licensing/error': {
+    args: JetpackV4LicensingErrorPatchPostPutArgs;
+    response: JetpackV4LicensingErrorPutResponse;
+  };
+  '/jetpack/v4/licensing/set-license': {
+    args: JetpackV4LicensingSetLicensePatchPostPutArgs;
+    response: JetpackV4LicensingSetLicensePutResponse;
+  };
+  '/jetpack/v4/licensing/user/activation-notice-dismiss': {
+    args: JetpackV4LicensingUserActivationNoticeDismissPatchPostPutArgs;
+    response: JetpackV4LicensingUserActivationNoticeDismissPutResponse;
+  };
+  '/jetpack/v4/module/(?P<service>[a-z\\-]+)/key/check': {
+    args: JetpackV4ModulePServiceAZKeyCheckPatchPostPutArgs;
+    response: JetpackV4ModulePServiceAZKeyCheckPutResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)': {
+    args: JetpackV4ModulePSlugAZPatchPostPutArgs;
+    response: JetpackV4ModulePSlugAZPutResponse;
+  };
+  '/jetpack/v4/module/(?P<slug>[a-z\\-]+)/active': {
+    args: JetpackV4ModulePSlugAZActivePatchPostPutArgs;
+    response: JetpackV4ModulePSlugAZActivePutResponse;
+  };
+  '/jetpack/v4/module/all/active': {
+    args: JetpackV4ModuleAllActivePatchPostPutArgs;
+    response: JetpackV4ModuleAllActivePutResponse;
+  };
+  '/jetpack/v4/notice/(?P<notice>[a-z\\-_]+)': {
+    args: JetpackV4NoticePNoticeAZPatchPostPutArgs;
+    response: JetpackV4NoticePNoticeAZPutResponse;
+  };
+  '/jetpack/v4/options/(?P<options>[a-z\\-]+)': {
+    args: JetpackV4OptionsPOptionsAZPatchPostPutArgs;
+    response: JetpackV4OptionsPOptionsAZPutResponse;
+  };
+  '/jetpack/v4/plugins/(?P<plugin>[^.\\/]+(?:\\/[^.\\/]+)?)': {
+    args: JetpackV4PluginsPPluginPatchPostPutArgs;
+    response: JetpackV4PluginsPPluginPutResponse;
+  };
+  '/jetpack/v4/recommendations/data': {
+    args: JetpackV4RecommendationsDataPatchPostPutArgs;
+    response: JetpackV4RecommendationsDataPutResponse;
+  };
+  '/jetpack/v4/recommendations/step': {
+    args: JetpackV4RecommendationsStepPatchPostPutArgs;
+    response: JetpackV4RecommendationsStepPutResponse;
+  };
+  '/jetpack/v4/remote_authorize': {
+    args: JetpackV4RemoteAuthorizePatchPostPutArgs;
+    response: JetpackV4RemoteAuthorizePutResponse;
+  };
+  '/jetpack/v4/search/plan/activate': {
+    args: JetpackV4SearchPlanActivatePatchPostPutArgs;
+    response: JetpackV4SearchPlanActivatePutResponse;
+  };
+  '/jetpack/v4/search/plan/deactivate': {
+    args: JetpackV4SearchPlanDeactivatePatchPostPutArgs;
+    response: JetpackV4SearchPlanDeactivatePutResponse;
+  };
+  '/jetpack/v4/search/settings': {
+    args: JetpackV4SearchSettingsPatchPostPutArgs;
+    response: JetpackV4SearchSettingsPutResponse;
+  };
+  '/jetpack/v4/seen-wc-connection-modal': {
+    args: JetpackV4SeenWcConnectionModalPatchPostPutArgs;
+    response: JetpackV4SeenWcConnectionModalPutResponse;
+  };
+  '/jetpack/v4/settings': {
+    args: JetpackV4SettingsPatchPostPutArgs;
+    response: JetpackV4SettingsPutResponse;
+  };
+  '/jetpack/v4/settings/(?P<slug>[a-z\\-]+)': {
+    args: JetpackV4SettingsPSlugAZPatchPostPutArgs;
+    response: JetpackV4SettingsPSlugAZPutResponse;
+  };
+  '/jetpack/v4/sync/checkout': {
+    args: JetpackV4SyncCheckoutPatchPostPutArgs;
+    response: JetpackV4SyncCheckoutPutResponse;
+  };
+  '/jetpack/v4/sync/close': {
+    args: JetpackV4SyncClosePatchPostPutArgs;
+    response: JetpackV4SyncClosePutResponse;
+  };
+  '/jetpack/v4/sync/data-histogram': {
+    args: JetpackV4SyncDataHistogramPatchPostPutArgs;
+    response: JetpackV4SyncDataHistogramPutResponse;
+  };
+  '/jetpack/v4/sync/full-sync': {
+    args: JetpackV4SyncFullSyncPatchPostPutArgs;
+    response: JetpackV4SyncFullSyncPutResponse;
+  };
+  '/jetpack/v4/sync/health': {
+    args: JetpackV4SyncHealthPatchPostPutArgs;
+    response: JetpackV4SyncHealthPutResponse;
+  };
+  '/jetpack/v4/sync/now': {
+    args: JetpackV4SyncNowPatchPostPutArgs;
+    response: JetpackV4SyncNowPutResponse;
+  };
+  '/jetpack/v4/sync/object': {
+    args: JetpackV4SyncObjectDeleteGetPatchPostPutArgs;
+    response: JetpackV4SyncObjectPutResponse;
+  };
+  '/jetpack/v4/sync/settings': {
+    args: JetpackV4SyncSettingsPatchPostPutArgs;
+    response: JetpackV4SyncSettingsPutResponse;
+  };
+  '/jetpack/v4/sync/unlock': {
+    args: JetpackV4SyncUnlockPatchPostPutArgs;
+    response: JetpackV4SyncUnlockPutResponse;
+  };
+  '/jetpack/v4/tracking/settings': {
+    args: JetpackV4TrackingSettingsPatchPostPutArgs;
+    response: JetpackV4TrackingSettingsPutResponse;
+  };
+  '/jetpack/v4/user-token': {
+    args: JetpackV4UserTokenPatchPostPutArgs;
+    response: JetpackV4UserTokenPutResponse;
+  };
+  '/jetpack/v4/verify-site/(?P<service>[a-z\\-_]+)': {
+    args: JetpackV4VerifySitePServiceAZPatchPostPutArgs;
+    response: JetpackV4VerifySitePServiceAZPutResponse;
+  };
+  '/jetpack/v4/waf': {
+    args: JetpackV4WafPatchPostPutArgs;
+    response: JetpackV4WafPutResponse;
+  };
+  '/jetpack/v4/waf/update-rules': {
+    args: JetpackV4WafUpdateRulesPatchPostPutArgs;
+    response: JetpackV4WafUpdateRulesPutResponse;
+  };
 }
 
 /**
