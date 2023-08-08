@@ -3,6 +3,29 @@
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
 
+## [1.0.0-alpha.1](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.7...v1.0.0-alpha.1) (2023-08-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* endoint mapping types are no longer just the args,
+but a richer `{ args, response }` aggregate type.
+
+### Features
+
+* **comments:** improve doc comments for types and members ([ae20620](https://github.com/JaredReisinger/wordpressed/commit/ae20620131495da8118fb48fb2285e5bcb07af8c))
+* now supports (and generates) response types ([1e2d117](https://github.com/JaredReisinger/wordpressed/commit/1e2d117e608c5a3ba85b554c560ce8480a41520e))
+
+
+### Code Refactoring
+
+* new LineBuffer class to encapsulate buffered file writing ([b95bb86](https://github.com/JaredReisinger/wordpressed/commit/b95bb86490a323817d0325d141a0b47b31bae255))
+
+
+### Miscellaneous Chores
+
+* remove forensic logging in generate test ([6fd2c76](https://github.com/JaredReisinger/wordpressed/commit/6fd2c769bf8938d7a4b4ff647bab63eb82fbbf4a))
+
 ## [0.1.0-alpha.7](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.6...v0.1.0-alpha.7) (2023-08-06)
 
 

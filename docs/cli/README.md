@@ -21,7 +21,7 @@ $ npm install -g wordpressed
 $ wordpressed COMMAND
 running command...
 $ wordpressed (--version)
-wordpressed/0.1.0-alpha.7 linux-x64 node-v18.17.0
+wordpressed/1.0.0-alpha.1 linux-x64 node-v18.17.0
 $ wordpressed --help [COMMAND]
 USAGE
   $ wordpressed COMMAND
