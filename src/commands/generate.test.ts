@@ -366,7 +366,7 @@ test.serial('handles known argument types', async (t) => {
       const content = await fs.readFile(path.join(tmpDir, file), {
         encoding: 'utf8',
       });
-      t.log('FILE CONTENTS', file, '\n----------\n' + content + '\n----------');
+      // t.log('FILE CONTENTS', file, '\n----------\n' + content + '\n----------');
       t.snapshot(content);
     }
   } finally {
