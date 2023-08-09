@@ -24,8 +24,9 @@
     "clean": "shx rm -rf dist coverage tsconfig.tsbuildinfo",
     "lint": "eslint ./src",
     "test": "ava",
-    "test:coverage": "c8 --all --src src --exclude namespaces --per-file --reporter lcov --reporter text npm test",
+    "test:coverage": "c8 --all --src src --exclude namespaces --exclude example --per-file --reporter lcov --reporter text npm test",
     "coverage": "npm run test:coverage",
+    "example": "ts-node src/example/index.ts",
     "prepare": "(is-ci || husky install) && npm run snyk-protect",
     "release": "semantic-release",
     "snyk-protect": "snyk-protect",
@@ -43,8 +44,9 @@
   },
   "files": [
     "/bin",
+    "!/bin/dev.*",
     "/dist",
-    "!/dist/tools/",
+    "!/dist/example/",
     "!**/*.test.*",
     "oclif.manifest.json"
   ],

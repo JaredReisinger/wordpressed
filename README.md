@@ -9,67 +9,35 @@ A modern, Typescript+ESM client for the WordPress REST API. _(Rhymes with “wo
 
 > **WARNING:** This is _**very much**_ an early work-in-progress. It is being published so that early feedback on design decisions can be made. There _**will**_ be changes to the way that calls/requests are made.
 
-## _What is this?_
+## Usage
 
-This is an attempt at bringing Typescript and ESM support to the [WordPress REST API](https://developer.wordpress.org/rest-api/) world. The intent is to have a very-thin-at-runtime, but very-rich-at-edit/build-time library that makes it very, very easy to call WordPress REST API routes/endpoints and pass the correct parameters and arguments, and _**know**_ what type of values you should be getting back. The hope is that a huge amount of the heavy lifting can be automagically generated thanks to the WordPress REST API’s built-in [discovery mechanism](https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/).
+Just construct the client with the URL to your WordPress host, and start making REST API calls with the `get()`, `post()`, `delete()`, etc. method-specific functions:
 
-Ideally, when calling, say, the `GET /wp-json/wp/v2/pages` endpoint, Typescript can prevent you from passing invalid arguments, and can provide auto-complete for the correct ones… and even provide some documentation about them, as well!
+```ts
+import { Client } from 'wordpressed';
+
+const client = new Client('http://myhost.example.org');
+
+const response = await client.get('/wp/v2/pages', {
+  after: '2023-08-01T00:00:00Z',
+  per_page: 100,
+});
+
+response.body.forEach((page => { ... })
+```
+
+Note that you get Typescript type checking and intellisense completion (if your editor supports it) on the routes, the arguments specific to that route, and for the response body:
 
 ![example usage](https://github.com/JaredReisinger/wordpressed/blob/alpha/docs/wordpressed-example.png?raw=true)
 
-I’d also like a “namespace-streamlined” client, so you could, say, lock it to a single namespace, and vastly simplify the calls. [My use-case in particular](https://www.npmjs.com/package/order-fetcher) could look like:
+## What to do if your routes aren’t included
 
-```ts
-const client = new NamespaceClient('https://somehost.com', 'wc/v3');
-const orders = await client.get('orders', { after: '2023-01-01' });
-```
+If you have a use-case that involves a plugin/namespace/routes/endpoints that aren’t already a part of this library, you can use the included [`wordpressed` CLI](https://github.com/JaredReisinger/wordpressed/blob/alpha/docs/cli/README.md) to generate your own custom types, and then provide those to your client instance.
 
-... which, to me, looks much cleaner and easier than most other options available. _(Note that the namespace-specific client is not yet implemented!)_
+See the [_Customizing_ section of the type-generation docs](https://github.com/JaredReisinger/wordpressed/blob/alpha/docs/type-generation.md#customizing) for all the details.
 
-## `wordpressed` CLI
+## It’s _much_ smaller than it looks!
 
-This package now also includes [a CLI](https://github.com/JaredReisinger/wordpressed/blob/alpha/docs/cli#readme) for generating types from a live WordPress host.
+As of 2023–08–09, `npm pack --dry-run` on my machine reports about 850kB in file size, which matches the “unpacked size” reported on npmjs.com. But 775kB (_**91%!**_) of that is the `namespace` directory, which is entirely Typescript types that only exist at edit/build time. If you are including this library and running any kind of bundler/transpiler, you will likely end up with _at most_ 32kB (3.8% of the package) of `.js` files included from this library in your final build.
 
----
-
-## Current roadblocks / thoughts
-
-- The WordPress REST API discovery mechanism does not seem to provide _**any**_ response field information whatsoever. To me, this seems like a complete oversight. These response types _might_ have to be completely hand-written, which is unfortunate. If that is the case, I will endeavor to ensure that automatic generation of route param and arg types will not clobber the hand-written response types.
-
-- The namespace/route/endpoint generation is currently dependent on a WordPress instance that I can reach. It does not have all possible plugins/namespaces available. I am attempting to structure this type information in a way that it will be easy to take contributions to this library. I’m also hoping to make it relatively easy to create your own custom routes/type mappings for _**your**_ specific WordPress server, and provide those directly to the “standard” library, _without_ needing to necessarily contribute them back, so that you’re never stuck waiting for an update in order to handle your specific use-case. (Which might make possible som number of "extension pacakges" that just augment the set of available routes/types.)
-
-## TODO / Roadmap
-
-- [ ] Generate route/endpoint argument types
-
-  - [x] basic types (string, integer, etc.)
-
-  - [ ] array items
-
-  - [ ] objects
-
-- [ ] Generate route path (regexp match) parameters
-
-- [x] Generate response types for routes/endpoints _(It appears that the WordPress developers didn’t think reponses needed to be discoverable… I don’t believe there is **any** queryable/parseable response information at all, sadly.)_
-
-- [x] Create route/endpoint-to-argument type safety
-
-- [ ] Create all-purpose get/post/patch/etc. client calls
-
-  - [x] very rough stubbed calls
-
-  - [x] argument support
-
-  - [ ] route parameter support
-
-- [ ] Create streamlined “namespace-specific” client?
-
-- [ ] Generate namespace-specific authentication? (WooCommerce has its own, but I don’t see that “magic” exposed in the discovery information.)
-
-- [x] Increase test coverage
-
-  - [x] main client code
-
-  - [x] utility routines
-
-  - [x] generation CLI
+So yes, it’s a relatively sizeable package for the runtime functionality. But the whole point of this is that 91% set of types that drastically improves the edit-time experience. As time goes on and more types come in, that proportion is likely to grow… but the actual run-time impact of the package will remain unchanged.

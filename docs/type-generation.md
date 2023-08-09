@@ -1,4 +1,4 @@
-`# Type generation
+# Type generation
 
 ## Context
 
@@ -20,90 +20,95 @@ Of these three values, only the request **path variables** and **arguments** are
 
 ## Process
 
+> ### But first, a caveat:
+>
+> The namespace/route/endpoint generation is currently dependent on a WordPress instance that **_I_** can reach. It does not have all possible plugins/namespaces available. I am attempting to structure this type information in a way that it will be easy to take contributions to this library. It is also relatively easy to create your own custom routes/type mappings for _**your**_ specific WordPress server, [see _Customizing_, below](#customizing).
+
 ### From WordPress to Typescript...
 
-The `GET /wp-json` endpoint is called, which results in a (potentially large) response that contains all of the routes, endpoints, and arguments defined on that server. We iterate the routes/endpoints, parsing the schema to build a Typescript-equivalent definition for each argument set. These are named for the route/endpoint they are associated with, so for example, the route `/wp/v2/posts/(?P<id>[\\d]+)` defines three endpoints, one for `DELETE`, one for `GET`, and one for the set of `POST`, `PUT`, and `PATCH`. We use a naive textification of the route (rather than attempting to be “smart” about the pattern matching), giving us a base of **`WpV2PostsPIdD`**, and then append the endopoint method(s) and **`Args`**, resulting in:
+The `GET /wp-json` endpoint is called, which results in a (potentially large) response that contains all of the routes, endpoints, and arguments defined on that server. We iterate the routes/endpoints, parsing the schema to build a Typescript-equivalent definition for each argument set. These are named for the route/endpoint they are associated with, so for example, the route `/wp/v2/posts/(?P<id>[\\d]+)` defines three endpoints, one for `DELETE`, one for `GET`, and one for the set of `PATCH`, `POST`, and `PUT`. We use a naive textification of the route (rather than attempting to be “smart” about the pattern matching), giving us a base of **`WpV2PostsPIdD`**, and then append the endopoint method(s) and **`Args`**, resulting in:
 
 - **`WpV2PostsPIdDDeleteArgs`**
 - **`WpV2PostsPIdDGetArgs`**
-- **`WpV2PostsPIdDPostPutPatchArgs`**
+- **`WpV2PostsPIdDPatchPostPutArgs`**
 
 Simply-typed arguments (strings, numbers) have easy mappings to Typescript equivalents, but more complex ones (arrays, objects) require us to further define those types as well. For example, the `content` member of `WpV2PostsPostArgs` (for the `POST /wp/v2/posts` endpoint) is itself an object with `raw`, `rendered`, `block_version` and `protected` properties. We thus define `WpV2PostsPostArgsContent` (appending the member name to the arg type name) and then refer to that within the arg type. WordPress does not constrain the depth that these complex types might have; fortunately, we can simply parse and process each new type as we see it.
 
+#### But what about response types?
+
+Missing from the discussion thus far is the type of the response from a given endpoint. Sadly, the WordPress REST API discovery mechanism does not seem to include the type/fields in the response. That said, we can stub these out as empty placeholder interfaces. We could use `unknown`, but using an empty interface subtly encourages submissions/updates to fix the types in the library.
+
+Also, whereas more than one HTTP method might use the same arguments description, we _**cannot**_ know whether the response types for those methods will be the same. Therefore, we assume that they are all distinct, and write separate per-method response types. For the same `/wp/v2/posts/(?P<id>[\\d]+)` example from before, this results in:
+
+- **`WpV2PostsPIdDDeleteResponse`**
+- **`WpV2PostsPIdDGetResponse`**
+- **`WpV2PostsPIdDPatchResponse`**
+- **`WpV2PostsPIdDPostResponse`**
+- **`WpV2PostsPIdDPutResponse`**
+
 ### … and then get smart about it!
 
-Having the argument types defined is a good start, but would still require a developer to “know” to indicate what argument type was needed on a request-by-request basis. There are certainly cases where this will still be the case, but clever use of generic types and `keyof` can make developer experience much, much more simple. If we know (i.e. Typescript knows) that we're making a `GET /wp/v2/posts` call, it can then infer that `WpV2PostsGetArgs` is the correct argument type to use.
+Having the argument types defined is a good start, but would still require a developer to “know” to indicate what argument type was needed on a request-by-request basis. There are certainly cases where this will still be the case, but clever use of generic types and `keyof` can make developer experience much, much more simple. If we know (i.e. Typescript knows) that we're making a `GET /wp/v2/posts` call, it can then infer that `WpV2PostsGetArgs` is the correct argument type to use, and that `WpV2PostsGetResponse` is the response body type.
 
-We do this by defining a mapping interface for each HTTP method whose members (keys) are the route path, and whose type is the argument type, for example:
+We do this by defining a mapping interface for each HTTP method whose members (keys) are the route path, and whose type is an object of the argument type and the response type, for example:
 
 ```ts
 export interface WpV2GetRoutes {
   // ...
-  '/wp/v2/posts': WpV2PostsGetArgs;
+  '/wp/v2/posts': { args: WpV2PostsGetArgs; response: WpV2PostsGetResponse };
   // ...
 }
 ```
 
-These are then aggregated across all namespaces as **`KnownGetRoutes`**, **`KnownPostRoutes`**, and so on. With that, indexing by the route results in the matching argument type:
+These are then aggregated across all namespaces as **`KnownGetRoutes`**, **`KnownPostRoutes`**, and so on. These per-method aggregates are then combined into a singe type, as **`KnownRoutes`**. With that, indexing by the route results in the args/response type specific to that route, such that:
 
 ```ts
-KnownGetRoute['/wp/v2/posts'];
+KnownRoutes['Get']['/wp/v2/posts']['args']; // for the argument type
+KnownRoutes['Get']['/wp/v2/posts']['response']; // for the response type
 ```
 
-has the type `WpV2PostsGetArgs`.
+gives us back the types `WpV2PostsGetArgs` and `WpV2PostsGetResponse`.
 
 We can use this in the definition of the `get()` method of the client as follows:
 
 ```ts
-export class Client {
+export class Client<ROUTES extends Methodable = KnownRoutes> {
   // ...
   async get<
-    R extends keyof KnownGetRoutes = keyof KnownGetRoutes,
-    A extends KnownGetRoutes[R] = KnownGetRoutes[R],
+    R extends keyof ROUTES['Get'] = keyof ROUTES['Get'],
+    E extends ROUTES['Get'][R] & ArgResponse = ROUTES['Get'][R],
+    A extends E['args'] = E['args'],
+    T extends E['response'] = E['response'],
   >(route: R, args?: A) {
-    return this._call(EndpointMethod.GET, route, args);
+    return this._call<T, R, A>(EndpointMethod.GET, route, args);
   }
   // ...
 }
 ```
 
-> _NOTE: The actual definition is slightly more complex, to add the type of the response. More on that later._
+That’s a lot of generic specifiers, but in the typical case, you should never have to provide any of them yourself. **`R`** is the route/endpoint path, which can be any of the keys in the `ROUTES[‘Get’]` (aka `KnownGetRoutes`) mapping. Next is **`E`**, which is that route’s `{args; response;}` endpoint type, which we reach by indexing into the known get routes by the `R` value that is actually passed in the call. `E` isn’t used in the call directly, but is needed so we can get to the `args` and `repsonse` types in the next two generic types. The third is **`A`**, the argument type, which comes from getting the type of the `args` member of `E`. And finally comes **`T`** for the response type (“R” was already taken!), which comes from the `response` member of `E`.
 
-There are two type generics here, **`R`** for the route, and **`A`** for the args. The default value for `R` is “all the keys in `KnownGetRoutes`”, and the default for `A` is “the type that results from looking up the specific route in the mapping”. Given this, Typescript knows two things: first, that the route passed to `get()` _**should be**_ one of the known routes we’ve seen and parsed, and second, that for a given route path, the argument type can be found by looking up that route in the `KnownGetRoutes` mapping. This means that:
-
-```ts
-client.get('/wp/v2/posts', { ... });
-```
-
-does _**not**_ need any manual typing for Typescript to know that the `args` parameter has the type `WpV2PostsGetArgs`.
-
-### But what about response types?
-
-Missing from the discussion thus far is the type of the response from a given endpoint. Sadly, the WordPress REST API discovery mechanism does not seem to include the type/fields in the response. That said, we can stub these out as `unknown`, which is at least an accurate way to tell Typescript “we don’t know what this looks like”. We then make sure to provide a mechanism to allow the consumer of the client to provide their own type definition for the response; it’s the same mechanism that can be used to define routes/arguments that the client doesn’t already know about.
-
-The actual definition of the `get()` method of the client is thus:
+With all of those generic types defined, we can now see:
 
 ```ts
-export class Client {
-  // ...
-  async get<
-    T = unknown,
-    R extends keyof KnownGetRoutes = keyof KnownGetRoutes,
-    A extends KnownGetRoutes[R] = KnownGetRoutes[R],
-  >(route: R, args?: A) {
-    return this._call<T>(EndpointMethod.GET, route, args);
+  async get<...>(route: R, args?: A) {
+    return this._call<T, R, A>(EndpointMethod.GET, route, args);
   }
-  // ...
-}
 ```
 
-... where **`T`** has been added as the first generic type parameter (first, so that it's easy to provide _only_ that type if need be), and passed through to `this._call<T>(...)`, causing `_call()` and thus `get()` to return `Promise<T>`.
+…where the `route` passed to `get()` is one of the known route strings, and `args` _**must**_ match type `A`, which is the `{args;}` member associated with that specific route. Up until now, `T` hasn’t been used; it’s simply passed as a generic type to `_call()`, which uses it to define the type of the JSON response body, causing `get()` to have a return type of `Promise<Response<T>>`.
 
-Left as an open question is whether the type generation should provide stubbed response types like `Record<string, unknown>`, or something roughly equivalent. In the near future I’m going to try doing something like this, and adding them into the route-to-type lookup process. I would probably have the stubbed response types placed into a separate file from the path variables and arguments, though, and _not_ clobber those files if they already exist. That way, they can be created/updated by hand, and the client library will eventually get better and better about also providing useful response types.
+All in all, this means that as soon as Typescript sees:
+
+```ts
+const response = await client.get('/wp/v2/posts', ...
+```
+
+... it knows that the arguments to the call must be `WpV2PostsGetArgs`, and the type of `reponse` is `Response<WpV2PostsGetResponse>`, and `response.body` is `WpV2PostsGetResponse`.
 
 ## Customizing
 
-If you have a use-case that involves a plugin/namespace/routes/endpoints that aren't already a part of this library, you can use the `wordpressed` CLI to help you generate your own custom types, and then provide those to your client instance.
+If you have a use-case that involves a plugin/namespace/routes/endpoints that aren't already a part of this library, you can use the [`wordpressed` CLI](./cli/README.md) to help you generate your own custom types, and then provide those to your client instance.
 
 > _NOTE: This mechanism is still a work in progress, what follows is mostly thoughts about how it **ought** to work._
 
@@ -114,31 +119,15 @@ $ mkdir -p src/wordpressed-types
 $ npx wordpressed --host https://myhost.example.org --out-dir src/wordpressed-types
 ```
 
-will create in `src/wordpressed-types` a complete set of route/endpoint types specific to the server you are planning to use. (Or at the very least, some subset of the types you know you are going to need.) You can then seed your instance of the client with the outermost type, using _**your**_ generated `KnownRoutes` insead of the default `KnownRoutes` shipped with the library:
+will create in `src/wordpressed-types` a complete set of route/endpoint types specific to the server you are planning to use. (Or at the very least, some subset of the types you know you are going to need.) These will be structured _**exactly**_ the same way as the types bundled with the wordpressed client, which makes them very easy to substitute in. Just import the main `KnownRoutes` from your custom-generated types, and pass it as the generic type parameter to the `Client` constructor (you don’t really need to rename the imported route type, I’ve only done it here to emphasize that they are custom):
 
 ```ts
 import { Client } from 'wordpressed';
-import { KnownTypes } from './wordpresed-types';
+import { KnownRoutes as MyCustomRoutes } from './wordpresed-types';
 
-const client = new Client<KnownTypes>('http://myhost.example.org');
+const client = new Client<MyCustomRoutes>('http://myhost.example.org');
 ```
 
-This will supersede _**all**_ of the default types for every call into the client, giving you a client pre-typed for your particular use-case.
+This will replace _**all**_ of the default types for every call into the client, giving you a client pre-typed for your particular use-case.
 
 > _NOTE: If you use this option, please consider providing any new routes/endpoints/types back to this project; if you needed some as-yet untyped plugin, someone else probably needs it as well!_
-
-If you just want to override one call, you can do that as well by providing the response, route, and argument type you want to use:
-
-```ts
-import { MyRoutes, MySpecificRouteArg, MySpecificRouteResponse } from './mine';
-
-// ...
-
-const response = await client.get<
-  MySpecificResponse,
-  MyRoutes,
-  MySpecificRouteArg,
->(someRoute, { (...your args...) });
-```
-
-will require `someRoute` to be of type `MyRoutes`, the argument object of type `MySpecificRouteArg`, and the response will be typed as `MySpecificResponse`.

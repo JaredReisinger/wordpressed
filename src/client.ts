@@ -1,6 +1,8 @@
-import got, { OptionsOfJSONResponseBody } from 'got';
+import got, { Options, OptionsOfJSONResponseBody } from 'got';
 
 import { KnownRoutes } from './namespaces/index.js';
+
+export { Options, OptionsOfJSONResponseBody }; // convenience export
 
 // We have to decide if some core WpJson stuff is exposed in parallel to the
 // discovery-generated types.
@@ -39,9 +41,11 @@ interface ArgResponse {
 
 export class Client<ROUTES extends Methodable = KnownRoutes> {
   host: string;
+  options?: Options;
 
-  constructor(host: string) {
+  constructor(host: string, options?: Options) {
     this.host = host;
+    this.options = options;
   }
 
   // The `args` arguments are currently optional, but there may be cases where
@@ -102,7 +106,11 @@ export class Client<ROUTES extends Methodable = KnownRoutes> {
 
     const url = new URL(`${this.host}/wp-json${route}`);
     // console.log(method, { route, args, url });
-    const options: OptionsOfJSONResponseBody = { method, responseType: 'json' };
+    const options: OptionsOfJSONResponseBody = {
+      ...this.options,
+      method,
+      responseType: 'json',
+    };
 
     const argsInQuerystring = [
       EndpointMethod.DELETE,
@@ -123,27 +131,3 @@ export class Client<ROUTES extends Methodable = KnownRoutes> {
     return resp;
   }
 }
-
-// export async function adhoc() {
-//   const client = new Client('xxx');
-//   const resp = await client.get('/forminator/v1/preview/forms', {
-//     module_id: 3,
-//   });
-//   console.log(resp);
-//   // const resp = await client.delete('/jetpack/v4/backup-helper-script', {});
-
-//   interface CustomRoutes {
-//     Get: {
-//       '/something3': { args: { foo3: string }; response: { bar3: number } };
-//       '/somthing4': { args: { foo4: string }; response: { bar4: number } };
-//     };
-//     Delete: never;
-//     Post: never;
-//     Patch: never;
-//     Put: never;
-//   }
-
-//   const c2 = new Client<CustomRoutes>('ccc');
-//   const r2 = await c2.get('/something3', {foo3});
-//   console.log(r2);
-// }

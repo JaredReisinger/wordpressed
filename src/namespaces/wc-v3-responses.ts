@@ -155,10 +155,117 @@ export interface WcV3DataCurrenciesPCurrencyW3GetResponse {}
  */
 export interface WcV3DataCurrenciesCurrentGetResponse {}
 
+// hand-rolled Order (and dependent) types lifted from
+// https://github.com/JaredReisinger/order-fetcher
+interface MetaDatum {
+  id: number;
+  key: string;
+  value: string;
+}
+
+interface Billing {
+  first_name: string;
+  last_name: string;
+  company: string;
+  address_1: string;
+  address_2: string;
+  city: string;
+  state: string;
+  postcode: string;
+  country: string;
+  email: string;
+  phone: string;
+}
+
+interface Shipping {
+  first_name: string;
+  last_name: string;
+  company: string;
+  address_1: string;
+  address_2: string;
+  city: string;
+  state: string;
+  postcode: string;
+  country: string;
+  email: string;
+}
+
+interface LineItem {
+  id: number;
+  name: string;
+  product_id: number;
+  variation_id: number;
+  quantity: number;
+  tax_class: string;
+  subtotal: string;
+  subtotal_tax: string;
+  total: string;
+  total_tax: string;
+  taxes: unknown[];
+  meta_data: MetaDatum[];
+  sku: string;
+  price: number;
+}
+
+interface ShippingLine {
+  id: number;
+  method_title: string;
+  method_id: string;
+  instance_id: string;
+  total: string;
+  total_tax: string;
+  taxes: unknown[];
+  meta_data: unknown[];
+}
+
+interface Order {
+  id: number;
+  parent_id: number;
+  number: string; // seems to be string version of `id`
+  order_key: string;
+  created_via: string;
+  version: string;
+  status: string;
+  currency: string;
+  date_created: string; // Date;
+  date_created_gmt: string; // Date;
+  date_modified: string; // Date;
+  date_modified_gmt: string; // Date;
+  discount_total: string;
+  discount_tax: string;
+  shipping_total: string;
+  shipping_tax: string;
+  cart_tax: string;
+  total: string;
+  total_tax: string;
+  prices_include_tax: boolean;
+  customer_id: number;
+  customer_ip_address: string;
+  customer_user_agent: string;
+  customer_note: string;
+  billing: Billing;
+  shipping: Shipping;
+  payment_method: string;
+  payment_method_title: string;
+  transaction_id: string;
+  date_paid?: unknown;
+  date_paid_gmt?: unknown;
+  date_completed?: unknown;
+  date_completed_gmt?: unknown;
+  cart_hash: string;
+  meta_data: MetaDatum[]; // was any[]
+  line_items: LineItem[];
+  tax_lines: unknown[];
+  shipping_lines: ShippingLine[];
+  fee_lines: unknown[];
+  coupon_lines: unknown[];
+  refunds: unknown[];
+  // _links: Links;
+}
 /**
  * Response for `/wc/v3/orders` route when calling GET method.
  */
-export interface WcV3OrdersGetResponse {}
+export type WcV3OrdersGetResponse = Order[];
 
 /**
  * Response for `/wc/v3/orders` route when calling POST method.
