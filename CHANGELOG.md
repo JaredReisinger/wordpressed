@@ -3,6 +3,13 @@
 _All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/) for commit guidelines._
 
 
+## [1.0.0-alpha.2](https://github.com/JaredReisinger/wordpressed/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2023-08-09)
+
+
+### Features
+
+* add options for pre-request hooks, example ([f9222f1](https://github.com/JaredReisinger/wordpressed/commit/f9222f16759b6665afd14681ff1612cfb9b76882))
+
 ## [1.0.0-alpha.1](https://github.com/JaredReisinger/wordpressed/compare/v0.1.0-alpha.7...v1.0.0-alpha.1) (2023-08-08)
 
 
