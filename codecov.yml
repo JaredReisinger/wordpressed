@@ -1,3 +1,5 @@
 ignore:
   # namespaces are purely generated type files, and don't need coverage
-  - 'src/namespaces'
+  - src/namespaces
+  # also exclude the example code
+  - src/example
